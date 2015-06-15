@@ -47,22 +47,128 @@
 // p
 // 	+jpg(bla)
 
-
+=font
+	font-family: 'Roboto', Arial, sans-serif
+=thin
+	font-weight: 100 
+=light
+	font-weight: 300 
+=reg
+	font-weight: 400 
+=med
+	font-weight: 500 
+=bold
+	font-weight: 700 
+=black
+	font-weight: 900 
+$green: #009036
+$green_h: darken($green, 7%)
+$green_l: #9ba08e
+$black: #262626
+$violet: #7a254f
+$light: #a8ae9d
+$bg: #f6f6f4
+html
+	+selection
+		background: rgba($green, 1)
+		color: #fff
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	+font
+	+reg
+	font-size: 12px
 	line-height: 1.4
+	color: $black 
 
-
+a
+	text-decoration: none
 // common blocks      
 
+.title-link
+	color: $green
+	font-size: 16px
+	line-height: 1.25
+	+med
+	+tr(color .3s)
+	&:hover
+		color: $green_h 
+.text
+	color: $black
+	font-size: 13px
+	line-height: 1.5
+	+reg 
+.date
+	display: inline-block
+	padding: 4px 8px 
+	background: #ecebe7
+	font-size: 12px
+	line-height: 1
+	+reg
+	color: $green_l
 
+.field
+	display: block
+	margin-bottom: 11px
+	&__title
+		display: block
+		position: relative
+		font-size: 12px
+		color: $light
+		.icon-star
+			position: absolute
+			left: -13px
+			top: 3px
+	&__body
+		display: block
+		position: relative
+.input
+	display: block
+	border: 1px solid #e4e5df
+	padding: 0 11px 
+	width: 100%
+	height: 40px
+	background: #fff
+	+font
+	+reg
+	font-size: 15px 
+	color: $light 
+	+tr(border .3s)
+	&:focus
+		border-color: #d8d9d6 
+	&_textarea
+		padding: 11px
+		min-height: 110px
+		resize: none 
 
-
-
-
-
-
+.tabs
+	font-size: 0
+	&__item
+		display: inline-block
+		margin-right: 27px
+		vertical-align: middle
+		font-size: 13px
+	&__link
+		display: block
+		position: relative
+		height: 40px
+		color: $green 
+		line-height: 40px
+		+tr(color .3s)
+		&:after
+			content: ""
+			display: none
+			position: absolute
+			bottom: -4px
+			left: 0
+			right: 0
+			height: 4px
+			background: $green 
+		&:hover
+			color: $green_h 
+	.is-active
+		.tabs__link
+			color: $black 
+			&:after
+				display: block
 
 
 
