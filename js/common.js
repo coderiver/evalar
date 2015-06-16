@@ -4,16 +4,16 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
-
-	console.log($('body').html());
+	document.createElement( "picture" );
+	var config = {
+		slidesToShow: 1,
+		dots: true,
+		arrows: true
+	}
+	$('.js-slider').on('init', function(slick) {
+		setTimeout(function(){
+			$('.slider').addClass("is-ready");
+		},200);
+	});
+	$(".js-slider").slick(config);
 });

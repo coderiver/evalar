@@ -1,1 +1,57 @@
-// Normally mainpage styles
+.slider
+	position: relative
+	opacity: 0
+	visibility: hidden
+	+tr(opacity .3s)
+	&.is-ready
+		opacity: 1
+		visibility: visible
+	&__item
+		overflow: hidden
+		max-height: 760px
+		
+		> .container
+			position: relative
+	&__info
+		position: absolute
+		top: 0
+		left: 15px
+		+reg
+		color: #fff 
+	&__img
+		img
+			display: block
+			width: 100%
+			height: auto
+	&__title
+		font-size: 72px
+		line-height: 1
+	&__info
+		font-size: 30px
+		margin-top: 15px
+		line-height: 1.2
+	&__main
+		position: absolute
+		left: 0
+		right: 0
+		top: 19.5%
+	&__title
+		margin-bottom: 35px
+	&__prod
+		position: relative
+		margin-right: -15px
+		display: inline-block
+		&:before
+			content: ""
+			position: absolute
+			right: 74px
+			top: 0
+			width: 260px
+			height: 260px
+			border-radius: 50% 
+			opacity: 0.7
+			+g(rgba(#a26c01,.1), rgba(#a26c01, .9))
+		img
+			position: relative
+			z-index: 2
+			
