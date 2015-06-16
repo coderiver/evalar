@@ -19,16 +19,18 @@
 			color: #737969
 			+tr(opacity .3s)
 			font-size: 12px 
+			position: relative
+			padding-right: 9px 
 			&:hover
 				opacity: .7
 			+r(767)
 				font-size: 14px 
-		a:not(:last-child):after
+		a:after
 			content: '/'
-			display: inline-block
-			margin: 0 3px
-			+r(767)
-				margin: 0 5px 
+			position: absolute
+			right: 2px
+		a:last-child:after
+			display: none
 		&:first-child
 			margin-bottom: 35px
 			+r(1022)
