@@ -1,0 +1,108 @@
+.header
+	position: relative
+	&__top
+		background: #fff
+		padding: 24px 0 0  
+	&__logo
+		float: left
+		margin-right: 20px
+		+hide-text
+		+svg(logo,130,62)
+	&__promo
+		overflow: hidden
+		padding-right: 16%
+		font-size: 11px
+		text-transform: uppercase
+		color: $green_l 
+		strong
+			display: block
+			color: $green 
+			text-transform: none
+			font-size: 24px
+		span
+			+bold
+	&__icons
+		margin-top: 8px
+	&__main
+		background: $green 
+.tel
+	font-size: 12px
+	white-space: nowrap
+	color: $green_l
+	line-height: 1.3
+	+reg
+	span
+		display: block
+	a
+		font-size: 23px
+		color: $green
+		+med
+		&:hover
+			color: $green_h 
+
+.dropdown
+	display: inline-block
+	position: relative
+	text-align: left
+	+reg
+	&__title
+		font-size: 12px
+		color: $green_l
+	&__val
+		cursor: pointer
+		position: relative
+		padding-right: 10px
+		display: block
+		font-size: 14px
+		color: $green
+		&:hover
+			color: $green_h s
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			bottom: 7px
+			+arr(6,3,$green,b) 
+	&__list
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		white-space: nowrap
+	&__touch
+		display: none
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 20px
+		opacity: 0
+		-webkit-appearence: none
+.mobile
+	.dropdown__touch
+		display: block
+		
+.btn-menu
+	width: 50px
+	height: 50px
+	background: none 
+	position: relative
+	i
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		height: 2px
+		width: 20px
+		background: #fff
+		&:before,
+		&:after
+			content: "" 
+			position: absolute
+			left: 0
+			height: 2px
+			width: 20px
+			background: #fff 
+		&:before
+			top: -7px
+		&:after
+			bottom: -7px

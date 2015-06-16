@@ -28,7 +28,8 @@
 	padding-left: 15px
 	margin-right: auto
 	margin-left: auto
-
+	&.no-padding
+		padding: 0
 @media (min-width: 480px)
 	.container
 		max-width: 480px
@@ -40,14 +41,14 @@
 		max-width: 640px
 @media (min-width: 768px)
 	.container
-		width: 750px
+		max-width: 750px
 		max-width: 750px
 @media (min-width: 992px)
 	.container
-		width: 970px
-@media (min-width: 1200px)
+		max-width: 970px
+@media (min-width: 1230px)
 	.container
-		width: 1170px
+		max-width: 1230px
 .container-fluid
 	padding-right: 15px
 	padding-left: 15px
