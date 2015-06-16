@@ -1,0 +1,55 @@
+// encyclopedia_2.html styles
+.page-head
+	position: relative
+	overflow: hidden 
+	font-size: 0
+	line-height: 0
+	.page-head__title
+		font-size: 60px 
+		position: absolute
+		top: 50%
+		color: #fff 
+		+light
+
+.icon-home
+	+svg(home, 15,15)
+	
+
+.breadcrumbs
+	border-bottom: 1px solid #efeeeb 
+	height: 40px 
+	line-height: 40px 
+	.breadcrumbs__main
+		border-left: 1px solid #efeeeb 
+		+clr
+		li
+			float: left
+			width: auto
+			position: relative 
+			a
+				display: block
+				color: #000 
+				padding: 0 12px 0 10px
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: 0
+					+svg(arr_outline-r-gray, 10, 40) 
+			&:first-child
+				a 
+					padding: 0 10px 0 5px
+					i
+						position: relative
+						top: 1px 
+				width: 50px
+				text-align: center
+				
+.encyclopedia
+	margin-top: 50px
+	.encyclopedia__main
+		background: #f6f6f4 
+
+				
+			
+				 
