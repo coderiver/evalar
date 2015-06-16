@@ -69,6 +69,7 @@ $black: #262626
 $violet: #7a254f
 $light: #a8ae9d
 $bg: #f6f6f4
+$border: #ecebe7
 html
 	+selection
 		background: rgba($green, 1)
@@ -85,18 +86,24 @@ a
 // common blocks      
 
 .title-link
-	color: $green
 	font-size: 16px
 	line-height: 1.25
 	+med
-	+tr(color .3s)
-	&:hover
-		color: $green_h 
+	a
+		+tr(color .3s)
+		color: $green
+		&:hover
+			color: $green_h 
 .text
 	color: $black
 	font-size: 13px
 	line-height: 1.5
 	+reg 
+	a
+		color: $black
+		+tr(color .3s)
+		&:hover
+			color: $green
 .date
 	display: inline-block
 	padding: 4px 8px 
@@ -105,12 +112,21 @@ a
 	line-height: 1
 	+reg
 	color: $green_l
-
+.title
+	margin-bottom: 14px
+	font-size: 24px
+	color: $black
+	+reg 
+	&_white
+		color: #fff 
+	&_light
+		color: $green_l 
 .field
 	display: block
 	margin-bottom: 11px
 	&__title
 		display: block
+		margin-bottom: 6px
 		position: relative
 		font-size: 12px
 		color: $light
@@ -172,24 +188,34 @@ a
 				display: block
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.posts-wrap
+	margin-bottom: 30px
+	border-bottom: 1px solid $border
+	.post
+		padding: 42px 40px 36px 0
+	&_long
+		border-bottom: 0
+		.post
+			padding-top: 12px
+.post
+	+clr
+	.date
+		margin-bottom: 10px
+	.title-link
+		margin: 0 0 10px
+	.thumbnail
+		float: left
+		margin-right: 20px
+	&__main
+		overflow: hidden
+.thumbnail
+	width: 100px
+	display: block
+	overflow: hidden
+	img
+		display: block
+		width: 100%
+		height: auto
 
 
 

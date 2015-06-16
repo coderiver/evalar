@@ -113,22 +113,21 @@
 	li
 		position: relative
 		display: inline-block
-		padding: 0 3px 
+		padding: 0 7px 
 		&.slick-active
 			button
-				opacity: 0.3
-				box-shadow: none
+				background: #fff 
 		&:before
 			display: none 
 				 
 	button
 		display: block
-		width: 6px
-		height: 6px
-		background: #fff
-		+box-shadow(0 1px 5px rgba(0,0,0,.25))
+		width: 16px
+		height: 16px
+		border: 2px solid #fff
 		cursor: pointer
 		+hide-text
+		background: none
 		border-radius: 50% 
 		&:hover
 			box-shadow: none

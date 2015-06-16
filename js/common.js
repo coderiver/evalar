@@ -8,7 +8,7 @@ head.ready(function() {
 	var config = {
 		slidesToShow: 1,
 		dots: true,
-		arrows: true
+		arrows: false
 	}
 	$('.js-slider').on('init', function(slick) {
 		setTimeout(function(){
