@@ -1,0 +1,44 @@
+//  distrib_1.html
+
+.distrib
+	margin-top: 40px
+	.distrib__main
+		border-top: 1px solid #b9beb1
+		background: #fff 
+		padding-top: 54px 
+	.distrib__paragraph
+		font-size: 15px
+		color: #262626 
+		+med
+		line-height: 1.6em 
+	.distrib__list
+		margin-top: 22px 
+		+clr
+		li
+			width: 25%
+			float: left 
+			height: 220px
+			padding: 60px 0 40px
+			border-bottom: 1px solid #b9beb1
+		p
+			color: #b9beb1
+	.link-out
+		display: block
+		color: $green
+		+med
+		font-size: 16px 
+		margin: 27px 0 5px
+		+tr(color .3s)
+		&:hover
+			color: $green_h
+		
+
+	
+
+.link-out
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: -3px
+		+svg(link,10,10)

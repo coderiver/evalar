@@ -6,13 +6,15 @@
 		p
 			color: #9ba08e 
 			+r(767)
-				font-size: 14px 
+				font-size: 15px 
+				line-height: 1.6em 
+				
 		p:first-child
 			margin-bottom: 35px
 			+r(1022)
 				margin-bottom: 15px 
 		+r(767)
-			margin-bottom: 20px 
+			margin-bottom: 40px 
 	.footer__nav
 		font-size: 0
 		a
@@ -21,14 +23,19 @@
 			font-size: 12px 
 			position: relative
 			padding-right: 9px 
+			display: inline-block
 			&:hover
 				opacity: .7
 			+r(767)
 				font-size: 14px 
+				line-height: 1.6em 
+				padding-right: 15px 
 		a:after
 			content: '/'
 			position: absolute
 			right: 2px
+			+r(767)
+				right: 4px 
 		a:last-child:after
 			display: none
 		&:first-child
@@ -42,10 +49,10 @@
 		+r(1022)
 			margin-bottom: 50px 
 			+r(767)
-				margin-bottom: 20px 
+				margin-bottom: 30px 
 	.footer__sertificates
 		+r(767)
-			margin-bottom: 20px 
+			margin-bottom: 30px 
 	.footer__in	
 		+display-flex
 		+flex-flow(row wrap)
@@ -69,7 +76,8 @@
 			display: table-cell
 			padding-right: 20px 
 			vertical-align: middle
-			color: #9ba08e 
+			color: #9ba08e
+			font-size: 15px 
 	.soc__link
 		width: 30px
 		height: 30px
@@ -85,7 +93,7 @@
 		&:hover
 			background: $green_h 
 	+r(767)
-		margin-bottom: 20px
+		margin-bottom: 40px
 		display: table 
 
 .icon-vk
@@ -110,7 +118,8 @@
 		margin-top: 15px 
 	+r(767)
 		margin-bottom: 20px 
-		font-size: 14px 
+		font-size: 15px 
+		line-height: 1.6em 
 	
 .icon-mail
 	+svg(mail,12,10)	
@@ -125,7 +134,7 @@
 		position: absolute
 		left: 0
 	+r(767)
-		font-size: 14px 
+		font-size: 15px 
 
 
 	

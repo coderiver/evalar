@@ -34,7 +34,7 @@
 			position: relative 
 			a
 				display: block
-				color: #000 
+				color: #b9beb1 
 				padding: 0 12px 0 10px
 				+tr(color .3s)
 				&:after
@@ -63,6 +63,9 @@
 						visibility: visible 
 				width: 50px
 				text-align: center
+			&:last-child
+				a
+					color: #000 
 				
 .encyclopedia
 	margin-top: 40px
@@ -73,12 +76,12 @@
 	.encyclopedia__in
 		+column-count(4)
 		+column-gap(20px)
-		padding: 44px 0 120px
+		padding: 52px 0 120px
 		// margin-top: 44px 
 		+r(767)
-			+column-count(3)
-		+r(380)
-			+column-count(2)
+			+column-count(1)
+		// +r(380)
+			// +column-count(2)
 
 
 
