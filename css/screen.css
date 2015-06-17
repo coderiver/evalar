@@ -41,6 +41,10 @@ a { text-decoration: none; }
 .text a { color: #262626; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .text a:hover { color: #009036; }
 
+.text_light { color: #9ba08e; }
+.text_light a { color: #9ba08e; }
+.text_light a:hover { color: #009036; }
+
 .date { display: inline-block; padding: 4px 8px; background: #ecebe7; font-size: 12px; line-height: 1; font-weight: 400; color: #9ba08e; }
 
 .title { margin-bottom: 14px; font-size: 24px; color: #262626; font-weight: 400; }
@@ -66,11 +70,19 @@ a { text-decoration: none; }
 .tabs .is-active .tabs__link:after { display: block; }
 
 .posts-wrap { display: table; table-layout: fixed; width: 100%; margin-bottom: 30px; overflow: hidden; border-bottom: 1px solid #ecebe7; }
+@media only screen and (max-width: 1023px) { .posts-wrap { display: block; } }
 .posts-wrap__item { display: table-cell; vertical-align: top; }
+@media only screen and (max-width: 1023px) { .posts-wrap__item { display: block; } }
 .posts-wrap__item.has-bg { background: #f6f6f4; }
 .posts-wrap .post { padding: 42px 40px 36px 0; }
+@media only screen and (max-width: 1023px) { .posts-wrap .post { padding: 33px 40px 0 0; } }
 .posts-wrap_long { border-bottom: 0; }
-.posts-wrap_long .post { padding-top: 12px; }
+.posts-wrap_long .post { padding-top: 12px; margin-bottom: 60px; }
+@media only screen and (max-width: 767px) { .posts-wrap_long .post { margin-bottom: 40px; } }
+.posts-wrap .slick-dots { text-align: left; bottom: 16px; }
+.posts-wrap .slick-dots li { padding: 0 7px 0 0; }
+.posts-wrap .slick-dots button { border: 1px solid #a7ae9e; width: 8px; height: 8px; }
+.posts-wrap .slick-dots .slick-active button { background: #a7ae9e; }
 
 .post { *zoom: 1; }
 .post:after { content: " "; display: table; clear: both; }
@@ -617,6 +629,8 @@ a { text-decoration: none; }
 
 .icon-cart { background: url("../img/svg/cart.svg") no-repeat 0 0; -moz-background-size: 30px 25px; -o-background-size: 30px 25px; -webkit-background-size: 30px 25px; background-size: 30px 25px; width: 30px; height: 25px; display: inline-block; }
 
+.icon-play { background: url("../img/svg/play.svg") no-repeat 0 0; -moz-background-size: 60px 60px; -o-background-size: 60px 60px; -webkit-background-size: 60px 60px; background-size: 60px 60px; width: 60px; height: 60px; display: inline-block; }
+
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
@@ -747,18 +761,20 @@ a { text-decoration: none; }
 .banner .title { position: absolute; left: 30px; top: 20px; }
 .banner .title_white { line-height: 1.1; }
 .banner .title_white .cart-circle { position: absolute; left: 0; top: 0; }
+.banner .icon-play { position: absolute; left: 50%; bottom: 50px; margin: 0 0 0 -30px; }
 
 .banner_shop .title_white { padding-left: 90px; }
 @media only screen and (max-width: 1230px) { .banner_shop .title_white { padding-left: 65px; } }
 
 .subscribe { padding: 30px; background: #f6f6f4; }
-.subscribe .title { white-space: nowrap; }
+@media only screen and (max-width: 1023px) { .subscribe { min-height: 240px; } }
+.subscribe .title { font-size: 23px; }
+@media only screen and (max-width: 1023px) { .subscribe .title { white-space: nowrap; } }
 .subscribe__btn { position: absolute; right: 0; top: 0; height: 40px; width: 40px; background: #009036; }
 .subscribe__btn:hover { background: #20b019; }
 .subscribe__btn:hover i:after { opacity: 1; }
 .subscribe__btn i { display: inline-block; position: relative; vertical-align: middle; background: url("../img/svg/subscribe.svg") no-repeat 0 0; -moz-background-size: 14px 11px; -o-background-size: 14px 11px; -webkit-background-size: 14px 11px; background-size: 14px 11px; width: 14px; height: 11px; display: inline-block; }
 .subscribe__btn i:after { content: ""; position: absolute; top: 0; left: 0; opacity: 0; background: url("../img/svg/subscribe-white.svg") no-repeat 0 0; -moz-background-size: 14px 11px; -o-background-size: 14px 11px; -webkit-background-size: 14px 11px; background-size: 14px 11px; width: 14px; height: 11px; display: inline-block; }
-.subscribe .input { border-width: 0; border-top-width: 1px; }
 
 .cart-circle { display: inline-block; width: 50px; height: 50px; text-align: center; line-height: 50px; border-radius: 50%; background: #20b019; }
 .cart-circle i { vertical-align: middle; }

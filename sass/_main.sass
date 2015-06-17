@@ -260,6 +260,11 @@
 			position: absolute
 			left: 0
 			top: 0
+	.icon-play
+		position: absolute
+		left: 50%
+		bottom: 50px
+		margin: 0 0 0 -30px
 .banner_shop
 	.title_white	
 		padding-left: 90px
@@ -268,8 +273,12 @@
 .subscribe
 	padding: 30px 
 	background: $bg 
+	+r(1023)
+		min-height: 240px
 	.title
-		white-space: nowrap 
+		font-size: 23px
+		+r(1023)
+			white-space: nowrap
 	&__btn
 		position: absolute
 		right: 0
@@ -295,9 +304,6 @@
 				opacity: 0
 				+svg(subscribe-white,14,11)
 
-	.input
-		border-width: 0
-		border-top-width: 1px 
 .cart-circle
 	display: inline-block
 	width: 50px

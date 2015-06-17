@@ -29,7 +29,30 @@ head.ready(function() {
 		slidesToShow: 2,
 		slidesToScroll: 2,
 		dots: true,
-		arrows: false
+		arrows: false,
+		adaptiveHeight: true,
+		responsive: [
+	    {
+	      breakpoint: 767,
+	      settings: {
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
 	}
-	//$(".js-post-slider").slick(configPostSlider);
+	if ($(window).width() < 1024) {
+		$(".js-post-slider").slick(configPostSlider);
+	}
+
+	$(window).resize(function() {
+		if ($(window).width() < 1024) {
+			$(".js-post-slider").slick(configPostSlider);
+		}
+		if ($(window).width() >= 1024 && $(".js-post-slider").hasClass(".slick-slider"))  {
+			$(".js-post-slider").slick("unslick");
+		}
+	})
+
+
+	
 });

@@ -104,6 +104,12 @@ a
 		+tr(color .3s)
 		&:hover
 			color: $green
+.text_light
+	color: $green_l
+	a
+		color: $green_l
+		&:hover
+			color: $green 
 .date
 	display: inline-block
 	padding: 4px 8px 
@@ -197,18 +203,39 @@ a
 	margin-bottom: 30px
 	overflow: hidden
 	border-bottom: 1px solid $border
+	+r(1023)
+		display: block
 	&__item
 		display: table-cell
 		vertical-align: top
+		+r(1023)
+			display: block
 		&.has-bg
 			background: $bg 
 	.post
 		padding: 42px 40px 36px 0
+		+r(1023)
+			padding: 33px 40px 0 0
 	&_long
 		border-bottom: 0
 		.post
 			padding-top: 12px
-		
+			margin-bottom: 60px
+			
+			+r(767)
+				margin-bottom: 40px
+	.slick-dots
+		text-align: left
+		bottom: 16px
+		li
+			padding: 0 7px 0 0
+		button
+			border: 1px solid #a7ae9e
+			width: 8px
+			height: 8px
+		.slick-active
+			button
+				background: #a7ae9e 
 .post
 	+clr
 	.date
