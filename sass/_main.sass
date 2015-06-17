@@ -33,27 +33,38 @@
 		display: block
 		width: 100%
 		height: auto
+		+r(1600)
+			height: 100%
+			width: auto
+			max-width: 1000%
 .slider__title
 	font-size: 72px
 	line-height: 1
+	+r(1230)
+		font-size: 48px
 .slider__info
 	font-size: 30px
-	margin: 15px 0 0 -15px
+	margin: 15px 0 0
 	line-height: 1.2
+	+r(1230)
+		font-size: 24px
 .slider__main
 	position: absolute
 	left: 0
 	right: 0
 	top: 19.5%
-	
+	bottom: 260px
+	+r(1230)
+		bottom: 204px
 .slider__title
 	margin-bottom: 35px
 .slider__slogan
 	font-size: 60px
 	+light
+	+r(1230)
+		font-size: 48px
 .slider__prod
 	position: relative
-	margin-right: -15px
 	display: inline-block
 	&.is-brown
 		&:before
@@ -82,17 +93,23 @@
 	left: -70px
 	top: 225px
 	+svg(prev,21,60)
+	+r(1230)
+		left: -15px
 .slider__next
 	position: absolute
 	right: -70px
 	top: 225px
 	+svg(next,21,60)
+	+r(1230)
+		right: -15px
 .banners-wrap
 	position: relative
 	z-index: 3
 	margin-top: -260px
 	overflow: hidden
 	background: rgba(#fff,.5) 
+	+r(1230)
+		margin-top: -204px
 	.row
 		> div
 			position: relative
@@ -122,9 +139,7 @@
 	overflow: hidden
 	img
 		display: block
-		min-width: 100%
-		min-height: 100%
-		width: auto
+		width: 100%
 		height: auto
 	&__title
 		position: absolute
@@ -140,6 +155,8 @@
 	.title_white
 		padding-left: 90px
 		line-height: 1.1
+		+r(1230)
+			padding-left: 65px
 		.cart-circle
 			position: absolute
 			left: 0
