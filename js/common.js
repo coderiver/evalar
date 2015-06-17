@@ -16,4 +16,12 @@ head.ready(function() {
 		},200);
 	});
 	$(".js-slider").slick(config);
+	$('.js-slider-prev').on('click', function(slick) {
+		$(".js-slider").slick("slickPrev");
+		return false;
+	});
+	$('.js-slider-next').on('click', function(slick) {
+		$(".js-slider").slick("slickNext");
+		return false;
+	});
 });

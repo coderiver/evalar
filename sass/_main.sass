@@ -2,75 +2,91 @@
 	position: relative
 	z-index: 1
 	opacity: 0
+	margin-top: -1px
 	visibility: hidden
 	+tr(opacity .3s)
+	> .container
+		position: relative
+		height: 1px
+		z-index: 2
+	.slick-slider
+		clear: both
 	.slick-dots
 		bottom: 293px
 	&.is-ready
 		opacity: 1
 		visibility: visible
-	&__item
-		overflow: hidden
-		max-height: 760px
-		
-		> .container
-			position: relative
-	&__info
-		position: absolute
-		top: 0
-		left: 15px
-		+reg
-		color: #fff 
-	&__img
-		img
-			display: block
-			width: 100%
-			height: auto
-	&__title
-		font-size: 72px
-		line-height: 1
-	&__info
-		font-size: 30px
-		margin: 15px 0 0 -15px
-		line-height: 1.2
-	&__main
-		position: absolute
-		left: 0
-		right: 0
-		top: 19.5%
-		
-	&__title
-		margin-bottom: 35px
-	&__slogan
-		font-size: 60px
-		+light
-	&__prod
+.slider__item
+	overflow: hidden
+	max-height: 760px
+	
+	> .container
 		position: relative
-		margin-right: -15px
-		display: inline-block
-		&.is-brown
-			&:before
-				+g(rgba(#a26c01,.1), rgba(#a26c01, .9))
-		&.is-black
-			&:before
-				+g(rgba(#000,.1), rgba(#000, .7))
-		&.is-blue
-			&:before
-				opacity: 0.6
-				+g(rgba(#248482,.1), rgba(#248482, .9))
+.slider__info
+	position: absolute
+	top: 0
+	left: 15px
+	+reg
+	color: #fff 
+.slider__img
+	img
+		display: block
+		width: 100%
+		height: auto
+.slider__title
+	font-size: 72px
+	line-height: 1
+.slider__info
+	font-size: 30px
+	margin: 15px 0 0 -15px
+	line-height: 1.2
+.slider__main
+	position: absolute
+	left: 0
+	right: 0
+	top: 19.5%
+	
+.slider__title
+	margin-bottom: 35px
+.slider__slogan
+	font-size: 60px
+	+light
+.slider__prod
+	position: relative
+	margin-right: -15px
+	display: inline-block
+	&.is-brown
 		&:before
-			content: ""
-			position: absolute
-			right: 74px
-			top: 0
-			width: 260px
-			height: 260px
-			border-radius: 50% 
-			opacity: 0.7
-		img
-			position: relative
-			z-index: 2
-			
+			+g(rgba(#a26c01,.1), rgba(#a26c01, .9))
+	&.is-black
+		&:before
+			+g(rgba(#000,.1), rgba(#000, .7))
+	&.is-blue
+		&:before
+			opacity: 0.6
+			+g(rgba(#248482,.1), rgba(#248482, .9))
+	&:before
+		content: ""
+		position: absolute
+		right: 74px
+		top: 0
+		width: 260px
+		height: 260px
+		border-radius: 50% 
+		opacity: 0.7
+	img
+		position: relative
+		z-index: 2
+.slider__prev
+	position: absolute
+	left: -70px
+	top: 225px
+	+svg(prev,21,60)
+.slider__next
+	position: absolute
+	right: -70px
+	top: 225px
+	+svg(next,21,60)
 .banners-wrap
 	position: relative
 	z-index: 3

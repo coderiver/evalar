@@ -17,28 +17,28 @@
 	<div class="header">
 		<div class="header__top">
 			<div class="container">	
-				<div class="row">
-					<div class="col-lg-5 col-md-5">
+				<div class="row no-padding">
+					<div class="col-lg-5 col-md-5 col-sm-4 col-xs-4">
 						<a href="#" class="header__logo">Эвалар</a>
-						<div class="header__promo">
+						<div class="header__promo hidden-sm hidden-xs">
 							<strong><span>№1</span> в России</strong>
 							В КАТЕГОРИИ НАТУРАЛЬНЫХ ПРЕПАРАТОВ
 							ДЛЯ УКРЕПЛЕНИЯ ЗДОРОВЬЯ И ПОВЫШЕНИЯ 
 							КАЧЕСТВА ЖИЗНИ
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3">
+					<div class="col-lg-3 col-md-3 visible-lg">
 						<div class="header__icons">
 							<img src="img/svg/certificates.svg" width="218" alt="">
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-2">
+					<div class="col-lg-2 col-md-4 col-sm-4 col-xs-8">
 						<div class="tel">
 							<span>Линия здоровья</span>
 							<a href="tel:88002005252">8-800-200-52-52</a>
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-2 text-right">
+					<div class="col-lg-2 col-md-3 col-sm-4 text-right hidden-xs">
 						<div class="dropdown dropdown_location">
 							<div class="dropdown__title">Ваш регион</div>
 							<span class="dropdown__val">Санкт-Петербург</span>
@@ -57,25 +57,25 @@
 		</div>
 		<div class="container">
 			<div class="header__main">
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="row  no-padding">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
 						<button class="btn-menu" type="button"><i></i></button>
 						<ul class="nav">
 							<li class="nav__item">
-								<a href="#" class="nav__link">О компании</a>
+								<a href="#" class="nav__link visible-lg  visible-md">О компании</a>
 							</li>   
 							<li class="nav__item">
-								<a href="#" class="nav__link">продукция</a>
+								<a href="#" class="nav__link hidden-xs">продукция</a>
 							</li>   
 							<li class="nav__item">
 								<a href="#" class="nav__link">где купить</a>
 							</li>  
-							<li class="nav__item">
+							<li class="nav__item visible-lg">
 								<a href="#" class="nav__link">Партнерам</a>
 							</li>
 						</ul>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 text-right">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-5 text-right">
 						<div class="search">
 							<button class="btn-search" type="button">
 								<i class="icon-search"></i>
@@ -86,7 +86,7 @@
 							Интернет-магазин «Эвалар»
 							<i class="shop__arr"></i>
 						</a>
-						<div class="dropdown dropdown_lang">
+						<div class="dropdown dropdown_lang hidden-xs">
 							<span class="dropdown__val">RU</span>
 							<ul class="dropdown__list">
 								<li><a href="#">RU</a></li>
@@ -103,6 +103,14 @@
 		</div>
 	</div>
 	<div class="slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<button class="slider__prev js-slider-prev" type="button"></button>
+					<button class="slider__next js-slider-next" type="button"></button>
+				</div>
+			</div>
+		</div>
 		<div class="js-slider">
 			<div>
 				<div class="slider__item">
@@ -295,6 +303,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
 	<div class="banners-wrap">
 		<div class="container">
