@@ -28,17 +28,22 @@
 	padding-left: 15px
 	margin-right: auto
 	margin-left: auto
+	+r(767)
+		padding-left: 10px
+		padding-right: 10px
 	&.no-padding
 		padding: 0
+		+r(767)
+			padding: 0
 
 	
 @media (min-width: 320px)
 	.container
 		max-width: 320px
 			
-@media (min-width: 480px)
-	.container
-		max-width: 480px
+// @media (min-width: 480px)
+// 	.container
+// 		max-width: 480px
 		
 @media (min-width: 768px)
 	.container
@@ -57,16 +62,26 @@
 	padding-left: 15px
 	margin-right: auto
 	margin-left: auto
-
+	+r(767)
+		padding-left: 10px
+		padding-right: 10px
 .row
 	margin-right: -15px
 	margin-left: -15px
 	+clr
+	+r(767)
+		margin-left: -10px
+		margin-right: -10px
 	&.no-padding
 		margin-left: 0
 		margin-right: 0
+		+r(767)
+			margin-left: 0
+			margin-right: 0
 		> div
 			padding: 0
+			+r(767)
+				padding: 0
 	.has-bg
 		background: $bg 
 .row_table
@@ -74,6 +89,9 @@
 		display: table-cell
 		vertical-align: top
 		float: none !important
+		+r(1023)
+			display: block
+			float: left !important
 .row_inline
 	> div
 		display: inline-block
@@ -84,7 +102,9 @@
 	min-height: 1px
 	padding-right: 15px
 	padding-left: 15px
-
+	+r(767)
+		padding-right: 10px
+		padding-left: 10px
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12
 	float: left
 

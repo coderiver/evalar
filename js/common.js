@@ -24,4 +24,12 @@ head.ready(function() {
 		$(".js-slider").slick("slickNext");
 		return false;
 	});
+
+	var configPostSlider = {
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		dots: true,
+		arrows: false
+	}
+	//$(".js-post-slider").slick(configPostSlider);
 });

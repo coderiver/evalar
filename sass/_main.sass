@@ -13,13 +13,17 @@
 		clear: both
 	.slick-dots
 		bottom: 293px
+		+r(1230)
+			bottom: 230px
+		+r(1023)
+			bottom: 283px
+		+r(767)
+			bottom: 23px
 	&.is-ready
 		opacity: 1
 		visibility: visible
 .slider__item
 	overflow: hidden
-	max-height: 760px
-	
 	> .container
 		position: relative
 .slider__info
@@ -29,6 +33,11 @@
 	+reg
 	color: #fff 
 .slider__img
+	height: 760px
+	+r(1023)
+		height: 690px
+	+r(767)
+		height: 380px
 	img
 		display: block
 		width: 100%
@@ -38,16 +47,26 @@
 			width: auto
 			max-width: 1000%
 .slider__title
+	margin-bottom: 35px
 	font-size: 72px
 	line-height: 1
 	+r(1230)
 		font-size: 48px
+	+r(1023)
+		font-size: 24px
+		margin-bottom: 15px
+		
 .slider__info
 	font-size: 30px
 	margin: 15px 0 0
 	line-height: 1.2
 	+r(1230)
 		font-size: 24px
+	+r(1023)
+		font-size: 16px
+		padding-right: 20px
+	+r(767)
+		position: static
 .slider__main
 	position: absolute
 	left: 0
@@ -56,16 +75,54 @@
 	bottom: 260px
 	+r(1230)
 		bottom: 204px
-.slider__title
-	margin-bottom: 35px
+	+r(767)
+		top: 75px
+		bottom: 0
+	&.is-abs-position
+		.slider__prod
+			position: absolute
+			bottom: 0
+			left: 0
+		.container,
+		.row,
+		.row > div
+			+r(767)
+				height: 100%
+		.slider__prod
+			img
+				+r(767)
+					max-height: 180px
+	.container
+		height: 100%
+		+r(767)
+			height: auto
+	.row
+		height: 100%
+		+r(767)
+			+display-flex
+			+flex-direction(column)
+			height: auto
+		> div
+			height: 100%
+			+r(767)
+				order: 2
+				height: auto
+			&:last-child
+				+r(767)
+					+order(1)
 .slider__slogan
 	font-size: 60px
 	+light
 	+r(1230)
 		font-size: 48px
+	+r(1023)
+		font-size: 24px
 .slider__prod
 	position: relative
 	display: inline-block
+	+r(767)
+		display: block
+		text-align: left
 	&.is-brown
 		&:before
 			+g(rgba(#a26c01,.1), rgba(#a26c01, .9))
@@ -76,6 +133,7 @@
 		&:before
 			opacity: 0.6
 			+g(rgba(#248482,.1), rgba(#248482, .9))
+	
 	&:before
 		content: ""
 		position: absolute
@@ -85,23 +143,43 @@
 		height: 260px
 		border-radius: 50% 
 		opacity: 0.7
+		+r(1023)
+			width: 160px
+			height: 160px
+			right: 24px
+		+r(767)
+			display: none
 	img
 		position: relative
 		z-index: 2
+		+r(767)
+			max-height: 120px
 .slider__prev
 	position: absolute
 	left: -70px
 	top: 225px
 	+svg(prev,21,60)
 	+r(1230)
+		left: -45px
+	+r(1100)
 		left: -15px
+	+r(1023)
+		left: -55px
+	+r(767)
+		display: none
 .slider__next
 	position: absolute
 	right: -70px
 	top: 225px
 	+svg(next,21,60)
 	+r(1230)
+		right: -45px
+	+r(1100)
 		right: -15px
+	+r(1023)
+		right: -55px
+	+r(767)
+		display: none
 .banners-wrap
 	position: relative
 	z-index: 3
@@ -110,6 +188,11 @@
 	background: rgba(#fff,.5) 
 	+r(1230)
 		margin-top: -204px
+	+r(1023)
+		margin-top: -260px
+		background: none
+	+r(767)
+		margin-top: 0
 	.row
 		> div
 			position: relative
@@ -122,7 +205,10 @@
 					bottom: 0
 					width: 10px
 					+rotate(-4)
-					box-shadow: 0 0 30px rgba(#000,1) 
+					box-shadow: 0 0 30px rgba(#000,1)
+					+r(1023)
+						display: none
+
 			&:last-child
 				&:before
 					content: ""
@@ -133,6 +219,21 @@
 					width: 10px
 					+rotate(4)
 					box-shadow: 0 0 30px rgba(#000,1) 
+					+r(1023)
+						display: none
+
+	.banner
+		+r(1023)
+			height: 260px
+			img
+				height: 100%
+				width: auto
+		+r(767)
+			width: 100%
+			height: auto  
+			img
+				width: 100%
+				height: auto
 .banner
 	position: relative
 	display: block
@@ -153,10 +254,8 @@
 		left: 30px
 		top: 20px
 	.title_white
-		padding-left: 90px
 		line-height: 1.1
-		+r(1230)
-			padding-left: 65px
+		
 		.cart-circle
 			position: absolute
 			left: 0
@@ -164,9 +263,13 @@
 .banner_shop
 	.title_white	
 		padding-left: 90px
+		+r(1230)
+			padding-left: 65px
 .subscribe
 	padding: 30px 
-	background: $bg  
+	background: $bg 
+	.title
+		white-space: nowrap 
 	&__btn
 		position: absolute
 		right: 0
