@@ -593,7 +593,7 @@ a { text-decoration: none; }
 .breadcrumbs .breadcrumbs__main { border-left: 1px solid #efeeeb; *zoom: 1; }
 .breadcrumbs .breadcrumbs__main:after { content: " "; display: table; clear: both; }
 .breadcrumbs .breadcrumbs__main li { float: left; width: auto; position: relative; }
-.breadcrumbs .breadcrumbs__main li a { display: block; color: black; padding: 0 12px 0 10px; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.breadcrumbs .breadcrumbs__main li a { display: block; color: #b9beb1; padding: 0 12px 0 10px; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .breadcrumbs .breadcrumbs__main li a:after { content: ""; position: absolute; right: 0; top: 0; background: url("../img/svg/arr_outline-r-gray.svg") no-repeat 0 0; -moz-background-size: 10px 40px; -o-background-size: 10px 40px; -webkit-background-size: 10px 40px; background-size: 10px 40px; width: 10px; height: 40px; display: inline-block; }
 .breadcrumbs .breadcrumbs__main li a:hover { color: #009036; }
 .breadcrumbs .breadcrumbs__main li:first-child { width: 50px; text-align: center; }
@@ -601,15 +601,29 @@ a { text-decoration: none; }
 .breadcrumbs .breadcrumbs__main li:first-child a i { position: relative; top: 1px; }
 .breadcrumbs .breadcrumbs__main li:first-child a i:before { -moz-transition: visibility 0.3s; -o-transition: visibility 0.3s; -webkit-transition: visibility 0.3s; transition: visibility 0.3s; content: ""; visibility: hidden; background: url("../img/svg/home-green.svg") no-repeat 0 0; -moz-background-size: 15px 15px; -o-background-size: 15px 15px; -webkit-background-size: 15px 15px; background-size: 15px 15px; width: 15px; height: 15px; display: inline-block; position: absolute; left: 0; }
 .breadcrumbs .breadcrumbs__main li:first-child:hover i:before { visibility: visible; }
+.breadcrumbs .breadcrumbs__main li:last-child a { color: black; }
 
 .encyclopedia { margin-top: 40px; border-bottom: 1px solid white; }
 .encyclopedia .encyclopedia__main { background: #f6f6f4; border-top: 1px solid #efeeeb; }
-.encyclopedia .encyclopedia__in { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; -moz-column-gap: 20px; -webkit-column-gap: 20px; column-gap: 20px; padding: 44px 0 120px; }
+.encyclopedia .encyclopedia__in { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; -moz-column-gap: 20px; -webkit-column-gap: 20px; column-gap: 20px; padding: 52px 0 120px; }
 @media only screen and (max-width: 767px) { .encyclopedia .encyclopedia__in { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; } }
 .encyclopedia .encyclopedia__chapter { margin-bottom: 44px; display: inline-block; width: 100%; }
 .encyclopedia .encyclopedia__chapter li { margin-bottom: 24px; }
 .encyclopedia .encyclopedia__chapter a { color: #009036; font-size: 15px; }
 .encyclopedia .encyclopedia__title { font-size: 24px; margin-bottom: 12px; }
+
+.distrib { margin-top: 40px; }
+.distrib .distrib__main { border-top: 1px solid #b9beb1; background: white; padding-top: 54px; }
+.distrib .distrib__paragraph { font-size: 15px; color: #262626; font-weight: 500; line-height: 1.6em; }
+.distrib .distrib__list { margin-top: 22px; *zoom: 1; }
+.distrib .distrib__list:after { content: " "; display: table; clear: both; }
+.distrib .distrib__list li { width: 25%; float: left; height: 220px; padding: 60px 0 40px; border-bottom: 1px solid #b9beb1; }
+.distrib .distrib__list p { color: #b9beb1; }
+.distrib .link-out { display: block; color: #009036; font-weight: 500; font-size: 16px; margin: 27px 0 5px; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.distrib .link-out:hover { color: #20b019; }
+
+.link-out { position: relative; }
+.link-out:after { content: ""; position: absolute; top: -3px; background: url("../img/svg/link.svg") no-repeat 0 0; -moz-background-size: 10px 10px; -o-background-size: 10px 10px; -webkit-background-size: 10px 10px; background-size: 10px 10px; width: 10px; height: 10px; display: inline-block; }
 
 .icon-star { background: url("../img/svg/star.svg") no-repeat 0 0; -moz-background-size: 8px 9px; -o-background-size: 8px 9px; -webkit-background-size: 8px 9px; background-size: 8px 9px; width: 8px; height: 9px; display: inline-block; }
 
