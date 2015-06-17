@@ -36,18 +36,31 @@
 				display: block
 				color: #000 
 				padding: 0 12px 0 10px
+				+tr(color .3s)
 				&:after
 					content: ''
 					position: absolute
 					right: 0
 					top: 0
 					+svg(arr_outline-r-gray, 10, 40) 
+				&:hover
+					color: $green
 			&:first-child
 				a 
 					padding: 0 10px 0 5px
 					i
 						position: relative
 						top: 1px 
+						&:before
+							+tr(visibility .3s)
+							content: ''
+							visibility: hidden
+							+svg(home-green, 15,15)
+							position: absolute
+							left: 0
+				&:hover
+					i:before
+						visibility: visible 
 				width: 50px
 				text-align: center
 				
@@ -72,6 +85,8 @@
 		
 	.encyclopedia__chapter
 		margin-bottom: 44px 
+		display: inline-block
+		width: 100% 
 		li
 			margin-bottom: 24px
 		a
