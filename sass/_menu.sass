@@ -1,0 +1,41 @@
+.has-open-nav
+	overflow: hidden
+	.menu
+		right: 17px
+.menu
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 217px 20px 0 0
+	z-index: 9
+	background: #018531
+	.has-fixed-header &
+		position: fixed
+		padding-top: 107px
+	a
+		color: #fff
+.menu__in
+	height: 100%
+	overflow-y: auto
+	+scrollbar
+		width: 6px
+		height: 6px
+	+scrollbar-thumb
+		background: rgba(#000,.2)
+.menu__item
+	display: inline-block
+	margin-bottom: 20px
+	padding: 0 30px 
+	width: 100%
+	vertical-align: top
+.menu__title
+	margin-bottom: 10px
+	font-size: 18px
+	+med
+.menu__list
+	font-size: 15px
+	li
+		margin-bottom: 19px
