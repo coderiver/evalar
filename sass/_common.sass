@@ -124,7 +124,9 @@ a
 	color: $black
 	+reg 
 	+r(767)
-		font-size: 22px
+		font-size: 16px
+		margin-bottom: 16px
+		+med
 	&_white
 		color: #fff 
 	&_light
@@ -205,6 +207,9 @@ a
 	border-bottom: 1px solid $border
 	+r(1023)
 		display: block
+	+r(767)
+		border-bottom: 0
+		margin-bottom: 11px
 	&__item
 		display: table-cell
 		vertical-align: top
@@ -212,18 +217,22 @@ a
 			display: block
 		&.has-bg
 			background: $bg 
+			+r(767)
+				background: none
 	.post
 		padding: 42px 40px 36px 0
 		+r(1023)
-			padding: 33px 40px 0 0
+			padding: 33px 40px 20px 0
 	&_long
 		border-bottom: 0
 		.post
 			padding-top: 12px
 			margin-bottom: 60px
-			
 			+r(767)
-				margin-bottom: 40px
+				margin-bottom: 23px
+	&.slick-slider
+		+r(767)
+			padding-bottom: 75px
 	.slick-dots
 		text-align: left
 		bottom: 16px
@@ -239,9 +248,9 @@ a
 .post
 	+clr
 	.date
-		margin-bottom: 10px
+		margin-bottom: 11px
 	.title-link
-		margin: 0 0 10px
+		margin: 0 0 7px
 	.thumbnail
 		float: left
 		margin-right: 20px

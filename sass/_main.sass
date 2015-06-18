@@ -5,6 +5,7 @@
 	margin-top: -1px
 	visibility: hidden
 	+tr(opacity .3s)
+	overflow: hidden
 	> .container
 		position: relative
 		height: 1px
@@ -52,9 +53,11 @@
 	line-height: 1
 	+r(1230)
 		font-size: 48px
-	+r(1023)
-		font-size: 24px
-		margin-bottom: 15px
+		+light
+	+r(767)
+		font-size: 20px
+		+reg
+		margin-bottom: 17px
 		
 .slider__info
 	font-size: 30px
@@ -62,8 +65,10 @@
 	line-height: 1.2
 	+r(1230)
 		font-size: 24px
-	+r(1023)
+	+r(1023)	
+		margin-top: 25px
 		font-size: 16px
+		+med
 		padding-right: 20px
 	+r(767)
 		position: static
@@ -159,6 +164,8 @@
 	left: -70px
 	top: 225px
 	+svg(prev,21,60)
+	+r(1400)
+		left: -20px
 	+r(1230)
 		left: -45px
 	+r(1100)
@@ -172,6 +179,8 @@
 	right: -70px
 	top: 225px
 	+svg(next,21,60)
+	+r(1400)
+		right: -20px
 	+r(1230)
 		right: -45px
 	+r(1100)
@@ -249,13 +258,16 @@
 		font-size: 18px
 		+med
 		color: #fff 
+		+r(767)
+			font-size: 16px
 	.title
 		position: absolute
 		left: 30px
 		top: 20px
+		+r(767)
+			font-size: 20px
 	.title_white
 		line-height: 1.1
-		
 		.cart-circle
 			position: absolute
 			left: 0
@@ -275,10 +287,18 @@
 	background: $bg 
 	+r(1023)
 		min-height: 240px
+	+r(767)
+		margin-bottom: 40px
+		min-height: 1px
+		padding: 22px 30px 50px 
 	.title
 		font-size: 23px
 		+r(1023)
 			white-space: nowrap
+			font-size: 22px
+		+r(767)
+			margin-bottom: 18px
+			font-size: 20px
 	&__btn
 		position: absolute
 		right: 0
@@ -303,7 +323,8 @@
 				left: 0
 				opacity: 0
 				+svg(subscribe-white,14,11)
-
+	.field__title
+		font-size: 13px
 .cart-circle
 	display: inline-block
 	width: 50px
