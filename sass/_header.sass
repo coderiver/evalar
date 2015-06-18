@@ -76,7 +76,7 @@
 		&:hover
 			color: $green_h 
 
-.dropdown
+.location
 	display: inline-block
 	position: relative
 	text-align: left
@@ -105,41 +105,74 @@
 		top: 100%
 		left: 0
 		white-space: nowrap
-	&__touch
-		display: none
-		position: absolute
-		bottom: 0
-		left: 0
-		width: 100%
-		height: 20px
-		opacity: 0
-		-webkit-appearence: none
-.dropdown_location
+.location
 	margin-top: 18px
-.dropdown_lang	
+.lang	
 	float: right
+	position: relative
+	+reg
 	width: 60px
 	cursor: pointer
 	text-align: center
 	+tr(background .2s)
+	background: $green_d 
 	&:hover
 		background: $green_h 
-	.dropdown__val
+		.lang__list
+			will-change: opacity
+	&.is-active
+		.lang__list	
+			opacity: 1
+			visibility: visible
+	&__val
+		position: relative
 		display: inline-block
+		padding-right: 11px
 		color: #fff
 		height: 50px
 		line-height: 50px
 		text-transform: uppercase
 		font-size: 14px 
 		&:after
+			content: "" 
+			position: absolute
+			right: 0
 			+arr(6,3,#fff,b)
 			bottom: auto
 			top: 50%
 			margin-top: -2px
-.mobile
-	.dropdown__touch
-		display: block
-		
+	&__list
+		position: absolute
+		padding: 0
+		visibility: hidden
+		top: 100%
+		left: 0
+		right: 0
+		background: $green
+		+tr(opacity .3s)
+		li
+			position: relative
+			&:first-child
+				&:before
+					display: none
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				height: 1px
+				+gh3(transparent, rgba(#fff,.3), transparent) 
+		a
+			display: block
+			color: #fff
+			height: 50px
+			line-height: 50px
+			text-transform: uppercase
+			font-size: 14px 
+			+tr(background .2s)
+			&:hover
+				background: $green_d 
 .btn-menu
 	position: absolute
 	left: 0

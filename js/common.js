@@ -4,6 +4,9 @@ head.ready(function() {
 		if ($(".js-search").hasClass("is-active")) {
 			$(".js-search").removeClass("is-active");
 		}
+		if ($('.js-toggle-lang').hasClass("is-active")) {
+			$('.js-toggle-lang').removeClass("is-active");
+		}
 		
 	});
 
@@ -104,14 +107,14 @@ head.ready(function() {
 
 	$('.js-toggle-menu').on('click', function() {
 		if ($(this).hasClass("is-active")) {
-			$(".js-menu").hide();
+			$(".js-menu").fadeOut(200);
 			body.removeClass("has-open-nav").css({
 				marginRight: 0
 			});
 			$(this).removeClass("is-active");
 		}
 		else {
-			$(".js-menu").show();
+			$(".js-menu").fadeIn(200);
 			body.toggleClass("has-open-nav").css({
 				marginRight: scrollWidth
 			});
@@ -135,6 +138,22 @@ head.ready(function() {
 
 	$(window).scroll(function() {
 		fixHeader();
+	});
+
+	$(".js-search").on('click', function(event) {
+		event.stopPropagation();
+	});
+
+	$('.js-toggle-lang').on('click', function(event) {
+		$(this).toggleClass("is-active");
+		event.stopPropagation();
+	});
+
+	$('.js-toggle').on('click', function() {
+		var el = $(this).attr("data-toggle");
+		$("."+el).toggleClass("is-active");
+		$(this).toggleClass("is-active");
+		return false;
 	});
 	
 
