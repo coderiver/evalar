@@ -5,59 +5,66 @@
 	.distrib__main
 		border-top: 1px solid #b9beb1
 		background: #fff 
-		padding-top: 54px 
+		padding: 54px 0 50px 
 	.distrib__paragraph
 		font-size: 15px
 		color: #262626 
 		+med
 		line-height: 1.6em 
+		+r(767)
+			line-height: 1.7em 
 	.distrib__list
-		margin-top: 22px 
+		margin-top: 30px 
+		position: relative
+		font-size: 0
 		+clr
+		+r(767)
+			margin-top: 0
 		.distrib__item
 			width: 25%
-			float: left 
-			height: 220px
-			padding: 60px 0 40px
+			display: inline-block
+			vertical-align: top
 			position: relative
-			border-top: 0px
-			&:nth-child(n+4)~li
-				border-top: 1px solid #b9beb1
+			height: 220px 
+			border-bottom: 1px solid #b9beb1
 			+r(1022)
 				width: 33.333% 
-				&:nth-child(n+3)~li
-					border-top: 1px solid #b9beb1
-				
-			+r(676)
+			+r(767)
 				width: 100% 
-				border-bottom: 0px
+				border-bottom: 0px 
 				height: 180px 
 			p
 				color: #b9beb1
-			img
-				position: absolute
-			a
-				margin-top: 80px 
-			// &:nth-last-child(n+2)
-			// 	border-bottom: 0px
+				font-size: 12px
+		&:after
+			content: ''
+			width: 100%
+			height: 1px
+			position: absolute
+			bottom: 0px 
+			background: #fff   
+		.distrib__img
+			height: 60px 
+			margin-top: 50px 
 
 	.link-out
 		display: block
 		color: $green
 		+med
 		font-size: 16px 
-		margin: 27px 0 5px
+		margin: 22px 0 8px
 		+tr(color .3s)
 		&:hover
 			color: $green_h
 		
-
-	
-
 .link-out
 	position: relative
 	&:after
 		content: ''
 		position: absolute
 		top: -3px
+		margin-left: 3px 
 		+svg(link,10,10)
+
+	
+
