@@ -14,7 +14,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<div class="header">
+	<div class="header js-header">
 		<div class="header__top">
 			<div class="container">	
 				<div class="row no-padding">
@@ -55,7 +55,7 @@
 			<div class="header__main">
 				<div class="row  no-padding">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
-						<button class="btn-menu" type="button"><i></i></button>
+						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
 						<ul class="nav">
 							<li class="nav__item">
 								<a href="#" class="nav__link hidden-sm hidden-xs">О компании</a>
@@ -73,10 +73,15 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-5 col-lg-offset-2 col-md-offset-2">
 						
-						<div class="search">
-							<input class="search__input" type="text" placeholder="Поиск">
-							<button class="search__btn" type="button">
-								<i class="icon-search"></i>
+						<div class="search js-search">
+							<form>
+								<input class="search__input" type="text" placeholder="Поиск">
+								<button class="search__btn" type="submit">
+									<i class="icon-search"></i>
+								</button>
+							</form>
+							<button class="search__toggle js-toggle-search" type="button">
+								<i class="icon-search-white"></i>
 							</button>
 						</div>
 						<!-- <a href="#" class="shop">
@@ -96,6 +101,74 @@
 							</select>
 						</div>
 						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu js-menu">
+		<div class="menu__in">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="menu__item">	
+							<div class="menu__title"><a href="#">О компании</a></div>
+							<ul class="menu__list">	
+								<li><a href="#">История</a></li>
+								<li><a href="#">10 причин для  доверия </a></li>
+								<li><a href="#">Эвалар в мире</a></li>
+								<li><a href="#">Качество Эвалар</a></li>
+								<li><a href="#">Аптечная сеть</a></li>
+								<li><a href="#">Социальная ответственность</a></li>
+								<li><a href="#">Алтай</a></li>
+							</ul>
+						</div>
+						<div class="menu__item">
+							<div class="menu__title"><a href="#">Где купить</a></div>
+							<ul class="menu__list">	
+								<li><a href="#">Аптеки в Вашем городе</a></li>
+								<li><a href="#">Аптечная сеть Эвалар</a></li>
+								<li><a href="#">Заказ на сайте </a></li>
+							</ul>
+						</div>
+						<div class="menu__item">
+							<div class="menu__title"><a href="#">Партнёрам</a></div>
+							<ul class="menu__list">	
+								<li><a href="#">Дистрибьюторам</a></li>
+								<li><a href="#">Поставщикам</a></li>
+								<li><a href="#">Аптекам</a></li>
+								<li><a href="#">Специалистам</a></li>
+								<li><a href="#">Франшиза Эвалар</a></li>
+								<li><a href="#">Контрактное производство, </a></li>
+								<li><a href="#">Документы Эвалар</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="menu__item">
+							<div class="menu__title"><a href="#">Карьера</a></div>
+							<ul class="menu__list">	
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Разместить резюме</a></li>
+								<li><a href="#">Студентам  и выпускникам</a></li>
+								<li><a href="#">Для профессионалов</a></li>
+								<li><a href="#">Истории успеха</a></li>
+								<li><a href="#">Отделы компании</a></li>
+								<li><a href="#">Ваша карьера в Эвалар</a></li>
+								<li><a href="#">Фото офиса</a></li>
+								<li><a href="#">Вопросы и ответы</a></li>
+							</ul>
+						</div>
+						<div class="menu__item">	
+							<div class="menu__title"><a href="#">Продукция</a></div>
+							<div class="menu__title"><a href="#">Новости</a></div>
+							<div class="menu__title"><a href="#">Акции</a></div>
+							<div class="menu__title"><a href="#">Энциклопедия трав</a></div>
+							<div class="menu__title"><a href="#">Вопросы и ответы</a></div>
+							<div class="menu__title"><a href="#">ГИД по БАДам</a></div>
+							<div class="menu__title"><a href="#">Образ жизни</a></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -299,7 +372,6 @@
 				</div>
 			</div>
 		</div>
-		
 	</div>
 	<div class="banners-wrap">
 		<div class="container">

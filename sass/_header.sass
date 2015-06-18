@@ -1,6 +1,14 @@
+.has-fixed-header
+	.header
+		> .container
+			position: fixed
+			top: 0
+			left: 50%
+			width: 1230px
+			+transform(translateX(-50%))
 .header
 	position: relative
-	z-index: 5
+	z-index: 10
 	.container
 		position: relative
 	&__top
@@ -141,8 +149,17 @@
 	background: none 
 	font-size: 0
 	+tr(background .2s)
-	&:hover
+	&:hover,
+	&.is-active
 		background: $green_h 
+	&.is-active
+		i
+			background: none
+			+transform(translateX(4px))
+			&:before
+				+transform(rotateZ(45deg))
+			&:after
+				+transform(rotateZ(-45deg))
 	i
 		display: inline-block
 		vertical-align: middle
@@ -150,6 +167,7 @@
 		height: 2px
 		width: 20px
 		background: #fff
+		+tr(transform .2s)
 		&:before,
 		&:after
 			content: "" 
@@ -158,6 +176,8 @@
 			height: 2px
 			width: 20px
 			background: #fff 
+			+tr(transform .2s)
+			+transform-origin(left)
 		&:before
 			top: -7px
 		&:after
@@ -205,6 +225,11 @@
 		width: 50px
 		right: 0
 		left: auto
+	&.is-active
+		.search__input
+			display: block
+		.search__toggle
+			background: $green_h 
 .search__input
 	display: block
 	padding: 0 40px 0 10px 
@@ -219,7 +244,8 @@
 		top: 0
 		left: auto
 		right: 100%
-		width: 170px
+		padding-right: 10px
+		width: 260px
 		display: none
 	+placeholder
 		color: #a3a3a3 
@@ -235,17 +261,22 @@
 	font-size: 0
 	+tr(background .2s)
 	+r(767)
-		top: -10px
-		background: $green
-		width: 50px
-		height: 50px 
-		&:hover
-			background: $green_h 
+		visibility: hidden
 	i.icon-search
 		vertical-align: middle
 		+r(767)
 			+svgi(search-white,16,16)
-
+.search__toggle
+	display: none
+	position: absolute
+	top: -10px
+	background: $green
+	width: 50px
+	height: 50px 
+	&:hover
+		background: $green_h 
+	+r(767)
+		display: block
 .shop
 	position: relative
 	z-index: 2
@@ -296,3 +327,4 @@
 			display: inline-block 
 			vertical-align: middle
 			+svg(caret-r,4,8)
+
