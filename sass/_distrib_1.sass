@@ -14,14 +14,33 @@
 	.distrib__list
 		margin-top: 22px 
 		+clr
-		li
+		.distrib__item
 			width: 25%
 			float: left 
 			height: 220px
 			padding: 60px 0 40px
-			border-bottom: 1px solid #b9beb1
-		p
-			color: #b9beb1
+			position: relative
+			border-top: 0px
+			&:nth-child(n+4)~li
+				border-top: 1px solid #b9beb1
+			+r(1022)
+				width: 33.333% 
+				&:nth-child(n+3)~li
+					border-top: 1px solid #b9beb1
+				
+			+r(676)
+				width: 100% 
+				border-bottom: 0px
+				height: 180px 
+			p
+				color: #b9beb1
+			img
+				position: absolute
+			a
+				margin-top: 80px 
+			// &:nth-last-child(n+2)
+			// 	border-bottom: 0px
+
 	.link-out
 		display: block
 		color: $green
