@@ -6,16 +6,21 @@
 	line-height: 0
 	.page-head__title
 		font-size: 60px 
-		// position: absolute
-		// top: 50%
 		color: #fff 
 		+light
+		+r(1230)
+			font-size: 40px 
+		+r(767)
+			font-size: 20px
+			+reg
 	.page-head__info
 		position: absolute
 		top: 55% 
 		left: 0
 		right: 0 
-	.page-head__wrap
+	.page-head__img
+		img
+			width: 100% 
 
 .icon-home
 	+svg(home, 15,15)
@@ -78,16 +83,16 @@
 		+column-gap(20px)
 		padding: 52px 0 120px
 		// margin-top: 44px 
+		+r(1022)
+			+column-count(3)
 		+r(767)
 			+column-count(1)
-		// +r(380)
-			// +column-count(2)
 
 
 
 		
 	.encyclopedia__chapter
-		margin-bottom: 44px 
+		margin-bottom: 25px 
 		display: inline-block
 		width: 100% 
 		li
