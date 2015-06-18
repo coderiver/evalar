@@ -89,17 +89,19 @@
 			+column-count(1)
 
 
-
-		
 	.encyclopedia__chapter
 		margin-bottom: 25px 
-		display: inline-block
+		// display: inline-block
+		vertical-align: top
 		width: 100% 
 		li
-			margin-bottom: 24px
+			padding-bottom: 24px
 		a
 			color: $green 
 			font-size: 15px 
+			+tr(color .3s)
+			&:hover
+				color: $green_h
 	.encyclopedia__title
 		font-size: 24px 
 		// margin-top: 44px
