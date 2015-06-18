@@ -14,7 +14,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<div class="header">
+	<div class="header js-header">
 		<div class="header__top">
 			<div class="container">	
 				<div class="row no-padding">
@@ -39,10 +39,10 @@
 						</div>
 					</div>
 					<div class="col-lg-2 col-md-3 col-sm-4 text-right hidden-xs">
-						<div class="dropdown dropdown_location">
-							<div class="dropdown__title">Ваш регион</div>
-							<span class="dropdown__val">Санкт-Петербург</span>
-							<ul class="dropdown__list">
+						<div class="location">
+							<div class="location__title">Ваш регион</div>
+							<span class="location__val">Санкт-Петербург</span>
+							<ul class="location__list">
 								<li><a href="#">Санкт-Петербург</a></li>
 								<li><a href="#">Москва</a></li>
 							</ul>
@@ -55,7 +55,7 @@
 			<div class="header__main">
 				<div class="row  no-padding">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
-						<button class="btn-menu" type="button"><i></i></button>
+						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
 						<ul class="nav">
 							<li class="nav__item">
 								<a href="#" class="nav__link hidden-sm hidden-xs">О компании</a>
@@ -73,10 +73,15 @@
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-5 col-lg-offset-2 col-md-offset-2">
 						
-						<div class="search">
-							<input class="search__input" type="text" placeholder="Поиск">
-							<button class="search__btn" type="button">
-								<i class="icon-search"></i>
+						<div class="search js-search">
+							<form>
+								<input class="search__input" type="text" placeholder="Поиск">
+								<button class="search__btn" type="submit">
+									<i class="icon-search"></i>
+								</button>
+							</form>
+							<button class="search__toggle js-toggle-search" type="button">
+								<i class="icon-search-white"></i>
 							</button>
 						</div>
 						<!-- <a href="#" class="shop">
@@ -84,16 +89,12 @@
 							Интернет-магазин «Эвалар»
 							<i class="shop__arr"></i>
 						</a> -->
-						<div class="dropdown dropdown_lang hidden-xs">
-							<span class="dropdown__val">RU</span>
-							<ul class="dropdown__list">
-								<li><a href="#">RU</a></li>
+						<div class="lang js-toggle-lang hidden-xs">
+							<span class="lang__val">RU</span>
+							<ul class="lang__list">
 								<li><a href="#">EN</a></li>
+								<li><a href="#">DE</a></li>
 							</ul>
-							<select class="dropdown__touch">
-								<option value="RU">RU</option>
-								<option value="EN">EN</option>
-							</select>
 						</div>
 						
 					</div>
