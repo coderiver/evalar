@@ -267,20 +267,28 @@ a
 		width: 100%
 		height: auto
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn
+	display: inline-block
+	padding: 18px
+	font-size: 14px
+	+font
+	+black
+	color: #fff
+	background: $green 
+	line-height: 1
+	+tr(background .3s)
+	letter-spacing: 1px 
+	text-transform: uppercase
+	&:hover
+		background: $green_h 
+	&.is-width
+		display: block
+		width: 100%
+		text-align: center
+	&_gray
+		background: #b8b8b6
+		&:hover
+			background: darken(#b8b8b6, 5%)
 
 
 

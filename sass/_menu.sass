@@ -1,7 +1,9 @@
-.has-open-nav
+.desktop
+	.no-scroll
+		.menu
+			right: 17px
+.no-scroll
 	overflow: hidden
-	.menu
-		right: 17px
 .menu
 	display: none
 	position: absolute
@@ -34,14 +36,16 @@
 			color: $black 
 			&:hover
 				color: $green 
+.desktop
+	.menu__in
+		+scrollbar
+			width: 6px
+			height: 6px
+		+scrollbar-thumb
+			background: rgba(#000,.2)
 .menu__in
 	height: 100%
 	overflow-y: auto
-	+scrollbar
-		width: 6px
-		height: 6px
-	+scrollbar-thumb
-		background: rgba(#000,.2)
 .menu__item
 	margin-bottom: 46px
 	padding: 0 30px 
@@ -87,3 +91,4 @@
 		display: inline-block
 		+r(767)
 			padding: 3px 0 
+

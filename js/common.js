@@ -1,5 +1,6 @@
 head.ready(function() {
-
+	var header = $(".js-header");
+	var body = $("body");
 	$(document).on("click", function(){
 		if ($(".js-search").hasClass("is-active")) {
 			$(".js-search").removeClass("is-active");
@@ -7,8 +8,17 @@ head.ready(function() {
 		if ($('.js-toggle-lang').hasClass("is-active")) {
 			$('.js-toggle-lang').removeClass("is-active");
 		}
+
+		if ($('.js-popup').hasClass("is-active")) {
+			$('.js-popup').removeClass("is-active");
+			body.removeClass("no-scroll").css({
+				marginRight: 0
+			});
+		}
 		
 	});
+
+	
 
 // get scroll width;
 	var scrollWidth;
@@ -34,16 +44,27 @@ head.ready(function() {
 	  if (w1 == w2) w2 = outer.clientWidth;
 
 	  document.body.removeChild (outer);
-	  scrollWidth = w1 - w2;
+	  if ($("html").hasClass("desktop")) {
+	  	scrollWidth = w1 - w2;
+	  }
+	  else {
+	  	scrollWidth = 0;
+	  }
+	  
 	  return scrollWidth;
 
 	}
 	getScrollBarWidth();
 
+	if ($("html").hasClass("desktop")) {
+		if (body.hasClass("no-scroll")) {
+			body.css({
+				marginRight: scrollWidth
+			});
+		}
+	}
 
-
-	var header = $(".js-header");
-	var body = $("body");
+	
 
 	document.createElement( "picture" );
 	var config = {
@@ -108,14 +129,14 @@ head.ready(function() {
 	$('.js-toggle-menu').on('click', function() {
 		if ($(this).hasClass("is-active")) {
 			$(".js-menu").fadeOut(200);
-			body.removeClass("has-open-nav").css({
+			body.removeClass("no-scroll").css({
 				marginRight: 0
 			});
 			$(this).removeClass("is-active");
 		}
 		else {
 			$(".js-menu").fadeIn(200);
-			body.toggleClass("has-open-nav").css({
+			body.toggleClass("no-scroll").css({
 				marginRight: scrollWidth
 			});
 			$(this).addClass("is-active");
@@ -155,7 +176,36 @@ head.ready(function() {
 		$(this).toggleClass("is-active");
 		return false;
 	});
+
+	$(".js-show-popup").on("click", function(event){
+		var popup = $(this).attr("data-popup");
+		$(".js-popup").fadeOut();
+		$("."+popup).addClass("is-active").fadeIn();
+		body.addClass("no-scroll").css({
+				marginRight: scrollWidth
+			});
+		event.stopPropagation();
+		return false;
+	});
 	
+	$(".js-popup").on("click", function(){
+		$(this).fadeOut().removeClass("is-active");
+		body.removeClass("no-scroll").css({
+			marginRight: 0
+		});
+	});
+	$(".js-close-popup").on("click", function(){
+		$(this).parents(".js-popup").fadeOut().removeClass("is-active");
+		body.removeClass("no-scroll").css({
+				marginRight: 0
+			});
+		return false;
+	});
+
+
+	$(".js-popup-in").on("click", function(event){
+		event.stopPropagation();
+	});
 
 
 

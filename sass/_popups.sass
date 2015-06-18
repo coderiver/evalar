@@ -1,0 +1,122 @@
+.has-fixed-header
+	.popup__main
+		margin-top: 50px
+.popup
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 11
+	background: rgba(#000,.5)
+	+vertical
+	&:before
+		+r(767)
+			display: none
+	&__main
+		border: 1px solid #e2e0dc
+		width: 715px
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+		background: #f5f5f3 
+		+r(767)
+			width: 320px
+			margin: 60px auto 0
+			display: block
+	&__head
+		position: relative
+		padding: 29px 75px 29px 30px
+		background: #e9e9e7
+		text-align: left
+		+r(767)
+			padding: 24px 20px 24px
+	&__title
+		font-size: 18px
+		+light
+		strong
+			+bold
+		+r(767)
+			font-size: 16px
+	&__close
+		position: absolute
+		right: 0
+		top: 0
+		width: 83px
+		height: 83px
+		font-size: 0
+		background: none
+		+tr(background .2s)
+		+r(767)
+			right: auto
+			left: -1px
+			top: -51px
+			width: 50px
+			height: 50px
+			background: #d1d1cf 
+		&:hover
+			background: #d1d1cf 
+			+r(767)
+				background: lighten(#d1d1cf, 5%) 
+		i
+			vertical-align: middle
+	&__body
+		max-height: 56vh
+		overflow-y: auto
+		font-size: 15px
+		+r(767)
+			max-height: 72vh
+		+rh(480)
+			max-height: 65vh
+	&__in
+		padding: 33px 30px 
+		+r(767)
+			padding: 24px 19px 
+	.btn
+		+r(767)
+			margin-bottom: 24px
+	.row
+		> div
+			&:last-child
+				.btn
+					margin-bottom: 0
+.desktop
+	.popup__body
+		+scrollbar
+			width: 10px
+			height: 10px
+			background: #dcdcda 
+		+scrollbar-thumb
+			background: #c6c6c4
+.city-list
+	position: relative
+	margin-top: 45px
+	padding-left: 68px
+	+r(767)
+		padding-left: 0
+		margin-top: 40px
+	&:first-child
+		margin-top: 0
+	&__letter
+		position: absolute
+		left: 0
+		top: 0
+		font-size: 42px
+		line-height: 1.1
+		+black
+		color: #b8b8b6 
+		+r(767)
+			margin-bottom: 13px
+			position: static
+	&__main
+		font-size: 15px
+		li
+			margin-bottom: 15px
+		a
+			display: inline-block
+			padding: 5px 0 
+			color: $black 
+			+tr(color .3s)
+			&:hover
+				color: $green 
