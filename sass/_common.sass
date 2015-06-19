@@ -237,7 +237,10 @@ a
 			&:after
 				display: block
 
-
+.posts-group
+	.posts-wrap
+		&:last-child
+			border-bottom: 0
 .posts-wrap
 	display: table
 	table-layout: fixed
@@ -263,6 +266,10 @@ a
 		padding: 42px 40px 36px 0
 		+r(1023)
 			padding: 33px 40px 20px 0
+		&__img
+			margin-bottom: 12px
+		.title-link_big
+			margin-bottom: 13px
 	&_long
 		border-bottom: 0
 		.post
@@ -300,6 +307,15 @@ a
 		margin: 25px 0 0 
 	&__main
 		overflow: hidden
+	&__img
+		img
+			max-width: 100%
+			height: auto
+			+tr(opacity .2s)
+			+gpu
+			background: $green_h 
+			&:hover
+				opacity: 0.9
 .post_main
 	.post__img
 		margin-right: -20px
@@ -308,6 +324,7 @@ a
 			width: 100%
 	.post__body
 		padding: 0 20px 
+		
 .thumbnail
 	width: 100px
 	display: block
@@ -320,10 +337,22 @@ a
 	font-size: 12px
 	+reg
 	a
+		
 		color: $green
 		+tr(color .2s)
 		&:hover
 			color: $green_h 
+	span
+		display: inline-block
+		margin-left: 2px
+		padding-left: 8px
+		position: relative
+		color: $green_l 
+		&:before
+			content: "/"
+			position: absolute
+			left: 0 
+			top: 0
 .btn
 	display: inline-block
 	padding: 18px
@@ -374,8 +403,83 @@ a.btn-action
 
 
 
-
-
+.pager
+	overflow: hidden
+	position: relative
+	text-align: center
+	font-size: 0
+	&__main
+		position: absolute
+		left: 40px
+		right: 40px
+		top: 0
+	&__prev
+		float: left
+		&:before
+			+svg(caret-l-green,7,16)
+		&.is-inactive
+			&:before
+				+svg(caret-l-gray,7,16)
+	&__next
+		float: right
+		&:before
+			+svg(caret-r-green,7,16)
+		&.is-inactive
+			&:before
+				+svg(caret-r-gray,7,16)
+		
+	&__prev,
+	&__next
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border-radius: 50% 
+		border: 1px solid $border
+		+tr(border .3s)
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+		&:hover
+			border-color: $green
+		&.is-inactive
+			pointer-events: none
+	&__link
+		display: inline-block
+		position: relative
+		margin: 0 5px 
+		vertical-align: middle
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border-radius: 50% 
+		color: $green_l
+		font-size: 13px 
+		+tr(color .2s)
+		&:hover
+			color: $green 
+		&.is-active
+			color: #fff
+			background: $green  
+		&:first-child
+			&:before
+				content: ""
+				position: absolute
+				left: -265px 
+				width: 260px
+				top: 50%
+				height: 1px
+				background: $border 
+		
+		&:last-child
+			&:before
+				content: ""
+				position: absolute
+				right: -265px 
+				width: 260px
+				top: 50%
+				height: 1px
+				background: $border 
 
 
 
