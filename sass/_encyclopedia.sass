@@ -1,96 +1,18 @@
-// encyclopedia_2.html styles
-.page-head
-	position: relative
-	overflow: hidden 
-	font-size: 0
-	line-height: 0
-	.page-head__title
-		font-size: 60px 
-		color: #fff 
-		+light
-		+r(1230)
-			font-size: 40px 
-		+r(767)
-			font-size: 32px
-			+reg
-	.page-head__info
-		position: absolute
-		top: 57% 
-		left: 0
-		right: 0 
-	.page-head__img
-		img
-			width: 100%
-			+r(1600)
-				width: auto 
-		
-.icon-home
-	+svg(home, 15,15)
+// abc_2.html styles
 
-.breadcrumbs
-	border-bottom: 1px solid #efeeeb 
-	height: 40px 
-	line-height: 40px 
-	.breadcrumbs__main
-		border-left: 1px solid #efeeeb 
-		+clr
-		li
-			float: left
-			width: auto
-			position: relative 
-			a
-				display: block
-				color: #b9beb1 
-				padding: 0 12px 0 10px
-				+tr(color .3s)
-				&:after
-					content: ''
-					position: absolute
-					right: 0
-					top: 0
-					+svg(arr_outline-r-gray, 10, 40) 
-				&:hover
-					color: $green
-			&:first-child
-				a 
-					padding: 0 10px 0 5px
-					i
-						position: relative
-						top: 1px 
-						&:before
-							+tr(visibility .3s)
-							content: ''
-							visibility: hidden
-							+svg(home-green, 15,15)
-							position: absolute
-							left: 0
-				&:hover
-					i:before
-						visibility: visible 
-				width: 50px
-				text-align: center
-			&:last-child
-				a
-					color: #000 
 				
-.encyclopedia
-	margin-top: 40px
-	border-bottom: 1px solid #fff
-	.encyclopedia__main
+.abc
+	+column-count(4)
+	+column-gap(20px)
+	padding: 52px 0 120px
+	// margin-top: 44px 
+	+r(1022)
+		+column-count(3)
+	+r(767)
+		+column-count(1)
+	.abc__main
 		background: #f6f6f4 
-		border-top: 1px solid #efeeeb 
-	.encyclopedia__in
-		+column-count(4)
-		+column-gap(20px)
-		padding: 52px 0 120px
-		// margin-top: 44px 
-		+r(1022)
-			+column-count(3)
-		+r(767)
-			+column-count(1)
-
-
-	.encyclopedia__chapter
+	.abc__chapter
 		margin-bottom: 25px 
 		// display: inline-block
 		vertical-align: top
@@ -103,7 +25,7 @@
 			+tr(color .3s)
 			&:hover
 				color: $green_h
-	.encyclopedia__title
+	.abc__title
 		font-size: 24px 
 		// margin-top: 44px
 		margin-bottom: 12px 

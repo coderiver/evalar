@@ -1,0 +1,82 @@
+.page-head
+	position: relative
+	overflow: hidden 
+	font-size: 0
+	line-height: 0
+	.page-head__title
+		font-size: 60px 
+		color: #fff 
+		+light
+		+r(1230)
+			font-size: 40px 
+		+r(767)
+			font-size: 32px
+			+reg
+	.page-head__info
+		position: absolute
+		top: 57% 
+		left: 0
+		right: 0 
+	.page-head__img
+		img
+			width: 100%
+			+r(1600)
+				width: auto 
+		
+.icon-home
+	+svg(home, 15,15)
+
+.breadcrumbs
+	border-bottom: 1px solid $border 
+	height: 40px 
+	line-height: 40px 
+	+ .tabs-wrap
+		margin-top: 40px
+	.breadcrumbs__main
+		border-left: 1px solid $border 
+		+clr
+		li
+			float: left
+			position: relative 
+			&:first-child
+				width: 50px
+				text-align: center
+				&:hover
+					i:before
+						visibility: visible 
+				a 
+					padding: 0 10px 0 5px
+					i
+						position: relative
+						top: 1px 
+						&:before
+							+tr(visibility .3s)
+							content: ''
+							visibility: hidden
+							+svg(home-green, 15,15)
+							position: absolute
+							left: 0
+			&:last-child
+				a
+					color: #000 
+			a
+				display: block
+				color: #b9beb1 
+				padding: 0 12px 0 10px
+				+tr(color .2s)
+				&:after
+					content: ''
+					position: absolute
+					right: 0
+					top: 0
+					+svg(arr_outline-r-gray, 10, 40) 
+				&:hover
+					color: $green
+			
+.page-body
+	background: #fff 
+	padding: 52px 0 50px 
+	&_gray
+		background: $bg 
+.page-text
+	margin-bottom: 40px

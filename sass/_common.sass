@@ -69,7 +69,8 @@ $black: #262626
 $violet: #7a254f
 $light: #a8ae9d
 $bg: #f6f6f4
-$border: #ecebe7
+$border_d: #ecebe7
+$border: #efeeeb
 html
 	+selection
 		background: rgba($green, 1)
@@ -80,7 +81,13 @@ body
 	font-size: 12px
 	line-height: 1.4
 	color: $black 
-
+.desktop
+	.no-scroll
+		.menu
+			right: 17px
+.no-scroll
+	overflow: hidden
+	-webkit-overflow-scrolling: auto
 a
 	text-decoration: none
 // common blocks      
@@ -94,6 +101,10 @@ a
 		color: $green
 		&:hover
 			color: $green_h 
+.title-link_big
+	font-size: 18px
+	+r(767)
+		font-size: 16px
 .text
 	color: $black
 	font-size: 13px
@@ -110,6 +121,11 @@ a
 		color: $green_l
 		&:hover
 			color: $green 
+.text_big
+	font-size: 15px
+	line-height: 1.7
+	+r(767)
+		font-size: 14px
 .date
 	display: inline-block
 	padding: 4px 8px 
@@ -165,9 +181,15 @@ a
 		padding: 11px
 		min-height: 110px
 		resize: none 
-
+.tabs-wrap
+	border-bottom: 1px solid $border 
 .tabs
 	font-size: 0
+	padding-bottom: 15px
+	margin-bottom: -15px
+	overflow-x: auto
+	overflow-y: hidden
+	white-space: nowrap
 	&__item
 		display: inline-block
 		margin-right: 27px
@@ -204,7 +226,7 @@ a
 	width: 100%
 	margin-bottom: 30px
 	overflow: hidden
-	border-bottom: 1px solid $border
+	border-bottom: 1px solid $border_d
 	+r(1023)
 		display: block
 	+r(767)
