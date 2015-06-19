@@ -228,21 +228,23 @@
 		font-size: 14px
 		+black
 		text-transform: uppercase
+		+tr(background .2s)
 		+r(1023)
 			font-size: 12px
 		&:last-child
 			+r(1230)
 				display: none
+		&.is-active,
+		&:hover
+			background: $green_h 
 	&__link
 		display: block
 		padding: 0 20px 
 		letter-spacing: .15px 
 		color: #fff
-		+tr(background .2s)
 		+r(1230)
 			padding: 0 18px 
-		&:hover
-			background: $green_h 
+		
 
 .search,
 .shop
