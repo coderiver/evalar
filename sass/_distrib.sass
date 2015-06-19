@@ -94,3 +94,35 @@
 			padding: 0
 	.title-link
 		margin-bottom: 13px
+		
+.icon-file
+	+svg(file,22,29)
+
+.file-wrap
+	font-size: 0
+	li
+		display: inline-block
+
+.file
+	font-size: 0
+	.file__dwnld, .file__info
+		display: inline-block
+		vertical-align: top
+		+r(767)
+			margin-bottom: 40px  
+	.file__dwnld
+		position: relative
+		font-size: 0
+		margin-right: 16px 
+	.file__type
+		position: absolute
+		bottom: 0
+		left: 4px 
+		+bold
+	.title-link
+		margin-bottom: 5px 
+.text_small
+	font-size: 8px
+	
+.page-body_gray
+	border-bottom: 1px solid #fff
