@@ -208,7 +208,6 @@ head.ready(function() {
 	});
 
 
-<<<<<<< HEAD
 	$(".js-select select").on("change", function(event){
 		var val = $(this).val();
 		$(this).parents(".js-select").find(".input").val(val);
@@ -241,12 +240,10 @@ head.ready(function() {
 		return false;
 
 	});
-=======
 $('.scroll-pane').jScrollPane({
 	// verticalGutter: 30
 	// showArrows: true
 });
->>>>>>> d7db73ecee1aeb7c0b3d2582710e5631f954b3e4
 
 	
 });
