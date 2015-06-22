@@ -240,10 +240,10 @@ head.ready(function() {
 		return false;
 
 	});
-$('.scroll-pane').jScrollPane({
-	// verticalGutter: 30
-	// showArrows: true
-});
+	$()
+	if($('.scroll-pane').length) {
+		$('.scroll-pane').jScrollPane()
+	}
 
 	
 });
