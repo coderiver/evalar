@@ -105,6 +105,12 @@ a
 	font-size: 18px
 	+r(767)
 		font-size: 16px
+.title-link_large
+	font-size: 24px
+	+reg
+	line-height: 1.6
+	+r(767)
+		font-size: 16px
 .text
 	color: $black
 	font-size: 13px
@@ -126,9 +132,13 @@ a
 	line-height: 1.7
 	+r(767)
 		font-size: 14px
+.text_med
+	font-size: 16px
+	+med
+	line-height: 1.6
 .date
 	display: inline-block
-	padding: 4px 8px 
+	padding: 7px 8px 
 	background: #ecebe7
 	font-size: 12px
 	line-height: 1
@@ -147,12 +157,20 @@ a
 		color: #fff 
 	&_light
 		color: $green_l 
+.title-small
+	margin-bottom: 21px
+	font-size: 18px
+	+med
+	color: $black 
+	+r(767)
+		font-size: 16px
+		line-height: 1.6
 .field
 	display: block
-	margin-bottom: 11px
+	margin-bottom: 12px
 	&__title
 		display: block
-		margin-bottom: 6px
+		margin-bottom: 2px
 		position: relative
 		font-size: 12px
 		color: $light
@@ -219,7 +237,10 @@ a
 			&:after
 				display: block
 
-
+.posts-group
+	.posts-wrap
+		&:last-child
+			border-bottom: 0
 .posts-wrap
 	display: table
 	table-layout: fixed
@@ -245,6 +266,10 @@ a
 		padding: 42px 40px 36px 0
 		+r(1023)
 			padding: 33px 40px 20px 0
+		&__img
+			margin-bottom: 12px
+		.title-link_big
+			margin-bottom: 13px
 	&_long
 		border-bottom: 0
 		.post
@@ -278,8 +303,28 @@ a
 		margin-right: 20px
 		+r(767)
 			display: none 
+	.links
+		margin: 25px 0 0 
 	&__main
 		overflow: hidden
+	&__img
+		img
+			max-width: 100%
+			height: auto
+			+tr(opacity .2s)
+			+gpu
+			background: $green_h 
+			&:hover
+				opacity: 0.9
+.post_main
+	.post__img
+		margin-right: -20px
+		img
+			display: block
+			width: 100%
+	.post__body
+		padding: 0 20px 
+		
 .thumbnail
 	width: 100px
 	display: block
@@ -288,7 +333,26 @@ a
 		display: block
 		width: 100%
 		height: auto
-
+.links
+	font-size: 12px
+	+reg
+	a
+		
+		color: $green
+		+tr(color .2s)
+		&:hover
+			color: $green_h 
+	span
+		display: inline-block
+		margin-left: 2px
+		padding-left: 8px
+		position: relative
+		color: $green_l 
+		&:before
+			content: "/"
+			position: absolute
+			left: 0 
+			top: 0
 .btn
 	display: inline-block
 	padding: 18px
@@ -312,18 +376,110 @@ a
 		&:hover
 			background: darken(#b8b8b6, 5%)
 
+.btn-action-wrap
+	margin-top: 40px
+	+r(767)
+		margin-top: 30px
+.btn-action
+	display: inline-block
+	border: 1px solid #a7af9a
+	padding: 0 19px 0 13px
+	height: 40px
+	color: #a7ae9c
+	background: none
+	line-height: 1
+	font-size: 16px
+	+font
+	+med
+	+tr(color .2s)
+	border-radius: 20px 
+	&:hover
+		color: #8d9186 
+	i
+		vertical-align: middle
+		margin-right: 8px
+a.btn-action
+	line-height: 40px
 
 
 
-
-
-
-
-
-
-
-
-
+.pager
+	overflow: hidden
+	position: relative
+	text-align: center
+	font-size: 0
+	&__main
+		position: absolute
+		left: 40px
+		right: 40px
+		top: 0
+	&__prev
+		float: left
+		&:before
+			+svg(caret-l-green,7,16)
+		&.is-inactive
+			&:before
+				+svg(caret-l-gray,7,16)
+	&__next
+		float: right
+		&:before
+			+svg(caret-r-green,7,16)
+		&.is-inactive
+			&:before
+				+svg(caret-r-gray,7,16)
+		
+	&__prev,
+	&__next
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border-radius: 50% 
+		border: 1px solid $border
+		+tr(border .3s)
+		&:before
+			content: ""
+			display: inline-block
+			vertical-align: middle
+		&:hover
+			border-color: $green
+		&.is-inactive
+			pointer-events: none
+	&__link
+		display: inline-block
+		position: relative
+		margin: 0 5px 
+		vertical-align: middle
+		width: 40px
+		height: 40px
+		line-height: 40px
+		border-radius: 50% 
+		color: $green_l
+		font-size: 13px 
+		+tr(color .2s)
+		&:hover
+			color: $green 
+		&.is-active
+			color: #fff
+			background: $green  
+		&:first-child
+			&:before
+				content: ""
+				position: absolute
+				left: -265px 
+				width: 260px
+				top: 50%
+				height: 1px
+				background: $border 
+		
+		&:last-child
+			&:before
+				content: ""
+				position: absolute
+				right: -265px 
+				width: 260px
+				top: 50%
+				height: 1px
+				background: $border 
 
 
 
