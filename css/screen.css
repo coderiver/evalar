@@ -892,6 +892,26 @@ a { text-decoration: none; }
 
 .page-body_gray { border-bottom: 1px solid white; }
 
+.map { *zoom: 1; }
+.map:after { content: " "; display: table; clear: both; }
+
+#map-canvas { height: 700px; }
+
+.map-info { padding: 30px; }
+.map-info_on-map { padding: 12px 0 21px; text-align: center; width: 249px; }
+.map-info_on-map .map-info__header { font-weight: 500; font-size: 16px; margin-bottom: 5px; }
+.map-info_on-map .map-info__time { margin-bottom: 12px; }
+.map-info_on-map .map-info__url a { color: #009036; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
+.map-info_on-map .map-info__url a:hover { color: #20b019; }
+.map-info .map-info__header { font-size: 16px; }
+.map-info .map-info__img img { max-width: 100%; }
+
+.icon-mark { background: url("../img/svg/mark.svg") no-repeat 0 0; -moz-background-size: 12px 17px; -o-background-size: 12px 17px; -webkit-background-size: 12px 17px; background-size: 12px 17px; width: 12px; height: 17px; display: inline-block; }
+
+.map__item { background: #f6f6f4; }
+
+.text_black { color: black; }
+
 .icon-star { background: url("../img/svg/star.svg") no-repeat 0 0; -moz-background-size: 8px 9px; -o-background-size: 8px 9px; -webkit-background-size: 8px 9px; background-size: 8px 9px; width: 8px; height: 9px; display: inline-block; }
 
 .icon-search { background: url("../img/svg/search.svg") no-repeat 0 0; -moz-background-size: 16px 16px; -o-background-size: 16px 16px; -webkit-background-size: 16px 16px; background-size: 16px 16px; width: 16px; height: 16px; display: inline-block; }
