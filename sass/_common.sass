@@ -136,6 +136,8 @@ a
 	font-size: 16px
 	+med
 	line-height: 1.6
+	+r(1023)
+		line-height: 1.45
 .date
 	display: inline-block
 	padding: 7px 8px 
@@ -157,8 +159,15 @@ a
 		color: #fff 
 	&_light
 		color: $green_l 
+	&_mb
+		margin-bottom: 45px
+		+r(1023)
+			margin-bottom: 10px
+	+ .field
+		+r(1023)
+			margin-bottom: 42px
 .title-small
-	margin-bottom: 21px
+	margin-bottom: 25px
 	font-size: 18px
 	+med
 	color: $black 
@@ -171,8 +180,9 @@ a
 	&__title
 		display: block
 		margin-bottom: 2px
+		min-height: 18px
 		position: relative
-		font-size: 12px
+		font-size: 13px
 		color: $light
 		.icon-star
 			position: absolute
@@ -199,8 +209,85 @@ a
 		padding: 11px
 		min-height: 110px
 		resize: none 
+.select
+	position: relative
+	cursor: pointer
+	&:after
+		content: ""
+		position: absolute
+		right: 14px
+		top: 50%
+		margin-top: -4px
+		+svg(arr_outline-b-bold,14,7) 
+	select
+		position: absolute
+		z-index: 2
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		cursor: pointer
+		-webkit-appearance: none
+		+font
+		font-size: 15px
+		option
+			padding: 5px 0
+.radio-group
+	margin: 10px 0
+	.radio
+		margin-right: 22px
+.radio
+	display: inline-block
+	vertical-align: top
+	position: relative
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ span
+				i
+					border-color: $green 
+					&:before
+						display: block
+	&__text
+		position: relative
+		i
+			display: inline-block
+			position: relative
+			margin-right: 8px
+			vertical-align: middle
+			border: 1px solid #e5e5e0
+			width: 18px
+			height: 18px
+			background: #fff 
+			border-radius: 50%
+			&:before
+				content: ""
+				display: none
+				position: absolute
+				top: 50%
+				left: 50%
+				margin: -4px 0 0 -4px
+				width: 8px
+				height: 8px
+				border-radius: 50%
+				background: $green    
 .tabs-wrap
 	border-bottom: 1px solid $border 
+	.container
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			width: 40px
+			+gh(transparent, rgba(#fff,.3) 50%) 
 .tabs
 	font-size: 0
 	padding-bottom: 15px
@@ -242,6 +329,8 @@ a
 		margin-bottom: 0
 		&:last-child
 			border-bottom: 0
+		+r(1023)
+			border: 0
 .post-parent
 	padding: 40px 0 
 	background: $bg 
@@ -266,6 +355,13 @@ a
 			background: $bg 
 			+r(767)
 				background: none
+	&_long
+		border-bottom: 0
+		.post
+			padding-top: 12px
+			margin-bottom: 60px
+			+r(767)
+				margin-bottom: 23px
 	.post
 		padding: 42px 40px 36px 0
 		+r(1023)
@@ -274,13 +370,10 @@ a
 			margin-bottom: 12px
 		.title-link_big
 			margin-bottom: 13px
-	&_long
-		border-bottom: 0
-		.post
-			padding-top: 12px
-			margin-bottom: 60px
-			+r(767)
-				margin-bottom: 23px
+	.post_single
+		+r(1023)
+			padding-right: 0
+	
 	&.slick-slider
 		+r(767)
 			padding-bottom: 75px
@@ -311,15 +404,28 @@ a
 		margin: 25px 0 0 
 	&__main
 		overflow: hidden
-	&__img
-		+r(767)
+	
+.post_single
+	+r(1023)
+		padding-right: 0
+	.post__img
+		+r(1023)
 			float: left
+			width: 44%
+			margin-right: 30px
+		+r(767)
+			float: none
+			width: 100%
+			margin-right: 0
 		img
+			display: block 
 			max-width: 100%
 			height: auto
 			+tr(opacity .2s)
 			+gpu
 			background: $green_h 
+			+r(767)
+				width: 100%
 			&:hover
 				opacity: 0.9
 .post_main
@@ -389,11 +495,15 @@ a
 	margin-top: 40px
 	+r(767)
 		margin-top: 30px
+	&_mod
+		+r(767)
+			margin-top: 8px
 .btn-action
 	display: inline-block
 	border: 1px solid #a7af9a
 	padding: 0 19px 0 13px
 	height: 40px
+	min-width: 120px
 	color: #a7ae9c
 	background: none
 	line-height: 1
@@ -402,16 +512,54 @@ a
 	+med
 	+tr(color .2s)
 	border-radius: 20px 
+	text-align: center
 	&:hover
 		color: #8d9186 
 	i
 		vertical-align: middle
 		margin-right: 8px
+	&_bg
+		border: 0
+		background: #cfd2c8
+		color: #fff  
+	&_green
+		color: $green
+		border-color: $green
+		&:hover
+			color: $green_h
+			border-color: $green_h 
+	.icon-list-view
+		margin-top: -3px 
 a.btn-action
-	line-height: 40px
+	line-height: 38px
 
-
-
+.btn-file
+	position: absolute
+	right: 0
+	top: 0
+	width: 43px
+	height: 40px
+	font-size: 0
+	background: none
+	i
+		display: inline-block
+		position: relative	
+		vertical-align: middle
+		height: 2px
+		width: 20px
+		background: $light
+		&:before,
+		&:after
+			content: "" 
+			position: absolute
+			left: 0
+			height: 2px
+			width: 20px
+			background: $light 
+		&:before
+			top: -7px
+		&:after
+			bottom: -7px
 .pager
 	overflow: hidden
 	margin: 55px 0 80px

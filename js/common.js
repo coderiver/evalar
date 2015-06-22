@@ -208,7 +208,38 @@ head.ready(function() {
 	});
 
 
+	$(".js-select select").on("change", function(event){
+		var val = $(this).val();
+		$(this).parents(".js-select").find(".input").val(val);
+	});
 
+	$(".js-file-btn").on("click", function(){
+		$(this).parents(".js-file").find(".js-file-hidden").trigger("click");
+	});
+	$(".js-file-hidden").on("change", function(){
+		var val = $(this).val();
+		$(this).parents(".js-file").find(".js-file-input").val(val);
+	});
+	$(".js-file-input").on("click", function(){
+		$(this).parents(".js-file").find(".js-file-hidden").trigger("click");
+	});
+
+	$(".js-accord-head").on("click", function(){
+		var accord = $(this).parents(".js-accord");
+		var accordBody = $(this).parents(".js-accord").find(".js-accord-body");
+		if (accord.hasClass("is-active")) {
+			accord.removeClass("is-active");
+			accordBody.slideUp(200);
+		}
+		else {
+			$(".js-accord").removeClass("is-active");
+			$(".js-accord-body").hide();
+			accord.addClass("is-active");
+			accordBody.slideDown(200);
+		}
+		return false;
+
+	});
 
 	
 });
