@@ -256,76 +256,39 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-12">
-					<ul class="brand">
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr1.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="map">
+		<div class="col-lg-9 col-no-pad">
+			<div id="map-canvas"></div>
+		</div>
+		<div class="col-lg-3 col-no-pad">
+			<div class="map__list">
+				<div class="map__item">
+					<div class="map-info">
+						<div class="map-info__in">
+							<div class="map-info__header text text_big">
+								Название аптеки
+								<i class="icon-mark"></i>
 							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «НПК Катрен»</a>
-							<p>Новосибирск</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr2.png" alt=""></a>
+							 <div class="text text_black map-info__address">
+								Тверская, 4
+							</div>	
+							 <div class="text text_black map-info__time">
+								Круглосуточно
 							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «ЦВ Протек»</a>
-							<p>Москва</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr3.png" alt=""></a>
+							 <div class="text text_black map-info__phone">
+								7 (495) 921-40-74 (многоканальный)
 							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «Роста»</a>
-							<p>Москва</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr4.png" alt=""></a>
+							 <div class="text map-info__work">
+								пн—пт 9:00—18:00
 							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «НПК Катрен»</a>
-							<p>Новосибирск</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr2.png" alt=""></a>
-							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «АММА»</a>
-							<p>Новосибирск</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr1.png" alt=""></a>
-							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «НПК Катрен»</a>
-							<p>Новосибирск</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr4.png" alt=""></a>
-							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «АММА»</a>
-							<p>Новосибирск</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr2.png" alt=""></a>
-							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «ЦВ Протек»</a>
-							<p>Москва</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__img">
-								<a href="#" target="_blank"><img src="img/distr3.png" alt=""></a>
-							</div>
-							<a href="#" target="_blank" class="link-out">ЗАО «Роста»</a>
-							<p>Москва</p>
-						</li>
-						<li class="brand__item">
-							<div class="brand__name">OOO «Фармперспектива»</div>
-							<p>Москва</p>
-						</li>
-					</ul>
+							 <div class="map-info__img">
+							 	<img src="img/map1.jpg" alt="">
+							 </div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -507,6 +470,156 @@
 <script src="js/lib/jquery.js"></script>
 <script src="js/lib/slick.min.js"></script>
 <script src="js/lib/picturefill.min.js"></script>
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 <script src="js/common.js"></script>
+<script>
+	function initialize() {
+		var myLatlng = new google.maps.LatLng(55.749792,37.632495);
+		var mapOptions = {
+			zoom: 11,
+			center: myLatlng
+		};
+
+		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+	 	var contentString = 
+			'<div class="map-info">'+
+				'<div class="map-info__in">'+
+					'<div class="map-info__header">'+
+						'Название аптеки'
+					+'</div>'
+					+ '<div class="text text_black map-info__address">'+
+						'Зацепинский вал, 14'
+					+'</div>'	
+					+ '<div class="text text_black map-info__time">'+
+						'9:00 - 23:00'
+					+'</div>'
+					+ '<div class="text text_black map-info__phone">'+
+						'+7 (495) 921-40-74 (многоканальный)'
+					+'</div>'
+					+ '<div class="text map-info__work">'+
+						'пн—пт 9:00—18:00'
+					+'</div>'
+					+ '<div class="text text_black map-info__url">'+
+						'<a href="#">'+'someurl.com'+'</a>'
+					+'</div>'
+					+ '<div class="text text_black map-info__pay">'+
+						'Оплата: карты, наличные'
+					+'</div>'
+				+'</div>'
+			+'</div>';
+
+	  var infowindow = new google.maps.InfoWindow({
+		  content: contentString,
+		  maxWidth: 300
+	  });
+	  var image = 'img/svg/marker.svg'
+	  var marker = new google.maps.Marker({
+		  position: myLatlng,
+		  map: map,
+		  title: 'Название аптеки',
+		  icon: image
+	  });
+	  google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map,marker);
+	  });
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+//
+//
+//
+// more markers //
+	// function initialize() {
+	//   var mapOptions = {
+	// 	zoom: 10,
+	// 	center: new google.maps.LatLng(55.749792,37.632495)
+	//   }
+	//   var map = new google.maps.Map(document.getElementById('map-canvas'),
+	// 								mapOptions);
+
+	//   setMarkers(map, places);
+	// }
+
+	//   var contentString = 
+	//   '<div class="map-info">'+
+	//   	'<div class="map-info__in">'+
+	//   		'<div class="map-info__header">'+
+	//   			'Название аптеки'
+	//   		+'</div>'
+	//   		+ '<div class="text text_black map-info__address">'+
+	//   			'Зацепинский вал, 14'
+	//   		+'</div>'	
+	//   		+ '<div class="text text_black map-info__time">'+
+	//   			'9:00 - 23:00'
+	//   		+'</div>'
+	//   		+ '<div class="text text_black map-info__phone">'+
+	//   			'+7 (495) 921-40-74 (многоканальный)'
+	//   		+'</div>'
+	//   		+ '<div class="text map-info__work">'+
+	//   			'пн—пт 9:00—18:00'
+	//   		+'</div>'
+	//   		+ '<div class="text text_black map-info__url">'+
+	//   			'<a href="#">'+'someurl.com'+'</a>'
+	//   		+'</div>'
+	//   		+ '<div class="text text_black map-info__pay">'+
+	//   			'Оплата: карты, наличные'
+	//   		+'</div>'
+	//   	+'</div>'
+	//   +'</div>';
+	// // *
+	// //  * Data for the markers consisting of a name, a LatLng and a zIndex for
+	// //  * the order in which these markers should display on top of each
+	// //  * other.
+	 
+	//   var places = [
+	// 	['place5', 55.805015, 37.690860, 4],
+	// 	['place4', 55.738970, 37.816516, 5],
+	// 	['place3', 55.797296, 37.434741, 3],
+	// 	['place2', 55.673974, 37.394229, 2],
+	// 	['place1', 55.654997, 37.699100, 1]
+	//   ];
+
+	// function setMarkers(map, locations) {
+	//   // Add markers to the map
+
+	//   // Marker sizes are expressed as a Size of X,Y
+	//   // where the origin of the image (0,0) is located
+	//   // in the top left of the image.
+
+	//   // Origins, anchor positions and coordinates of the marker
+	//   // increase in the X direction to the right and in
+	//   // the Y direction down.
+	//   var image = {
+	// 	url: 'img/svg/marker.svg',
+	// 	size: new google.maps.Size(46, 56),
+	// 	origin: new google.maps.Point(0,0),
+	// 	anchor: new google.maps.Point(0, 32)
+	//   };
+	//   var shape = {
+	// 	  coords: [1, 1, 1, 20, 18, 20, 18 , 1],
+	// 	  type: 'poly'
+	//   };
+	//   for (var i = 0; i < locations.length; i++) {
+	// 	var place = locations[i];
+	// 	var myLatLng = new google.maps.LatLng(place[1], place[2]);
+	// 	var marker = new google.maps.Marker({
+	// 		position: myLatLng,
+	// 		map: map,
+	// 		icon: image,
+	// 		shape: shape,
+	// 		title: place[0],
+	// 		zIndex: place[3]
+	// 	});
+	//   }
+	// }
+
+	// google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 </body>
 </html>

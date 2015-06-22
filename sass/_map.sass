@@ -1,0 +1,35 @@
+.map
+	+clr
+#map-canvas 
+	height: 700px 
+	
+.map-info
+	&_on-map
+		padding: 12px 0 21px
+		text-align: center
+		width: 249px
+		.map-info__header
+			+med
+			font-size: 16px
+			margin-bottom: 5px 
+		.map-info__time
+			margin-bottom: 12px 
+		.map-info__url
+			a
+				color: $green
+				+tr(color .3s)
+				&:hover
+					color: $green_h
+	padding: 30px 
+	.map-info__header
+		font-size: 16px 
+	.map-info__img
+		img
+			max-width: 100% 
+.icon-mark
+	+svg(mark,12, 17)	
+.map__item
+	background: $bg 
+.text_black
+	color: #000	
+	
