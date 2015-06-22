@@ -239,8 +239,12 @@ a
 
 .posts-group
 	.posts-wrap
+		margin-bottom: 0
 		&:last-child
 			border-bottom: 0
+.post-parent
+	padding: 40px 0 
+	background: $bg 
 .posts-wrap
 	display: table
 	table-layout: fixed
@@ -308,6 +312,8 @@ a
 	&__main
 		overflow: hidden
 	&__img
+		+r(767)
+			float: left
 		img
 			max-width: 100%
 			height: auto
@@ -319,12 +325,15 @@ a
 .post_main
 	.post__img
 		margin-right: -20px
+		+r(1023)
+			margin: 0 0 42px
 		img
 			display: block
-			width: 100%
+			max-width: 100%
 	.post__body
 		padding: 0 20px 
-		
+		+r(1023)
+			padding: 0
 .thumbnail
 	width: 100px
 	display: block
@@ -405,6 +414,7 @@ a.btn-action
 
 .pager
 	overflow: hidden
+	margin: 55px 0 80px
 	position: relative
 	text-align: center
 	font-size: 0
@@ -456,6 +466,20 @@ a.btn-action
 		color: $green_l
 		font-size: 13px 
 		+tr(color .2s)
+		+r(1023)
+			margin: 0
+		&:nth-child(8),
+		&:nth-child(9),
+		&:nth-child(10)
+			+r(1023)
+				display: none
+		&:nth-child(5),
+		&:nth-child(6),
+		&:nth-child(7),
+		&:nth-child(11)
+			+r(767)
+				display: none
+		
 		&:hover
 			color: $green 
 		&.is-active
@@ -470,8 +494,17 @@ a.btn-action
 				top: 50%
 				height: 1px
 				background: $border 
-		
+				+r(1230)
+					width: 130px
+					left: -135px
+				+r(1023)
+					width: 60px
+					left: -65px
+				+r(767)
+					display: none
 		&:last-child
+			+r(767)
+				display: none
 			&:before
 				content: ""
 				position: absolute
@@ -480,6 +513,12 @@ a.btn-action
 				top: 50%
 				height: 1px
 				background: $border 
+				+r(1230)
+					width: 130px
+					right: -135px
+				+r(1023)
+					width: 60px
+					right: -65px
 
 
 

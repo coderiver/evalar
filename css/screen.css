@@ -89,7 +89,10 @@ a { text-decoration: none; }
 .tabs .is-active .tabs__link { color: #262626; }
 .tabs .is-active .tabs__link:after { display: block; }
 
+.posts-group .posts-wrap { margin-bottom: 0; }
 .posts-group .posts-wrap:last-child { border-bottom: 0; }
+
+.post-parent { padding: 40px 0; background: #f6f6f4; }
 
 .posts-wrap { display: table; table-layout: fixed; width: 100%; margin-bottom: 30px; overflow: hidden; border-bottom: 1px solid #ecebe7; }
 @media only screen and (max-width: 1023px) { .posts-wrap { display: block; } }
@@ -119,12 +122,15 @@ a { text-decoration: none; }
 @media only screen and (max-width: 767px) { .post .thumbnail { display: none; } }
 .post .links { margin: 25px 0 0; }
 .post__main { overflow: hidden; }
+@media only screen and (max-width: 767px) { .post__img { float: left; } }
 .post__img img { max-width: 100%; height: auto; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); background: #20b019; }
 .post__img img:hover { opacity: 0.9; }
 
 .post_main .post__img { margin-right: -20px; }
-.post_main .post__img img { display: block; width: 100%; }
+@media only screen and (max-width: 1023px) { .post_main .post__img { margin: 0 0 42px; } }
+.post_main .post__img img { display: block; max-width: 100%; }
 .post_main .post__body { padding: 0 20px; }
+@media only screen and (max-width: 1023px) { .post_main .post__body { padding: 0; } }
 
 .thumbnail { width: 100px; display: block; overflow: hidden; }
 .thumbnail img { display: block; width: 100%; height: auto; }
@@ -150,7 +156,7 @@ a { text-decoration: none; }
 
 a.btn-action { line-height: 40px; }
 
-.pager { overflow: hidden; position: relative; text-align: center; font-size: 0; }
+.pager { overflow: hidden; margin: 55px 0 80px; position: relative; text-align: center; font-size: 0; }
 .pager__main { position: absolute; left: 40px; right: 40px; top: 0; }
 .pager__prev { float: left; }
 .pager__prev:before { background: url("../img/svg/caret-l-green.svg") no-repeat 0 0; -moz-background-size: 7px 16px; -o-background-size: 7px 16px; -webkit-background-size: 7px 16px; background-size: 7px 16px; width: 7px; height: 16px; display: inline-block; }
@@ -163,10 +169,19 @@ a.btn-action { line-height: 40px; }
 .pager__prev:hover, .pager__next:hover { border-color: #009036; }
 .pager__prev.is-inactive, .pager__next.is-inactive { pointer-events: none; }
 .pager__link { display: inline-block; position: relative; margin: 0 5px; vertical-align: middle; width: 40px; height: 40px; line-height: 40px; border-radius: 50%; color: #9ba08e; font-size: 13px; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
+@media only screen and (max-width: 1023px) { .pager__link { margin: 0; } }
+@media only screen and (max-width: 1023px) { .pager__link:nth-child(8), .pager__link:nth-child(9), .pager__link:nth-child(10) { display: none; } }
+@media only screen and (max-width: 767px) { .pager__link:nth-child(5), .pager__link:nth-child(6), .pager__link:nth-child(7), .pager__link:nth-child(11) { display: none; } }
 .pager__link:hover { color: #009036; }
 .pager__link.is-active { color: #fff; background: #009036; }
 .pager__link:first-child:before { content: ""; position: absolute; left: -265px; width: 260px; top: 50%; height: 1px; background: #efeeeb; }
+@media only screen and (max-width: 1230px) { .pager__link:first-child:before { width: 130px; left: -135px; } }
+@media only screen and (max-width: 1023px) { .pager__link:first-child:before { width: 60px; left: -65px; } }
+@media only screen and (max-width: 767px) { .pager__link:first-child:before { display: none; } }
+@media only screen and (max-width: 767px) { .pager__link:last-child { display: none; } }
 .pager__link:last-child:before { content: ""; position: absolute; right: -265px; width: 260px; top: 50%; height: 1px; background: #efeeeb; }
+@media only screen and (max-width: 1230px) { .pager__link:last-child:before { width: 130px; right: -135px; } }
+@media only screen and (max-width: 1023px) { .pager__link:last-child:before { width: 60px; right: -65px; } }
 
 .text-left { text-align: left; }
 
