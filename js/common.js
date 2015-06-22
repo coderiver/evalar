@@ -208,7 +208,10 @@ head.ready(function() {
 	});
 
 
-
+$('.scroll-pane').jScrollPane({
+	// verticalGutter: 30
+	// showArrows: true
+});
 
 	
 });

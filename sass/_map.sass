@@ -1,8 +1,32 @@
 .map
 	+clr
-#map-canvas 
+	+r(1023)
+		max-width: 600px 
+		margin: 0 auto
+		padding-left: 15px
+		padding-right: 15px
+	+r(767)
+		max-width: 320px 
+		padding-left: 10px
+		padding-right: 10px
+.map-canvas 
 	height: 700px 
-	
+	+r(1023)
+		height: 400px 
+		height: 70vh 
+.map__list
+	height: 680px 
+	+r(1023)
+		height: 380px
+		height: 68vh 
+.map__sidebar
+	background: $bg 
+	height: 700px
+	padding: 10px 0
+	+r(1023)
+		height: 400px 
+		height: 70vh 
+		padding: 1vh 0 
 .map-info
 	&_on-map
 		padding: 12px 0 21px
@@ -20,16 +44,54 @@
 				+tr(color .3s)
 				&:hover
 					color: $green_h
-	padding: 30px 
+	padding: 30px
+	.text
+		+tr(color .2s)
 	.map-info__header
 		font-size: 16px 
+		position: relative
+		margin-bottom: 6px
+		line-height: 1em 
+		i
+			position: absolute
+			left: -20px
+			top: 0 
+			&:before
+				content: ''
+				visibility: hidden
+				+svg(mark-w, 12,17)
+				+tr(visibility .2s)
+	.map-info__phone
+		letter-spacing: -0.02em 
+	.map-info__time
+		margin-bottom: 11px 
+
 	.map-info__img
+		margin-top: 11px 
+		font-size: 0
 		img
 			max-width: 100% 
+	.map-info__work
+		display: inline
+	.map-info_block
+
 .icon-mark
 	+svg(mark,12, 17)	
 .map__item
-	background: $bg 
+	display: block
+	cursor: pointer
+	+tr(background .2s)
+	margin-right: 10px 
+	&:hover
+		background: $green
+		.text
+			color: #fff 
+		.map-info__header
+			i:before
+				visibility: visible
+				
+				
+		 
 .text_black
 	color: #000	
 	
