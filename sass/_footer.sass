@@ -5,89 +5,89 @@
 	padding: 40px  0 70px
 	+r(768)
 		padding-bottom: 40px 
-	.footer__in
-		+r(1022)
-			margin: 0 -40px
+.footer__in
+	+r(1023)
+		margin: 0 -40px
+	+r(767)
+		margin: 0 
+.footer__meta
+	margin-right: -15px 
+	p
+		color: #9ba08e 
+		line-height: 1.6em 
+	p:first-child
+		margin-bottom: 24px
+		+r(1023)
+			margin-bottom: 15px 
+	+r(767)
+		margin-bottom: 40px 
+.footer__nav, .cap__nav
+	font-size: 0
+	a
+		color: #737969
+		+tr(opacity .3s)
+		font-size: 12px 
+		position: relative
+		padding-right: 9px 
+		line-height: 1.6em 
+		display: inline-block
+		&:hover
+			opacity: .7
 		+r(767)
-			margin: 0 
-	.footer__meta
-		margin-right: -15px 
-		p
-			color: #9ba08e 
 			line-height: 1.6em 
-		p:first-child
-			margin-bottom: 24px
-			+r(1022)
-				margin-bottom: 15px 
+			padding-right: 15px 
+	a:after
+		content: '/'
+		position: absolute
+		right: 2px
 		+r(767)
-			margin-bottom: 40px 
-	.footer__nav
-		font-size: 0
-		a
-			color: #737969
-			+tr(opacity .3s)
-			font-size: 12px 
-			position: relative
-			padding-right: 9px 
-			line-height: 1.6em 
-			display: inline-block
-			&:hover
-				opacity: .7
-			+r(767)
-				line-height: 1.6em 
-				padding-right: 15px 
-		a:after
-			content: '/'
-			position: absolute
-			right: 2px
-			+r(767)
-				right: 4px 
-		a:last-child:after
-			display: none
-			+r(767)
-				display: inline
-			
-		&:nth-child(2)
-			margin-bottom: 24px
-			+r(1022)
-				margin-bottom: 15px 
-			+r(767)
-				margin-bottom: 0
+			right: 4px 
+	a:last-child:after
+		display: none
 		+r(767)
 			display: inline
-			&:last-child
-				a:last-child:after
-					display: none
-				
-	.footer__links
-		+r(1022)
-			margin-bottom: 50px 
-			padding-right: 20px 
+		
+	&:nth-child(2)
+		margin-bottom: 24px
+		+r(1023)
+			margin-bottom: 15px 
 		+r(767)
-			margin-bottom: 30px 
-			padding-right: 0
-	.footer__sertificates
-		+r(1022)
-			float: right
-		+r(767)
-			margin-bottom: 22px 
-			float: none
+			margin-bottom: 0
+	+r(767)
+		display: inline
+		&:last-child
+			a:last-child:after
+				display: none
 			
-	.footer__in	
-		+display-flex
-		+flex-flow(row wrap)
-		+clr
-		+r(1022)
-			>div:nth-child(2)
-				+order(-1)
-			>div:nth-child(3)
-				+order(-1)	
-		+r(767)
-			>div:nth-child(4)
-				+order(-1)	
+.footer__links
+	+r(1023)
+		margin-bottom: 50px 
+		padding-right: 20px 
+	+r(767)
+		margin-bottom: 30px 
+		padding-right: 0
+.footer__sertificates
+	+r(1023)
+		float: right
+	+r(767)
+		margin-bottom: 22px 
+		float: none
+		
+.footer__in	
+	+display-flex
+	+flex-flow(row wrap)
+	+clr
+	+r(1023)
+		>div:nth-child(2)
+			+order(-1)
+		>div:nth-child(3)
+			+order(-1)	
+	+r(767)
+		>div:nth-child(4)
+			+order(-1)	
 
 .soc-wrap
-	+r(1022)
+	+r(1023)
 		float: right
 	+r(767)
 		float: none
@@ -139,7 +139,7 @@
 		margin-right: 5px  
 		position: relative
 		top: 1px 
-	+r(1022)
+	+r(1023)
 		margin-top: 15px 
 	+r(767)
 		margin-bottom: 33px 
@@ -157,7 +157,7 @@
 	i
 		position: absolute
 		left: 0
-	+r(1022)
+	+r(1023)
 		float: right
 	+r(767)
 		float: none

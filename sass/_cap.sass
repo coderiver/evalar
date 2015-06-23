@@ -1,0 +1,102 @@
+.bg-layout
+	position: fixed
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	overflow: hidden
+	z-index: -1 
+	img
+		width: 100%
+		display: block 
+		+r(1600)
+			width: auto
+		+r(1023) 
+			height: 100% 
+.icon-logo-white
+	+svg(logo-white, 130,62)
+	
+.cap
+	color: #fff
+	+r(768)
+		height: 100% 
+.cap__header
+	margin-top: 148px 
+	margin-top: 31vh 
+	+r(1023)
+		margin-top: 100px 
+		margin-top: 10vh 
+		width: 250px 
+	+r(767)
+		margin-top: 23px 
+		margin-top: 8%
+		width: auto
+		
+.cap__heading
+	font-size: 24px
+	line-height: 1.5em 
+	margin-top: 3px 
+
+.cap__about
+	padding-right: 57px 
+	font-size: 11px 
+	+r(1023)
+		padding-right: 0 
+	+r(767)
+		padding-right: 50px 
+
+.cap__error
+	font-size: 48px
+	margin-top: 40px 
+	+r(1229)
+		font-size: 42px 
+	+r(1023)
+		font-size: 36px
+		margin-top: 44px  
+	+r(767)
+		font-size: 24px 
+		margin-top: 11%
+.cap__nav
+	a
+		color: #fff
+
+.cap__main
+	margin-top: 196px 
+	margin-top: 42vh
+	+r(1023)
+		margin-top: 25px 
+	+r(767)
+		margin-top: 10% 
+.cap__text
+	font-size: 22px
+	letter-spacing: -0.01em  
+	line-height: 1.6em 
+	margin-bottom: 49px 
+	a
+		color: #299f2b
+		+tr(color .3s)
+		&:hover
+			color: $green
+		+r(767)
+			display: block
+	+r(1023)
+		letter-spacing: 1px
+		padding-right: 10px  
+	+r(767)
+		font-size: 20px
+		margin-bottom: 11%
+		line-height: 1.5em
+		
+		div
+			display: inline
++iphone4
+	.cap__main
+		margin-top: 4% 
+	.cap__text
+		margin-bottom: 7%
+	.cap__error
+		margin-top: 10% 
+	.cap__header
+		margin-top: 6%
+		
+	
