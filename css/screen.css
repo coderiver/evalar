@@ -1219,11 +1219,18 @@ a.btn-action { line-height: 38px; }
 
 .contacts_page { margin-bottom: 22px; }
 
-.hotline { position: relative; z-index: 2; padding: 40px 0; }
+.hotline { position: relative; z-index: 2; padding: 36px 0; margin: 62px 0 60px; }
 .hotline:before { content: ""; position: absolute; top: 0; bottom: 0; left: -1000px; right: -1000px; z-index: -1; background: #f6f6f4; }
+.hotline .title { margin-bottom: 0; }
 .hotline .title a { display: block; color: #262626; -moz-transition: color 0.3s; -o-transition: color 0.3s; -webkit-transition: color 0.3s; transition: color 0.3s; }
 .hotline .title a:hover { color: #20b019; }
 .hotline .text { margin-top: 7px; }
+
+.way__header { font-size: 16px; font-weight: 500; margin-bottom: 10px; }
+
+.page-info .text { margin: 52px 0; }
+
+.way__list li { font-size: 15px; line-height: 1.6em; }
 
 .icon-star { background: url("../img/svg/star.svg") no-repeat 0 0; -moz-background-size: 8px 9px; -o-background-size: 8px 9px; -webkit-background-size: 8px 9px; background-size: 8px 9px; width: 8px; height: 9px; display: inline-block; }
 
