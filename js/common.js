@@ -240,10 +240,26 @@ head.ready(function() {
 		return false;
 
 	});
-	$()
 	if($('.scroll-pane').length) {
-		$('.scroll-pane').jScrollPane()
+		$('.scroll-pane').jScrollPane();
 	}
 
+	
+	// 1. Initialize fotorama manually.
+	var $fotoramaDiv = $('.js-fotorama').fotorama();
+
+	// 2. Get the API object.
+	var fotorama = $fotoramaDiv.data('fotorama');
+
+	$(".js-fotorama-prev").on("click", function() {
+		fotorama.show('<');
+		return false;
+	});
+	$(".js-fotorama-next").on("click", function() {
+		fotorama.show('>');
+		return false;
+	});
+
+	
 	
 });
