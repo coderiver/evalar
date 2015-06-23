@@ -1,0 +1,30 @@
+// contacts.html
+
+.title-big
+	font-size: 48px 
+
+.page-text
+	.title-big
+		margin-top: 9px 
+	.title-big + .text
+		margin-top: 32px 
+.title-smaller
+	font-size: 16px
+	margin-bottom: 10px  
+	color: #262626
+	+med
+.contacts_page
+	margin-bottom: 22px 
+.hotline
+	position: relative
+	z-index: 2
+	padding: 40px 0
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -1000px
+		right: -1000px
+		z-index: -1   
+		background: $bg  
