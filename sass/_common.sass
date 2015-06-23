@@ -91,7 +91,8 @@ body
 a
 	text-decoration: none
 // common blocks      
-
+.out
+	overflow: hidden
 .title-link
 	font-size: 16px
 	line-height: 1.25
@@ -150,6 +151,15 @@ a
 	line-height: 1
 	+reg
 	color: $green_l
+.title-wrap
+	padding: 25px 0 
+	border-bottom: 1px solid #fff 
+	+r(767)
+		border: 0
+		padding: 10px 0 15px
+	.title
+		+r(767)
+			font-size: 20px
 .title
 	margin-bottom: 14px
 	font-size: 24px
@@ -167,6 +177,8 @@ a
 		margin-bottom: 45px
 		+r(1023)
 			margin-bottom: 10px
+	&_mt
+		margin-top: 20px
 	+ .field
 		+r(1023)
 			margin-bottom: 42px
@@ -387,12 +399,15 @@ a
 		li
 			padding: 0 7px 0 0
 		button
-			border: 1px solid #a7ae9e
+			border: 1px solid $light
 			width: 8px
 			height: 8px
+			+tr(border-color .2s)
 		.slick-active
 			button
-				background: #a7ae9e 
+				background: $light 
+				&:hover
+					border-color: $light 
 .post
 	+clr
 	.date
@@ -578,6 +593,19 @@ a.btn-action
 		margin-right: 7px
 	&:hover
 		border-color: $green 
+.btn-circle
+	display: inline-block
+	width: 50px
+	height: 50px
+	border-radius: 50%
+	background: $light  
+	text-align: center
+	line-height: 50px
+	+tr(background .2s)
+	i
+		vertical-align: middle
+	&:hover
+		background: $green_h 
 .pager
 	overflow: hidden
 	margin: 55px 0 80px
