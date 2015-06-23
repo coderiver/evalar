@@ -353,3 +353,45 @@
 		box-shadow: inset 0 0 0 1px #fff 
 	i
 		vertical-align: middle
+		
+.benefit
+	position: relative
+	border-top: 1px solid #fff 
+	&:first-child
+		border-top: 0
+	&:nth-child(2n)
+		.benefit__in
+			padding-right: 0
+			padding-left: 500px
+		.benefit__img
+			right: auto
+			left: -300px
+	&__in
+		position: relative
+		padding-right: 500px
+		padding-top: 40px
+		height: 300px
+	&__img
+		position: absolute
+		top: 0
+		right: -300px
+		width: 760px
+		height: 300px
+		+cover
+		overflow: hidden
+		//-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
+		//clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
+	&__number
+		margin-top: 18px
+		float: left
+		width: 100px
+		color: $light
+		font-size: 24px
+		+bold 
+	&__text
+		overflow: hidden
+	&__title
+		margin-bottom: 30px
+		font-size: 48px
+		+reg
+		line-height: 1.1
