@@ -1,0 +1,191 @@
+.article
+	font-size: 15px
+	+reg
+	line-height: 1.7
+	+r(767)
+		font-size: 14px
+		line-height: 1.8
+	+ .share
+		margin-top: 70px
+	> h2
+		margin-bottom: 45px
+		font-size: 48px
+		line-height: 1.1
+		+reg
+		+r(1023)
+			margin-top: 42px
+			font-size: 36px
+		+r(767)
+			font-size: 24px
+			margin-top: 35px
+			line-height: 1.45
+		+ .carousel
+			margin-top: 0
+	> h3
+		margin: 40px 0 10px 
+		font-size: 18px
+		+med
+		+r(767)
+			font-size: 16px
+			line-height: 1.6
+		&:first-child
+			margin-top: 0
+	> p
+		margin: 18px 0 
+	a
+		color: $green
+		+tr(color .2s)
+		&:hover
+			color: $green_h 
+	blockquote
+		margin: 57px 0 50px -300px 
+		padding: 30px 0 
+		margin-left: -300px
+		border-top: 1px solid $border 
+		border-bottom: 1px solid $border 
+		font-size: 24px
+		color: #a8ae9d
+		line-height: 1.45
+		+r(1230)
+			margin-left: -240px
+		+r(1023)
+			margin-left: 0
+		+r(767)
+			margin: 0 -10px 
+			font-size: 16px
+			line-height: 1.6
+.carousel
+	position: relative
+	z-index: 2
+	margin-top: 52px
+	padding: 50px 0
+	background: $bg 
+	+r(767)
+		padding: 30px 0 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -1000px
+		right: -1000px
+		z-index: -1
+		background: $bg 
+	.meta
+		position: absolute
+		left: -305px
+		top: 44px
+		width: 200px
+		+r(1230)
+			left: -240px
+		+r(1023)
+			margin-left: 0
+	.meta_static
+		position: static
+		width: 100%
+		margin-top: 20px
+.item-slider
+	border-right: 1px solid #fff 
+	+r(767)
+		border: 0
+		padding-bottom: 50px
+	.item
+		width: 100%
+		border-left: 1px solid #fff 
+		+r(767)
+			border: 0
+	.slick-dots
+		text-align: left
+		bottom: -10px
+		li
+			padding: 0 7px 0 0
+		button
+			border: 1px solid $light
+			width: 8px
+			height: 8px
+			&:hover
+				border-color: $green_h
+		.slick-active
+			button
+				background: $light 
+				&:hover
+					border-color: $light 
+.item
+	position: relative 
+	padding: 20px 30px 
+	width: 300px
+	height: 290px
+	overflow: hidden
+	
+	&__img
+		height: 190px
+		overflow: hidden
+		text-align: center
+		img
+			margin: 0 auto 
+			max-width: 100%
+			max-height: 100%
+	.title-link
+		padding-right: 36px
+		height: 40px
+		margin-bottom: 3px
+		overflow: hidden
+	.btn-circle
+		position: absolute
+		left: 35px
+		bottom: 30px
+.article-meta
+	.date
+		margin: 50px 0 20px
+		+r(1023)
+			margin: 0 10px 0 0
+			vertical-align: middle
+		+r(767)
+			margin-bottom: 15px
+	.btn-back
+		+r(1023)
+			margin: 0 90px 27px 0
+	.tags
+		+r(1023)
+			display: none
+	.links
+		display: none
+		+r(1023)
+			display: inline-block
+			vertical-align: middle
+
+		li
+			display: inline-block
+			vertical-align: middle
+			
+.tags
+	color: $light
+	font-size: 12px 
+	+r(1023)
+		display: inline-block
+		vertical-align: middle
+	li
+		+r(1023)
+			display: inline-block
+			vertical-align: middle
+	a
+		color: $green
+		+tr(color .2s)
+		&:hover
+			color: $green_h
+	
+
+.share
+	margin-left: -300px
+	+r(1230)
+		margin-left: -240px
+	+r(1023)
+		margin-left: 0
+	.meta,
+	.soc
+		display: inline-block
+		vertical-align: middle
+	.meta
+		margin-right: 10px
+	&_single
+		margin-left: 0

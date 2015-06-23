@@ -43,7 +43,8 @@
 	border-bottom: 1px solid $border 
 	height: 40px 
 	line-height: 40px 
-	
+	+r(767)
+		display: none
 	+ .tabs-wrap
 		margin-top: 40px
 		+r(1023)
@@ -52,10 +53,12 @@
 			margin-top: 20px
 	.breadcrumbs__main
 		border-left: 1px solid $border 
-		+clr
+		+text-overflow
 		li
-			float: left
+			display: inline-block
+			vertical-align: top
 			position: relative 
+			font-size: 12px
 			&:first-child
 				width: 50px
 				text-align: center
@@ -94,10 +97,14 @@
 .page-body
 	background: #fff 
 	padding: 50px 0
+	+r(767)
+		padding: 30px 0 
 	&_gray
 		background: $bg 
 	.pager
 		margin-bottom: 10px
+	&.no-padding
+		padding: 0
 .page-text
 	margin-bottom: 40px
 	+ .title-small
@@ -281,3 +288,68 @@
 		line-height: 1.5
 		
 
+.magazine-wrap
+	border-bottom: 1px solid #fff 
+	padding: 50px 0 20px
+	font-size: 0
+.year
+	font-size: 60px
+	+light
+	line-height: .7
+	color: $light 
+	+r(1023)	
+		margin-bottom: 35px
+		font-size: 48px
+	+r(767)
+		font-size: 24px
+		+reg
+.magazine
+	position: relative
+	display: inline-block
+	vertical-align: top
+	margin: 0 30px 30px 0
+	width: 170px
+	height: 240px
+	overflow: hidden
+	&:nth-child(5n)
+		margin-right: 0
+		+r(1023)
+			margin-right: 30px
+	&:nth-child(4n)
+		+r(1023)
+			margin-right: 0
+	img
+		width: 100%
+		height: auto
+	+r(1023)
+		width: 120px
+		height: 170px
+	&:hover
+		.magazine__in
+			opacity: 1
+	&__in
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+		padding-top: 70px
+		+tr(opacity .2s)
+		background: rgba($green,.8)
+		text-align: center 
+		+r(1023)
+			padding-top: 40px
+.link-circle
+	display: block
+	margin: 0 auto 20px 
+	width: 40px
+	height: 40px
+	border: 1px solid #fff
+	border-radius: 50%
+	text-align: center
+	line-height: 38px
+	&:hover
+		box-shadow: inset 0 0 0 1px #fff 
+	i
+		vertical-align: middle

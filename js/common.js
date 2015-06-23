@@ -260,6 +260,33 @@ head.ready(function() {
 		return false;
 	});
 
-	
+	var configItemSlider = {
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		infinite: false,
+		adaptiveHeight: false,
+		responsive: [
+	    {
+	      breakpoint: 1023,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    {
+	      breakpoint: 767,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        arrows: false,
+	        dots: true
+	      }
+	    }
+	  ]
+	}
+
+	$(".js-item-slider").slick(configItemSlider);
 	
 });

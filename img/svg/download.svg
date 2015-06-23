@@ -11,10 +11,10 @@
 		<use xlink:href="#SVGID_1_"  overflow="visible"/>
 	</clipPath>
 	
-		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#009036" stroke-width="2" stroke-miterlimit="10" x1="7" y1="0" x2="7" y2="11"/>
-	<polyline clip-path="url(#SVGID_2_)" fill="none" stroke="#009036" stroke-width="2" stroke-miterlimit="10" points="1.375,7.781 
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" x1="7" y1="0" x2="7" y2="11"/>
+	<polyline clip-path="url(#SVGID_2_)" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" points="1.375,7.781 
 		6.375,11.781 7,12.281 7.624,11.781 12.624,7.781 	"/>
 	
-		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#009036" stroke-width="2" stroke-miterlimit="10" x1="0" y1="14" x2="14" y2="14"/>
+		<line clip-path="url(#SVGID_2_)" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="14" x2="14" y2="14"/>
 </g>
 </svg>

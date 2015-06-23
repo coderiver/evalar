@@ -222,7 +222,9 @@
 	display: none
 	white-space: nowrap
 	z-index: 5
-
+.fotorama__nav-wrap
+	+r(767)
+		margin-top: 20px
 .fotorama__nav__shaft
 	position: relative
 	left: 0
@@ -242,6 +244,11 @@
 			bottom: 0
 			z-index: 2
 			border: 4px solid $bg
+			+r(767)
+				display: none
+	img
+		+r(767)
+			display: none
 .fotorama__nav--dots
 	display: block
 
@@ -252,6 +259,10 @@
 .fotorama__nav--dots .fotorama__nav__frame--thumb,.fotorama__nav--dots .fotorama__thumb-border
 	display: none
 
+.fotorama__nav__frame--thumb
+	+r(767)
+		width: 15px !important
+		height: 8px !important
 .fotorama__nav--thumbs
 	display: block
 	
@@ -294,7 +305,20 @@
 	position: relative
 	width: 100%
 	height: 100%
-
+	+r(767)
+		width: 8px
+		height: 8px
+		border: 1px solid $light
+		border-radius: 50% 
+		background: none
+		&:hover
+			border-color: $green_h
+.fotorama__active
+	.fotorama__thumb
+		+r(767)
+			background: $light 
+			&:hover
+				border-color: $light
 .fotorama__nav__frame:focus .fotorama__thumb
 	z-index: 2
 
