@@ -288,5 +288,22 @@ head.ready(function() {
 	}
 
 	$(".js-item-slider").slick(configItemSlider);
+
+	$(".js-open-filter").on("click", function() {
+		var filter = $(this).attr("data-filter");
+		if ($(this).hasClass("is-active")) {
+			$(this).removeClass("is-active");
+			$("."+filter).hide();
+		}
+		else {
+			$(".js-open-filter").removeClass("is-active");
+			$(".filter-row").hide();
+			$(this).addClass("is-active");
+			$("."+filter).show();
+		}
+		
+		
+		return false;
+	});
 	
 });
