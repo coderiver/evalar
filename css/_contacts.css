@@ -1,23 +1,22 @@
 /*
-Error: Undefined mixin 'med'.
-        on line 15 of D:/Projects/evalar/sass/_contacts.sass, in `med'
-        from line 15 of D:/Projects/evalar/sass/_contacts.sass
+Error: Undefined mixin 'r'.
+        on line 5 of D:/Projects/evalar/sass/_contacts.sass, in `r'
+        from line 5 of D:/Projects/evalar/sass/_contacts.sass
 
-10: 		margin-top: 32px 
-11: .title-smaller
-12: 	font-size: 16px
-13: 	margin-bottom: 10px  
-14: 	color: #262626
-15: 	+med
-16: .contacts_page
-17: 	margin-bottom: 22px 
-18: .hotline
-19: 	position: relative
-20: 	z-index: 2
+1: // contacts.html
+2: 
+3: .title-big
+4: 	font-size: 48px 
+5: 	+r(1023)
+6: 		font-size: 32px 
+7: 	+r(768)
+8: 		font-size: 24px 
+9: 
+10: .page-text
 
 Backtrace:
-D:/Projects/evalar/sass/_contacts.sass:15:in `med'
-D:/Projects/evalar/sass/_contacts.sass:15
+D:/Projects/evalar/sass/_contacts.sass:5:in `r'
+D:/Projects/evalar/sass/_contacts.sass:5
 C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
 C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Prepros/resources/app/ruby/ruby_gems/gems/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
@@ -73,4 +72,4 @@ C:/Program Files (x86)/Prepros/resources/app/ruby/loader.rb:15:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'med'.\A         on line 15 of D:/Projects/evalar/sass/_contacts.sass, in `med'\A         from line 15 of D:/Projects/evalar/sass/_contacts.sass\A \A 10: 		margin-top: 32px \A 11: .title-smaller\A 12: 	font-size: 16px\A 13: 	margin-bottom: 10px  \A 14: 	color: #262626\A 15: 	+med\A 16: .contacts_page\A 17: 	margin-bottom: 22px \A 18: .hotline\A 19: 	position: relative\A 20: 	z-index: 2"; }
+  content: "Error: Undefined mixin 'r'.\A         on line 5 of D:/Projects/evalar/sass/_contacts.sass, in `r'\A         from line 5 of D:/Projects/evalar/sass/_contacts.sass\A \A 1: // contacts.html\A 2: \A 3: .title-big\A 4: 	font-size: 48px \A 5: 	+r(1023)\A 6: 		font-size: 32px \A 7: 	+r(768)\A 8: 		font-size: 24px \A 9: \A 10: .page-text"; }
