@@ -1102,6 +1102,9 @@ a.btn-action { line-height: 38px; }
 .video-row .title { margin-bottom: 10px; }
 .video-row .links { margin-bottom: 40px; }
 
+.filter__item { float: left; margin-right: -1px; border-right: 1px solid #efeeeb; border-left: 1px solid #efeeeb; padding: 0 33px 0 21px; min-width: 120px; height: 50px; line-height: 50px; background: none; }
+.filter__row { display: none; }
+
 .abc { -moz-column-count: 4; -webkit-column-count: 4; column-count: 4; -moz-column-gap: 20px; -webkit-column-gap: 20px; column-gap: 20px; padding: 52px 0 120px; }
 @media only screen and (max-width: 1022px) { .abc { -moz-column-count: 3; -webkit-column-count: 3; column-count: 3; } }
 @media only screen and (max-width: 767px) { .abc { -moz-column-count: 1; -webkit-column-count: 1; column-count: 1; } }
