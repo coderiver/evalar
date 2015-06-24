@@ -2,6 +2,10 @@
 
 .title-big
 	font-size: 48px 
+	+r(1023)
+		font-size: 32px 
+	+r(768)
+		font-size: 24px 
 
 .page-text
 	.title-big
@@ -19,7 +23,9 @@
 	position: relative
 	z-index: 2
 	padding: 36px 0
-	margin: 62px 0 60px
+	margin: 62px 0 6px
+	+r(768)
+		margin: 30px 0 6px 
 	&:before
 		content: ''
 		position: absolute
@@ -54,3 +60,23 @@
 		line-height: 1.6em 
 
 
+.contacts-wrap
+	margin-top: 10px 
+	+column-count(4)
+	+column-gap(20px)
+	+r(1023)
+		+column-count(2)
+	+r(767)
+		+column-count(1)
+	.contacts
+		display: inline-block
+	.contacts__list
+		li a
+			white-space: nowrap
+		
+
+
+
+
+
+		
