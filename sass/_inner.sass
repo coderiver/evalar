@@ -363,22 +363,45 @@
 		.benefit__in
 			padding-right: 0
 			padding-left: 500px
+			+r(1230)
+				padding-left: 400px
+			+r(1023)
+				padding-left: 160px
+			+r(767)
+				padding-left: 0
 		.benefit__img
 			right: auto
 			left: -300px
+			+r(1230)
+				left: -400px
+			+r(1023)
+				left: -600px
 	&__in
 		position: relative
-		padding-right: 500px
-		padding-top: 40px
-		height: 300px
+		padding: 40px 500px 40px 0
+		min-height: 300px
+		+r(1230)
+			padding-right: 400px
+		+r(1023)
+			padding-right: 160px
+			padding-top: 47px
+		+r(767)
+			padding: 23px 0 32px
+			min-height: 10px
 	&__img
 		position: absolute
 		top: 0
+		bottom: 0
 		right: -300px
 		width: 760px
-		height: 300px
 		+cover
 		overflow: hidden
+		+r(1230)
+			right: -400px
+		+r(1023)
+			right: -600px
+		+r(767)
+			display: none
 		//-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
 		//clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
 	&__number
@@ -388,6 +411,15 @@
 		color: $light
 		font-size: 24px
 		+bold 
+		+r(1023)
+			margin-top: 2px 
+			width: 50px
+			line-height: 1.1
+		+r(767)
+			margin-bottom: 17px
+			float: none
+			width: auto
+			font-size: 16px
 	&__text
 		overflow: hidden
 	&__title
@@ -395,3 +427,8 @@
 		font-size: 48px
 		+reg
 		line-height: 1.1
+		+r(1023)
+			margin-bottom: 12px
+			font-size: 24px
+		+r(767)
+			font-size: 20px
