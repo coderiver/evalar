@@ -245,6 +245,13 @@ a.btn-action { line-height: 38px; }
 @media only screen and (max-width: 1230px) { .pager__link:last-child:before { width: 130px; right: -135px; } }
 @media only screen and (max-width: 1023px) { .pager__link:last-child:before { width: 60px; right: -65px; } }
 
+.btn-feedback { position: fixed; top: 50%; left: 0; z-index: 5; margin-top: -67px; -moz-transform: rotate(-90deg); -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -webkit-transform-origin: 0 0; transform-origin: 0 0; padding: 0 15px; height: 50px; line-height: 50px; background: #009036; font-weight: 400; color: #fff; -webkit-font-smoothing: antialiased; text-align: center; font-size: 0; -moz-transition: background 0.2s; -o-transition: background 0.2s; -webkit-transition: background 0.2s; transition: background 0.2s; }
+.btn-feedback:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.btn-feedback span { display: inline-block; vertical-align: middle; font-size: 12px; line-height: 1.1; }
+.btn-feedback strong { display: block; font-size: 14px; font-weight: 900; }
+.btn-feedback:hover { background: #20b019; }
+@media only screen and (max-width: 1024px) { .btn-feedback { display: none; } }
+
 .text-left { text-align: left; }
 
 .text-right { text-align: right; }

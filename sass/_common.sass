@@ -733,44 +733,34 @@ a.btn-action
 					width: 60px
 					right: -65px
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-feedback
+	position: fixed
+	top: 50%
+	left: 0
+	z-index: 5
+	margin-top: -67px
+	+transform(rotate(-90deg))
+	+transform-origin(0, 0)
+	padding: 0 15px 
+	height: 50px
+	line-height: 50px
+	background: $green
+	+reg
+	color: #fff
+	-webkit-font-smoothing: antialiased
+	+vertical
+	+tr(background .2s)
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 12px
+		line-height: 1.1
+	strong
+		display: block
+		font-size: 14px
+		+black
+	&:hover
+		background: $green_h 
+	+r(1024)
+		display: none
+		
