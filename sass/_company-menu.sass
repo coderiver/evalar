@@ -1,0 +1,28 @@
+.desktop 
+	.no-scroll
+		&.full-page-body 
+			margin-right: 0 !important
+			.menu
+				right: 0
+.full-page-body
+	.header,
+	.footer
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+	.footer
+		top: auto
+		bottom: 0
+.section
+	&__img
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		+cover
+		+tr(transform 20s)
+	&.active
+		.section__img
+			+scale(1.2)
