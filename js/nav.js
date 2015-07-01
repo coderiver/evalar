@@ -109,11 +109,11 @@ function changeBrowserURL(dom_element) {
   // Change URL with browser address bar using the HTML5 History API.
   if (history.pushState) {
     // Parameters: data, page title, URL
-    history.pushState(null, null, dom_element.dataset.url);
+    history.pushState(null, null, dom_element.href);
   }
   // Fallback for non-supported browsers.
   else {
-    document.location.hash = dom_element.getAttribute("data-url");
+    document.location.hash = dom_element.getAttribute("href");
   }
 }
 

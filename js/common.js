@@ -330,14 +330,34 @@ head.ready(function() {
 			});
 		}
 	});
-	var sectionLink = $(".js-section-nav a");
-	sectionLink.on("click", function() {
-		var name = $(this).attr("href");
-		$.scrollify("move",name);
-		sectionLink.removeClass("is-active");
-		$(this).addClass("is-active");
-		return false;
+	// var sectionLink = $(".js-section-nav a");
+	// sectionLink.on("click", function() {
+	// 	var name = $(this).attr("href");
+	// 	$.scrollify("move",name);
+	// 	sectionLink.removeClass("is-active");
+	// 	$(this).addClass("is-active");
+	// 	return false;
+	// });
+	function changeBrowserURL(data, url) {
+		// Change URL with browser address bar using the HTML5 History API.
+
+		// Parameters: data, page title, URL
+		history.pushState(data, null, url);
+	}
+	
+	$(".js-section-nav a").on("click", function(){
+		var ajaxUrl = $(this).attr("data-ajax");
+		var url = $(this).attr("href");
+		if (!$(this).hasClass("is-clicked")) {
+			$("#container").load(ajaxUrl);
+			$(this).addClass("is-clicked");
+			$("body").addClass("has-open-content")
+		}
+
+		changeBrowserURL("company_menu_all.html", url);
+	    return false;
 	});
+
 	
 });
 

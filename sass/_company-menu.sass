@@ -11,6 +11,7 @@
 .section
 	position: relative
 	height: 100vh
+	+tr(height .3s)
 	&__img
 		position: absolute
 		top: 0
@@ -43,3 +44,21 @@
 		+tr(font-size .7s)
 		&.is-active
 			font-size: 60px
+			
+#container
+	opacity: 1
+	+tr(opacity .5s)
+	// &.is-invisible
+	// 	opacity: 0
+		
+.has-open-content
+	.ajax-content
+		top: 10%
+.ajax-content
+	position: absolute
+	top: 100%
+	left: 0
+	right: 0
+	background: #fff 
+	padding: 50px 
+	+tr(top .3s)
