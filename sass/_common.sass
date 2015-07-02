@@ -93,8 +93,26 @@ a
 // common blocks      
 .out
 	overflow: hidden
+	margin: 0 0 -211px
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	+r(1023)
+		margin-bottom: -343px
+	+r(767)
+		margin-bottom: 0
+	&:after
+		content: ""
+		display: block 
+		clear: both
+		height: 211px
+		+r(1023)
+			height: 343px
+		+r(767)
+			display: none
 .out_fullpage
-	height: 100vh
+	height: 100vh !important
+	margin: 0
 .title-link
 	font-size: 16px
 	line-height: 1.25

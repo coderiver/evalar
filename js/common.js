@@ -319,7 +319,9 @@ head.ready(function() {
 		scrollSpeed: 700,
 		offset : 0,
 		scrollbars: true,
-		before:function() {},
+		before:function() {
+			
+		},
 		after:function() {
 			var scrollTop = $(document).scrollTop();
 			$(".js-section").each(function(){

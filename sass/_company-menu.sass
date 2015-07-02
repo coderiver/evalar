@@ -5,6 +5,7 @@
 		top: 0
 		left: 0
 		right: 0
+		z-index: 3
 	.footer
 		top: auto
 		bottom: 0
@@ -12,6 +13,9 @@
 	position: relative
 	height: 100vh
 	+tr(height .3s)
+	overflow: hidden
+	&[data-index="6"]
+		z-index: 2
 	&__img
 		position: absolute
 		top: 0
@@ -23,6 +27,17 @@
 	&.is-active
 		.section__img
 			+scale(1.2)
+	&__vertical
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		+vertical
+	&__in
+		display: inline-block
+		vertical-align: middle
+		width: 100%
 .section-nav
 	position: fixed
 	top: 0
@@ -44,21 +59,35 @@
 		+tr(font-size .7s)
 		&.is-active
 			font-size: 60px
-			
-#container
-	opacity: 1
-	+tr(opacity .5s)
-	// &.is-invisible
-	// 	opacity: 0
-		
-.has-open-content
-	.ajax-content
-		top: 10%
-.ajax-content
-	position: absolute
-	top: 100%
-	left: 0
-	right: 0
-	background: #fff 
-	padding: 50px 
-	+tr(top .3s)
+.nav-icon
+	display: block
+	white-space: nowrap
+	margin-bottom: 100px
+	text-align: left
+	padding-right: 60px
+	+gpu	
+	&:hover
+		i
+			opacity: 0.8
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-right: 13px
+		+tr(opacity .3s)
+	span
+		display: inline-block
+		white-space: normal
+		vertical-align: middle
+		font-size: 30px
+		+light
+		line-height: 1.16
+		color: #fff 			
+@for $i from 1 through 6
+	.icon-#{$i}
+		+svg(icon#{$i},70,70)
+
+.history-page
+	+cover
+	.breadcrumbs
+		background: #fff
+		 
