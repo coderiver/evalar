@@ -1163,10 +1163,10 @@ a.btn-action { line-height: 38px; }
 .abc .abc__title { font-size: 24px; margin-bottom: 12px; }
 
 .plants { position: relative; }
-.plants__bg { max-width: 1406px; }
+.plants__bg { max-width: 1406px; z-index: 2; position: relative; }
 .plants__bg img { width: 100%; height: auto; }
 
-.plant { position: absolute; }
+.plant { position: absolute; z-index: 3; }
 
 .brand { margin-top: 30px; position: relative; font-size: 0; *zoom: 1; }
 .brand:after { content: " "; display: table; clear: both; }
