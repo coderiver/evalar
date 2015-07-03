@@ -33,8 +33,8 @@
 
 .plants
 	position: relative
+	margin-top: 165px
 	&__bg
-		max-width: 1406px
 		z-index: 2
 		position: relative
 		img
@@ -43,3 +43,99 @@
 .plant
 	position: absolute
 	z-index: 3
+	&_1
+		top: 0
+		left: 287px
+	&_2
+		top: 207px
+		left: 326px
+	&_3
+		top: 504px
+		left: 0
+	&_4
+		top: 585px
+		left: 132px
+	&_5
+		top: 555px
+		left: 230px
+	&_6
+		top: 515px
+		left: 368px
+	&_7
+		bottom: 0
+		left: 488px
+	&_8
+		top: 297px
+		left: 0
+	&_9
+		top: 453px
+		right: 38px
+	&_10
+		top: 321px
+		right: 95px
+	&_11
+		top: 264px
+		left: 462px
+	&_12
+		top: 174px
+		left: 462px
+	&_13
+		top: 0
+		left: 476px
+.btn-round
+	display: inline-block
+	border: 1px solid
+	padding: 0 25px 0 17px 
+	height: 40px
+	line-height: 38px
+	text-align: center
+	font-size: 16px
+	+med
+	color: #a7ae9c 
+	border-radius: 20px 
+	.btn-arr
+		margin-right: 10px
+		vertical-align: middle
+.btn-arr
+	+svg(btn-arr,15,14)
+.input
+	&[disabled]
+		background: #ccc 
+.plant-info
+	position: absolute
+	z-index: 3
+	&_1
+		top: -85px
+		left: 0
+		i
+			top: 100%
+			left: 100%
+			+rotate(23)
+	&_2
+		top: 35px
+		left: 145px
+		width: 200px
+		i
+			top: 100%
+			left: 100px
+			+rotate(53)
+	&_3
+		top: 212px
+		left: 0
+		width: 200px
+		i
+			top: 100%
+			left: 20px
+			width: 300px
+			+rotate(80)
+	i
+		position: absolute
+		height: 1px
+		width: 205px
+		+transform-origin(left)
+		background: #dadbd4 
+
+	.title-small
+		margin-bottom: 13px
+	a
+		color: $green 

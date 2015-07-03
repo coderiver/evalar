@@ -311,27 +311,29 @@ head.ready(function() {
 		return false;
 	});
 
-
-	$.scrollify({
-		section : ".js-section",
-		sectionName : false,
-		easing: "easeOutExpo",
-		scrollSpeed: 700,
-		offset : 0,
-		scrollbars: true,
-		before:function() {
-			
-		},
-		after:function() {
-			var scrollTop = $(document).scrollTop();
-			$(".js-section").each(function(){
-				if ($(this).offset().top == scrollTop) {
-					$(".js-section").removeClass("is-active");
-					$(this).addClass("is-active");
-				}
-			});
-		}
-	});
+	if ($(".js-section").length) {
+		$.scrollify({
+			section : ".js-section",
+			sectionName : false,
+			easing: "easeOutExpo",
+			scrollSpeed: 700,
+			offset : 0,
+			scrollbars: true,
+			before:function() {
+				
+			},
+			after:function() {
+				var scrollTop = $(document).scrollTop();
+				$(".js-section").each(function(){
+					if ($(this).offset().top == scrollTop) {
+						$(".js-section").removeClass("is-active");
+						$(this).addClass("is-active");
+					}
+				});
+			}
+		});
+	}
+	
 	// var sectionLink = $(".js-section-nav a");
 	// sectionLink.on("click", function() {
 	// 	var name = $(this).attr("href");

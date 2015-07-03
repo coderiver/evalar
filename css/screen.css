@@ -1162,11 +1162,42 @@ a.btn-action { line-height: 38px; }
 .abc .abc__chapter a:hover { color: #20b019; }
 .abc .abc__title { font-size: 24px; margin-bottom: 12px; }
 
-.plants { position: relative; }
-.plants__bg { max-width: 1406px; z-index: 2; position: relative; }
+.plants { position: relative; margin-top: 165px; }
+.plants__bg { z-index: 2; position: relative; }
 .plants__bg img { width: 100%; height: auto; }
 
 .plant { position: absolute; z-index: 3; }
+.plant_1 { top: 0; left: 287px; }
+.plant_2 { top: 207px; left: 326px; }
+.plant_3 { top: 504px; left: 0; }
+.plant_4 { top: 585px; left: 132px; }
+.plant_5 { top: 555px; left: 230px; }
+.plant_6 { top: 515px; left: 368px; }
+.plant_7 { bottom: 0; left: 488px; }
+.plant_8 { top: 297px; left: 0; }
+.plant_9 { top: 453px; right: 38px; }
+.plant_10 { top: 321px; right: 95px; }
+.plant_11 { top: 264px; left: 462px; }
+.plant_12 { top: 174px; left: 462px; }
+.plant_13 { top: 0; left: 476px; }
+
+.btn-round { display: inline-block; border: 1px solid; padding: 0 25px 0 17px; height: 40px; line-height: 38px; text-align: center; font-size: 16px; font-weight: 500; color: #a7ae9c; border-radius: 20px; }
+.btn-round .btn-arr { margin-right: 10px; vertical-align: middle; }
+
+.btn-arr { background: url("../img/svg/btn-arr.svg") no-repeat 0 0; -moz-background-size: 15px 14px; -o-background-size: 15px 14px; -webkit-background-size: 15px 14px; background-size: 15px 14px; width: 15px; height: 14px; display: inline-block; }
+
+.input[disabled] { background: #ccc; }
+
+.plant-info { position: absolute; z-index: 3; }
+.plant-info_1 { top: -85px; left: 0; }
+.plant-info_1 i { top: 100%; left: 100%; -ms-transform: rotate(23deg); -webkit-transform: rotate(23deg); transform: rotate(23deg); }
+.plant-info_2 { top: 35px; left: 145px; width: 200px; }
+.plant-info_2 i { top: 100%; left: 100px; -ms-transform: rotate(53deg); -webkit-transform: rotate(53deg); transform: rotate(53deg); }
+.plant-info_3 { top: 212px; left: 0; width: 200px; }
+.plant-info_3 i { top: 100%; left: 20px; width: 300px; -ms-transform: rotate(80deg); -webkit-transform: rotate(80deg); transform: rotate(80deg); }
+.plant-info i { position: absolute; height: 1px; width: 205px; -moz-transform-origin: left 50%; -ms-transform-origin: left 50%; -webkit-transform-origin: left 50%; transform-origin: left 50%; background: #dadbd4; }
+.plant-info .title-small { margin-bottom: 13px; }
+.plant-info a { color: #009036; }
 
 .brand { margin-top: 30px; position: relative; font-size: 0; *zoom: 1; }
 .brand:after { content: " "; display: table; clear: both; }
