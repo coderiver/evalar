@@ -33,7 +33,7 @@
 
 .plants
 	position: relative
-	margin-top: 165px
+	margin: 165px 0 230px
 	&__bg
 		z-index: 2
 		position: relative
@@ -43,6 +43,11 @@
 .plant
 	position: absolute
 	z-index: 3
+	&.is-active
+		z-index: 4
+		img
+			+scale(1.2)
+			
 	&_1
 		top: 0
 		left: 287px
@@ -71,17 +76,19 @@
 		top: 453px
 		right: 38px
 	&_10
-		top: 321px
-		right: 95px
+		top: 317px
+		right: 137px
 	&_11
-		top: 264px
-		left: 462px
+		top: 230px
+		left: 430px
 	&_12
 		top: 174px
 		left: 462px
 	&_13
 		top: 0
 		left: 476px
+	img
+		+tr(transform .3s)
 .btn-round
 	display: inline-block
 	border: 1px solid
@@ -104,37 +111,125 @@
 .plant-info
 	position: absolute
 	z-index: 3
-	&_1
-		top: -85px
-		left: 0
-		i
-			top: 100%
-			left: 100%
-			+rotate(23)
-	&_2
-		top: 35px
-		left: 145px
-		width: 200px
-		i
-			top: 100%
-			left: 100px
-			+rotate(53)
-	&_3
-		top: 212px
-		left: 0
-		width: 200px
-		i
-			top: 100%
-			left: 20px
-			width: 300px
-			+rotate(80)
+	width: 200px
 	i
 		position: absolute
 		height: 1px
 		width: 205px
 		+transform-origin(left)
 		background: #dadbd4 
-
+	&_1
+		top: -100px
+		left: 0
+		i
+			top: 100%
+			left: 100%
+			width: 205px
+			+rotate(23)
+	&_2
+		top: 35px
+		left: 145px
+		i
+			top: 100%
+			left: 100px
+			width: 205px
+			+rotate(53)
+	&_3
+		top: 212px
+		left: 0
+		i
+			top: 100%
+			left: 20px
+			width: 300px
+			+rotate(80)
+	&_4
+		bottom: 170px
+		left: 0
+		width: 300px
+		i
+			bottom: 100%
+			left: 115px
+			width: 65px
+			+rotate(-55)
+	&_5
+		bottom: 35px
+		left: 150px
+		i
+			bottom: 84%
+			left: 90px
+			width: 190px
+			+rotate(-55)
+	&_6
+		bottom: -155px
+		left: 400px
+		i
+			bottom: 114%
+			left: 26px
+			width: 300px
+			+rotate(-77)
+	&_7
+		bottom: -155px
+		right: 120px
+		width: 300px
+		i
+			bottom: 114%
+			left: 26px
+			width: 85px
+			+rotate(-103)
+	&_8
+		bottom: 20px
+		right: 0
+		width: 270px
+		i
+			bottom: 114%
+			left: 0
+			width: 330px
+			+rotate(-107)
+	&_9
+		bottom: 185px
+		right: -30px
+		width: 270px
+		i
+			bottom: 114%
+			left: 30px
+			width: 100px
+			+rotate(-60)
+	&_10
+		top: 185px
+		right: 0
+		width: 240px
+		i
+			top: 100%
+			left: 0
+			width: 100px
+			+rotate(118)
+	&_11
+		top: 55px
+		right: 0
+		width: 300px
+		i
+			top: 100%
+			left: 0
+			width: 300px
+			+rotate(138)
+	&_12
+		top: -100px
+		right: 0
+		width: 300px
+		i
+			top: 100%
+			left: 0
+			width: 200px
+			+rotate(133)
+	&_13
+		top: -100px
+		right: 400px
+		width: 300px
+		i
+			top: 100%
+			left: 120px
+			width: 65px
+			+rotate(63)
 	.title-small
 		margin-bottom: 13px
 	a

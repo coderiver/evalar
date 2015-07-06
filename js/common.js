@@ -361,6 +361,14 @@ head.ready(function() {
 		changeBrowserURL("company_menu_all.html", url);
 	    return false;
 	});
+	$(".js-plant-info").hover(function() {
+		var index = $(this).attr("data-index");
+		$('[data-plant="'+index+'"]').addClass("is-active");
+	},
+	function() {
+		var index = $(this).attr("data-index");
+		$('[data-plant="'+index+'"]').removeClass("is-active");
+	});
 
 	
 });
