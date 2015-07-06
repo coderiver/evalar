@@ -1200,6 +1200,7 @@ a.btn-action { line-height: 38px; }
 
 .plant-info { position: absolute; z-index: 3; width: 200px; }
 .plant-info i { position: absolute; height: 1px; width: 205px; -moz-transform-origin: left 50%; -ms-transform-origin: left 50%; -webkit-transform-origin: left 50%; transform-origin: left 50%; background: #dadbd4; }
+.plant-info a { display: block; }
 .plant-info_1 { top: -100px; left: 0; }
 .plant-info_1 i { top: 100%; left: 100%; width: 205px; -ms-transform: rotate(23deg); -webkit-transform: rotate(23deg); transform: rotate(23deg); }
 .plant-info_2 { top: 35px; left: 145px; }
