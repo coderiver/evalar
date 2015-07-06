@@ -370,6 +370,9 @@ head.ready(function() {
 		$('[data-plant="'+index+'"]').removeClass("is-active");
 	});
 
+	setTimeout(function(){
+		$(".js-plants").addClass("is-visible");
+	},1000);
 	
 });
 

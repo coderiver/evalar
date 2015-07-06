@@ -34,6 +34,10 @@
 .plants
 	position: relative
 	margin: 165px 0 230px
+	opacity: 0
+	+tr(opacity .3s)
+	&.is-visible
+		opacity: 1
 	&__bg
 		z-index: 2
 		position: relative
