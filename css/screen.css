@@ -1589,6 +1589,25 @@ html.fp-enabled, .fp-enabled body { margin: 0; padding: 0; overflow: hidden; /*A
 .history-page { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .history-page .breadcrumbs { background: #fff; }
 
+.history { overflow: hidden; padding: 30px 0; }
+.history > .container { position: relative; }
+.history > .container:before, .history > .container:after { content: ""; position: absolute; top: 50%; height: 1px; width: 1500px; background: #fff; }
+.history > .container:before { left: -1610px; }
+.history > .container:after { right: -1610px; }
+.history__slider { position: relative; width: 67%; margin: 0 auto; }
+.history__slider:before, .history__slider:after { content: ""; position: absolute; top: 50%; height: 1px; width: 21.5%; background: #fff; }
+.history__slider:before { left: -25%; }
+.history__slider:after { right: -25%; }
+.history__item { display: table; table-layout: fixed; width: 100%; color: #fff; }
+.history__date { display: table-cell; vertical-align: middle; width: 25%; padding: 16% 0; font-weight: 400; font-size: 48px; }
+.history__info { display: table-cell; vertical-align: middle; font-size: 16px; line-height: 1.6; font-weight: 500; }
+.history__info p { margin-bottom: 25px; }
+.history__info p:last-child { margin-bottom: 0; }
+.history .slick-prev { left: -34%; background: url("../img/svg/prev.svg") no-repeat 0 0; -moz-background-size: 21px 60px; -o-background-size: 21px 60px; -webkit-background-size: 21px 60px; background-size: 21px 60px; }
+.history .slick-next { right: -34%; background: url("../img/svg/next.svg") no-repeat 0 0; -moz-background-size: 21px 60px; -o-background-size: 21px 60px; -webkit-background-size: 21px 60px; background-size: 21px 60px; }
+.history .slick-disabled { margin: -20px 0 0 -5px; border: 1px solid #fff; width: 40px; height: 40px; border-radius: 50%; background: none; pointer-events: none; }
+.history .slick-disabled:before { content: ""; position: absolute; left: 50%; top: 50%; margin: -5px 0 0 -5px; width: 10px; height: 10px; background: #fff; border-radius: 50%; }
+
 .fotorama__arr:focus:after, .fotorama__fullscreen-icon:focus:after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot:after, .fotorama__nav__frame:focus .fotorama__thumb:after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe { position: absolute; width: 100%; height: 100%; top: 0; right: 0; left: 0; bottom: 0; }
 
 .fotorama--fullscreen, .fotorama__img { max-width: 99999px !important; max-height: 99999px !important; min-width: 0 !important; min-height: 0 !important; border-radius: 0 !important; box-shadow: none !important; padding: 0 !important; }

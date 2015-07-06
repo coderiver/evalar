@@ -116,6 +116,20 @@ head.ready(function() {
 		}
 	});
 
+	var configHistorySlider = {
+		slidesToShow: 1,
+		dots: false,
+		arrows: true,
+		infinite: false,
+		adaptiveHeight: true
+	}
+	$('.js-history-slider').on('init', function(slick) {
+		setTimeout(function(){
+			$('.js-history-slider').addClass("is-ready");
+		},200);
+	});
+	$(".js-history-slider").slick(configHistorySlider);
+
 	$(".js-search").on('click', function(event) {
 		event.stopPropagation();
 	});

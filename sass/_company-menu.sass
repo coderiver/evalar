@@ -90,4 +90,84 @@
 	+cover
 	.breadcrumbs
 		background: #fff
-		 
+
+.history
+	overflow: hidden
+	padding: 30px 0 
+	> .container
+		position: relative
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			height: 1px
+			width: 1500px
+			background: #fff
+		&:before
+			left: -1610px
+		&:after
+			right: -1610px
+	&__slider
+		position: relative
+		width: 67%
+		margin: 0 auto 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			height: 1px
+			width: 21.5%
+			background: #fff
+		&:before
+			left: -25%
+		&:after
+			right: -25%
+	&__item
+		display: table
+		table-layout: fixed
+		width: 100%
+		color: #fff 
+		
+	&__date
+		display: table-cell
+		vertical-align: middle	
+		width: 25%
+		padding: 16% 0 
+		+reg
+		font-size: 48px
+	&__info
+		display: table-cell
+		vertical-align: middle	
+		font-size: 16px
+		line-height: 1.6
+		+med
+		p
+			margin-bottom: 25px
+			&:last-child
+				margin-bottom: 0
+	.slick-prev
+		left: -34%
+		+svgi(prev,21,60)
+	.slick-next
+		right: -34%
+		+svgi(next,21,60)
+	.slick-disabled
+		margin: -20px 0 0 -5px
+		border: 1px solid #fff
+		width: 40px
+		height: 40px
+		border-radius: 50% 
+		background: none
+		pointer-events: none
+		&:before
+			content: ""
+			position: absolute
+			left: 50%
+			top: 50%
+			margin: -5px 0 0 -5px 
+			width: 10px
+			height: 10px
+			background: #fff  
+			border-radius: 50% 
