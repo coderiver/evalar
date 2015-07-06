@@ -1163,27 +1163,33 @@ a.btn-action { line-height: 38px; }
 .abc .abc__title { font-size: 24px; margin-bottom: 12px; }
 
 .plants { position: relative; margin: 165px 0 230px; opacity: 0; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+@media only screen and (max-width: 1230px) { .plants { width: 600px; margin: 0 auto; } }
 .plants.is-visible { opacity: 1; }
 .plants__bg { z-index: 2; position: relative; }
+@media only screen and (max-width: 1230px) { .plants__bg { margin: 0 auto; width: 75%; } }
 .plants__bg img { width: 100%; height: auto; }
 
-.plant { position: absolute; z-index: 3; }
+.plant { position: absolute; z-index: 3; pointer-events: none; }
 .plant.is-active { z-index: 4; }
 .plant.is-active img { -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
 .plant_1 { top: 0; left: 287px; }
+@media only screen and (max-width: 1230px) { .plant_1 { left: 160px; width: 20%; } }
 .plant_2 { top: 207px; left: 326px; }
 .plant_3 { top: 504px; left: 0; }
 .plant_4 { top: 585px; left: 132px; }
 .plant_5 { top: 555px; left: 230px; }
 .plant_6 { top: 515px; left: 368px; }
 .plant_7 { bottom: 0; left: 488px; }
+@media only screen and (max-width: 1230px) { .plant_7 { left: 260px; width: 20%; } }
 .plant_8 { top: 297px; left: 0; }
 .plant_9 { top: 453px; right: 38px; }
 .plant_10 { top: 317px; right: 137px; }
 .plant_11 { top: 230px; left: 430px; }
 .plant_12 { top: 174px; left: 462px; }
+@media only screen and (max-width: 1230px) { .plant_12 { top: 37px; left: 306px; width: 12%; } }
 .plant_13 { top: 0; left: 476px; }
-.plant img { -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
+@media only screen and (max-width: 1230px) { .plant_13 { left: 280px; width: 15%; } }
+.plant img { width: 100%; -moz-transition: -moz-transform 0.3s; -o-transition: -o-transform 0.3s; -webkit-transition: -webkit-transform 0.3s; transition: transform 0.3s; }
 
 .btn-round { display: inline-block; border: 1px solid; padding: 0 25px 0 17px; height: 40px; line-height: 38px; text-align: center; font-size: 16px; font-weight: 500; color: #a7ae9c; border-radius: 20px; }
 .btn-round .btn-arr { margin-right: 10px; vertical-align: middle; }

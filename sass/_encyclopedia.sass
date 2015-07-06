@@ -36,25 +36,35 @@
 	margin: 165px 0 230px
 	opacity: 0
 	+tr(opacity .3s)
+	+r(1230)
+		width: 600px
+		margin: 0 auto 
 	&.is-visible
 		opacity: 1
 	&__bg
 		z-index: 2
 		position: relative
+		+r(1230)
+			margin: 0 auto 
+			width: 75%
 		img
 			width: 100%
 			height: auto
+		
 .plant
 	position: absolute
 	z-index: 3
+	pointer-events: none
 	&.is-active
 		z-index: 4
 		img
 			+scale(1.2)
-			
 	&_1
 		top: 0
 		left: 287px
+		+r(1230)
+			left: 160px
+			width: 20%
 	&_2
 		top: 207px
 		left: 326px
@@ -73,6 +83,9 @@
 	&_7
 		bottom: 0
 		left: 488px
+		+r(1230)
+			left: 260px
+			width: 20%
 	&_8
 		top: 297px
 		left: 0
@@ -88,10 +101,18 @@
 	&_12
 		top: 174px
 		left: 462px
+		+r(1230)
+			top: 37px
+			left: 306px
+			width: 12%
 	&_13
 		top: 0
 		left: 476px
+		+r(1230)
+			left: 280px
+			width: 15%
 	img
+		width: 100%
 		+tr(transform .3s)
 .btn-round
 	display: inline-block
