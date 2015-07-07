@@ -37,16 +37,19 @@
 	opacity: 0
 	+tr(opacity .3s)
 	+r(1230)
-		width: 600px
-		margin: 0 auto 
+		width: 455px
+		margin: 410px auto 360px
+	+r(767)
+		width: 100%
+		margin: 0
 	&.is-visible
 		opacity: 1
+		
 	&__bg
 		z-index: 2
 		position: relative
-		+r(1230)
-			margin: 0 auto 
-			width: 75%
+		+r(767)
+			margin: 50px 0
 		img
 			width: 100%
 			height: auto
@@ -55,6 +58,8 @@
 	position: absolute
 	z-index: 3
 	pointer-events: none
+	+r(767)
+		display: none
 	&.is-active
 		z-index: 4
 		img
@@ -63,57 +68,82 @@
 		top: 0
 		left: 287px
 		+r(1230)
-			left: 160px
-			width: 20%
+			top: -5px
+			left: 115px
 	&_2
 		top: 207px
 		left: 326px
+		+r(1230)
+			top: 82px
+			left: 124px
 	&_3
 		top: 504px
 		left: 0
+		+r(1230)
+			top: 175px
 	&_4
 		top: 585px
 		left: 132px
+		+r(1230)
+			top: 208px
+			left: 56px
 	&_5
 		top: 555px
 		left: 230px
+		+r(1230)
+			top: 205px
+			left: 90px
 	&_6
 		top: 515px
 		left: 368px
+		+r(1230)
+			top: 20px
+			left: 128px
 	&_7
 		bottom: 0
 		left: 488px
 		+r(1230)
-			left: 260px
-			width: 20%
+			bottom: 20px
+			left: 95px
 	&_8
 		top: 297px
 		left: 0
+		+r(1230)
+			top: 100px
 	&_9
 		top: 453px
 		right: 38px
+		+r(1230)
+			top: 160px
+			right: 0
 	&_10
 		top: 317px
 		right: 137px
+		+r(1230)
+			top: 80px
+			right: 20px
 	&_11
 		top: 230px
 		left: 430px
+		+r(1230)
+			top: 105px
+			left: 180px
 	&_12
 		top: 174px
 		left: 462px
 		+r(1230)
-			top: 37px
-			left: 306px
-			width: 12%
+			top: 50px
+			left: 160px
 	&_13
 		top: 0
 		left: 476px
 		+r(1230)
-			left: 280px
-			width: 15%
+			left: 176px
 	img
 		width: 100%
 		+tr(transform .3s)
+		+r(1230)
+			width: auto
 .btn-round
 	display: inline-block
 	border: 1px solid
@@ -137,42 +167,77 @@
 	position: absolute
 	z-index: 3
 	width: 200px
+	+r(767)
+		position: static
+		width: 100%	
+		margin-bottom: 20px
 	i
 		position: absolute
+		z-index: -1
 		height: 1px
 		width: 205px
 		+transform-origin(left)
 		background: #dadbd4 
+		+r(767)
+			display: none
 	a
 		display: block
 	&_1
 		top: -100px
 		left: 0
+		+r(1230)
+			top: -345px
+			left: -60px
+			
 		i
 			top: 100%
 			left: 100%
 			width: 205px
 			+rotate(23)
+			+r(1230)
+				display: none
 	&_2
 		top: 35px
 		left: 145px
+		+r(1230)
+			top: -60px
+			left: -60px
+			width: 220px
 		i
 			top: 100%
 			left: 100px
 			width: 205px
 			+rotate(53)
+			+r(1230)
+				left: 120px
+				width: 120px
+				+rotate(40)
 	&_3
 		top: 212px
 		left: 0
+		+r(1230)
+			top: 85px
+			left: -60px
+			width: 220px
 		i
 			top: 100%
 			left: 20px
 			width: 300px
 			+rotate(80)
+			+r(1230)
+				top: 83px
+				left: 52px
+				+rotate(52)
+				width: 60px
 	&_4
 		bottom: 170px
 		left: 0
 		width: 300px
+		+r(1230)
+			top: 305px
+			bottom: auto
+			left: -60px
+			width: 220px
 		i
 			bottom: 100%
 			left: 115px
@@ -181,82 +246,161 @@
 	&_5
 		bottom: 35px
 		left: 150px
+		+r(1230)
+			top: 480px
+			bottom: auto
+			left: -60px
+			width: 200px
 		i
 			bottom: 84%
 			left: 90px
 			width: 190px
 			+rotate(-55)
+			+r(1230)
+				bottom: 57%
+				left: 145px
+				width: 225px
+				+rotate(-70)
 	&_6
 		bottom: -155px
 		left: 400px
+		+r(1230)
+			top: 480px
+			bottom: auto
+			left: 150px
+			width: 220px
 		i
 			bottom: 114%
 			left: 26px
 			width: 300px
 			+rotate(-77)
+			+r(1230)
+				bottom: 100%
+				width: 160px
 	&_7
 		bottom: -155px
 		right: 120px
 		width: 300px
+		+r(1230)
+			top: 480px
+			bottom: auto
+			left: 350px
+			width: 220px
 		i
 			bottom: 114%
 			left: 26px
 			width: 85px
 			+rotate(-103)
+			+r(1230)
+				bottom: 100%
+				left: 0
+				width: 100px
+				+rotate(-127)
 	&_8
 		bottom: 20px
 		right: 0
 		width: 270px
+		+r(1230)
+			top: -225px
+			left: -60px
+			bottom: auto
+			width: 220px
 		i
 			bottom: 114%
 			left: 0
 			width: 330px
 			+rotate(-107)
+			+r(1230)
+				bottom: auto
+				top: 75%
+				left: 130px
+				width: 385px
+				+rotate(55)
+				
 	&_9
 		bottom: 185px
 		right: -30px
 		width: 270px
+		+r(1230)
+			top: 305px
+			bottom: auto
+			left: 350px
+			width: 220px
 		i
 			bottom: 114%
 			left: 30px
 			width: 100px
 			+rotate(-60)
+			+r(1230)
+				bottom: 100%
+				width: 65px
 	&_10
 		top: 185px
 		right: 0
 		width: 240px
+		+r(1230)
+			top: -60px
+			bottom: auto
+			left: 350px
+			width: 220px
 		i
 			top: 100%
 			left: 0
 			width: 100px
 			+rotate(118)
+			+r(1230)
+				left: 50px
 	&_11
 		top: 55px
 		right: 0
 		width: 300px
+		+r(1230)
+			top: -225px
+			left: 350px
+			width: 220px
 		i
 			top: 100%
 			left: 0
 			width: 300px
 			+rotate(138)
+			+r(1230)
+				top: 72%
+				left: -10px
+				+rotate(105)
 	&_12
 		top: -100px
 		right: 0
 		width: 300px
+		+r(1230)
+			top: -345px
+			left: 350px
+			width: 200px
 		i
 			top: 100%
 			left: 0
 			width: 200px
 			+rotate(133)
+			+r(1230)
+				left: -10px
+				width: 330px
+				+rotate(104)
 	&_13
 		top: -100px
 		right: 400px
 		width: 300px
+		+r(1230)
+			top: -345px
+			left: 140px
+			width: 200px
 		i
 			top: 100%
 			left: 120px
 			width: 65px
 			+rotate(63)
+			+r(1230)
+				left: 40px
+				width: 260px
+				+rotate(75)
 	.title-small
 		margin-bottom: 13px
 	a
