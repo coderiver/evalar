@@ -38,10 +38,10 @@ body { font-family: "Roboto", Arial, sans-serif; font-weight: 400; font-size: 12
 a { text-decoration: none; }
 
 .out { overflow: hidden; margin: 0 0 -211px; min-height: 100%; height: auto !important; height: 100%; }
-@media only screen and (max-width: 1023px) { .out { margin-bottom: -343px; } }
+@media only screen and (max-width: 1023px) { .out { margin-bottom: -313px; } }
 @media only screen and (max-width: 767px) { .out { margin-bottom: 0; } }
 .out:after { content: ""; display: block; clear: both; height: 211px; }
-@media only screen and (max-width: 1023px) { .out:after { height: 343px; } }
+@media only screen and (max-width: 1023px) { .out:after { height: 313px; } }
 @media only screen and (max-width: 767px) { .out:after { display: none; } }
 
 .out_fullpage { height: 100vh !important; margin: 0; }
@@ -1586,25 +1586,38 @@ html.fp-enabled, .fp-enabled body { margin: 0; padding: 0; overflow: hidden; /*A
 
 .icon-6 { background: url("../img/svg/icon6.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
 
-.history-page { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.history-page .out { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .history-page .breadcrumbs { background: #fff; }
+@media only screen and (max-width: 767px) { .history-page .page-head { border-bottom: 1px solid #fff; } }
 
 .history { overflow: hidden; padding: 30px 0; }
 .history > .container { position: relative; }
 .history > .container:before, .history > .container:after { content: ""; position: absolute; top: 50%; height: 1px; width: 1500px; background: #fff; }
+@media only screen and (max-width: 1023px) { .history > .container:before, .history > .container:after { display: none; } }
 .history > .container:before { left: -1610px; }
 .history > .container:after { right: -1610px; }
 .history__slider { position: relative; width: 67%; margin: 0 auto; }
+@media only screen and (max-width: 1023px) { .history__slider { width: 100%; } }
 .history__slider:before, .history__slider:after { content: ""; position: absolute; top: 50%; height: 1px; width: 21.5%; background: #fff; }
+@media only screen and (max-width: 1230px) { .history__slider:before, .history__slider:after { display: none; } }
 .history__slider:before { left: -25%; }
 .history__slider:after { right: -25%; }
 .history__item { display: table; table-layout: fixed; width: 100%; color: #fff; }
+@media only screen and (max-width: 767px) { .history__item { display: block; margin-bottom: 70px; } }
 .history__date { display: table-cell; vertical-align: middle; width: 25%; padding: 16% 0; font-weight: 400; font-size: 48px; }
+@media only screen and (max-width: 1023px) { .history__date { width: 100px; font-size: 36px; } }
+@media only screen and (max-width: 767px) { .history__date { display: block; padding: 0; margin-bottom: 26px; font-size: 24px; width: 100%; } }
 .history__info { display: table-cell; vertical-align: middle; font-size: 16px; line-height: 1.6; font-weight: 500; }
+@media only screen and (max-width: 767px) { .history__info { display: block; line-height: 1.6; font-size: 14px; font-weight: 400; } }
 .history__info p { margin-bottom: 25px; }
+@media only screen and (max-width: 767px) { .history__info p { margin-bottom: 28px; } }
 .history__info p:last-child { margin-bottom: 0; }
 .history .slick-prev { left: -34%; background: url("../img/svg/prev.svg") no-repeat 0 0; -moz-background-size: 21px 60px; -o-background-size: 21px 60px; -webkit-background-size: 21px 60px; background-size: 21px 60px; }
+@media only screen and (max-width: 1230px) { .history .slick-prev { left: -20%; } }
+@media only screen and (max-width: 1023px) { .history .slick-prev { left: -50px; } }
 .history .slick-next { right: -34%; background: url("../img/svg/next.svg") no-repeat 0 0; -moz-background-size: 21px 60px; -o-background-size: 21px 60px; -webkit-background-size: 21px 60px; background-size: 21px 60px; }
+@media only screen and (max-width: 1230px) { .history .slick-next { right: -20%; } }
+@media only screen and (max-width: 1023px) { .history .slick-next { right: -50px; } }
 .history .slick-disabled { margin: -20px 0 0 -5px; border: 1px solid #fff; width: 40px; height: 40px; border-radius: 50%; background: none; pointer-events: none; }
 .history .slick-disabled:before { content: ""; position: absolute; left: 50%; top: 50%; margin: -5px 0 0 -5px; width: 10px; height: 10px; background: #fff; border-radius: 50%; }
 

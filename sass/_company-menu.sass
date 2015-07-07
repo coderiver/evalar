@@ -87,10 +87,13 @@
 		+svg(icon#{$i},70,70)
 
 .history-page
-	+cover
+	.out
+		+cover
 	.breadcrumbs
 		background: #fff
-
+	.page-head
+		+r(767)
+			border-bottom: 1px solid #fff 
 .history
 	overflow: hidden
 	padding: 30px 0 
@@ -104,6 +107,8 @@
 			height: 1px
 			width: 1500px
 			background: #fff
+			+r(1023)
+				display: none
 		&:before
 			left: -1610px
 		&:after
@@ -112,6 +117,9 @@
 		position: relative
 		width: 67%
 		margin: 0 auto 
+		+r(1023)
+			width: 100%
+			
 		&:before,
 		&:after
 			content: ""
@@ -120,6 +128,8 @@
 			height: 1px
 			width: 21.5%
 			background: #fff
+			+r(1230)
+				display: none
 		&:before
 			left: -25%
 		&:after
@@ -129,7 +139,9 @@
 		table-layout: fixed
 		width: 100%
 		color: #fff 
-		
+		+r(767)
+			display: block
+			margin-bottom: 70px
 	&__date
 		display: table-cell
 		vertical-align: middle	
@@ -137,22 +149,46 @@
 		padding: 16% 0 
 		+reg
 		font-size: 48px
+		+r(1023)
+			width: 100px
+			font-size: 36px
+		+r(767)
+			display: block
+			padding: 0 
+			margin-bottom: 26px
+			font-size: 24px
+			width: 100%
 	&__info
 		display: table-cell
 		vertical-align: middle	
 		font-size: 16px
 		line-height: 1.6
 		+med
+		+r(767)
+			display: block
+			line-height: 1.6
+			font-size: 14px
+			+reg
 		p
 			margin-bottom: 25px
+			+r(767)
+				margin-bottom: 28px
 			&:last-child
 				margin-bottom: 0
 	.slick-prev
 		left: -34%
 		+svgi(prev,21,60)
+		+r(1230)
+			left: -20%
+		+r(1023)
+			left: -50px
 	.slick-next
 		right: -34%
 		+svgi(next,21,60)
+		+r(1230)
+			right: -20%
+		+r(1023)
+			right: -50px
 	.slick-disabled
 		margin: -20px 0 0 -5px
 		border: 1px solid #fff

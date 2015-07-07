@@ -64,9 +64,9 @@ head.ready(function() {
 		}
 	}
 
-	
-
 	document.createElement( "picture" );
+
+// main slider
 	var config = {
 		slidesToShow: 1,
 		dots: true,
@@ -87,6 +87,7 @@ head.ready(function() {
 		return false;
 	});
 
+// post slider
 	var configPostSlider = {
 		slidesToShow: 2,
 		slidesToScroll: 2,
@@ -111,25 +112,36 @@ head.ready(function() {
 		if ($(window).width() < 1024) {
 			$(".js-post-slider").slick(configPostSlider);
 		}
-		if ($(window).width() >= 1024 && $(".js-post-slider").hasClass(".slick-slider"))  {
+		if ($(window).width() >= 1024 && $(".js-post-slider").hasClass("slick-slider"))  {
 			$(".js-post-slider").slick("unslick");
 		}
 	});
 
+// history slider
 	var configHistorySlider = {
 		slidesToShow: 1,
 		dots: false,
 		arrows: true,
 		infinite: false,
-		adaptiveHeight: true
+		adaptiveHeight: true,
+		responsive: [
+			{
+		    	breakpoint: 768,
+		    	settings: "unslick"
+		   	}
+		]
 	}
 	$('.js-history-slider').on('init', function(slick) {
 		setTimeout(function(){
 			$('.js-history-slider').addClass("is-ready");
 		},200);
 	});
+
 	$(".js-history-slider").slick(configHistorySlider);
 
+
+
+// search
 	$(".js-search").on('click', function(event) {
 		event.stopPropagation();
 	});
@@ -139,7 +151,7 @@ head.ready(function() {
 		return false;
 	});
 
-
+// menu
 	$('.js-toggle-menu').on('click', function() {
 		if ($(this).hasClass("is-active")) {
 			$(".js-menu").fadeOut(200);
@@ -158,7 +170,8 @@ head.ready(function() {
 		
 		return false;
 	});
-	
+
+//fixed header
 	function fixHeader() {
 		var scrollTop = $(window).scrollTop();
 		var height = header.outerHeight();
@@ -180,10 +193,8 @@ head.ready(function() {
 		
 	});
 
-	$(".js-search").on('click', function(event) {
-		event.stopPropagation();
-	});
-
+	
+// lang list
 	$('.js-toggle-lang').on('click', function(event) {
 		$(this).toggleClass("is-active");
 		event.stopPropagation();
@@ -196,6 +207,7 @@ head.ready(function() {
 		return false;
 	});
 
+// popup
 	$(".js-show-popup").on("click", function(event){
 		var popup = $(this).attr("data-popup");
 		$(".js-popup").fadeOut();
@@ -206,7 +218,6 @@ head.ready(function() {
 		event.stopPropagation();
 		return false;
 	});
-	
 	$(".js-popup").on("click", function(){
 		$(this).fadeOut().removeClass("is-active");
 		body.removeClass("no-scroll").css({
@@ -220,18 +231,17 @@ head.ready(function() {
 			});
 		return false;
 	});
-
-
 	$(".js-popup-in").on("click", function(event){
 		event.stopPropagation();
 	});
 
-
+// select list
 	$(".js-select select").on("change", function(event){
 		var val = $(this).val();
 		$(this).parents(".js-select").find(".input").val(val);
 	});
 
+// file
 	$(".js-file-btn").on("click", function(){
 		$(this).parents(".js-file").find(".js-file-hidden").trigger("click");
 	});
@@ -243,6 +253,7 @@ head.ready(function() {
 		$(this).parents(".js-file").find(".js-file-hidden").trigger("click");
 	});
 
+// accordeon
 	$(".js-accord-head").on("click", function(){
 		var accord = $(this).parents(".js-accord");
 		var accordBody = $(this).parents(".js-accord").find(".js-accord-body");
@@ -259,11 +270,13 @@ head.ready(function() {
 		return false;
 
 	});
+
+// scrollpane
 	if($('.scroll-pane').length) {
 		$('.scroll-pane').jScrollPane();
 	}
 
-	
+// fotorama
 	// 1. Initialize fotorama manually.
 	var $fotoramaDiv = $('.js-fotorama').fotorama();
 
@@ -279,6 +292,7 @@ head.ready(function() {
 		return false;
 	});
 
+// item slider
 	var configItemSlider = {
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -308,6 +322,7 @@ head.ready(function() {
 
 	$(".js-item-slider").slick(configItemSlider);
 
+// filter
 	$(".js-open-filter").on("click", function() {
 		var filter = $(this).attr("data-filter");
 		if ($(this).hasClass("is-active")) {
@@ -325,6 +340,7 @@ head.ready(function() {
 		return false;
 	});
 
+// scrollify
 	if ($(".js-section").length) {
 		$.scrollify({
 			section : ".js-section",
@@ -387,6 +403,5 @@ head.ready(function() {
 	setTimeout(function(){
 		$(".js-plants").addClass("is-visible");
 	},1000);
-	
 });
 
