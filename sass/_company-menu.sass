@@ -6,9 +6,16 @@
 		left: 0
 		right: 0
 		z-index: 3
+	
 	.footer
 		top: auto
 		bottom: 0
+		+r(767)
+			position: absolute
+	.out
+		+r(767)
+			position: relative
+			padding-bottom: 534px
 .section
 	position: relative
 	height: 100vh
@@ -38,6 +45,10 @@
 		display: inline-block
 		vertical-align: middle
 		width: 100%
+		+r(1023)
+			margin-top: -180px
+		+r(767)
+			margin-top: -50px
 .section-nav
 	position: fixed
 	top: 0
@@ -45,20 +56,64 @@
 	left: 0
 	right: 0
 	+vertical
+	+gpu
 	ul
 		display: inline-block
 		vertical-align: middle
 		margin-top: -50px
-		
 		+light
+		+r(1023)
+			margin-top: -170px
+		+r(767)
+			margin-top: 100px
+	li
+		position: relative
+		white-space: nowrap
+		&:before
+			content: ""
+			position: absolute
+			bottom: 83%
+			left: 50%
+			width: 1px
+			height: 20px
+			background: #fff  
+			+rh(840)
+				bottom: 75%
+			+rh(780)
+				display: none
+			+r(767)
+				display: block
+				bottom: 78%
+		&:first-child
+			&:before
+				display: none
 	a
 		display: inline-block
 		padding: 10px 0 
 		color: #fff
 		font-size: 30px 
-		+tr(font-size .7s)
+		+tr(font-size .2s)
+		+rh(840)
+			font-size: 20px
+		+rh(780)
+			padding: 5px 0
+			font-size: 16px
+		+r(1023)
+			font-size: 30px
+		+r(767)
+			font-size: 16px
+			padding: 15px 0 
 		&.is-active
 			font-size: 60px
+			+rh(840)
+				font-size: 30px
+			+rh(780)
+				font-size: 24px
+			+r(1023)
+				font-size: 48px
+			+r(767)
+				font-size: 22px
+
 .nav-icon
 	display: block
 	white-space: nowrap
@@ -66,6 +121,8 @@
 	text-align: left
 	padding-right: 60px
 	+gpu	
+	+r(1023)
+		margin-bottom: 20px
 	&:hover
 		i
 			opacity: 0.8
@@ -81,11 +138,18 @@
 		font-size: 30px
 		+light
 		line-height: 1.16
-		color: #fff 			
+		color: #fff 		
+		+r(1230)
+			font-size: 24px
+		+r(1023)
+			font-size: 18px	
 @for $i from 1 through 6
 	.icon-#{$i}
 		+svg(icon#{$i},70,70)
-
+		+r(1023)
+			background-size: 35px 35px
+			width: 35px
+			height: 35px
 .history-page
 	.out
 		+cover

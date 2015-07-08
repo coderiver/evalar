@@ -358,12 +358,45 @@ head.ready(function() {
 					if ($(this).offset().top == scrollTop) {
 						$(".js-section").removeClass("is-active");
 						$(this).addClass("is-active");
+						var index = $(this).attr("data-index");
+						console.log(index);
+						$(".js-section-nav a").removeClass("is-active");
+						$(".js-section-nav li").eq(index).find("a").addClass("is-active");
 					}
 				});
 			}
 		});
 	}
 	
+	$(window).resize(function(){
+		if ($(".js-section").length) {
+			$.scrollify({
+				section : ".js-section",
+				sectionName : false,
+				easing: "easeOutExpo",
+				scrollSpeed: 700,
+				offset : 0,
+				scrollbars: true,
+				before:function() {
+					
+				},
+				after:function() {
+					var scrollTop = $(document).scrollTop();
+					$(".js-section").each(function(){
+						if ($(this).offset().top == scrollTop) {
+							$(".js-section").removeClass("is-active");
+							$(this).addClass("is-active");
+							var index = $(this).attr("data-index");
+							console.log(index);
+							$(".js-section-nav a").removeClass("is-active");
+							$(".js-section-nav li").eq(index).find("a").addClass("is-active");
+						}
+					});
+				}
+			});
+			console.log("resize");
+		}
+	});
 	// var sectionLink = $(".js-section-nav a");
 	// sectionLink.on("click", function() {
 	// 	var name = $(this).attr("href");
@@ -379,16 +412,25 @@ head.ready(function() {
 		history.pushState(data, null, url);
 	}
 	
-	$(".js-section-nav a").on("click", function(){
-		var ajaxUrl = $(this).attr("data-ajax");
-		var url = $(this).attr("href");
-		if (!$(this).hasClass("is-clicked")) {
-			$("#container").load(ajaxUrl);
-			$(this).addClass("is-clicked");
-			$("body").addClass("has-open-content")
-		}
+	// $(".js-section-nav a").on("click", function(){
+	// 	var ajaxUrl = $(this).attr("data-ajax");
+	// 	var url = $(this).attr("href");
+	// 	if (!$(this).hasClass("is-clicked")) {
+	// 		$("#container").load(ajaxUrl);
+	// 		$(this).addClass("is-clicked");
+	// 		$("body").addClass("has-open-content")
+	// 	}
 
-		changeBrowserURL("company_menu_all.html", url);
+	// 	changeBrowserURL("company_menu_all.html", url);
+	//     return false;
+	// });
+	$(".js-section-nav a").on("click", function(){
+		if (!$(this).hasClass("is-active")) {
+			var index = +$(this).parent().index();
+			$.scrollify('move',index);
+			$(".js-section-nav a").removeClass("is-active");
+			$(this).addClass("is-active");
+		}
 	    return false;
 	});
 	$(".js-plant-info").hover(function() {
