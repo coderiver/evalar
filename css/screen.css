@@ -1591,8 +1591,8 @@ html.fp-enabled, .fp-enabled body { margin: 0; padding: 0; overflow: hidden; /*A
 
 .fp-slidesNav ul li { display: inline-block; }
 
-.full-page-body .header, .full-page-body .footer { position: fixed; top: 0; left: 0; right: 0; z-index: 3; }
-.full-page-body .footer { top: auto; bottom: 0; }
+.full-page-body .header, .full-page-body .footer { position: fixed; top: 0; left: 0; right: 0; z-index: 10; }
+.full-page-body .footer { top: auto; bottom: 0; z-index: 3; }
 @media only screen and (max-width: 767px) { .full-page-body .footer { position: absolute; } }
 @media only screen and (max-width: 767px) { .full-page-body .out { position: relative; padding-bottom: 534px; } }
 
