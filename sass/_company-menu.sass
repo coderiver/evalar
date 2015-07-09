@@ -1,6 +1,5 @@
 .full-page-body
-	.header,
-	.footer
+	.header
 		position: fixed
 		top: 0
 		left: 0
@@ -8,11 +7,10 @@
 		z-index: 10
 	
 	.footer
-		top: auto
+		position: absolute
 		bottom: 0
-		z-index: 3
-		+r(767)
-			position: absolute
+		left: 0
+		right: 0
 	.out
 		+r(767)
 			position: relative
@@ -22,7 +20,8 @@
 	height: 100vh
 	+tr(height .3s)
 	overflow: hidden
-	&[data-index="6"]
+	&[data-index="6"],
+	&[data-index="7"]
 		z-index: 2
 	&__img
 		position: absolute
@@ -52,69 +51,68 @@
 			margin-top: -50px
 .section-nav
 	position: fixed
-	top: 0
+	top: 160px
 	bottom: 0
 	left: 0
 	right: 0
 	+vertical
 	+gpu
+	+r(1023)
+		top: 140px
 	ul
 		display: inline-block
 		vertical-align: middle
-		margin-top: -50px
 		+light
-		+r(1023)
-			margin-top: -170px
-		+r(767)
-			margin-top: 100px
 	li
 		position: relative
 		white-space: nowrap
 		&:before
 			content: ""
 			position: absolute
-			bottom: 83%
+			bottom: 80%
 			left: 50%
 			width: 1px
-			height: 20px
+			height: 30px
 			background: #fff  
-			+rh(840)
-				bottom: 75%
-			+rh(780)
-				display: none
 			+r(767)
 				display: block
 				bottom: 78%
+			+rh(760)
+				height: 20px
+			+rh(550)
+				display: none
 		&:first-child
 			&:before
 				display: none
 	a
 		display: inline-block
-		padding: 10px 0 
+		padding: 20px 0 
 		color: #fff
 		font-size: 30px 
 		+tr(font-size .2s)
-		+rh(840)
-			font-size: 20px
-		+rh(780)
-			padding: 5px 0
-			font-size: 16px
 		+r(1023)
 			font-size: 30px
 		+r(767)
 			font-size: 16px
 			padding: 15px 0 
+		+rh(760)
+			padding: 10px 0 
+		+rh(760)
+			font-size: 24px
+		+rh(550)
+			font-size: 20px
+		+rh(480)
+			padding: 5px 0 
 		&.is-active
 			font-size: 60px
-			+rh(840)
-				font-size: 30px
-			+rh(780)
-				font-size: 24px
 			+r(1023)
 				font-size: 48px
 			+r(767)
 				font-size: 22px
-
+			+rh(760)
+				font-size: 30px
+			+rh(550)
+				font-size: 24px
 .nav-icon
 	display: block
 	white-space: nowrap
