@@ -405,12 +405,12 @@ head.ready(function() {
 	// 	$(this).addClass("is-active");
 	// 	return false;
 	// });
-	function changeBrowserURL(data, url) {
-		// Change URL with browser address bar using the HTML5 History API.
+	// function changeBrowserURL(data, url) {
+	// 	// Change URL with browser address bar using the HTML5 History API.
 
-		// Parameters: data, page title, URL
-		history.pushState(data, null, url);
-	}
+	// 	// Parameters: data, page title, URL
+	// 	history.pushState(data, null, url);
+	// }
 	
 	// $(".js-section-nav a").on("click", function(){
 	// 	var ajaxUrl = $(this).attr("data-ajax");
