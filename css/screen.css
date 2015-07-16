@@ -933,7 +933,7 @@ a.btn-action { line-height: 38px; }
 .banner img { display: block; min-width: 100%; min-height: 100%; height: auto; width: auto; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .banner__title { position: absolute; z-index: 2; top: 20px; left: 30px; font-size: 18px; font-weight: 500; color: #fff; }
 @media only screen and (max-width: 767px) { .banner__title { font-size: 16px; } }
-.banner .title { position: absolute; left: 30px; z-index: 2; top: 20px; }
+.banner .title { position: absolute; left: 30px; z-index: 2; top: 15px; }
 @media only screen and (max-width: 767px) { .banner .title { font-size: 20px; } }
 .banner .title_white { line-height: 1.1; }
 .banner .title_white .cart-circle { position: absolute; left: 0; top: 0; }
@@ -943,7 +943,7 @@ a.btn-action { line-height: 38px; }
 .banner_video:before { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: #fff; z-index: 2; }
 .banner_video .icon-play { bottom: 60px; }
 
-.banner_shop .title_white { padding-left: 90px; }
+.banner_shop .title_white { padding-left: 72px; top: 18px; left: 20px; }
 @media only screen and (max-width: 1230px) { .banner_shop .title_white { padding-left: 65px; } }
 
 .subscribe { padding: 30px; background: #f6f6f4; }

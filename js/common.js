@@ -273,8 +273,18 @@ head.ready(function() {
 
 // scrollpane
 	if($('.scroll-pane').length) {
-		$('.scroll-pane').jScrollPane();
+		var scrollPane = $('.scroll-pane').jScrollPane();
+		var api = scrollPane.data('jsp');
+
 	}
+
+	$(window).resize(function(){
+		if($('.scroll-pane').length) {
+			var scrollPane = $('.scroll-pane').jScrollPane();
+			var api = scrollPane.data('jsp');
+			api.reinitialise(s);
+		}
+	});
 
 // fotorama
 	// 1. Initialize fotorama manually.
