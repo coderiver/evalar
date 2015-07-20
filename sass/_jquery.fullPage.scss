@@ -91,8 +91,8 @@ html.fp-enabled,
     overflow: scroll;
 }
 .fp-notransition {
-    -webkit-transition: none !important;
-    transition: none !important;
+    //-webkit-transition: none !important;
+    //transition: none !important;
 }
 .fp-slidesNav{
     position: absolute;
