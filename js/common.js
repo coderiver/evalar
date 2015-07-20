@@ -419,8 +419,8 @@ head.ready(function() {
 	        	$(".js-section-nav li").eq(nextIndex-1).find("a").addClass("is-active");
 	        },
 	        afterLoad: function(anchorLink, index){
-	        	$(".js-section-nav a").removeClass("is-active");
-	        	$(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
+	        	//$(".js-section-nav a").removeClass("is-active");
+	        	//$(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
 	        },
 	        afterRender: function(){},
 	        afterResize: function(){},

@@ -20,7 +20,7 @@ $(function(){
     router.bind('everyfetchstart', function(page){
       $root.css('opacity', 0.6);
       console.log("start");
-      
+      window.scrollTo(0, 0);
     });
 
     router.bind('everyfetchsuccess', function(page){
@@ -63,12 +63,12 @@ $(function(){
           //events
           onLeave: function(index, nextIndex, direction){
             console.log(nextIndex);
-            $(".js-section-nav a").removeClass("is-active");
-            $(".js-section-nav li").eq(nextIndex-1).find("a").addClass("is-active");
+            //$(".js-section-nav a").removeClass("is-active");
+            //$(".js-section-nav li").eq(nextIndex-1).find("a").addClass("is-active");
           },
           afterLoad: function(anchorLink, index){
-            $(".js-section-nav a").removeClass("is-active");
-            $(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
+            //$(".js-section-nav a").removeClass("is-active");
+           // $(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
           },
           afterRender: function(){},
           afterResize: function(){},
@@ -79,16 +79,17 @@ $(function(){
         });
       }
       else {
-        $.fn.fullpage.destroy('all');
+        $.fn.fullpage.destroy();
         $("body").addClass("is-inactive-fullpage");
       }
      
       $root.css('opacity', 1);
-      $newcontent = $(page.rip('content')).hide();
+      //$newcontent = $(page.rip('content')).hide();
+      $newcontent = $(page.rip('content'));
       $root.empty().append($newcontent);
-      $newcontent.fadeIn();
+      //$newcontent.fadeIn();
       page.trigger('pageready');
-      
+
     });
 
     router.bind('everyfetchfail', function(){
