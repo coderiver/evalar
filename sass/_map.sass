@@ -1,5 +1,14 @@
+.map-canvas 
+	height: 700px 
+	display: inline-block
+	vertical-align: middle
+	width: 100% 
+	+r(1023)
+		height: 400px 
+		height: 70vh 
 .map
 	+clr
+	font-size: 0
 	+r(1023)
 		max-width: 600px 
 		margin: 0 auto
@@ -9,22 +18,25 @@
 		max-width: 320px 
 		padding-left: 10px
 		padding-right: 10px
+	&_sm
+		.map-canvas
+			width: 81.25% 
+			+r(1023)	
+				width: 60% 
+			+r(767)
+				width: 100%
 .map_big
 	+r(1023)
-		max-width: 100% 
+		max-width: 600px 
 		margin: 0 auto
 		padding-left: 15px
 		padding-right: 15px
 	+r(767)
-		// max-width: 320px 
+		max-width: 320px 
 		padding-left: 10px
 		padding-right: 10px
 
-.map-canvas 
-	height: 700px 
-	+r(1023)
-		height: 400px 
-		height: 70vh 
+
 .map__list
 	height: 680px 
 	+r(1023)
@@ -32,12 +44,18 @@
 		height: 68vh 
 .map__sidebar
 	background: $bg 
+	width: 18.75% 
 	height: 700px
 	padding: 10px 0
+	display: inline-block
+	vertical-align: middle
 	+r(1023)
 		height: 400px 
 		height: 70vh 
 		padding: 1vh 0 
+		width: 40%
+	+r(767)
+		width: 100% 
 .map-info
 	&_on-map
 		padding: 12px 0 21px
