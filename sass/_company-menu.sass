@@ -1,4 +1,5 @@
 .full-page-body
+	
 	.header
 		position: fixed
 		top: 0
@@ -8,17 +9,18 @@
 	
 	.menu
 		position: fixed
-	.out
-		+r(767)
-			position: relative
-			padding-bottom: 534px
+	.footer
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 30px 0 20px 
 .section
 	position: relative
 	height: 100vh
 	+tr(height .3s)
 	overflow: hidden
-	&[data-index="6"],
-	&[data-index="7"]
+	&[data-section="7"]
 		z-index: 2
 	&__img
 		position: absolute
@@ -28,7 +30,7 @@
 		left: 0
 		+cover
 		+tr(transform 20s)
-	&.is-active
+	&.active
 		.section__img
 			+scale(1.2)
 	&__vertical
@@ -44,7 +46,7 @@
 		display: inline-block
 		vertical-align: middle
 		width: 100%
-		+r(1023)
+		+r(1024)
 			margin-top: -180px
 		+r(767)
 			margin-top: -50px
@@ -119,7 +121,7 @@
 	text-align: left
 	padding-right: 60px
 	+gpu	
-	+r(1023)
+	+r(1024)
 		margin-bottom: 20px
 	&:hover
 		i
@@ -139,12 +141,12 @@
 		color: #fff 		
 		+r(1230)
 			font-size: 24px
-		+r(1023)
+		+r(1024)
 			font-size: 18px	
 @for $i from 1 through 6
 	.icon-#{$i}
 		+svg(icon#{$i},70,70)
-		+r(1023)
+		+r(1024)
 			background-size: 35px 35px
 			width: 35px
 			height: 35px
@@ -269,3 +271,9 @@
 			height: 10px
 			background: #fff  
 			border-radius: 50% 
+	
+.is-inactive-fullpage
+	.fullpage
+		height: 30vh
+		overflow: hidden
+	

@@ -1593,17 +1593,17 @@ html.fp-enabled, .fp-enabled body { margin: 0; padding: 0; overflow: hidden; /*A
 
 .full-page-body .header { position: fixed; top: 0; left: 0; right: 0; z-index: 10; }
 .full-page-body .menu { position: fixed; }
-@media only screen and (max-width: 767px) { .full-page-body .out { position: relative; padding-bottom: 534px; } }
+.full-page-body .footer { position: absolute; bottom: 0; left: 0; right: 0; padding: 30px 0 20px; }
 
 .section { position: relative; height: 100vh; -moz-transition: height 0.3s; -o-transition: height 0.3s; -webkit-transition: height 0.3s; transition: height 0.3s; overflow: hidden; }
-.section[data-index="6"], .section[data-index="7"] { z-index: 2; }
+.section[data-section="7"] { z-index: 2; }
 .section__img { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; -moz-transition: -moz-transform 20s; -o-transition: -o-transform 20s; -webkit-transition: -webkit-transform 20s; transition: transform 20s; }
-.section.is-active .section__img { -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
+.section.active .section__img { -ms-transform: scale(1.2); -webkit-transform: scale(1.2); transform: scale(1.2); }
 .section__vertical { position: absolute; top: 0; right: 0; bottom: 0; left: 0; text-align: center; font-size: 0; }
 .section__vertical:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 @media only screen and (max-height: 760px) { .section__vertical { top: 220px; } }
 .section__in { display: inline-block; vertical-align: middle; width: 100%; }
-@media only screen and (max-width: 1023px) { .section__in { margin-top: -180px; } }
+@media only screen and (max-width: 1024px) { .section__in { margin-top: -180px; } }
 @media only screen and (max-width: 767px) { .section__in { margin-top: -50px; } }
 
 .section-nav { position: fixed; top: 160px; bottom: 0; left: 0; right: 0; text-align: center; font-size: 0; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
@@ -1630,30 +1630,30 @@ html.fp-enabled, .fp-enabled body { margin: 0; padding: 0; overflow: hidden; /*A
 @media only screen and (max-height: 550px) { .section-nav a.is-active { font-size: 24px; } }
 
 .nav-icon { display: block; white-space: nowrap; margin-bottom: 100px; text-align: left; padding-right: 60px; -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-@media only screen and (max-width: 1023px) { .nav-icon { margin-bottom: 20px; } }
+@media only screen and (max-width: 1024px) { .nav-icon { margin-bottom: 20px; } }
 .nav-icon:hover i { opacity: 0.8; }
 .nav-icon i { display: inline-block; vertical-align: middle; margin-right: 13px; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
 .nav-icon span { display: inline-block; white-space: normal; vertical-align: middle; font-size: 30px; font-weight: 300; line-height: 1.16; color: #fff; }
 @media only screen and (max-width: 1230px) { .nav-icon span { font-size: 24px; } }
-@media only screen and (max-width: 1023px) { .nav-icon span { font-size: 18px; } }
+@media only screen and (max-width: 1024px) { .nav-icon span { font-size: 18px; } }
 
 .icon-1 { background: url("../img/svg/icon1.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
-@media only screen and (max-width: 1023px) { .icon-1 { background-size: 35px 35px; width: 35px; height: 35px; } }
+@media only screen and (max-width: 1024px) { .icon-1 { background-size: 35px 35px; width: 35px; height: 35px; } }
 
 .icon-2 { background: url("../img/svg/icon2.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
-@media only screen and (max-width: 1023px) { .icon-2 { background-size: 35px 35px; width: 35px; height: 35px; } }
+@media only screen and (max-width: 1024px) { .icon-2 { background-size: 35px 35px; width: 35px; height: 35px; } }
 
 .icon-3 { background: url("../img/svg/icon3.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
-@media only screen and (max-width: 1023px) { .icon-3 { background-size: 35px 35px; width: 35px; height: 35px; } }
+@media only screen and (max-width: 1024px) { .icon-3 { background-size: 35px 35px; width: 35px; height: 35px; } }
 
 .icon-4 { background: url("../img/svg/icon4.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
-@media only screen and (max-width: 1023px) { .icon-4 { background-size: 35px 35px; width: 35px; height: 35px; } }
+@media only screen and (max-width: 1024px) { .icon-4 { background-size: 35px 35px; width: 35px; height: 35px; } }
 
 .icon-5 { background: url("../img/svg/icon5.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
-@media only screen and (max-width: 1023px) { .icon-5 { background-size: 35px 35px; width: 35px; height: 35px; } }
+@media only screen and (max-width: 1024px) { .icon-5 { background-size: 35px 35px; width: 35px; height: 35px; } }
 
 .icon-6 { background: url("../img/svg/icon6.svg") no-repeat 0 0; -moz-background-size: 70px 70px; -o-background-size: 70px 70px; -webkit-background-size: 70px 70px; background-size: 70px 70px; width: 70px; height: 70px; display: inline-block; }
-@media only screen and (max-width: 1023px) { .icon-6 { background-size: 35px 35px; width: 35px; height: 35px; } }
+@media only screen and (max-width: 1024px) { .icon-6 { background-size: 35px 35px; width: 35px; height: 35px; } }
 
 .history-page .out { background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .history-page .breadcrumbs { background: #fff; }
@@ -1689,6 +1689,8 @@ html.fp-enabled, .fp-enabled body { margin: 0; padding: 0; overflow: hidden; /*A
 @media only screen and (max-width: 1023px) { .history .slick-next { right: -50px; } }
 .history .slick-disabled { margin: -20px 0 0 -5px; border: 1px solid #fff; width: 40px; height: 40px; border-radius: 50%; background: none; pointer-events: none; }
 .history .slick-disabled:before { content: ""; position: absolute; left: 50%; top: 50%; margin: -5px 0 0 -5px; width: 10px; height: 10px; background: #fff; border-radius: 50%; }
+
+.is-inactive-fullpage .fullpage { height: 30vh; overflow: hidden; }
 
 .fotorama__arr:focus:after, .fotorama__fullscreen-icon:focus:after, .fotorama__html, .fotorama__img, .fotorama__nav__frame:focus .fotorama__dot:after, .fotorama__nav__frame:focus .fotorama__thumb:after, .fotorama__stage__frame, .fotorama__stage__shaft, .fotorama__video iframe { position: absolute; width: 100%; height: 100%; top: 0; right: 0; left: 0; bottom: 0; }
 

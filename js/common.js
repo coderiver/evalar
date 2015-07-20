@@ -350,63 +350,7 @@ head.ready(function() {
 		return false;
 	});
 
-// scrollify
-	if ($(".js-section").length) {
-		$.scrollify({
-			section : ".js-section",
-			sectionName : false,
-			easing: "easeOutExpo",
-			scrollSpeed: 700,
-			offset : 0,
-			scrollbars: true,
-			before:function() {
-				
-			},
-			after:function() {
-				var scrollTop = $(document).scrollTop();
-				$(".js-section").each(function(){
-					if ($(this).offset().top == scrollTop) {
-						$(".js-section").removeClass("is-active");
-						$(this).addClass("is-active");
-						var index = $(this).attr("data-index");
-						console.log(index);
-						$(".js-section-nav a").removeClass("is-active");
-						$(".js-section-nav li").eq(index).find("a").addClass("is-active");
-					}
-				});
-			}
-		});
-	}
-	
-	$(window).resize(function(){
-		if ($(".js-section").length) {
-			$.scrollify({
-				section : ".js-section",
-				sectionName : false,
-				easing: "easeOutExpo",
-				scrollSpeed: 700,
-				offset : 0,
-				scrollbars: true,
-				before:function() {
-					
-				},
-				after:function() {
-					var scrollTop = $(document).scrollTop();
-					$(".js-section").each(function(){
-						if ($(this).offset().top == scrollTop) {
-							$(".js-section").removeClass("is-active");
-							$(this).addClass("is-active");
-							var index = $(this).attr("data-index");
-							console.log(index);
-							$(".js-section-nav a").removeClass("is-active");
-							$(".js-section-nav li").eq(index).find("a").addClass("is-active");
-						}
-					});
-				}
-			});
-			console.log("resize");
-		}
-	});
+
 	// var sectionLink = $(".js-section-nav a");
 	// sectionLink.on("click", function() {
 	// 	var name = $(this).attr("href");
@@ -434,15 +378,75 @@ head.ready(function() {
 	// 	changeBrowserURL("company_menu_all.html", url);
 	//     return false;
 	// });
+	if (!$('body').hasClass("is-inactive-fullpage")) {
+		$('.js-fullpage').fullpage({
+	        //Navigation
+	        menu: false,
+	        lockAnchors: false,
+	        // anchors:['firstPage', 'secondPage'],
+
+	        //Scrolling
+	        css3: true,
+	        scrollingSpeed: 700,
+	        autoScrolling: true,
+	        fitToSection: true,
+	        scrollBar: true,
+	        easing: 'easeInOutCubic',
+	        easingcss3: 'ease',
+	        normalScrollElements: '.footer',
+
+	        //Accessibility
+	        keyboardScrolling: true,
+	        animateAnchor: true,
+	        recordHistory: true,
+
+	        //Design
+	        controlArrows: false,
+	        verticalCentered: false,
+	        resize : true,
+	        //fixedElements: '.header, .menu, .section-nav',
+	        responsiveWidth: 0,
+	        responsiveHeight: 0,
+
+	        //Custom selectors
+	        sectionSelector: '.js-section',
+	        //slideSelector: '.slide',
+
+	        //events
+	        onLeave: function(index, nextIndex, direction){
+	        	console.log(nextIndex);
+	        	$(".js-section-nav a").removeClass("is-active");
+	        	$(".js-section-nav li").eq(nextIndex-1).find("a").addClass("is-active");
+	        },
+	        afterLoad: function(anchorLink, index){
+	        	$(".js-section-nav a").removeClass("is-active");
+	        	$(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
+	        },
+	        afterRender: function(){},
+	        afterResize: function(){},
+	        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+	        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+	        	
+	        }
+		    });
+	}
+		
 	$(".js-section-nav a").on("click", function(){
 		if (!$(this).hasClass("is-active")) {
-			var index = +$(this).parent().index();
-			$.scrollify('move',index);
+			var index = +$(this).parent().index()+1;
+			$.fn.fullpage.moveTo(index);
 			$(".js-section-nav a").removeClass("is-active");
 			$(this).addClass("is-active");
+			return false;
 		}
-	    return false;
+	    
 	});
+
+
+
+
+
+
 	$(".js-plant-info").hover(function() {
 		var index = $(this).attr("data-index");
 		$('[data-plant="'+index+'"]').addClass("is-active");
