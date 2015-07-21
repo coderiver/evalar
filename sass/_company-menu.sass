@@ -1,5 +1,5 @@
 .full-page-body
-	
+	margin-right: 0 !important
 	.header
 		position: fixed
 		top: 0
@@ -9,6 +9,7 @@
 	
 	.menu
 		position: fixed
+		right: 0 !important
 	.footer
 		position: absolute
 		bottom: 0
@@ -17,11 +18,13 @@
 		padding: 30px 0 20px 
 .section
 	position: relative
-	height: 100vh
-	+tr(height .3s)
+	+tr(transform .3s)
 	overflow: hidden
+	//+gpu
+	&.is-active
+		height: 100vh
 	&[data-section="7"]
-		z-index: 2s
+		z-index: 5
 	&__img
 		position: absolute
 		top: 0
@@ -30,9 +33,9 @@
 		left: 0
 		+cover
 		+tr(transform 20s)
-	&.active
-		.section__img
-			+scale(1.2)
+	// &.active
+	// 	.section__img
+	// 		+scale(1.2)
 	&__vertical
 		position: absolute
 		top: 0
@@ -58,6 +61,7 @@
 	right: 0
 	+vertical
 	+gpu
+	z-index: 4
 	+r(1023)
 		top: 140px
 	ul
@@ -120,7 +124,7 @@
 	margin-bottom: 100px
 	text-align: left
 	padding-right: 60px
-	+gpu	
+	//+gpu	
 	+r(1024)
 		margin-bottom: 20px
 	&:hover
@@ -273,13 +277,44 @@
 			border-radius: 50% 
 
 .fullpage
-	height: 100vh !important
-	+tr(height .3s)
+	+tr(transform .3s)
+	height: 100vh
 .is-inactive-fullpage
-	.fullpage
-		height: 30vh !important
-		overflow: hidden
-	.section
-		height: 30vh !important
+	height: 100% !important
+	.fullpage,
+	.article
+		+transform(translateY(calc(-100vh + 300px)))
+	.article
+		margin-bottom: calc(-100vh + 300px) 
+	.section-nav
+		+transform(translateY(calc(-100vh)))
+.article,
+.section-nav
+	+tr(transform .3s)
 .article_fullpage
 	padding: 50px 
+.lazyjaxdavis__title
+	position: absolute
+	left: 15px
+	top: -185px
+	color: #fff 
+	+light
+	font-size: 60px
+	+r(1023)
+		font-size: 48px
+	+r(767)
+		font-size: 22px
+	+rh(760)
+		font-size: 30px
+	+rh(550)
+		font-size: 24px
+
+.btn-history
+	position: absolute
+	right: 20px
+	top: -150px
+	+sr(close-white)
+	+tr(opacity .2s)
+	//+gpu
+	&:hover
+		opacity: 0.8

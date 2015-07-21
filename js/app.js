@@ -1,4 +1,5 @@
 $(function(){  
+  var  body = $("body");
   new $.LazyJaxDavis(function(router){
     router.option({
        expr: {
@@ -18,15 +19,15 @@ $(function(){
     var $root = $('#lazyjaxdavisroot');
 
     router.bind('everyfetchstart', function(page){
-      $root.css('opacity', 0.6);
       console.log("start");
-      window.scrollTo(0, 0);
     });
 
     router.bind('everyfetchsuccess', function(page){
 
-      if ($("body").hasClass("is-inactive-fullpage")) {
-        $("body").removeClass("is-inactive-fullpage");
+      // load parent page
+      if (body.hasClass("is-inactive-fullpage")) {
+        var activeSection = body.attr("data-section");
+        body.removeClass("is-inactive-fullpage");
         $('.js-fullpage').fullpage({
           //Navigation
           menu: false,
@@ -63,12 +64,11 @@ $(function(){
           //events
           onLeave: function(index, nextIndex, direction){
             console.log(nextIndex);
-            //$(".js-section-nav a").removeClass("is-active");
-            //$(".js-section-nav li").eq(nextIndex-1).find("a").addClass("is-active");
+            $("body").attr("data-section", nextIndex);
           },
           afterLoad: function(anchorLink, index){
-            //$(".js-section-nav a").removeClass("is-active");
-           // $(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
+            $(".js-section-nav a").removeClass("is-active");
+            $(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
           },
           afterRender: function(){},
           afterResize: function(){},
@@ -77,17 +77,21 @@ $(function(){
             
           }
         });
+        $.fn.fullpage.silentMoveTo(activeSection);
+        $("body").find(".js-section.is-active").removeClass("is-active");
+        $(window).trigger("resize");
       }
+
+      // load inner page
       else {
-        $.fn.fullpage.destroy();
-        $("body").addClass("is-inactive-fullpage");
+        $("body").find(".js-section.active").addClass("is-active");
+        $.fn.fullpage.destroy("all");
+        body.addClass("is-inactive-fullpage");
+
       }
      
-      $root.css('opacity', 1);
-      //$newcontent = $(page.rip('content')).hide();
       $newcontent = $(page.rip('content'));
       $root.empty().append($newcontent);
-      //$newcontent.fadeIn();
       page.trigger('pageready');
 
     });
@@ -101,5 +105,10 @@ $(function(){
        console.log("everypageready")
     });
 
+  });
+
+  $(".js-btn-history").on("click", function(){
+    window.history.back();
+    return false;
   });
 });

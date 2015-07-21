@@ -417,10 +417,11 @@ head.ready(function() {
 	        	console.log(nextIndex);
 	        	$(".js-section-nav a").removeClass("is-active");
 	        	$(".js-section-nav li").eq(nextIndex-1).find("a").addClass("is-active");
+	        	$("body").attr("data-section", nextIndex);
 	        },
 	        afterLoad: function(anchorLink, index){
-	        	//$(".js-section-nav a").removeClass("is-active");
-	        	//$(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
+	        	$(".js-section-nav a").removeClass("is-active");
+	        	$(".js-section-nav li").eq(index-1).find("a").addClass("is-active");
 	        },
 	        afterRender: function(){},
 	        afterResize: function(){},
