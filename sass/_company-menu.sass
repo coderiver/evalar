@@ -11,19 +11,13 @@
 		position: fixed
 		right: 0 !important
 	.footer
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
+		margin: 50px -50px -50px
 		padding: 30px 0 20px 
 .full-page-body
 	.menu
 		position: fixed
 	.footer
-		position: absolute
-		bottom: 0
-		left: 0
-		right: 0
+		margin: 50px -50px -50px
 		padding: 30px 0 20px 
 .section
 	position: relative
@@ -65,18 +59,18 @@
 .section-nav
 	position: fixed
 	top: 160px
-	bottom: 0
 	left: 0
 	right: 0
 	+vertical
-	+gpu
-	z-index: 4
+	z-index: 5
 	+r(1023)
 		top: 140px
 	ul
 		display: inline-block
 		vertical-align: middle
 		+light
+		margin-top: 0
+		+gpu
 	li
 		position: relative
 		white-space: nowrap
@@ -295,8 +289,8 @@
 		+transform(translateY(calc(-100vh + 300px)))
 	.article
 		margin-bottom: calc(-100vh + 300px) 
-	.section-nav
-		+transform(translateY(calc(-100vh)))
+	// .section-nav
+	// 	+transform(translateY(calc(-100vh)))
 .is-inactive-fullpage
 	height: 100% !important
 	.fullpage,
@@ -305,7 +299,7 @@
 	.article
 		margin-bottom: calc(-100vh + 200px) 
 	.section-nav
-		+transform(translateY(calc(-100vh)))
+		opacity: 0
 .is-inner-page
 	.article
 		margin-bottom: 0
@@ -313,7 +307,7 @@
 .section-nav
 	+tr(transform .3s)
 .article_fullpage
-	padding: 50px 50px 250px
+	padding: 50px
 	.world-map
 		margin: -52px -50px 0
 .lazyjaxdavis__title

@@ -95,6 +95,17 @@ $(document).ready(function() {
 		arrows: false,
 		adaptiveHeight: true,
 		responsive: [
+		{
+	      breakpoint: 5000,
+	      settings: "unslick"
+	    },
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	      }
+	    },
 	    {
 	      breakpoint: 767,
 	      settings: {
@@ -104,18 +115,9 @@ $(document).ready(function() {
 	    }
 	  ]
 	}
-	if ($(window).width() < 1024) {
-		$(".js-post-slider").slick(configPostSlider);
-	}
 
-	$(window).resize(function() {
-		if ($(window).width() < 1024) {
-			$(".js-post-slider").slick(configPostSlider);
-		}
-		if ($(window).width() >= 1024 && $(".js-post-slider").hasClass("slick-slider"))  {
-			$(".js-post-slider").slick("unslick");
-		}
-	});
+	$(".js-post-slider").slick(configPostSlider);
+
 
 // history slider
 	var configHistorySlider = {
@@ -182,12 +184,12 @@ $(document).ready(function() {
 			body.removeClass("has-fixed-header");
 		}
 	}
-	if (!body.hasClass("full-page-body")) {
+	if (!body.hasClass("main-full-page")) {
 		fixHeader();
 	}
 
 	$(window).scroll(function() {
-		if (!body.hasClass("full-page-body")) {
+		if (!body.hasClass("main-full-page")) {
 			fixHeader();
 		}
 		
@@ -377,7 +379,7 @@ $(document).ready(function() {
 	        controlArrows: false,
 	        verticalCentered: false,
 	        resize : true,
-	        //fixedElements: '.header, .menu, .section-nav',
+	        fixedElements: '.js-section-nav',
 	        responsiveWidth: 0,
 	        responsiveHeight: 0,
 
