@@ -378,7 +378,8 @@ head.ready(function() {
 	// 	changeBrowserURL("company_menu_all.html", url);
 	//     return false;
 	// });
-	if (!$('body').hasClass("is-inactive-fullpage")) {
+	if (!$('body').hasClass("is-inactive-fullpage") && $('.js-fullpage').length) {
+
 		$('.js-fullpage').fullpage({
 	        //Navigation
 	        menu: false,
@@ -460,5 +461,77 @@ head.ready(function() {
 	setTimeout(function(){
 		$(".js-plants").addClass("is-visible");
 	},1000);
+
+	// var mapEvalar;
+	// function initialize() {
+
+	// 	var boundsEvalar = new google.maps.LatLngBounds();
+	// 	var centerBiysk = new google.maps.LatLng(52.5139063, 85.2165484);
+	// 	var mapOptions = {
+	// 		mapTypeId: 'roadmap',
+	// 		mapTypeControl: true,
+	// 		    mapTypeControlOptions: {
+	// 		        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+	// 		        position: google.maps.ControlPosition.BOTTOM_CENTER
+	// 		    },
+	// 		    zoomControl: true,
+	// 		    scrollwheel: false,
+	// 		    zoomControlOptions: {
+	// 		        style: google.maps.ZoomControlStyle.LARGE,
+	// 		        position: google.maps.ControlPosition.RIGHT_CENTER
+	// 		    },
+	// 		    scaleControl: false,
+	// 		    streetViewControl: false,
+	// 		    streetViewControlOptions: {
+	// 		        position: google.maps.ControlPosition.RIGHT_TOP
+	// 		    }
+	// 	};
+	// 	mapEvalar = new google.maps.Map(document.getElementById("evalarmap"), mapOptions);
+
+	// 	mapEvalar.panTo(centerBiysk);
+	// 	var markersEvalar = [
+	// 			['Декабристов, 33', 85.142305, 52.4881996, '\
+	// 		<div class=\"info_content\"\>Ежедневно 08:00–20:00\<br\>+7 (3854) 39‒00‒39\<br\>единая справочная - пн-пт 8:00-19:30\</div\>']
+				
+	// 	];
+	// 	var infoWindowEvalar = new google.maps.InfoWindow({ maxWidth: 320 }), markerEvalar, i;
+	// 	var markers = [];
+	// 	for( i = 0; i < markersEvalar.length; i++ ) {
+	// 		var positionEvalar = new google.maps.LatLng(markersEvalar[i][2], markersEvalar[i][1]);
+	// 		boundsEvalar.extend(positionEvalar);
+	// 		markerEvalar = new google.maps.Marker({
+	// 			position: positionEvalar,
+	// 			map: mapEvalar,
+	// 			icon: './img/cluster.png',
+	// 			title: markersEvalar[i][0]
+	// 		});
+	// 		markers.push(markerEvalar);
+	// 		google.maps.event.addListener(markerEvalar, 'click', (function(markerEvalar, i) {
+	// 			return function() {
+	// 				infoWindowEvalar.setContent('\
+	// 				<h5 style=\"margin: 0.7em 0 1em 0;\"\>'+markersEvalar[i][0]+'\</h5\>'+markersEvalar[i][3]);
+	// 				infoWindowEvalar.open(mapEvalar, markerEvalar);
+	// 			}
+	// 		})(markerEvalar, i));
+	// 		mapEvalar.fitBounds(boundsEvalar);
+	// 	}
+	// 	var clusterOptions = {
+	// 		styles: [{
+	// 			url: './img/cluster.png', 
+	// 			textColor: 'white', 
+	// 			height: 28, 
+	// 			width: 60,
+	// 			anchor: [40,0],
+	// 			textSize: 13
+	// 		}]
+	// 	};
+	// 	var markerCluster = new MarkerClusterer(mapEvalar, markers, clusterOptions);
+	// 	var boundsListenerEvalar = google.maps.event.addListener((mapEvalar), 'bounds_changed', function(event) {
+	// 		google.maps.event.removeListener(boundsListenerEvalar);
+	// 	});
+	// 	// // Initialize JSONP request
+	// }
+	
+
 });
 
