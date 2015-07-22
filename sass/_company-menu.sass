@@ -33,9 +33,9 @@
 		left: 0
 		+cover
 		+tr(transform 20s)
-	// &.active
-	// 	.section__img
-	// 		+scale(1.2)
+	&.active
+		.section__img
+			+scale(1.2)
 	&__vertical
 		position: absolute
 		top: 0
@@ -288,11 +288,16 @@
 		margin-bottom: calc(-100vh + 300px) 
 	.section-nav
 		+transform(translateY(calc(-100vh)))
+.is-inner-page
+	.article
+		margin-bottom: 0
 .article,
 .section-nav
 	+tr(transform .3s)
 .article_fullpage
-	padding: 50px 
+	padding: 50px 50px 250px
+	.world-map
+		margin: -52px -50px 0
 .lazyjaxdavis__title
 	position: absolute
 	left: 15px
