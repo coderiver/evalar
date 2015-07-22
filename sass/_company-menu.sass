@@ -1,4 +1,4 @@
-.full-page-body
+.main-full-page
 	margin-right: 0 !important
 	.header
 		position: fixed
@@ -10,6 +10,15 @@
 	.menu
 		position: fixed
 		right: 0 !important
+	.footer
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 30px 0 20px 
+.full-page-body
+	.menu
+		position: fixed
 	.footer
 		position: absolute
 		bottom: 0
@@ -279,13 +288,22 @@
 .fullpage
 	+tr(transform .3s)
 	height: 100vh
-.is-inactive-fullpage
+.main-full-page.is-inactive-fullpage
 	height: 100% !important
 	.fullpage,
 	.article
 		+transform(translateY(calc(-100vh + 300px)))
 	.article
 		margin-bottom: calc(-100vh + 300px) 
+	.section-nav
+		+transform(translateY(calc(-100vh)))
+.is-inactive-fullpage
+	height: 100% !important
+	.fullpage,
+	.article
+		+transform(translateY(calc(-100vh + 200px)))
+	.article
+		margin-bottom: calc(-100vh + 200px) 
 	.section-nav
 		+transform(translateY(calc(-100vh)))
 .is-inner-page
