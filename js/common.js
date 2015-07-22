@@ -1,4 +1,4 @@
-head.ready(function() {
+$(document).ready(function() {
 	var header = $(".js-header");
 	var body = $("body");
 	$(document).on("click", function(){
