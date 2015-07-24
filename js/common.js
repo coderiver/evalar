@@ -61,6 +61,7 @@ $(document).ready(function() {
 			body.css({
 				marginRight: scrollWidth
 			});
+			
 		}
 	}
 
@@ -156,17 +157,27 @@ $(document).ready(function() {
 // menu
 	$('.js-toggle-menu').on('click', function() {
 		if ($(this).hasClass("is-active")) {
+			$(".js-menu").css({
+				paddingRight: 0
+			});
+			
 			$(".js-menu").fadeOut(200);
 			body.removeClass("no-scroll").css({
-				marginRight: 0
+				right: 0
 			});
+			
 			$(this).removeClass("is-active");
 		}
 		else {
+			$(".js-menu").css({
+				right: scrollWidth
+			});
+			
 			$(".js-menu").fadeIn(200);
 			body.toggleClass("no-scroll").css({
-				marginRight: scrollWidth
+				marginRight: scrollWidth 
 			});
+			
 			$(this).addClass("is-active");
 		}
 		
