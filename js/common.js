@@ -71,6 +71,7 @@ $(document).ready(function() {
 	var config = {
 		slidesToShow: 1,
 		dots: true,
+		adaptiveHeight: true,
 		arrows: false
 	}
 	$('.js-slider').on('init', function(slick) {
@@ -286,18 +287,20 @@ $(document).ready(function() {
 
 // scrollpane
 	if($('.scroll-pane').length) {
-		var scrollPane = $('.scroll-pane').jScrollPane();
+		var scrollPane = $('.scroll-pane').jScrollPane({
+			autoReinitialise: true
+		});
 		var api = scrollPane.data('jsp');
 
 	}
 
-	$(window).resize(function(){
-		if($('.scroll-pane').length) {
-			var scrollPane = $('.scroll-pane').jScrollPane();
-			var api = scrollPane.data('jsp');
-			api.reinitialise(s);
-		}
-	});
+	// $(window).resize(function(){
+	// 	if($('.scroll-pane').length) {
+	// 		var scrollPane = $('.scroll-pane').jScrollPane();
+	// 		var api = scrollPane.data('jsp');
+	// 		api.reinitialise(s);
+	// 	}
+	// });
 
 // fotorama
 	// 1. Initialize fotorama manually.
@@ -443,7 +446,10 @@ $(document).ready(function() {
 		$(".js-plants").addClass("is-visible");
 	},1000);
 
-	
+	$(".js-tag").on("click", function(){
+		$(this).toggleClass("is-active");
+	    return false;
+	});
 
 });
 

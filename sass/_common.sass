@@ -326,7 +326,11 @@ a
 			right: 0
 			width: 40px
 			+gh(transparent, rgba(#fff,.3) 50%) 
+.tabs-wrap_last
+	margin-bottom: -50px
 .tabs
+	position: relative
+	z-index: 3
 	font-size: 0
 	padding-bottom: 15px
 	margin-bottom: -15px
@@ -335,6 +339,7 @@ a
 	white-space: nowrap
 	&__item
 		display: inline-block
+		position: relative
 		margin-right: 27px
 		vertical-align: middle
 		font-size: 13px
@@ -356,12 +361,95 @@ a
 			background: $green 
 		&:hover
 			color: $green_h 
+	&__view-grid
+		padding-left: 20px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 13px
+			+svg(view-grid,14,14) 
+	&__view-list
+		padding-left: 17px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 13px
+			+svg(view-list,13,12) 
 	.is-active
 		.tabs__link
 			color: $black 
 			&:after
 				display: block
-
+		.tabs-view__grid
+			&:before
+				+svg(view-grid-act,14,14)
+		.tabs-view__list
+			&:before
+				+svg(view-list-act,13,12)
+.tabs-drop
+	position: absolute
+	z-index: 2
+	top: 100%
+	left: 0
+	width: 250px
+	max-height: 865px
+	background: #fff 
+	.scroll-pane
+		max-height: 780px
+	&__scroll
+		padding: 10px 0 
+	&__list
+		li
+			padding-right: 15px
+			+tr(oapcity .2s)
+			+gpu
+			&:hover
+				opacity: 0.8
+		a
+			display: block
+			height: 40px
+			+vertical
+			text-align: left
+			padding: 0 5px 0 20px
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 25px
+		.is-active
+			a
+				background: #f6f6f4 
+	&__active
+		a
+			display: block
+			position: relative
+			border-bottom: 1px solid #faf9f8 
+			padding: 0 5px 0 20px
+			+vertical
+			height: 60px
+			text-align: left
+			&:after
+				content: ""
+				position: absolute
+				right: 20px
+				top: 50%
+				margin-top: -7px
+				+svg(close,14,14) 
+			img
+				display: inline-block
+				vertical-align: middle
+.tabs_view
+	position: absolute
+	right: 0
+	bottom: 0
+.view
+	position: absolute
+	left: 0
+	bottom: 0
+	font-size: 13px
+	+reg
 .posts-group
 	.posts-wrap
 		margin-bottom: 0
@@ -785,4 +873,23 @@ a.btn-action
 		background: $green_h 
 	+r(1024)
 		display: none
-		
+
+.link-arr
+	display: inline-block
+	vertical-align: middle
+	padding: 0 28px 0 18px 
+	font-size: 16px
+	+med
+	height: 40px
+	line-height: 40px
+	color: $green 
+	background: #fff
+	border-radius: 20px  
+	+tr(background .2s)
+	&:before
+		content: ""
+		display: inline-block
+		margin-right: 8px
+		+svg(arr-right,15,14)
+	&:hover
+		background: rgba(#fff,.9)

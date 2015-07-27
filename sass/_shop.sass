@@ -1,0 +1,220 @@
+.prod-slider
+	.slick-dots
+		left: 30px
+		bottom: 23px
+		text-align: left
+	.slick-slide
+		a
+			display: block
+			position: relative
+	&__main
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 50%
+		padding: 2% 4% 5.5%
+		+med
+		font-size: 20px
+		color: #fff
+		span
+			font-size: 16px
+	&__title
+		margin-bottom: 6%
+		font-size: 60px 
+		color: #fff 
+		+light
+		+r(1230)
+			font-size: 48px 
+			+light
+		+r(767)
+			font-size: 26px
+			+reg
+	.icon-list
+		position: absolute
+		bottom: 33px
+		left: 50px
+.icon-list
+	color: #fff
+	+reg
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: middle	
+		font-size: 12px
+		margin-right: 18px
+	i
+		display: inline-block
+		margin-right: 6px
+		vertical-align: middle
+.icon-param1
+	+svg(param1,24,24)
+.icon-param2
+	+svg(param2,24,24)
+.icon-param3
+	+svg(param3,24,24)
+.icon-param4
+	+svg(param4,24,24)
+
+.guide-link
+	position: relative
+	margin-bottom: 30px
+	padding: 20px 200px 20px 30px
+	font-size: 15px
+	color: #fff
+	+reg
+	+cover
+	line-height: 1.7
+	p
+		margin-bottom: 4px
+	strong
+		font-weight: normal
+		font-size: 24px
+	.link-arr
+		position: absolute
+		top: 30px
+		right: 30px
+.el-group
+	margin: 45px 0 10px
+	font-size: 24px
+	+reg
+	color: $black 		
+.el
+	display: block
+	position: relative
+	border-left: 1px solid #fcfcfb
+	border-top: 1px solid #fcfcfb
+	position: relative
+	padding-bottom: 96%
+	background: #fff 
+	text-align: center
+	+gpu
+	&:hover
+		.el__more
+			opacity: 1
+			visibility: visible
+		.el__title,
+		.badge
+			opacity: 0
+		.el__body
+			box-shadow: none 
+	&__body
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 15px 20px
+	&__img
+		display: block
+		margin-bottom: 5px
+		height: 77%
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100%
+	&__title
+		display: block
+		font-size: 14px
+		color: $green
+		+reg 
+		height: 58px
+		overflow: hidden
+		+tr(opacity .2s)
+	&__more
+		opacity: 0
+		visibility: hidden
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 25px 30px 
+		background: rgba($green,.85)
+		color: #fff
+		line-height: 1.6
+		text-align: left
+		font-size: 16px
+		+tr(opacity .2s)
+		span
+			display: block
+			margin-bottom: 14%
+			font-size: 14px
+		strong
+			+med
+.el_special
+	.el__body
+		box-shadow: inset 0 0 0 4px #a8ae9d
+.badge
+	position: absolute
+	top: 25px
+	left: 20px
+	text-align: center
+	line-height: 80px
+	+background-size(80px,80px)
+	width: 80px
+	height: 80px
+	color: #fff
+	font-size: 13px 
+	&_new
+		+svgi(badge-new)
+	&_hit
+		+svgi(badge-hit)
+	&_special
+		+svgi(badge-special)
+
+.dots-pager
+	margin: 60px 0 30px 
+	text-align: center
+	font-size: 0
+	a
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		width: 12px
+		height: 12px
+		line-height: 12px
+		&:before
+			content: "" 
+			display: inline-block
+			vertical-align: middle
+			width: 6px
+			height: 6px
+			background: #acb1a1
+			+tr(background .2s)
+			border-radius: 50% 
+		&:hover
+			&:before
+				background: $green 
+	.is-active
+		&:before
+			background: $green 
+			width: 12px
+			height: 12px
+.tag
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	margin: 0 14px 10px 0 
+	border: 1px solid #b0b5a6
+	padding: 0 34px 0 20px 
+	height: 30px
+	line-height: 28px
+	border-radius: 15px 
+	color: #b0b5a6
+	font-size: 13px
+	+reg 
+	&:after
+		content: ""
+		position: absolute
+		right: 8px
+		top: 8px
+		+svg(plus,12,12)
+	&.is-active
+		background: $green
+		border-color: $green
+		color: #fff   
+		&:after
+			+svg(close-white,11,11)

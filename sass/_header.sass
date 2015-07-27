@@ -54,6 +54,8 @@
 		+r(767)
 			left: 0
 			right: 0
+		.text-right
+			font-size: 0
 .container_nav
 	+r(767)
 		width: 100%
@@ -173,6 +175,10 @@
 			+tr(background .2s)
 			&:hover
 				background: $green_d 
+.lang_shop
+	display: inline-block
+	vertical-align: top
+	float: none
 .btn-menu
 	position: absolute
 	left: 0
@@ -246,7 +252,6 @@
 			padding: 0 18px 
 		
 
-.search,
 .shop
 	display: inline-block
 	vertical-align: top
@@ -265,6 +270,8 @@
 			display: block
 		.search__toggle
 			background: $green_h 
+.search__form
+	display: none
 .search__input
 	display: block
 	padding: 0 40px 0 10px 
@@ -300,7 +307,7 @@
 	i.icon-search
 		vertical-align: middle
 		+r(767)
-			+svgi(search-white,16,16)
+			+svg(search-white,16,16)
 .search__toggle
 	display: none
 	position: absolute
@@ -308,10 +315,23 @@
 	background: $green
 	width: 50px
 	height: 50px 
+	+tr(background .2s)
 	&:hover
 		background: $green_h 
 	+r(767)
 		display: block
+.search_shop
+	position: relative
+	right: auto
+	top: auto
+	width: 50px
+	height: 50px
+	display: inline-block
+	vertical-align: top
+	.search__toggle
+		display: block
+		top: 0
+		left: 0
 .shop
 	position: relative
 	z-index: 2
