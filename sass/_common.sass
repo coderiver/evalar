@@ -395,7 +395,13 @@ a
 	left: 0
 	width: 250px
 	max-height: 865px
-	background: #fff 
+	background: #fff
+	opacity: 0
+	visibility: hidden 
+	+tr(opacity .2s)
+	&.is-active
+		opacity: 1
+		visibility: visible
 	.scroll-pane
 		max-height: 780px
 	&__scroll

@@ -15,6 +15,11 @@ $(document).ready(function() {
 				marginRight: 0
 			});
 		}
+
+		if ($(".js-toggle-list").hasClass("is-active")) {
+			$(".js-toggle-list").removeClass("is-active");
+			$(".js-list").removeClass("is-active");
+		}
 		
 	});
 
@@ -449,6 +454,17 @@ $(document).ready(function() {
 	$(".js-tag").on("click", function(){
 		$(this).toggleClass("is-active");
 	    return false;
+	});
+
+	$(".js-toggle-list").on("click", function(event){
+		var list = $(this).attr("data-list");
+		$("."+list).toggleClass("is-active");
+		$(this).toggleClass("is-active");
+		event.stopPropagation();
+	    return false;
+	});
+	$(".js-toggle-list").on("click", function(event){
+		event.stopPropagation();
 	});
 
 });
