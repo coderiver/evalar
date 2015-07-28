@@ -1,4 +1,10 @@
 .prod-slider
+	opacity: 0
+	visibility: hidden
+	+tr(opacity .2s)
+	&.is-ready
+		opacity: 1
+		visibility: visible
 	.slick-dots
 		left: 30px
 		bottom: 23px
@@ -248,3 +254,40 @@
 		color: #fff   
 		&:after
 			+svg(close-white,11,11)
+
+.search-form
+	position: relative
+	z-index: 1
+	padding: 15px 20px 
+	background: $green_h
+	+transform(translate3d(0,-100%,0))
+	+tr(transform .2s)
+	&.is-active
+		+transform(translate3d(0,0,0))
+	&__input
+		display: block
+		border: 1px solid #fff
+		padding: 0 40px 0 20px 
+		width: 100%
+		height: 40px
+		+font
+		+med
+		font-size: 16px
+		border-radius: 20px  
+		background: none
+		opacity: 0.5
+		+tr(opacity .2s)
+		+gpu
+		color: #fff 
+		+placeholder
+			color: #fff 
+		&:focus
+			opacity: 1
+	&__btn
+		position: absolute
+		right: 25px
+		top: 15px
+		height: 40px
+		width: 40px
+		color: #fff
+		background: none 

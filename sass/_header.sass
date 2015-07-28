@@ -9,10 +9,13 @@
 .header
 	position: relative
 	z-index: 10
-	.container
+	> .container
 		position: relative
+		z-index: 10
 	&__top
 		background: #fff
+		position: relative
+		z-index: 11
 		padding: 15px 0 17px
 		+r(1023)
 			padding: 11px 0 14px 
@@ -51,11 +54,16 @@
 		background: $green 
 		height: 50px
 		font-size: 0
+		z-index: 2
 		+r(767)
 			left: 0
 			right: 0
 		.text-right
 			font-size: 0
+		> .row
+			position: relative
+			z-index: 2
+			background: $green 
 .container_nav
 	+r(767)
 		width: 100%
@@ -332,6 +340,9 @@
 		display: block
 		top: 0
 		left: 0
+	&.is-active
+		.icon-search-white
+			+svg(close-white,15,15)
 .shop
 	position: relative
 	z-index: 2

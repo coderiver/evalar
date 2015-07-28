@@ -46,6 +46,55 @@
 		font-size: 16px
 		+med
 		color: $black 
+.brand_inline
+	color: $black 
+	background: $bg 
+	margin: 0 0 45px
+	.brand__item
+		width: 50%
+		border-left: 1px solid #fff 
+		border-top: 1px solid #fff 
+		height: 140px
+		+r(1023)
+			width: 100%
+			border-left: 0
+		&:nth-child(2n+1)
+			border-left: 0
+	.brand__img
+		float: left
+		width: 25%
+		padding-left: 10px
+		height: auto
+		text-align: right
+		+r(1023)
+			width: 20%
+		img
+			max-width: 100%
+	.brand__main
+		overflow: hidden
+		padding-left: 30px
+		font-size: 15px
+		+r(1023)
+			font-size: 13px
+	.brand__title
+		display: inline-block
+		margin-bottom: 8px
+		+med
+		font-size: 18px
+		color: $black 
+		+tr(color .2s)
+		+r(1023)
+			font-size: 16px
+		&:hover
+			color: $green 
+	.brand__text
+		margin-bottom: 5px
+.link
+	color: $green
+	font-size: 15px
+	+tr(color .2s)
+	&:hover
+		color: $green_h 
 .link-out
 	position: relative
 	display: block
@@ -58,12 +107,14 @@
 		color: $green_h
 	&:after
 		content: ''
-		position: absolute
-		top: -3px
+		display: inline-block
+		vertical-align: top
 		margin-left: 3px 
 		+svg(link,10,10)
 	&_no-mg
 		margin-top: 0
+	&_small
+		font-size: 15px
 
 	
 .product

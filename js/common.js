@@ -82,6 +82,7 @@ $(document).ready(function() {
 	$('.js-slider').on('init', function(slick) {
 		setTimeout(function(){
 			$('.slider').addClass("is-ready");
+			$('.js-slider').addClass("is-ready");
 		},200);
 	});
 	$(".js-slider").slick(config);
@@ -163,27 +164,23 @@ $(document).ready(function() {
 // menu
 	$('.js-toggle-menu').on('click', function() {
 		if ($(this).hasClass("is-active")) {
+			$(".js-menu").fadeOut(200);
 			$(".js-menu").css({
 				paddingRight: 0
 			});
-			
-			$(".js-menu").fadeOut(200);
 			body.removeClass("no-scroll").css({
-				right: 0
+				marginRight: 0
 			});
-			
 			$(this).removeClass("is-active");
 		}
 		else {
-			$(".js-menu").css({
-				right: scrollWidth
-			});
-			
 			$(".js-menu").fadeIn(200);
-			body.toggleClass("no-scroll").css({
-				marginRight: scrollWidth 
+			$(".js-menu").css({
+				paddingRight: scrollWidth
 			});
-			
+			body.toggleClass("no-scroll").css({
+				marginRight: scrollWidth
+			});
 			$(this).addClass("is-active");
 		}
 		
