@@ -148,6 +148,11 @@ a
 			color: $green
 	p
 		margin-bottom: 18px
+.text_link-marked
+	a
+		color: $green
+		&:hover
+			color: $green_h
 .text_light
 	color: $green_l
 	a
@@ -191,6 +196,15 @@ a
 		font-size: 16px
 		margin-bottom: 16px
 		+med
+	
+	&__link
+		display: inline-block
+		margin-left: 10px
+		font-size: 12px
+		color: $green
+		+tr(color .2s)
+		&:hover
+			color: $green_h 
 	&_white
 		color: #fff 
 	&_light
@@ -330,6 +344,8 @@ a
 			+gh(transparent, rgba(#fff,.3) 50%) 
 .tabs-wrap_last
 	margin-bottom: -50px
+.tabs-wrap_mt
+	margin-top: 40px
 .tabs
 	position: relative
 	z-index: 3
@@ -901,3 +917,10 @@ a.btn-action
 		+svg(arr-right,15,14)
 	&:hover
 		background: rgba(#fff,.9)
+	&_green
+		background: $green 
+		color: #fff 
+		&:before
+			+svg(arr-right-white,15,14)
+		&:hover
+			background: $green_h 

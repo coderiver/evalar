@@ -126,7 +126,39 @@ $(document).ready(function() {
 
 	$(".js-post-slider").slick(configPostSlider);
 
+	// post slider
+	var configSliderItems = {
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		dots: false,
+		arrows: false,
+		responsive: [
+	    {
+	      breakpoint: 1024,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2,
+	      }
+	    },
+	    {
+	      breakpoint: 767,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	      }
+	    }
+	  ]
+	}
 
+	$(".js-slider-items").slick(configSliderItems);
+	$('.js-slider-items-prev').on('click', function(slick) {
+		$(".js-slider-items").slick("slickPrev");
+		return false;
+	});
+	$('.js-slider-items-next').on('click', function(slick) {
+		$(".js-slider-items").slick("slickNext");
+		return false;
+	});
 // history slider
 	var configHistorySlider = {
 		slidesToShow: 1,
