@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>product</title>
+	<title>product corp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
-	<meta name="theme-color" content="#009036"> 
-	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<meta name="theme-color" content="#816aae"> 
+	<link rel="stylesheet" media="all" href="css/screen_corp.css" >
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	
 </head>
@@ -54,37 +54,28 @@
 						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
 						<ul class="nav">
 							<li class="nav__item">
-								<a href="#" class="nav__link hidden-sm hidden-xs">О компании</a>
-							</li>   
-							<li class="nav__item">
 								<a href="#" class="nav__link hidden-xs">продукция</a>
-							</li>   
+							</li> 
 							<li class="nav__item">
-								<a href="#" class="nav__link">где купить</a>
-							</li>  
+								<a href="#" class="nav__link hidden-sm hidden-xs">акции</a>
+							</li>   
 							<li class="nav__item hidden-md hidden-sm hidden-xs">
-								<a href="#" class="nav__link">Партнерам</a>
+								<a href="#" class="nav__link">доставка и оплата</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-5 col-lg-offset-1">
 						<div class="text-right">
+							
+							<a href="#" class="shop shop_corp">
+								<i class="icon-case"></i>
+								Корпоративный сайт
+								<i class="shop__arr"></i>
+							</a>
 							<div class="search search_shop js-search">
 								<button class="search__toggle js-toggle-search" type="button">
 									<i class="icon-search-white"></i>
 								</button>
-							</div>
-							<a href="#" class="shop">
-								<i class="icon-cart"></i>
-								Интернет-магазин «Эвалар»
-								<i class="shop__arr"></i>
-							</a>
-							<div class="lang lang_shop js-toggle-lang hidden-xs">
-								<span class="lang__val">RU</span>
-								<ul class="lang__list">
-									<li><a href="#">EN</a></li>
-									<li><a href="#">DE</a></li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -185,16 +176,7 @@
 		</div>
 	</div>
 	<!-- BEGIN page-head  -->
-	<div class="page-head">
-		<div class="page-head__img">
-			<picture>
-				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="img/page_head10.jpg" media="(min-width: 1024px)">
-				<source srcset="img/page_head10-1024.jpg" media="(min-width: 768px)">
-				<!-- [if IE 9]></video><![endif] -->
-				<img srcset="img/page_head10-1024.jpg" alt="img">
-			</picture>
-		</div>
+	<div class="page-head page-head_empty">
 		<div class="page-head__info">
 			<div class="container">
 				<div class="row">
@@ -221,7 +203,7 @@
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-	<div class="page-body page-body_gray">
+	<div class="page-body page-body_gray page-body_pb">
 		<div class="container">
 			<div class="goods">
 				<div class="row">
@@ -230,12 +212,7 @@
 							<img src="img/prod1.png" alt="">
 							<div class="badge badge_special">Акция</div>
 						</div>
-						<div class="goods__logo">
-							<img src="img/prod-logo.png" alt="">
-						</div>
-						<div class="text text_link-marked">
-							Более подробную информацию о средствах для похудения Турбослим ищите на специальном сайте <a href="#">turboslim.ru</a>
-						</div>
+						
 
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
@@ -244,8 +221,38 @@
 							<div class="goods__info">
 								Блокирует усвоение не только углеводов, но и жиров. Mus ate con por aceaque doluptatem il il et, cuptate simusciis id ut qui ipidebit exerumqui
 							</div>
-							<div class="goods__buy">
-								<span>50, 100 или 150 таблеток в упаковке</span><a href="#" class="link-arr link-arr_green">Где купить</a>
+							<div class="goods__action">
+								<form>
+									<div class="price-old">
+										<span>200</span>
+										руб
+									</div>
+									<div class="price">
+										<div class="price__in">
+											<span>183</span>
+											руб
+										</div>
+									</div>
+									<div class="select select_inline select_160 js-select">
+										<input type="text" class="input input_dark" placeholder="Выберите" readonly value="20 таблеток">
+										<select>
+											<option value="20 таблеток" selected>20 таблеток</option>
+											<option value="40 таблеток">40 таблеток</option>
+											<option value="60 таблеток">60 таблеток</option>
+										</select>
+									</div>
+									<div class="select select_inline select_100 js-select">
+										<input type="text" class="input input_dark" placeholder="Выберите" readonly value="1 шт.">
+										<select>
+											<option value="1 шт." selected>1 шт.</option>
+											<option value="2 шт.">2 шт.</option>
+											<option value="3 шт.">3 шт.</option>
+										</select>
+									</div>
+									<button type="button" class="btn-cart">
+										В корзину
+									</button>
+								</form>
 							</div>
 							<ul class="icon-list">
 								<li><i class="icon-param1"></i>без глютена</li>    
@@ -274,6 +281,27 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="page-body__line"></span>
+		<div class="goods-brand">
+			<div class="container">
+				<div class="row row_table row_middle">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+						<div class="goods__logo">
+							<img src="img/prod-logo.png" alt="">
+						</div>
+						
+					</div>
+					<div class="col-lg-5 col-md-9 col-sm-12 col-xs-12">
+						<div class="text text_link-marked">
+							Более подробную информацию о средствах для похудения Турбослим ищите на специальном сайте <a href="#">turboslim.ru</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						
 					</div>
 				</div>
 			</div>

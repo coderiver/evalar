@@ -40,7 +40,14 @@
 	.links
 		margin: 15px 0 
 		color: #a8ae9d 
-		
+.goods__action
+	margin: 45px 0 35px
+	font-size: 0
+	.price
+		margin: 0 20px 10px
+	.select,
+	.btn-cart
+		margin: 0 10px
 .slider-items
 	padding: 40px 0 100px 
 	margin: 100px 0 45px
@@ -60,3 +67,69 @@
 	.slider-next
 		right: -35px
 		top: 175px
+		
+.price-old
+	display: inline-block
+	vertical-align: middle
+	color: $light 
+	+reg
+	line-height: 1
+	font-size: 15px
+	text-align: center
+	span
+		display: block
+		position: relative
+		font-size: 30px
+		+med
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			right: -3px
+			height: 1px
+			background: $light 
+			
+.price
+	display: inline-block
+	vertical-align: middle
+	width: 80px
+	height: 80px
+	background: $green
+	border-radius: 50%  
+	+vertical
+	color: #fff 
+	&__in
+		display: inline-block
+		width: 100%
+		vertical-align: middle
+		line-height: 1
+		font-size: 15px
+	span
+		display: block
+		position: relative
+		font-size: 30px
+		+med
+		
+.btn-cart
+	display: inline-block
+	vertical-align: middle
+	position: relative 
+	padding: 0 30px 0 65px 
+	height: 50px
+	line-height: 50px
+	font-size: 16px
+	+med
+	color: #fff
+	+font
+	border-radius: 25px
+	background: $green
+	+tr(background .2s)
+	&:hover
+		background: $green_h 
+	&:before
+		content: ""
+		position: absolute
+		left: 15px
+		top: 13px
+		+svg(cart,30,25) 

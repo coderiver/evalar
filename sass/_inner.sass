@@ -35,9 +35,12 @@
 				min-width: 100%
 				min-height: 100%
 				height: auto
-.icon-home
-	+svg(home, 15,15)
 
+.page-head_empty
+	background: $bg
+	height: 190px 
+	.page-head__title
+		color: $black 
 .breadcrumbs
 	position: relative
 	border-bottom: 1px solid $border 
@@ -63,20 +66,11 @@
 				width: 50px
 				text-align: center
 				&:hover
-					i:before
-						visibility: visible 
+					.icon-home
+						&:before
+							visibility: visible 
 				a 
 					padding: 0 10px 0 5px
-					i
-						position: relative
-						top: 1px 
-						&:before
-							+tr(visibility .3s)
-							content: ''
-							visibility: hidden
-							+svg(home-green, 15,15)
-							position: absolute
-							left: 0
 			&:last-child
 				a
 					color: #000 
@@ -93,7 +87,6 @@
 					+svg(arr_outline-r-gray, 10, 40) 
 				&:hover
 					color: $green
-			
 .page-body
 	background: #fff 
 	padding: 50px 0
@@ -105,6 +98,13 @@
 		margin-bottom: 10px
 	&.no-padding
 		padding: 0
+	&_pb
+		padding-bottom: 0
+.page-body__line
+	display: block
+	margin-top: 40px
+	height: 1px
+	background: #fff 
 .page-text
 	margin-bottom: 40px
 	+ .title-small
@@ -562,3 +562,9 @@
 				color: $green_h 
 				
 
+.goods-brand
+	img
+		max-width: 100%
+	.row
+		> div
+			padding: 32px 0 

@@ -61,16 +61,7 @@
 	font-weight: 700 
 =black
 	font-weight: 900 
-$green: #009036
-$green_h: #20b019
-$green_l: #9ba08e
-$green_d: #046e21
-$black: #262626
-$violet: #7a254f
-$light: #a8ae9d
-$bg: #f6f6f4
-$border_d: #ecebe7
-$border: #efeeeb
+
 html
 	+selection
 		background: rgba($green, 1)
@@ -263,6 +254,10 @@ a
 		padding: 11px
 		min-height: 110px
 		resize: none 
+.input_dark
+	color: $black  
+	font-size: 16px
+	+med
 .select
 	position: relative
 	cursor: pointer
@@ -287,6 +282,13 @@ a
 		font-size: 15px
 		option
 			padding: 5px 0
+.select_inline
+	display: inline-block
+	vertical-align: middle
+.select_160
+	width: 160px
+.select_100
+	width: 100px
 .radio-group
 	margin: 10px 0
 	.radio
