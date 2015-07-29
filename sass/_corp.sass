@@ -1,5 +1,119 @@
+.header__main
+	white-space: nowrap
+.nav
+	display: inline-block
+	vertical-align: middle
+.user
+	display: inline-block
+	position: relative
+	width: 34.4%
+	vertical-align: middle
+	height: 50px
+	background: $violet_h
+	&:after
+		content: ""
+		position: absolute
+		z-index: 2
+		top: 22px
+		right: 18px
+		+svg(arr-b-white,12,7)
+		pointer-events: none
+	&__name
+		display: block
+		position: relative
+		padding: 0 35px 0 50px 
+		width: 100%
+		background: none
+		height: 50px
+		line-height: 50px
+		+font
+		font-size: 12px
+		+reg
+		color: #fff 
+		&:before
+			content: ""
+			position: absolute
+			left: 20px
+			top: 14px
+			+svg(user,22,22)
+		&:after
+			content: ""
+			position: absolute
+			right: 0
+			top: 0
+			bottom: 0
+			width: 30%
+			z-index: 2
+			+gh(transparent, $violet_h 40%) 
+		
+	&__list
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		top: 100%
+		left: 0
+		right: 0
+		background: $violet
+		font-size: 18px
+		color: #fff 
+		+med
+		+gpu
+		+tr(opacity .2s)
+		&.is-active
+			opacity: 1
+			visibility: visible
+		a
+			display: block
+			position: relative
+			padding: 12px 20px 12px 25px 
+			border-top: 1px solid #9a88be 
+			color: #fff 
+			+tr(color .2s)
+			&:hover
+				color: #b8a4dc 
+		.icon-logout
+			position: absolute
+			right: 50px
+			top: 13px
+	&.is-active
+		background: $violet_h 
+.cart
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	width: 60px
+	height: 50px
+	text-align: center
+	line-height: 50px
+	+tr(background .2s)
+	&:hover
+		background: $violet_h
+	.icon-cart
+		vertical-align: middle
+.search
+	width: 60px
 .icon-mail
 	+svgi(mail-violet)
 .icon-home
 	&:before
 		+svgi(home-violet)
+.icon-back
+	+svg(caret-l-violet,5,10)
+.icon-logout
+	+svg(logout,23,22)
+.el
+	background: $bg 
+	text-align: left
+	&__body
+		padding-top: 25px
+	&__title
+		height: 40px
+	&__img
+		position: relative
+		height: 83%
+		text-align: center
+		margin-bottom: 0
+	.price
+		position: absolute
+		right: 20px
+		bottom: 37%

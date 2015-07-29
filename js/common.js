@@ -495,6 +495,9 @@ $(document).ready(function() {
 	$(".js-toggle-list").on("click", function(event){
 		event.stopPropagation();
 	});
+	$(".js-list").on("click", function(event){
+		event.stopPropagation();
+	});
 
 });
 
