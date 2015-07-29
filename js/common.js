@@ -5,6 +5,10 @@ $(document).ready(function() {
 		if ($(".js-search").hasClass("is-active")) {
 			$(".js-search").removeClass("is-active");
 		}
+		if ($('.js-toggle-user').parent().hasClass("is-active")) {
+			$('.js-toggle-user').parent().removeClass("is-active");
+			$('.js-list-user').removeClass("is-active");
+		}
 		if ($('.js-toggle-lang').hasClass("is-active")) {
 			$('.js-toggle-lang').removeClass("is-active");
 		}
@@ -16,10 +20,6 @@ $(document).ready(function() {
 			});
 		}
 
-		if ($(".js-toggle-list").hasClass("is-active")) {
-			$(".js-toggle-list").removeClass("is-active");
-			$(".js-list").removeClass("is-active");
-		}
 		
 	});
 
@@ -190,6 +190,18 @@ $(document).ready(function() {
 
 	$('.js-toggle-search').on('click', function() {
 		$(".js-search").toggleClass("is-active");
+		return false;
+	});
+
+// user
+	$(".js-list-user").on('click', function(event) {
+		event.stopPropagation();
+	});
+
+	$('.js-toggle-user').on('click', function(event) {
+		$(".js-list-user").toggleClass("is-active");
+		$(this).parent().toggleClass("is-active");
+		event.stopPropagation();
 		return false;
 	});
 
@@ -487,8 +499,16 @@ $(document).ready(function() {
 
 	$(".js-toggle-list").on("click", function(event){
 		var list = $(this).attr("data-list");
-		$("."+list).toggleClass("is-active");
-		$(this).toggleClass("is-active");
+		if ($(this).hasClass("is-active")) {
+			$(this).removeClass("is-active");
+			$("."+list).removeClass("is-active");
+		}
+		else {
+			$(".js-toggle-list").removeClass("is-active")
+			$(".js-list").removeClass("is-active")
+			$(this).addClass("is-active");
+			$("."+list).addClass("is-active");
+		}
 		event.stopPropagation();
 	    return false;
 	});

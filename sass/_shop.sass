@@ -40,6 +40,25 @@
 		position: absolute
 		bottom: 33px
 		left: 50px
+.prod-slider_large
+	margin-top: -1px
+	max-height: 760px
+	overflow: hidden
+	img
+		display: block
+		width: 100%
+		height: auto
+	.prod-slider__main
+		margin-bottom: 3%
+		padding-top: 8.2%
+	.icon-list
+		margin-top: 30px
+		position: static
+	.slick-dots
+		left: 50%
+		bottom: 310px
+		width: 1200px
+		+transform(translateX(-50%))
 .icon-list
 	color: #fff
 	+reg
@@ -233,6 +252,10 @@
 			background: $green 
 			width: 12px
 			height: 12px
+.tags-hidden
+	display: none
+	&.is-active
+		display: block
 .tag
 	display: inline-block
 	vertical-align: middle
@@ -295,3 +318,23 @@
 		width: 40px
 		color: #fff
 		background: none 
+		
+.drop-list
+	position: absolute
+	left: 0
+	top: 100%
+	background: $green 
+	font-size: 16px
+	+med
+	color: #fff 
+	line-height: 1
+	z-index: 3
+	&__main
+		li
+			padding-right: 12px
+		a
+			display: block
+			padding: 12px 20px
+			color: #fff 
+	.scroll-pane
+		max-height: 700px
