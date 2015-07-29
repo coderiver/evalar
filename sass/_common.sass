@@ -755,10 +755,18 @@ a.btn-action
 	text-align: center
 	line-height: 50px
 	+tr(background .2s)
+	white-space: nowrap
 	i
 		vertical-align: middle
 	&:hover
 		background: $green_h 
+	span
+		position: absolute
+		left: 65px
+		top: 0
+		font-size: 15px
+		+med
+		color: #fff 
 .pager
 	overflow: hidden
 	margin: 55px 0 80px
@@ -872,7 +880,7 @@ a.btn-action
 	top: 50%
 	left: 0
 	z-index: 5
-	margin-top: -67px
+	margin-top: 67px
 	+transform(rotate(-90deg))
 	+transform-origin(0, 0)
 	padding: 0 15px 
