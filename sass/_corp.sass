@@ -94,6 +94,21 @@
 		background: $violet_h
 	.icon-cart
 		vertical-align: middle
+	&.is-full
+		background: $violet_h
+	span
+		position: absolute
+		right: 6px
+		top: 6px
+		width: 20px
+		height: 20px
+		border-radius: 50%
+		background: $violet
+		line-height: 20px
+		text-align: center
+		font-size: 8px
+		+reg 
+		color: #fff 
 .search
 	width: 60px
 .shop__arr
@@ -105,9 +120,13 @@
 	&:before
 		+svgi(home-violet)
 .icon-back
-	+svg(caret-l-violet,5,10)
+	+svgi(caret-l-violet)
 .icon-logout
 	+svg(logout,23,22)
+.icon-star
+	+svgi(star-violet)
+.icon-add
+	+svgi(soc-add-violet)
 .el
 	background: $bg 
 	text-align: left
@@ -158,3 +177,10 @@
 				color: #b5a5ca
 	.jspDrag
 		background: #a797c6 
+		
+.btn-action_violet
+	color: $violet 
+	border-color: $violet
+	&:hover
+		color: $violet_h
+		border-color: $violet_h

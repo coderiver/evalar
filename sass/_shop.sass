@@ -329,12 +329,48 @@
 	color: #fff 
 	line-height: 1
 	z-index: 3
+	opacity: 0
+	visibility: hidden
+	+tr(opacity .2s)
+	&.is-active
+		opacity: 1
+		visibility: visible
+	&__active
+		a
+			position: relative
+			padding: 22px 60px 22px 20px
+			border-bottom: 1px solid $green_h 
+			&:after
+				content: ""
+				position: absolute
+				right: 18px
+				top: 50%
+				margin-top: -7px
+				+svg(close-white,14,14) 
+			&:before
+				content: ""
+				position: absolute
+				right: 50px
+				top: 50%
+				margin-top: -10px
+				width: 1px
+				height: 20px
+				background: #fff  
+			&:hover
+				background: $green_h 
 	&__main
 		li
 			padding-right: 12px
 		a
-			display: block
 			padding: 12px 20px
-			color: #fff 
+	a
+		display: block
+		color: #fff 
+	.is-active
+		a
+			background: $green_h 
 	.scroll-pane
-		max-height: 700px
+		max-height: 640px
+	.jspVerticalBar
+		width: 6px
+	

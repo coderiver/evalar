@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>promotions_corp</title>
+	<title>account_corp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -80,8 +80,9 @@
 								Корпоративный сайт
 								<i class="shop__arr"></i>
 							</a>
-							<a href="#" class="cart">
+							<a href="#" class="cart is-full">
 								<i class="icon-cart"></i>
+								<span>10</span>
 							</a>
 							<div class="search search_shop js-search">
 								<button class="search__toggle js-toggle-search" type="button">
@@ -192,7 +193,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="page-head__title">Акции</div>					
+						<div class="page-head__title">Личный кабинет</div>					
 					</div>
 				</div>
 			</div>
@@ -206,179 +207,91 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumbs__main">
 						<li><a href="#"><i class="icon-home"></i></a></li>
-						<li><a href="#">Акции</a></li>
+						<li><a href="#">Личные данные</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-<!-- 	<div class="post-parent">
+
+	<div class="page-body page-body_gray">
+
+		<div class="container">
+			<div class="form">
+				
+				<div class="row">
+					
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="form__col">
+							
+							<label class="field">
+								<span class="field__title"><!-- <i class="icon-star"></i> -->Имя:</span>
+								<span class="field__body">
+									<input type="text" class="input input_dark">
+								</span>
+							</label>
+							<label class="field">
+								<span class="field__title"><!-- <i class="icon-star"></i> -->Эл. почта:</span>
+								<span class="field__body">
+									<input type="email" class="input input_dark">
+								</span>
+							</label>
+							<label class="field field_password js-password">
+								<span class="field__title"><!-- <i class="icon-star"></i> -->Пароль:</span>
+								<span class="field__body">
+									<input type="password" class="input input_dark">
+									<button type="button" class="field__pass js-show-password" data-text="Скрыть">Показать</button>
+									<a href="#" class="link link_small">Сменить пароль</a>
+								</span>
+
+							</label>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12">
+						<div class="row row_form">
+							<div class="col-lg-3 col-md-3 col-sm-12">
+								<div class="title-small title-small_mod">Адреса доставки:</div>
+							</div>
+							<div class="col-lg-9 col-md-9 col-sm-12">
+								<div class="address">
+									123456, Московская область, Улица Академика Королева, 12 А, кв. 48
+									<button type="button" class="btn-del">Удалить</button>
+								</div>
+								<div class="address">
+									123456, Москва, Улица Отрадная, 45, кв. 48
+									<button type="button" class="btn-del">Удалить</button>
+								</div>
+								<button class="btn-action btn-action_violet" type="submit"><i class="icon-add"></i>Добавить адрес</button>
+							</div>
+						</div>
+						<div class="row row_form">
+							<div class="col-lg-3 col-md-3 col-sm-12">
+								<div class="title-small title-small_mod">Подписка:</div>
+							</div>
+							<div class="col-lg-9 col-md-9 col-sm-12">
+								<div class="address">
+									Подписка на новости и акции оформлена
+									<button type="button" class="btn-del">Отменить подписку</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="page-body__line"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="post post_main">
-						<div class="row">
-							<div class="col-lg-4 col-md-4">
-								<div class="post__img">
-									<a href="#"><img src="img/post-main.jpg" alt=""></a>
-								</div>
-							</div>
-							<div class="col-lg-8 col-md-8">
-								<div class="post__body">
-									<div class="date">17 февраля 2015</div>
-									<div class="title-link title-link_large">
-										<a href="#">Новый препарат «Фибралакс» — натуральное лекарство от запоров</a>
-									</div>
-									<div class="text text_med">О запорах многие предпочитают стыдливо умалчивать или говорить шепотом. Но важно знать, что с этим недугом необходимо бороться, не откладывая это дело в долгий ящик. Часто возникающий или хронический запор требует обязательного лечения! Для эффективного решения этой остроактуальной проблемы специалисты…</div>
-									<div class="links">
-										<a href="#">Новости компании</a>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="btn-action-wrap btn-action-wrap_single">
+						<button class="btn-action" type="submit"><i class="icon-send"></i>Отправить</button>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div> -->
-	<div class="container">
-		<div class="posts-group">
-			<div class="posts-wrap">
-				<div class="posts-wrap__item">
-					<div class="post post_single">
-						<span class="date">17 февраля 2015</span>
-						<div class="post__img">
-							<a href="#">
-								<img src="img/post2.jpg" width="280" height="180" alt="">
-							</a>
-						</div>
-						<div class="post__main">
-							<div class="title-link title-link_big">
-								<a href="#">Лекарство + крем «Ци-Клим» — вместе лучше!</a>
-							</div>
-							<div class="text"><a href="#">Милые и обворожительные красавицы старше 40, знаете ли вы, что совместное применение лекарства и крема «Ци-Клим» положительно влияет на состояние вашей кожи? Теперь это клинически доказано! К такому выводу пришли специалисты «Клиники профессора Юцковской».</a></div>
-							<div class="links">
-								<a href="#">Статьи о компании</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="posts-wrap__item">
-					<div class="post post_single">
-						<span class="date">17 февраля 2015</span>
-						<div class="post__img">
-							<a href="#">
-								<img src="img/post2.jpg" width="280" height="180" alt="">
-							</a>
-						</div>
-						<div class="post__main">
-							<div class="title-link title-link_big">
-								<a href="#">Лекарство + крем «Ци-Клим» — вместе лучше!</a>
-							</div>
-							<div class="text"><a href="#">Милые и обворожительные красавицы старше 40, знаете ли вы, что совместное применение лекарства и крема «Ци-Клим» положительно влияет на состояние вашей кожи? Теперь это клинически доказано! К такому выводу пришли специалисты «Клиники профессора Юцковской».</a></div>
-							<div class="links">
-								<a href="#">Статьи о компании</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="posts-wrap__item">
-					<div class="post post_single">
-						<span class="date">17 февраля 2015</span>
-						<div class="post__img">
-							<a href="#">
-								<img src="img/post2.jpg" width="280" height="180" alt="">
-							</a>
-						</div>
-						<div class="post__main">
-							<div class="title-link title-link_big">
-								<a href="#">Лекарство + крем «Ци-Клим» — вместе лучше!</a>
-							</div>
-							<div class="text"><a href="#">Милые и обворожительные красавицы старше 40, знаете ли вы, что совместное применение лекарства и крема «Ци-Клим» положительно влияет на состояние вашей кожи? Теперь это клинически доказано! К такому выводу пришли специалисты «Клиники профессора Юцковской».</a></div>
-							<div class="links">
-								<a href="#">Статьи о компании</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="posts-wrap">
-				<div class="posts-wrap__item">
-					<div class="post post_single">
-						<span class="date">17 февраля 2015</span>
-						<div class="post__main">
-							<div class="title-link title-link_big">
-								<a href="#">Как в 50 не только выглядеть, но и чувствовать себя на 35</a>
-							</div>
-							<div class="text"><a href="#">Об этом героини популярного телепроекта «Хочу быть красивой», финал которого в эфире программы «Здоровье» получился по-настоящему весенним, праздничным и удивительно душевным, теперь знают не понаслышке. </a></div>
-							<div class="links">
-								<a href="#">Новости компании</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="posts-wrap__item">
-					<div class="post post_single">
-						<span class="date">17 февраля 2015</span>
-						<div class="post__img">
-							<a href="#">
-								<img src="img/post2.jpg" width="280" height="180" alt="">
-							</a>
-						</div>
-						<div class="post__main">
-							<div class="title-link title-link_big">
-								<a href="#">Новинки от компании «Эвалар» покорили публику на выставке-форуме «Госзаказ-2015»</a>
-							</div>
-							<div class="text"><a href="#">В этом году крупнейшая российская фармкомпания «Эвалар» в рамках своей экспозиции представила потребителям хорошо известные натуральные препараты для укрепления здоровья, сохранения красоты и молодости и презентовала новую продукцию. </a></div>
-							<div class="links">
-								<a href="#">СМИ о нас</a>
-								<span>Московский комсомолец</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="posts-wrap__item">
-					<div class="post post_single">
-						<span class="date">17 февраля 2015</span>
-						<div class="post__img">
-							<a href="#">
-								<img src="img/post2.jpg" width="280" height="180" alt="">
-							</a>
-						</div>
-						<div class="post__main">
-							<div class="title-link title-link_big">
-								<a href="#">Компания «Эвалар» укрепилась в рейтинге самых влиятельных фармпроизводителей России/a>
-							</div>
-							<div class="text"><a href="#">По итогам ежегодного независимого исследования газеты «Фармацевтический Вестник» компания «Эвалар» заняла седьмое место в рейтинге наиболее влиятельных локальных производственных фармкомпаний.</a></div>
-							<div class="links">
-								<a href="#">Статьи о компании</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="pager">
-			<a href="#" class="pager__prev is-inactive"></a>
-			<div class="pager__main">
-				<a href="#" class="pager__link is-active">1</a>
-				<a href="#" class="pager__link">2</a>
-				<a href="#" class="pager__link">3</a>
-				<a href="#" class="pager__link">4</a>
-				<a href="#" class="pager__link">5</a>
-				<a href="#" class="pager__link">6</a>
-				<a href="#" class="pager__link">7</a>
-				<a href="#" class="pager__link">8</a>
-				<a href="#" class="pager__link">9</a>
-				<a href="#" class="pager__link">10</a>
-				<a href="#" class="pager__link">...</a>
-				<a href="#" class="pager__link">52</a>
-			</div>
-			<a href="#" class="pager__next"></a>
 		</div>
 	</div>
-
 	
 	<!-- END abc -->
 </div>
