@@ -1,0 +1,823 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>basket_corp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<!-- theme color for android 5.0 -->
+	<meta name="theme-color" content="#816aae"> 
+	<link rel="stylesheet" media="all" href="css/screen_corp.css" >
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+<!-- BEGIN  out-->
+<div class="out">
+	<div class="header js-header">
+		<div class="header__top">
+			<div class="container">	
+				<div class="row no-padding">
+					<div class="col-lg-5 col-md-5 col-sm-4 col-xs-4">
+						<a href="#" class="header__logo">Эвалар</a>
+						<div class="header__promo hidden-sm hidden-xs">
+							<strong><span>№1</span> в России</strong>
+							В КАТЕГОРИИ НАТУРАЛЬНЫХ ПРЕПАРАТОВ
+							ДЛЯ УКРЕПЛЕНИЯ ЗДОРОВЬЯ И ПОВЫШЕНИЯ 
+							КАЧЕСТВА ЖИЗНИ
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 visible-lg">
+						<div class="header__icons">
+							<img src="img/svg/certificates.svg" width="218" alt="">
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-4 col-sm-4 col-xs-8">
+						<div class="tel">
+							<span>Линия здоровья</span>
+							<a href="tel:88002005252">8-800-200-52-52</a>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-3 col-sm-4 text-right hidden-xs">
+						<div class="location">
+							<div class="location__title">Ваш регион</div>
+							<span class="location__val js-show-popup" data-popup="js-popup-city">Москва и МО</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header__main">
+				<div class="row no-padding">
+					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
+						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
+						<ul class="nav">
+							<li class="nav__item">
+								<a href="#" class="nav__link hidden-xs">продукция</a>
+							</li> 
+							<li class="nav__item">
+								<a href="#" class="nav__link hidden-sm hidden-xs">акции</a>
+							</li>   
+							<li class="nav__item hidden-md hidden-sm hidden-xs">
+								<a href="#" class="nav__link">доставка и оплата</a>
+							</li>
+						</ul>
+						<div class="user">
+							<button class="user__name js-toggle-user" type="button">Константин Констанополь</button>
+							<ul class="user__list js-list-user">
+								<li><a href="#">Личные данные</a></li>
+								<li><a href="#">История заказов</a></li>
+								<li><a href="#">Выход <i class="icon-logout"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-5">
+						<div class="text-right">
+							
+							<a href="#" class="shop shop_corp">
+								<i class="icon-case"></i>
+								Корпоративный сайт
+								<i class="shop__arr"></i>
+							</a>
+							<a href="#" class="cart is-full">
+								<i class="icon-cart"></i>
+								<span>10</span>
+							</a>
+							<div class="search search_shop js-search">
+								<button class="search__toggle js-toggle-search" type="button">
+									<i class="icon-search-white"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-form js-search">
+					<form>
+						<input class="search-form__input" type="text" placeholder="Поиск">
+						<button class="search-form__btn" type="submit"><i class="icon-search-white"></i></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu js-menu">
+		<div class="menu__in">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="menu__item visible-xs">
+									<div class="location">
+										<div class="location__title">Ваш регион</div>
+										<span class="location__val js-show-popup" data-popup="js-popup-city">Москва и МО</span>
+									</div>
+								</div>
+								<div class="menu__item">	
+									<div class="menu__title"><a href="#">О компании</a></div>
+									<ul class="menu__list">	
+										<li><a href="#">История</a></li>
+										<li><a href="#">10 причин для  доверия </a></li>
+										<li><a href="#">Эвалар в мире</a></li>
+										<li><a href="#">Качество Эвалар</a></li>
+										<li><a href="#">Аптечная сеть</a></li>
+										<li><a href="#">Социальная ответственность</a></li>
+										<li><a href="#">Алтай</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="menu__item">
+									<div class="menu__title"><a href="#">Где купить</a></div>
+									<ul class="menu__list">	
+										<li><a href="#">Аптеки в Вашем городе</a></li>
+										<li><a href="#">Аптечная сеть Эвалар</a></li>
+										<li><a href="#">Заказ на сайте </a></li>
+									</ul>
+								</div>
+								<div class="menu__item">
+									<div class="menu__title"><a href="#">Партнёрам</a></div>
+									<ul class="menu__list">	
+										<li><a href="#">Дистрибьюторам</a></li>
+										<li><a href="#">Поставщикам</a></li>
+										<li><a href="#">Аптекам</a></li>
+										<li><a href="#">Специалистам</a></li>
+										<li><a href="#">Франшиза Эвалар</a></li>
+										<li><a href="#">Контрактное производство, </a></li>
+										<li><a href="#">Документы Эвалар</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="menu__item">
+									<div class="menu__title"><a href="#">Карьера</a></div>
+									<ul class="menu__list">	
+										<li><a href="#">О компании</a></li>
+										<li><a href="#">Вакансии</a></li>
+										<li><a href="#">Разместить резюме</a></li>
+										<li><a href="#">Студентам  и выпускникам</a></li>
+										<li><a href="#">Для профессионалов</a></li>
+										<li><a href="#">Истории успеха</a></li>
+										<li><a href="#">Отделы компании</a></li>
+										<li><a href="#">Ваша карьера в Эвалар</a></li>
+										<li><a href="#">Фото офиса</a></li>
+										<li><a href="#">Вопросы и ответы</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="menu__item">	
+									<div class="menu__title"><a href="#">Продукция</a></div>
+									<div class="menu__title"><a href="#">Новости</a></div>
+									<div class="menu__title"><a href="#">Акции</a></div>
+									<div class="menu__title"><a href="#">Энциклопедия трав</a></div>
+									<div class="menu__title"><a href="#">Вопросы и ответы</a></div>
+									<div class="menu__title"><a href="#">ГИД по БАДам</a></div>
+									<div class="menu__title"><a href="#">Образ жизни</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- BEGIN page-head  -->
+	<div class="page-head page-head_empty">
+		<div class="page-head__info">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="page-head__title">Корзина</div>					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END page-head -->
+	<!-- BEGIN breadcrumbs  -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="breadcrumbs__main">
+						<li><a href="#"><i class="icon-home"></i></a></li>
+						<li><a href="#">Корзина</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END breadcrumbs -->
+	<div class="page-body page-body_mod">
+		<div class="container">
+			<div class="row no-padding">
+				<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+					<ul class="steps">
+						<li class="is-active"><a href="#"><span>1</span> Корзина</a></li>
+						<li><a href="#"><span>2</span> Оформление заказа</a></li>
+						<li><a href="#"><span>3</span> Подтверждение заказа</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<a class="btn-action btn-action_violet" href="#"><i class="icon-arr-r"></i>Вернуться к выбору продукции</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="page-body no-padding">
+		<div class="product product_extend js-parent">
+			<div class="container">
+				<div class="row no-padding">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="product__img">
+							<a href="#"><img src="img/product1.png" alt=""></a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="product__text">
+							<div class="title-link title-link_big"><a href="">Турбослим блокатор калорий</a></div>
+							<div class="text text_big">Veniment, ommolup tatectotatis expedissit, odit porum alias eatus,Tem ea doluptam lis preperum quid etur a doluptias</div>
+						</div>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-1">
+						<div class="select js-select">
+							<input type="text" class="input input_dark" value="1 уп." placeholder="Выберите" readonly required>
+							<select>
+								<option value="1 уп." selected>1 уп.</option>
+								<option value="2 уп.">2 уп.</option>
+								<option value="3 уп.">3 уп.</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<div class="product__price">
+							<div class="price-old price-old_small">
+								<span>200</span>
+								руб
+							</div>
+							<div class="price-simple">
+								<span>183</span>
+								руб
+							</div>
+							<button class="btn-remove js-remove" type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product product_extend js-parent">
+			<div class="container">
+				<div class="row no-padding">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="product__img">
+							<a href="#"><img src="img/product2.png" alt=""></a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="product__text">
+							<div class="title-link title-link_big"><a href="">Ци-Клим Аланин</a></div>
+							<div class="text text_big">Veniment, ommolup tatectotatis expedissit, odit porum alias eatus,Tem ea doluptam lis preperum quid etur a doluptias</div>
+						</div>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-1">
+						<div class="select js-select">
+							<input type="text" class="input input_dark" value="1 уп." placeholder="Выберите" readonly required>
+							<select>
+								<option value="1 уп." selected>1 уп.</option>
+								<option value="2 уп.">2 уп.</option>
+								<option value="3 уп.">3 уп.</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<div class="product__price">
+							<div class="price-old price-old_small">
+								<span>200</span>
+								руб
+							</div>
+							<div class="price-simple">
+								<span>183</span>
+								руб
+							</div>
+							<button class="btn-remove js-remove" type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product product_extend js-parent">
+			<div class="container">
+				<div class="row no-padding">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="product__img">
+							<a href="#"><img src="img/product3.png" alt=""></a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="product__text">
+							<div class="title-link title-link_big"><a href="">Турбослим блокатор калорий</a></div>
+							<div class="text text_big">Veniment, ommolup tatectotatis expedissit, odit porum alias eatus,Tem ea doluptam lis preperum quid etur a doluptias</div>
+						</div>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-1">
+						<div class="select js-select">
+							<input type="text" class="input input_dark" value="1 уп." placeholder="Выберите" readonly required>
+							<select>
+								<option value="1 уп." selected>1 уп.</option>
+								<option value="2 уп.">2 уп.</option>
+								<option value="3 уп.">3 уп.</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<div class="product__price">
+							<div class="price-old price-old_small">
+								<span>200</span>
+								руб
+							</div>
+							<div class="price-simple">
+								<span>183</span>
+								руб
+							</div>
+							<button class="btn-remove js-remove" type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product product_extend js-parent">
+			<div class="container">
+				<div class="row no-padding">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<div class="product__img">
+							<a href="#"><img src="img/product1.png" alt=""></a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="product__text">
+							<div class="title-link title-link_big"><a href="">Турбослим блокатор калорий</a></div>
+							<div class="text text_big">Veniment, ommolup tatectotatis expedissit, odit porum alias eatus,Tem ea doluptam lis preperum quid etur a doluptias</div>
+						</div>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-1">
+						<div class="select js-select">
+							<input type="text" class="input input_dark" value="1 уп." placeholder="Выберите" readonly required>
+							<select>
+								<option value="1 уп." selected>1 уп.</option>
+								<option value="2 уп.">2 уп.</option>
+								<option value="3 уп.">3 уп.</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2">
+						<div class="product__price">
+							<div class="price-old price-old_small">
+								<span>200</span>
+								руб
+							</div>
+							<div class="price-simple">
+								<span>183</span>
+								руб
+							</div>
+							<button class="btn-remove js-remove" type="button"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="total-price">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">Стоимость товаров: 1200 руб.</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title-small title-small_mod">Способ доставки <a href="#" class="link link_small">Где купить?</a></div>
+					</div>
+					<div class="col-lg-5">
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-delivery" checked>
+								<span class="radio__text"><i></i>Курьерская доставка по  Москве Piluli.ru — <strong>бесплатно от 900 руб</strong></span>
+							</label>
+						</div>
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-delivery">
+								<span class="radio__text"><i></i>Почта России по  предоплате –бесплатно</span>
+							</label>
+						</div>
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-delivery">
+								<span class="radio__text"><i></i>Почта России –наложенный платеж</span>
+							</label>
+						</div>
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-delivery">
+								<span class="radio__text"><i></i>Заказ через  Apteka.ru. </span>
+								<span class="radio__info">для завершения оформления заказа вы будете перенаправлены на Apteka.ru и дальнейшее оформление на сайте Эвалар уже не происходит.</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="title-small title-small_mod">Способ оплаты <a href="#" class="link link_small">Как оплатить?</a></div>
+					</div>
+					<div class="col-lg-5">
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-payment" checked>
+								<span class="radio__text"><i></i>Наличные</span>
+							</label>
+						</div>
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-payment">
+								<span class="radio__text"><i></i>Карта</span>
+							</label>
+						</div>
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-payment">
+								<span class="radio__text"><i></i>Банковский перевод</span>
+							</label>
+						</div>
+						<div class="radio-group">
+							<label class="radio">
+								<input type="radio" class="radio__input" name="radio-payment">
+								<span class="radio__text"><i></i>Наложенный платеж</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="total">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						Доставка по России: 500 руб.
+						<span>Итого с доставкой: 1200 руб.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="message message_alert">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<i class="icon-alert"></i>Не достаточная сумма для бесплатной доставки
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="order order_action">
+			<div class="container">
+				<div class="row row_table row_middle">
+					<div class="col-lg-12">
+						<a class="btn-action" href="#"><i class="icon-arr-r"></i>Оформить заказ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-body page-body_gray no-padding">
+		<div class="container-fluid title-wrap visible-sm visible-xs">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="title title_light title_mt">Лидеры продаж</div>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
+					<div class="title title_light title_mt">Лидеры продаж</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-lg-offset-1 col-md-offset-1">
+					<div class="item-slider">
+						<div class="js-item-slider">
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+							<div>
+								<div class="el">
+									<div class="el__body">
+										<a class="el__title" href="#">Турбослим билокатор калорий</a>
+										<div class="el__img">
+											<a href="#"><img src="img/product1.png" alt=""></a>
+											<div class="price">
+												<div class="price__in">
+													<span>235</span>	
+													руб
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<a class="el__more" href="#">
+										<span>Турбослим билокатор калорий</span>
+										<strong>Единственный коллагеновый напиток с L-карнозином для быстрого и&nbsp;глубокого омоложения</strong>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+									<a href="#" class="btn-circle btn-circle_buy">
+										<i class="icon-cart"></i>
+										<span>В корзину</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- END abc -->
+</div>
+<!-- END out-->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="footer__in">
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-no-pad">
+            <div class="footer__meta">
+              <p>© «Эвалар», 2003—2014</p>
+              <p>659332, Россия, Алтайский край, 
+                Бийск, ул. Социадистическая,
+              </p>
+              <p>23/6</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-1 col-md-offset-1 col-no-pad">
+            <div class="footer__links">
+              <div class="footer__nav">
+                <a href="#">О компании</a>
+                <a href="#">Производство</a>
+                <a href="#">Продукция</a>
+                <a href="#">Партнерам</a>
+                <a href="#">Контакты</a>
+              </div>
+              <div class="footer__nav">
+                <a href="#">Новости</a>
+                <a href="#">Акции</a>
+                <a href="#">Карьера</a>
+                <a href="#">Аптеки в городе</a>
+                <a href="#">Заказ на сайте</a>
+              </div>
+              <div class="footer__nav">
+                <a href="#">Вопросы и ответы</a>
+                <a href="#">Гид по БАДам</a>
+                <a href="#">Образ жизни</a>
+              </div>
+              <div class="footer__nav">
+                <a href="#">Энциклопедия трав</a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden-lg hidden-md col-sm-4 col-xs-12 col-no-pad">
+            <div class="footer__sertificates">
+              <img src="img/svg/certificates.svg" width="218" alt="">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-no-pad">
+            <div class="soc-wrap">
+              <div class="soc">
+                <div class="soc__title">Мы в соцсетях</div>
+                <a href="#" class="soc__link">
+                <i class="icon-vk"></i>
+                </a>
+                <a href="#" class="soc__link">
+                <i class="icon-fb"></i>
+                </a>
+                <a href="#" class="soc__link">
+                <i class="icon-od"></i>
+                </a>
+              </div>
+              <a href="#" class="link-action"><i class="icon-mail"></i>Написать письмо</a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-no-pad">
+            <a href="#" class="created-by">
+              <i class="icon-qb"></i>
+              <div>Разработка сайта -</div>
+              <span>qb-interactive</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<a class="btn-feedback" href="#">
+	<span>
+		Подписка на новости
+		<strong>Клуб здоровья</strong>
+	</span>
+</a>
+<!-- load scripts -->
+<script src="js/main.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

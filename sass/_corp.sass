@@ -125,8 +125,7 @@
 	+svg(logout,23,22)
 .icon-star
 	+svgi(star-violet)
-.icon-add
-	+svgi(soc-add-violet)
+
 .icon-reload
 	+svgi(reload-violet)
 .el
@@ -186,7 +185,10 @@
 	&:hover
 		color: $violet_h
 		border-color: $violet_h
-		
+	.icon-add
+		+svgi(soc-add-violet)
+	.icon-arr-r
+		+svgi(arr-right-violet)
 .accord
 	&__icon
 		&:before
@@ -205,3 +207,51 @@
 		&.is-inactive
 			&:before
 				+svgi(caret-r-gray)
+
+.slick-prev
+	+svg(prev-violet,21,60)
+	&.slick-disabled
+		+svgi(prev-gray)
+	
+.slick-next
+	+svg(next-violet,21,60)
+	&.slick-disabled
+		+svgi(next-gray)
+
+.steps
+	li
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-left: 4%
+		width: 23.5%
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: -13.5%
+			width: 10%
+			height: 1px
+			background: $light 
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		&.is-active
+			a
+				color: #fff
+				background: $light
+				border-color: $light   
+	a
+		display: block
+		border: 1px solid
+		padding: 0 10px 0 25px
+		height: 40px
+		line-height: 40px
+		border-radius: 20px 
+		font-size: 13px
+		+reg
+		+text-overflow
+		color: $light  
+		&:hover
+			color: $violet 

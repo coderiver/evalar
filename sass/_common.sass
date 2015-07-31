@@ -221,6 +221,9 @@ a
 		line-height: 1.6
 	&_mod
 		font-size: 16px
+	a
+		display: inline-block
+		margin-left: 20px
 .field
 	display: block
 	margin-bottom: 12px
@@ -361,6 +364,13 @@ a
 				height: 8px
 				border-radius: 50%
 				background: $green    
+		strong
+			+black
+	&__info
+		display: block
+		padding-left: 26px
+		font-size: 12px
+		color: $light 
 .tabs-wrap
 	border-bottom: 1px solid $border 
 	.container
@@ -989,3 +999,14 @@ a.btn-action
 		+svg(close-violet,14,14)
 	&:hover
 		color: $green_h 
+		
+.message
+	padding: 35px 0
+	font-size: 18px
+	+med
+	color: #fff
+	i
+		vertical-align: middle
+		margin-right: 17px
+	&_alert
+		background: #e74c36

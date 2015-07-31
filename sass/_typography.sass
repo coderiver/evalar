@@ -89,13 +89,23 @@
 		width: 100%
 		margin-top: 20px
 .item-slider
-	border-right: 1px solid #fff 
+	.slick-slider
+		border-left: 1px solid #fff
+		border-right: 1px solid #fff
 	+r(767)
 		border: 0
 		padding-bottom: 50px
 	.item
 		width: 100%
 		border-left: 1px solid #fff 
+		+r(767)
+			border: 0
+	.el
+		width: 100%
+		padding-bottom: 98%
+		border-left: 0
+		border-top: 0
+		border-right: 1px solid #fff 
 		+r(767)
 			border: 0
 	.slick-dots

@@ -552,5 +552,10 @@ $(document).ready(function() {
 	// 	event.stopPropagation();
 	// });
 
+	$(".js-remove").on("click", function(event){
+		$(this).parents(".js-parent").remove();
+	    return false;
+	});
+
 });
 

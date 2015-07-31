@@ -128,7 +128,7 @@
 	+r(767)
 		min-height: 320px 
 		padding: 40px 20px 50px
-	.product__img
+	&__img
 		text-align: center
 		padding-right: 30px
 		+r(1230)
@@ -141,15 +141,36 @@
 			text-align: left
 		img
 			max-width: 100% 
-	.product__text
+	&__text
 		padding-right: 70px
 		+r(1230)
 			padding-right: 30px
 		+r(767)
 			padding: 0
+	&__price
+		padding-left: 20px
+		position: relative
+		.btn-remove
+			position: absolute
+			right: 0
+			top: 0
 	.title-link
 		margin-bottom: 13px
-		
+.product_extend
+	.product__img
+		text-align: left
+		padding: 0 20px 
+.btn-remove
+	border: 1px solid $green
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	background: none
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		+svg(close-violet,14,14) 
 .icon-file
 	+svg(file,22,29)
 
