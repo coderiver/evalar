@@ -36,16 +36,21 @@
 	+svg(view-green,20,18)	
 .icon-download-green
 	+svg(download-green,14,15)
+.icon-reload
+	+svg(reload,24,24)
 .icon-home
 	position: relative
 	top: 1px
-	+svg(home, 15,15)
+	+svg(home, 14,11)
 	&:before
-		+tr(visibility .3s)
 		content: ''
-		visibility: hidden
-		+svg(home-green, 15,15)
 		position: absolute
 		left: 0
+		top: 0
+		opacity: 0
+		+gpu
+		+tr(opacity .2s)
+		+svg(home-green, 14,11)
+		
 .icon-case
 	+svg(case,26,24)

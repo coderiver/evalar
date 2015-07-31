@@ -68,7 +68,7 @@
 				&:hover
 					.icon-home
 						&:before
-							visibility: visible 
+							opacity: 1
 				a 
 					padding: 0 10px 0 5px
 			&:last-child
@@ -183,12 +183,20 @@
 		+r(767)
 			display: none
 	&__title
+		position: relative
 		font-size: 24px
 		color: $green 
 		+tr(color .2s)
 		+r(767)
 			font-size: 16px
 			+med
+		span
+			color: $light 
+		.date
+			position: absolute
+			left: 100%
+			top: -20px
+			margin-left: 10px
 	&__body	
 		display: none
 		margin-top: 28px
@@ -568,3 +576,46 @@
 	.row
 		> div
 			padding: 32px 0 
+			
+.order
+	font-size: 16px
+	+med
+	border-bottom: 1px solid #fff 
+	background: $bg 
+	+r(1023)
+		font-size: 15px
+	.row
+		> div
+			height: 110px
+			padding-top: 10px
+			padding-bottom: 10px
+			min-height: 110px
+	&__digit
+		font-size: 24px
+		+r(1023)
+			font-size: 18px
+	&__img
+		text-align: center
+		padding: 0 10px
+		img
+			max-width: 100%
+	&__count
+		font-size: 13px
+		position: absolute
+		top: 50%
+		left: 15px
+		+transform(translateY(-50%))
+	.address
+		margin-bottom: 0
+.total
+	padding: 43px 0 
+	border-bottom: 1px solid #fff 
+	background: $green
+	color: #fff
+	+med
+	font-size: 16px
+	line-height: 1
+	span
+		display: block 
+		margin: 6px 0 0 
+		font-size: 30px

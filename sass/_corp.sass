@@ -127,6 +127,8 @@
 	+svgi(star-violet)
 .icon-add
 	+svgi(soc-add-violet)
+.icon-reload
+	+svgi(reload-violet)
 .el
 	background: $bg 
 	text-align: left
@@ -184,3 +186,22 @@
 	&:hover
 		color: $violet_h
 		border-color: $violet_h
+		
+.accord
+	&__icon
+		&:before
+			+svgi(arr_outline-b-violet)
+
+.pager
+	&__prev
+		&:before
+			+svgi(caret-l-violet)
+		&.is-inactive
+			&:before
+				+svgi(caret-l-gray)
+	&__next
+		&:before
+			+svgi(caret-r-violet)
+		&.is-inactive
+			&:before
+				+svgi(caret-r-gray)
