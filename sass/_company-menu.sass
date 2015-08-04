@@ -165,6 +165,14 @@
 	.page-head
 		+r(767)
 			border-bottom: 1px solid #fff 
+
+body
+	&[data-section="1"]
+		&.is-inactive-fullpage
+			background-image: url(../img/history.jpg)
+			+cover
+			.section__img
+				background-image: none !important
 .history
 	overflow: hidden
 	padding: 30px 0 
@@ -184,6 +192,8 @@
 			left: -1610px
 		&:after
 			right: -1610px
+	&__bg
+		position: absolute
 	&__slider
 		position: relative
 		width: 67%
@@ -247,14 +257,14 @@
 			&:last-child
 				margin-bottom: 0
 	.slick-prev
-		left: -34%
+		left: -33%
 		+svg(prev,21,60)
 		+r(1230)
 			left: -20%
 		+r(1023)
 			left: -50px
 	.slick-next
-		right: -34%
+		right: -33%
 		+svg(next,21,60)
 		+r(1230)
 			right: -20%
@@ -283,6 +293,7 @@
 	+tr(transform .3s)
 	height: 100vh
 .main-full-page.is-inactive-fullpage
+	min-height: 100vh !important
 	height: 100% !important
 	.fullpage,
 	.article

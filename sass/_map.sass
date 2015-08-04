@@ -1,11 +1,52 @@
 .map-canvas 
 	height: 700px 
+	position: relative
 	display: inline-block
 	vertical-align: middle
 	width: 100% 
 	+r(1023)
 		height: 400px 
-		height: 70vh 
+		height: 70vh
+	&__in
+		position: absolute
+		top: 60px
+		right: 0
+		bottom: 0
+		left: 0
+.map-search
+	border-top: 1px solid #faf9f8
+	height: 60px
+	+clr
+	&__item
+		float: left
+		position: relative
+		width: 300px
+		&:hover
+			.drop-list
+				opacity: 1
+				visibility: visible 
+		.drop-list
+			top: -1px
+			width: 100%
+			height: 700px
+			li
+				&:hover
+					background: #20b019 
+			&__active
+				a
+					padding: 14px 60px 14px 20px 
+				span
+					margin-bottom: 3px
+					color: #5bc07e 
+					font-size: 12px
+					+reg
+					display: block
+			.scroll-pane
+				max-height: 570px
+			.jspDrag
+				background: rgba(#fff,.3) 
+			.drop-list
+				height: 640px
 .map
 	+clr
 	font-size: 0
@@ -98,6 +139,8 @@
 	.map-info__img
 		margin-top: 11px 
 		font-size: 0
+		&:first-child
+			margin-bottom: 15px
 		img
 			max-width: 100% 
 	.map-info__work
@@ -122,4 +165,31 @@
 		 
 .text_black
 	color: #000	
+
+.map_extend
+	.map__item
+		position: relative
+		margin-top: 1px
+		margin-right: 17px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 30px
+			right: 0
+			height: 1px
+			background: #f3f3f1  
+		&:before
+			top: -1px
+		&:after
+			bottom: -1px
+		&:hover
+			background: #fff
+			z-index: 2
+			.map-info__header
+				color: $green 
+		.text
+			color: #000 
+		.link
+			font-size: 13px
 	

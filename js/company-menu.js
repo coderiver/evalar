@@ -112,6 +112,29 @@ $(function(){
          // init google map function
         initialize();
       }
+      if (body.attr("data-section") == 1) {
+
+        var configHistorySlider = {
+          slidesToShow: 1,
+          dots: false,
+          arrows: true,
+          infinite: false,
+          adaptiveHeight: true,
+          responsive: [
+            {
+                breakpoint: 768,
+                settings: "unslick"
+              }
+          ]
+        }
+        $('.js-history-slider').on('init', function(slick) {
+          setTimeout(function(){
+            $('.js-history-slider').addClass("is-ready");
+          },200);
+        });
+
+        $(".js-history-slider").slick(configHistorySlider);
+      }
     });   
 
   });
