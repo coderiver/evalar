@@ -19,6 +19,8 @@
 	.footer
 		margin: 50px -50px -50px
 		padding: 30px 0 20px 
+.fullpage
+	position: static !important
 .section
 	position: relative
 	+tr(transform .3s)
@@ -27,7 +29,7 @@
 	&.is-active
 		height: 100vh
 	&[data-section="7"]
-		z-index: 5
+		z-index: 6
 	&__img
 		position: absolute
 		top: 0
@@ -63,6 +65,7 @@
 	right: 0
 	+vertical
 	z-index: 5
+	+transition(transform .3s)
 	+r(1023)
 		top: 140px
 	ul
@@ -315,8 +318,7 @@ body
 .is-inner-page
 	.article
 		margin-bottom: 0
-.article,
-.section-nav
+.article
 	+tr(transform .3s)
 .article_fullpage
 	padding: 50px
