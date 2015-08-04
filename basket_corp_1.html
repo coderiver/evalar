@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>account_corp</title>
+	<title>basket_corp_1</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -193,7 +193,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="page-head__title">Личный кабинет</div>					
+						<div class="page-head__title">Корзина</div>					
 					</div>
 				</div>
 			</div>
@@ -207,93 +207,162 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumbs__main">
 						<li><a href="#"><i class="icon-home"></i></a></li>
-						<li><a href="#">Личные данные</a></li>
+						<li><a href="#">Корзина</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-
-	<div class="page-body page-body_gray">
-
+	<div class="page-body page-body_mod">
 		<div class="container">
-			<div class="form">
-				
-				<div class="row">
-					
-					<div class="col-lg-6 col-md-6 col-sm-12">
-						<div class="form__col">
-							
-							<label class="field">
-								<span class="field__title"><!-- <i class="icon-star"></i> -->Имя:</span>
-								<span class="field__body">
-									<input type="text" class="input input_dark">
-								</span>
-							</label>
-							<label class="field">
-								<span class="field__title"><!-- <i class="icon-star"></i> -->Эл. почта:</span>
-								<span class="field__body">
-									<input type="email" class="input input_dark">
-								</span>
-							</label>
-							<label class="field field_password js-password">
-								<span class="field__title"><!-- <i class="icon-star"></i> -->Пароль:</span>
-								<span class="field__body">
-									<input type="password" class="input input_dark">
-									<button type="button" class="field__pass js-show-password" data-text="Скрыть">Показать</button>
-									<a href="#" class="link link_small">Сменить пароль</a>
-								</span>
-
-							</label>
-						</div>
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12">
-						<div class="row row_form">
-							<div class="col-lg-3 col-md-3 col-sm-12">
-								<div class="title-small title-small_mod">Адреса доставки:</div>
-							</div>
-							<div class="col-lg-9 col-md-9 col-sm-12">
-								<div class="address">
-									123456, Московская область, Улица Академика Королева, 12 А, кв. 48
-									<button type="button" class="btn-del">Удалить</button>
-								</div>
-								<div class="address">
-									123456, Москва, Улица Отрадная, 45, кв. 48
-									<button type="button" class="btn-del">Удалить</button>
-								</div>
-								<button class="btn-action btn-action_violet" type="submit"><i class="icon-add"></i>Добавить адрес</button>
-							</div>
-						</div>
-						<div class="row row_form">
-							<div class="col-lg-3 col-md-3 col-sm-12">
-								<div class="title-small title-small_mod">Подписка:</div>
-							</div>
-							<div class="col-lg-9 col-md-9 col-sm-12">
-								<div class="address">
-									Подписка на новости и акции оформлена
-									<button type="button" class="btn-del">Отменить подписку</button>
-								</div>
-							</div>
-						</div>
-					</div>
+			<div class="row no-padding">
+				<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+					<ul class="steps">
+						<li><a href="#"><span>1</span> Корзина</a></li>
+						<li class="is-active"><a href="#"><span>2</span> Оформление заказа</a></li>
+						<li><a href="#"><span>3</span> Подтверждение заказа</a></li>
+					</ul>
 				</div>
-				
 			</div>
 		</div>
-		<div class="page-body__line"></div>
+	</div>
+	<div class="page-body page-body_gray">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="btn-action-wrap btn-action-wrap_single">
-						<button class="btn-action" type="submit"><i class="icon-check-gray"></i>Сохранить</button>
+					<div class="form">
+						<a href="#" class="btn-action btn-action_filled">
+							<span class="icon-arr-r"></span>
+							Я уже зарегистрирован
+						</a>
+						<form>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="note-text">
+										Не забудьте заполнить важные поля, отмеченные звездочкой (<i class="icon-star"></i>)
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="form__col">
+										<div class="title-small">Информация о покупателе</div>
+										<label class="field">
+											<span class="field__title"><i class="icon-star"></i>Имя:</span>
+											<span class="field__body">
+												<input type="text" class="input input_dark" required>
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__title"><i class="icon-star"></i>Фамилия:</span>
+											<span class="field__body">
+												<input type="text" class="input input_dark" required>
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__title"><i class="icon-star"></i>Отчество:</span>
+											<span class="field__body">
+												<input type="text" class="input input_dark" required>
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__title">Телефон для связи:</span>
+											<span class="field__body">
+												<input type="tel" class="input input_dark" placeholder="+7  (      )">
+											</span>
+										</label>
+										<label class="field">
+											<span class="field__title">Эл. почта:</span>
+											<span class="field__body">
+												<input type="email" class="input input_dark">
+											</span>
+										</label>
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" checked>
+											<span class="checkbox__text"><i></i>Зарегистрировать меня</span>
+										</label>
+										
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="form__col">
+										<div class="title-small">Адрес доставки</div>
+										<label class="field">
+											<span class="field__title"><i class="icon-star"></i>Адрес доставки:</span>
+											<span class="field__body">
+												<input type="text" class="input input_dark" required>
+											</span>
+										</label>
+										<label class="checkbox">
+											<input class="checkbox__input" type="checkbox" checked>
+											<span class="checkbox__text"><i></i>Я согласен получать рассылку от Эвалар</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="page-body__line has-margin"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="title-small">Откуда вы о на узнали?</div>
+					<div class="text text_big">
+						<p>Axima nobit que sequisint ilibusc ieniscilla seque excepud ipienti corrum quatiusam sam cuptatur ant accatemquiat odicimporem di ut poressim dolupta turisquam fuga. Nest exped modi que abori omnisque id quae quia dolecabor sapistion es estiat fugiant hilliquis eosaessi aut pra sunt lacestio. Tem vel ium exped quia aut fugiatus escit lacerorepro mossent aut parumquam ium simusandam net fugitium quat vel moluptatur?</p>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="radio-group radio-group_mt">
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news" checked>
+							<span class="radio__text"><i></i>Интернет</span>
+						</label>
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news">
+							<span class="radio__text"><i></i>Пресса</span>
+						</label>
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news">
+							<span class="radio__text"><i></i>Телевидение</span>
+						</label>
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news">
+							<span class="radio__text"><i></i>Радио</span>
+						</label>
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news">
+							<span class="radio__text"><i></i>Аптекарь</span>
+						</label>
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news">
+							<span class="radio__text"><i></i>От знакомых / родственников</span>
+						</label>
+						<label class="radio">
+							<input type="radio" class="radio__input" name="radio-news">
+							<span class="radio__text"><i></i>Другое</span>
+						</label>                  
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-body__line has-margin"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="btn-action-group">
+						<a class="btn-action" href="#"><i class="icon-arr-l"></i>Назад</a>
+						<a class="btn-action" href="#"><i class="icon-arr-r"></i>Дальше</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<!-- END abc -->
+
+
 </div>
 <!-- END out-->
 <div class="footer">

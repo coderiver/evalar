@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>account_corp</title>
+	<title>basket_corp_2</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -193,7 +193,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="page-head__title">Личный кабинет</div>					
+						<div class="page-head__title">Корзина</div>					
 					</div>
 				</div>
 			</div>
@@ -207,93 +207,159 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumbs__main">
 						<li><a href="#"><i class="icon-home"></i></a></li>
-						<li><a href="#">Личные данные</a></li>
+						<li><a href="#">Корзина</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-
-	<div class="page-body page-body_gray">
-
+	<div class="page-body page-body_mod">
 		<div class="container">
-			<div class="form">
-				
-				<div class="row">
-					
-					<div class="col-lg-6 col-md-6 col-sm-12">
-						<div class="form__col">
-							
-							<label class="field">
-								<span class="field__title"><!-- <i class="icon-star"></i> -->Имя:</span>
-								<span class="field__body">
-									<input type="text" class="input input_dark">
-								</span>
-							</label>
-							<label class="field">
-								<span class="field__title"><!-- <i class="icon-star"></i> -->Эл. почта:</span>
-								<span class="field__body">
-									<input type="email" class="input input_dark">
-								</span>
-							</label>
-							<label class="field field_password js-password">
-								<span class="field__title"><!-- <i class="icon-star"></i> -->Пароль:</span>
-								<span class="field__body">
-									<input type="password" class="input input_dark">
-									<button type="button" class="field__pass js-show-password" data-text="Скрыть">Показать</button>
-									<a href="#" class="link link_small">Сменить пароль</a>
-								</span>
-
-							</label>
-						</div>
-					</div>
-					<div class="col-lg-8 col-md-8 col-sm-12">
-						<div class="row row_form">
-							<div class="col-lg-3 col-md-3 col-sm-12">
-								<div class="title-small title-small_mod">Адреса доставки:</div>
-							</div>
-							<div class="col-lg-9 col-md-9 col-sm-12">
-								<div class="address">
-									123456, Московская область, Улица Академика Королева, 12 А, кв. 48
-									<button type="button" class="btn-del">Удалить</button>
-								</div>
-								<div class="address">
-									123456, Москва, Улица Отрадная, 45, кв. 48
-									<button type="button" class="btn-del">Удалить</button>
-								</div>
-								<button class="btn-action btn-action_violet" type="submit"><i class="icon-add"></i>Добавить адрес</button>
-							</div>
-						</div>
-						<div class="row row_form">
-							<div class="col-lg-3 col-md-3 col-sm-12">
-								<div class="title-small title-small_mod">Подписка:</div>
-							</div>
-							<div class="col-lg-9 col-md-9 col-sm-12">
-								<div class="address">
-									Подписка на новости и акции оформлена
-									<button type="button" class="btn-del">Отменить подписку</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-		<div class="page-body__line"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="btn-action-wrap btn-action-wrap_single">
-						<button class="btn-action" type="submit"><i class="icon-check-gray"></i>Сохранить</button>
-					</div>
+			<div class="row no-padding">
+				<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+					<ul class="steps">
+						<li><a href="#"><span>1</span> Корзина</a></li>
+						<li><a href="#"><span>2</span> Оформление заказа</a></li>
+						<li class="is-active"><a href="#"><span>3</span> Подтверждение заказа</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<!-- END abc -->
+	<div class="order">
+		<div class="container">
+			<div class="row row_table row_middle">
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<span class="order__count">1</span>
+					<div class="order__img">
+						<a href="#"><img src="img/cart-item.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<div class="title-link"><a href="#">Турбослим билокатор калорий</a></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<span class="order__digit">2</span> упаковки
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<span class="order__digit">800</span> руб.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="order">
+		<div class="container">
+			<div class="row row_table row_middle">
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<span class="order__count">2</span>
+					<div class="order__img">
+						<a href="#"><img src="img/cart-item.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<div class="title-link"><a href="#">Биоритм антистресс 24 день/ночь</a></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<span class="order__digit">1</span> упаковка
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<span class="order__digit">800</span> руб.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="order">
+		<div class="container">
+			<div class="row row_table row_middle">
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<span class="order__count">3</span>
+					<div class="order__img">
+						<a href="#"><img src="img/cart-item.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<div class="title-link"><a href="#">Бифилар</a></div>
+				</div>
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<span class="order__digit">1</span> упаковка
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<span class="order__digit">800</span> руб.
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="total">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					Доставка по России: 500 руб.
+					<span>Итого с доставкой: 1200 руб.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-body page-body_gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-12">
+							<div class="title-small title-small_mod">Адреса доставки:</div>
+						</div>
+						<div class="col-lg-9 col-md-9 col-sm-12">
+							<div class="address">
+								123456, Московская область, Улица Академика Королева, 12 А, кв. 48
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-12">
+							<div class="title-small title-small_mod">Контактное лицо:</div>
+						</div>
+						<div class="col-lg-9 col-md-9 col-sm-12">
+							<div class="address">
+								Алексей Иванович Иванов
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-12">
+							<div class="title-small title-small_mod">Телефон:</div>
+						</div>
+						<div class="col-lg-9 col-md-9 col-sm-12">
+							<div class="address">
+								+7 926 123-45-67
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="btn-action-wrap">
+						<a href="#" class="btn-action">
+							<i class="icon-arr-r"></i>
+							Внести правки в заказ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-body__line has-margin"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="btn-action-group">
+						<a class="btn-action" href="#"><i class="icon-arr-l"></i>Назад</a>
+						<a class="btn-action btn-action_violet" href="#"><i class="icon-check-violet"></i>Готово</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
 </div>
 <!-- END out-->
 <div class="footer">

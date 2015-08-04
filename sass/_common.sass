@@ -227,6 +227,8 @@ a
 .field
 	display: block
 	margin-bottom: 12px
+	+ .checkbox
+		margin-top: 37px
 	&__title
 		display: block
 		margin-bottom: 2px
@@ -325,6 +327,8 @@ a
 	margin: 10px 0
 	.radio
 		margin-right: 22px
+	&_mt
+		margin-top: 25px
 .radio
 	display: inline-block
 	vertical-align: top
@@ -346,7 +350,7 @@ a
 		i
 			display: inline-block
 			position: relative
-			margin-right: 8px
+			margin: -2px 8px 0 0
 			vertical-align: middle
 			border: 1px solid #e5e5e0
 			width: 18px
@@ -371,6 +375,41 @@ a
 		padding-left: 26px
 		font-size: 12px
 		color: $light 
+.checkbox
+	display: inline-block
+	vertical-align: top
+	position: relative
+	cursor: pointer
+	&__input
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ .checkbox__text
+				i
+					&:before
+						display: block
+	&__text
+		position: relative
+		i
+			display: inline-block
+			position: relative
+			margin: -2px 8px 0 0
+			vertical-align: middle
+			border: 1px solid $green
+			width: 18px
+			height: 18px
+			background: #fff 
+			border-radius: 3px
+			&:before
+				content: ""
+				+svg(check,14,11)
+				display: none
+				position: absolute
+				top: 2px
+				right: -2px
 .tabs-wrap
 	border-bottom: 1px solid $border 
 	.container
@@ -701,6 +740,9 @@ a
 		&:hover
 			background: darken(#b8b8b6, 5%)
 
+.btn-action-group
+	.btn-action
+		margin-right: 15px
 .btn-action-wrap
 	margin-top: 40px
 	+r(767)
@@ -735,6 +777,16 @@ a
 		border: 0
 		background: #cfd2c8
 		color: #fff  
+	&_filled
+		background: $green 
+		color: #fff
+		border-color: $green  
+		.icon-arr-r
+			+svgi(arr-right-white)
+			margin-right: 10px
+		&:hover
+			background: $green_h
+			color: #fff  
 	&_green
 		color: $green
 		border-color: $green
