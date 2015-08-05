@@ -374,6 +374,8 @@
 	opacity: 0
 	visibility: hidden
 	+tr(opacity .2s)
+	&_dark
+		background: #3c4234 
 	&.is-active
 		opacity: 1
 		visibility: visible
@@ -405,6 +407,10 @@
 			padding-right: 12px
 		a
 			padding: 12px 20px
+		&.has-dark-hover
+			li
+				&:hover
+					background: #3c4234 
 	&__group
 		padding: 0 20px 
 		height: 50px
@@ -421,6 +427,17 @@
 			color: #5bc07e
 			font-size: 12px 
 			vertical-align: top
+	li
+		&.has-icon
+			a
+				position: relative 
+				padding-left: 45px
+				
+			i
+				position: absolute
+				left: 15px
+				top: 10px
+				
 	.is-active
 		a
 			background: $green_h 
