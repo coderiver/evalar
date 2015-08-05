@@ -289,33 +289,6 @@
 								<p>+7 (495) 921-40-74</p>
 								<div>(многоканальный) пн—пт 9:00—18:00</div>
 							</div>
-							<div class="text text_black map-info__url">
-								<a href="#">someurl.com</a>
-							</div>
-							 <div class="map-info__img">
-							 	<img src="img/map1.jpg" alt="">
-							 </div>
-						</div>
-					</div>
-				</a>
-
-				<a href="#" class="map__item">
-					<div class="map-info">
-						<div class="map-info__in">
-							<div class="map-info__header text text_big">
-								<p>Название аптеки</p>
-								<i class="icon-mark"></i>
-							</div>
-							 <div class="text text_black map-info__address">
-								<p>Тверская, 4</p>
-							</div>	
-							 <div class="text text_black map-info__time">
-								<p>Круглосуточно</p>
-							</div>
-							 <div class="text text_black map-info__phone">
-								<p>+7 (495) 921-40-74</p>
-								<div>(многоканальный) пн—пт 9:00—18:00</div>
-							</div>
 							 <div class="text text_black map-info__phone">
 								<p>+7 (495) 692-39-11</p>
 							</div>
@@ -578,12 +551,12 @@
 		</div>
 	</div>
 </div>
-<a class="btn-feedback" href="#">
+<!-- <a class="btn-feedback" href="#">
 	<span>
 		Подписка на новости
 		<strong>Клуб здоровья</strong>
 	</span>
-</a>
+</a> -->
 <!-- load scripts -->
 <script src="js/main.js"></script>
 <script src="js/common.js"></script>
@@ -599,7 +572,7 @@ function initialize() {
 		}
 	}
 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-	var image = 'img/svg/marker-op.svg';
+	var image = 'img/marker-green.png';
 	// var image2 = 'img/svg/marker.svg';
 	var myLatLng1 = new google.maps.LatLng(55.654997, 37.699100);
 	var myLatLng2 = new google.maps.LatLng(55.673974, 37.394229);
@@ -661,7 +634,32 @@ function initialize() {
 				+'</div>'
 			+'</div>'
 		+'</div>';
-		var contentString2 =	'<div class="map-info map-info_on-map">'+
+	var contentString2 =	'<div class="map-info map-info_on-map">'+
+			'<div class="map-info__in">'+
+				'<div class="map-info__header">'+
+					'<p>'+'Название аптеки'+'</p>'
+				+'</div>'
+				+ '<div class="text text_black map-info__address">'+
+					'<p>'+'Зацепинский вал, 14'+'</p>'
+				+'</div>'	
+				+ '<div class="text text_black map-info__time">'+
+					'<p>'+'9:00 - 23:00'+'</p>'
+				+'</div>'
+				+ '<div class="text text_black map-info__phone">'+
+					'<p>'+'+7 (495) 921-40-74 (многоканальный)'+'</p>'
+				+'</div>'
+				+ '<div class="text map-info__work">'+
+					'<p>'+'пн—пт 9:00—18:00'+'</p>'
+				+'</div>'
+				+ '<div class="text text_black map-info__url">'+
+					'<a href="#">'+'someurl.com'+'</a>'
+				+'</div>'
+				+ '<div class="text text_black map-info__pay">'+
+					'<p>'+'Оплата: карты, наличные'+'</p>'
+				+'</div>'
+			+'</div>'
+		+'</div>';
+	var contentString3 =	'<div class="map-info map-info_on-map">'+
 				'<div class="map-info__in">'+
 					'<div class="map-info__header">'+
 						'<p>'+'Название аптеки'+'</p>'
@@ -686,29 +684,83 @@ function initialize() {
 					+'</div>'
 				+'</div>'
 			+'</div>';
-	var infowindow1 = new google.maps.InfoWindow({
+	var contentString4 =	'<div class="map-info map-info_on-map">'+
+				'<div class="map-info__in">'+
+					'<div class="map-info__header">'+
+						'<p>'+'Название аптеки'+'</p>'
+					+'</div>'
+					+ '<div class="text text_black map-info__address">'+
+						'<p>'+'Зацепинский вал, 14'+'</p>'
+					+'</div>'	
+					+ '<div class="text text_black map-info__time">'+
+						'<p>'+'9:00 - 23:00'+'</p>'
+					+'</div>'
+					+ '<div class="text text_black map-info__phone">'+
+						'<p>'+'+7 (495) 921-40-74 (многоканальный)'+'</p>'
+					+'</div>'
+					+ '<div class="text map-info__work">'+
+						'<p>'+'пн—пт 9:00—18:00'+'</p>'
+					+'</div>'
+					+ '<div class="text text_black map-info__url">'+
+						'<a href="#">'+'someurl.com'+'</a>'
+					+'</div>'
+					+ '<div class="text text_black map-info__pay">'+
+						'<p>'+'Оплата: карты, наличные'+'</p>'
+					+'</div>'
+				+'</div>'
+			+'</div>';
+	var contentString5 =	'<div class="map-info map-info_on-map">'+
+				'<div class="map-info__in">'+
+					'<div class="map-info__header">'+
+						'<p>'+'Название аптеки'+'</p>'
+					+'</div>'
+					+ '<div class="text text_black map-info__address">'+
+						'<p>'+'Зацепинский вал, 14'+'</p>'
+					+'</div>'	
+					+ '<div class="text text_black map-info__time">'+
+						'<p>'+'9:00 - 23:00'+'</p>'
+					+'</div>'
+					+ '<div class="text text_black map-info__phone">'+
+						'<p>'+'+7 (495) 921-40-74 (многоканальный)'+'</p>'
+					+'</div>'
+					+ '<div class="text map-info__work">'+
+						'<p>'+'пн—пт 9:00—18:00'+'</p>'
+					+'</div>'
+					+ '<div class="text text_black map-info__url">'+
+						'<a href="#">'+'someurl.com'+'</a>'
+					+'</div>'
+					+ '<div class="text text_black map-info__pay">'+
+						'<p>'+'Оплата: карты, наличные'+'</p>'
+					+'</div>'
+				+'</div>'
+			+'</div>';
+	var infowindow = new google.maps.InfoWindow({
 		content: contentString1
 	});
-	var infowindow2 = new google.maps.InfoWindow({
-		content: contentString2
-	});
+
 	google.maps.event.addListener(marker1, 'click', function(){
-		infowindow1.open(map,marker1);
+		infowindow.setContent(contentString1);
+		infowindow.open(map,marker1);
 	});
 	google.maps.event.addListener(marker2, 'click', function(){
-		infowindow1.open(map,marker2);
+		infowindow.setContent(contentString2);
+		infowindow.open(map,marker2);
 	});
 	google.maps.event.addListener(marker3, 'click', function(){
-		infowindow1.open(map,marker3);
+		infowindow.setContent(contentString3);
+		infowindow.open(map,marker3);
 	});
 	google.maps.event.addListener(marker4, 'click', function(){
-		infowindow1.open(map,marker4);
+		infowindow.setContent(contentString4);
+		infowindow.open(map,marker4);
+		
 	});
 	google.maps.event.addListener(marker5, 'click', function(){
-		infowindow1.open(map,marker5);
+		infowindow.setContent(contentString5);
+		infowindow.open(map,marker5);
 	});
-
-	infowindow2.open(map,marker4);
+	infowindow.setContent(contentString4);
+	infowindow.open(map,marker4);
 
 	}
 	// Asynchronous Loading
