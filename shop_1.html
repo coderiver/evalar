@@ -224,7 +224,15 @@
 		<div class="prod-slider js-slider">
 			<div>
 				<a href="#">
-					<img src="img/slider1.jpg" alt="">
+					<!-- <img src="img/slider1.jpg" alt=""> -->
+					<picture>
+						<!--[if IE 9]><video style="display: none;"><![endif]-->
+						<source srcset="img/slider1.jpg" media="(min-width: 1024px)">
+						<source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
+						<source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
+						<!-- [if IE 9]></video><![endif] -->
+						<img srcset="img/slider1-1024.jpg" alt="img">
+					</picture>
 					<div class="prod-slider__main">
 						<div class="prod-slider__title">Новинка</div>
 						<p>При склонности к запорам — батончик Фитолакс с ценными пищевыми волокнами.</p>
@@ -240,10 +248,28 @@
 				</a>
 			</div>
 			<div>
-				<a href="#"><img src="img/slider1.jpg" alt=""></a>
+				<a href="#">
+					<picture>
+						<!--[if IE 9]><video style="display: none;"><![endif]-->
+						<source srcset="img/slider1.jpg" media="(min-width: 1024px)">
+						<source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
+						<source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
+						<!-- [if IE 9]></video><![endif] -->
+						<img srcset="img/slider1-1024.jpg" alt="img">
+					</picture>
+				</a>
 			</div>
 			<div>
-				<a href="#"><img src="img/slider1.jpg" alt=""></a>
+				<a href="#">
+					<picture>
+						<!--[if IE 9]><video style="display: none;"><![endif]-->
+						<source srcset="img/slider1.jpg" media="(min-width: 1024px)">
+						<source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
+						<source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
+						<!-- [if IE 9]></video><![endif] -->
+						<img srcset="img/slider1-1024.jpg" alt="img">
+					</picture>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -251,9 +277,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="guide-link" style="background-image: url(./img/banner12.jpg)">
+					<div class="guide-link">
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif]-->
+							<source srcset="img/banner12.jpg" media="(min-width: 1024px)">
+							<source srcset="img/banner12-1024.jpg" media="(min-width: 768px)">
+							<source srcset="img/banner12-767.jpg" media="(max-width: 767px)">
+							<!-- [if IE 9]></video><![endif] -->
+							<img srcset="img/banner12-1024.jpg" alt="img">
+						</picture>
 						<p><strong>Подберите индивидуальную программу для оздоровления организма</strong></p>
-						<p>Atenimillam, nostias archicil ilique velicae conse volo to expelig <br>nimodig endebit</p>
+						<p>Atenimillam, nostias archicil ilique velicae conse volo to expelig nimodig endebit</p>
 						<a href="#" class="link-arr">Подобрать</a>
 					</div>
 				</div>
@@ -263,37 +297,41 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<ul class="tabs tabs_sm">
-							<li class="tabs__item">
-								<a href="#" class="tabs__link">По алфавиту</a>    
-							</li>
-							<li class="tabs__item js-toggle-list" data-list="js-list-brand">
-								<a href="#" class="tabs__link">По брендам</a>
-							</li>
-							<li class="tabs__item">
-								<a href="#" class="tabs__link">По назначению</a>
-							</li>
-							<li class="tabs__item">
-								<a href="#" class="tabs__link">По категориям</a>
-							</li>
-							<li class="tabs__item">
-								<a href="#" class="tabs__link">Лидеры продаж</a>
-							</li>                 
-							<li class="tabs__item">
-								<a href="#" class="tabs__link">Новинки</a>
-							</li> 
-							<li class="tabs__item">
-								<a href="#" class="tabs__link">Товары по акции</a>
-							</li> 
-						</ul>
-						<ul class="tabs tabs_view">
-							<li class="tabs__item is-active">
-								<a href="#" class="tabs__link tabs__view-grid"><span>Плитка</span></a>    
-							</li>
-							<li class="tabs__item">
-								<a href="#" class="tabs__link tabs__view-list"><span>Список</span></a>
-							</li>
-						</ul>
+						<div class="tabs-arr">
+							<ul class="tabs tabs_sm">
+								<li class="tabs__item">
+									<a href="#" class="tabs__link">По алфавиту</a>    
+								</li>
+								<li class="tabs__item js-toggle-list" data-list="js-list-brand">
+									<a href="#" class="tabs__link">По брендам</a>
+								</li>
+								<li class="tabs__item">
+									<a href="#" class="tabs__link">По назначению</a>
+								</li>
+								<li class="tabs__item">
+									<a href="#" class="tabs__link">По категориям</a>
+								</li>
+								<li class="tabs__item">
+									<a href="#" class="tabs__link">Лидеры продаж</a>
+								</li>                 
+								<li class="tabs__item">
+									<a href="#" class="tabs__link">Новинки</a>
+								</li> 
+								<li class="tabs__item">
+									<a href="#" class="tabs__link">Товары по акции</a>
+								</li> 
+							</ul>
+							<ul class="tabs tabs_view">
+								<li class="tabs__item is-active">
+									<a href="#" class="tabs__link tabs__view-grid"><span>Плитка</span></a>    
+								</li>
+								<li class="tabs__item">
+									<a href="#" class="tabs__link tabs__view-list"><span>Список</span></a>
+								</li>
+							</ul>
+							<i class="icon-arr-l_tab tabs-arr__item"></i>
+							<i class="icon-arr-r_tab tabs-arr__item"></i>
+						</div>
 						<div class="tabs-drop js-list js-list-brand">
 							<div class="tabs-drop__active">
 								<a href="#"><img src="img/brand/endokrinol.jpg" alt=""></a>
@@ -401,43 +439,41 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="tags-wrap">
-						<div class="tags-list">
-							<a class="tag js-tag" href="#">Турбослим</a>
-							<a class="tag js-tag" href="#">Тропикана Слим</a>
-							<a class="tag js-tag" href="#">Фитолакс</a>
-							<a class="tag js-tag" href="#">Овесол</a>
-							<a class="tag js-tag" href="#">Ци-клим</a>
-							<a class="tag js-tag" href="#">Эндокринол</a>
-							<a class="tag js-tag" href="#">Турбослим</a>
-							<a class="tag js-tag" href="#">Тропикана Слим</a>
-							<a class="tag js-tag" href="#">Фитолакс</a>
-							<a class="tag js-tag" href="#">Лора</a>
-							<a class="tag js-tag" href="#">Гепатрин</a>
-							<a class="tag js-tag" href="#">Хонда</a>
-							<a class="tag js-tag" href="#">Эндокринол</a>
-							<a class="tag js-tag" href="#">Турбослим</a>
-							<a class="tag js-tag" href="#">Тропикана Слим</a>
-							<a class="tag js-tag" href="#">Фитолакс</a>
-							<a class="tag js-tag" href="#">Овесол</a>
-							<a class="tag js-tag" href="#">Тропикана Слим</a>
-							<a class="tag js-tag" href="#">Гепатрин</a>
-							<a class="tag js-tag" href="#">Хонда</a>
-							<a class="tag js-tag" href="#">Эндокринол</a>
-							<a class="tag js-tag" href="#">Турбослим</a>
-							<a class="tag js-tag" href="#">Гепатрин</a>
-							<a class="tag js-tag" href="#">Хонда</a>
-							<a class="tag js-tag" href="#">Эндокринол</a>
-						</div>
-						<div class="tags-dropdown">
-							<div class="select select_gray js-select">
-								<input type="text" class="input input_round" value="А" placeholder="Выберите" readonly required>
-								<select>
-									<option value="А" selected>А</option>
-									<option value="Б">Б</option>
-									<option value="В">В</option>
-								</select>
-							</div>
+					<div class="tags-list">
+						<a class="tag js-tag" href="#">Турбослим</a>
+						<a class="tag js-tag" href="#">Тропикана Слим</a>
+						<a class="tag js-tag" href="#">Фитолакс</a>
+						<a class="tag js-tag" href="#">Овесол</a>
+						<a class="tag js-tag" href="#">Ци-клим</a>
+						<a class="tag js-tag" href="#">Эндокринол</a>
+						<a class="tag js-tag" href="#">Турбослим</a>
+						<a class="tag js-tag" href="#">Тропикана Слим</a>
+						<a class="tag js-tag" href="#">Фитолакс</a>
+						<a class="tag js-tag" href="#">Лора</a>
+						<a class="tag js-tag" href="#">Гепатрин</a>
+						<a class="tag js-tag" href="#">Хонда</a>
+						<a class="tag js-tag" href="#">Эндокринол</a>
+						<a class="tag js-tag" href="#">Турбослим</a>
+						<a class="tag js-tag" href="#">Тропикана Слим</a>
+						<a class="tag js-tag" href="#">Фитолакс</a>
+						<a class="tag js-tag" href="#">Овесол</a>
+						<a class="tag js-tag" href="#">Тропикана Слим</a>
+						<a class="tag js-tag" href="#">Гепатрин</a>
+						<a class="tag js-tag" href="#">Хонда</a>
+						<a class="tag js-tag" href="#">Эндокринол</a>
+						<a class="tag js-tag" href="#">Турбослим</a>
+						<a class="tag js-tag" href="#">Гепатрин</a>
+						<a class="tag js-tag" href="#">Хонда</a>
+						<a class="tag js-tag" href="#">Эндокринол</a>
+					</div>
+					<div class="tags-dropdown">
+						<div class="select select_gray js-select">
+							<input type="text" class="input input_round" value="А" placeholder="Выберите" readonly required>
+							<select>
+								<option value="А" selected>А</option>
+								<option value="Б">Б</option>
+								<option value="В">В</option>
+							</select>
 						</div>
 					</div>
 				</div>

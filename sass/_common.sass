@@ -504,15 +504,6 @@ a
 		+r(767)
 			width: 100% 
 			margin-bottom: 0
-		&:after
-			content: ''
-			position: absolute
-			right: 0
-			top: 15px
-			+svg(caret-r-green,7,11)
-		&.is-scroll
-			&:after
-				display: none
 .tabs-drop
 	position: absolute
 	z-index: 2
@@ -571,12 +562,60 @@ a
 			img
 				display: inline-block
 				vertical-align: middle
+.tabs-arr
+	.tabs-arr__item
+		display: none
+		position: absolute
+		top: 15px
+		z-index: 8  
+	+r(1023) 
+		.icon-arr-r_tab 
+			display: block
+			right: 22% 
+	+r(767)
+		.icon-arr-l_tab 
+			display: block
+		.icon-arr-r_tab 
+			right: 0
+		.icon-arr-l_tab 
+			left: 0
+	&:after
+		content: ''
+		position: absolute
+		right: 22%
+		top: 15px
+		display: none
+		+r(767)
+			background-size: 100%
+			width: 40px
+			right: 0
+			background-image: linear-gradient(to right, transparent 10%, #fff 80%)
+			height: 11px
+			z-index: 7
+	&:before 
+		content: ''
+		position: absolute
+		left: 0
+		top: 15px
+		display: none
+		+r(767)
+			background-size: 100%
+			width: 40px
+			background-image: linear-gradient(to left, transparent 10%, #fff 80%)
+			height: 11px
+			z-index: 7
+	
+	+r(767)
+		&:before,
+		&:after,
+			display: block
 .tabs_view
 	position: absolute
 	right: 0
 	bottom: 0
-	+r(1023)
+	+r(1229)
 		top: 0
+	+r(1023)
 		li
 			span
 				display: none

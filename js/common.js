@@ -556,9 +556,5 @@ $(document).ready(function() {
 		$(this).parents(".js-parent").remove();
 	    return false;
 	});
-	$('.tabs.tabs_sm').on('scroll',function () {
-		$('.tabs.tabs_sm').addClass('is-scroll');
-	});
-
 });
 
