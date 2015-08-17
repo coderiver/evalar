@@ -292,6 +292,11 @@ a
 	color: $black  
 	font-size: 16px
 	+med
+.input_round 
+	border-radius: 30px
+	padding: 0 20px
+	background: transparent  
+
 .select
 	position: relative
 	cursor: pointer
@@ -301,7 +306,10 @@ a
 		right: 14px
 		top: 50%
 		margin-top: -4px
-		+svg(arr_outline-b-bold,14,7) 
+		+svg(arr_outline-b-bold,14,7)
+	&_gray
+		&:after
+			+svg(arr_outline-b-bold_gray,14,7)
 	select
 		position: absolute
 		z-index: 2
@@ -467,6 +475,10 @@ a
 			left: 0
 			top: 13px
 			+svg(view-grid,14,14) 
+			+r(1023) 
+				left: 50%
+				margin-left: -7px 
+			
 	&__view-list
 		padding-left: 17px
 		&:before
@@ -486,6 +498,21 @@ a
 		.tabs__view-list
 			&:before
 				+svg(view-list-act,13,12)
+	&_sm
+		+r(1023)
+			width: 78% 
+		+r(767)
+			width: 100% 
+			margin-bottom: 0
+		&:after
+			content: ''
+			position: absolute
+			right: 0
+			top: 15px
+			+svg(caret-r-green,7,11)
+		&.is-scroll
+			&:after
+				display: none
 .tabs-drop
 	position: absolute
 	z-index: 2
@@ -548,6 +575,15 @@ a
 	position: absolute
 	right: 0
 	bottom: 0
+	+r(1023)
+		top: 0
+		li
+			span
+				display: none
+	+r(767) 
+		display: none
+	
+				
 .view
 	position: absolute
 	left: 0
@@ -1065,3 +1101,6 @@ a.btn-action
 		margin-right: 17px
 	&_alert
 		background: #e74c36
+.tags-list
+	+r(767) 
+		display: none
