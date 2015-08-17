@@ -3,6 +3,14 @@
 	top: -1px
 	opacity: 0
 	visibility: hidden
+	max-width: 1200px 
+	margin: 0 auto
+	+r(1229)
+		width: 970px
+		padding: 0 15px 
+	+r(1024)
+		width: 100% 
+		padding: 0
 	+tr(opacity .2s)
 	&.is-ready
 		opacity: 1
