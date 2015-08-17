@@ -10,7 +10,12 @@
 	vertical-align: middle
 	height: 50px
 	background: $violet_h
-	
+	+r(1023)
+		float: right
+		width: 44px
+		background: none
+	+r(767)
+		margin-right: 20px
 	&:after
 		content: ""
 		position: absolute
@@ -21,6 +26,8 @@
 		+transform(translate3d(0,0,0) rotate(0))
 		+svg(arr-b-white,12,7)
 		pointer-events: none
+		+r(1023)
+			right: 0
 	&__name
 		display: block
 		position: relative
@@ -33,12 +40,19 @@
 		font-size: 12px
 		+reg
 		color: #fff 
+		+text-overflow
+		+r(1023)
+			font-size: 0
+			width: 22px
 		&:before
 			content: ""
 			position: absolute
 			left: 20px
 			top: 14px
 			+svg(user,22,22)
+			+r(1023)
+				left: 0
+				top: 14px
 		&:after
 			content: ""
 			position: absolute
@@ -47,7 +61,9 @@
 			bottom: 0
 			width: 30%
 			z-index: 2
-			+gh(transparent, $violet_h 40%) 
+			+gh(rgba($violet_h,0), $violet_h 40%) 
+			+r(1023)
+				display: none
 		
 	&__list
 		position: absolute
@@ -62,6 +78,9 @@
 		+med
 		+gpu
 		+tr(opacity .2s)
+		+r(1023)
+			left: -20px
+			right: auto
 		&.is-active
 			opacity: 1
 			visibility: visible

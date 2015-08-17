@@ -246,9 +246,9 @@
 		+tr(background .2s)
 		+r(1023)
 			font-size: 12px
-		&:last-child
-			+r(1230)
-				display: none
+		// &:last-child
+		// 	+r(1230)
+		// 		display: none
 		&.is-active,
 		&:hover
 			background: $green_h 
@@ -261,9 +261,7 @@
 			padding: 0 18px 
 		
 
-.shop
-	display: inline-block
-	vertical-align: top
+
 .search
 	position: absolute
 	left: 0
@@ -347,6 +345,8 @@
 			+svg(close-white,15,15)
 .shop
 	position: relative
+	display: inline-block
+	vertical-align: top
 	z-index: 2
 	padding: 0 12px 0 14px 
 	height: 50px
@@ -358,6 +358,8 @@
 	background: $green_d
 	white-space: nowrap
 	letter-spacing: .2px 
+	+r(1230)
+		font-size: 0
 	+r(1023)
 		font-size: 0
 		width: 160px
@@ -398,6 +400,12 @@
 
 .shop_corp
 	background: none
+	+r(1023)
+		text-align: left
+		width: 140px
+	+r(767)
+		width: 60px
+		text-align: center
 	.icon-case
 		margin-right: 13px
 		margin-top: -5px
@@ -406,3 +414,7 @@
 		height: 50px
 		background: url(../img/site.jpg) 0 0 no-repeat
 		+cover
+	.shop__arr
+		+r(1023)
+			margin-left: 53px
+
