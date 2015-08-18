@@ -1,6 +1,14 @@
 .goods
+	+r(767)
+		& > div > div
+			+display-flex()
+			+flex-wrap(wrap)
 	.share
-		margin: 55px 0 0
+		margin: 55px 0 0 
+		+r(767)
+			margin-top: 15px 
+			.soc 
+				margin-bottom: 0
 	&__img
 		position: relative
 		padding-top: 15px
@@ -12,14 +20,27 @@
 			left: 0
 	&__logo
 		margin: 10px 0
+		+r(767) 
+			+order(10)
+	&__about 
+		+r(767) 
+			+order(11)
+		
+	
+		
 	&__title
 		margin-bottom: 40px
 		font-size: 48px
 		+reg
 		line-height: 1
+		+r(767)
+			font-size: 32px 
+			margin: 20px 0 
 	&__info
 		font-size: 18px
 		+med
+		+r(767)
+			font-size: 16px 
 	&__buy
 		margin: 50px 0 35px 
 		font-size: 15px
@@ -27,6 +48,12 @@
 		span
 			margin-right: 25px
 			vertical-align: middle
+		+r(767) 
+			margin: 15px 0
+			.link-arr 
+				margin-top: 10px 
+			
+		
 	.icon-list
 		color: #a8ae9d 
 	.icon-param1
@@ -40,6 +67,16 @@
 	.links
 		margin: 15px 0 
 		color: #a8ae9d 
+	&__main
+		.links
+			a
+				padding-right: 10px 
+				&:after 
+					+r(767)
+						content: '\A'
+						white-space: pre
+	
+			
 .goods__action
 	margin: 45px 0 35px
 	font-size: 0
