@@ -86,6 +86,10 @@
 		background: $bg 
 .row_table
 	display: table
+	+r(1023) 
+		table-layout: fixed 
+		width: 100% 
+	
 	> div
 		display: table-cell
 		vertical-align: top
@@ -93,6 +97,15 @@
 		+r(1023)
 			display: block
 			float: left !important
+	&-true 
+		> div 
+			+r(1023) 
+				display: table-cell
+				float: none !important
+			
+		
+	
+		
 .row_middle
 	> div
 		vertical-align: middle
