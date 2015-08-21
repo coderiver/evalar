@@ -219,6 +219,7 @@ a
 	+r(767)
 		font-size: 16px
 		line-height: 1.6
+		margin-bottom: 15px
 	&_mod
 		font-size: 16px
 	a
@@ -334,7 +335,9 @@ a
 .radio-group
 	margin: 10px 0
 	.radio
-		margin-right: 22px
+		margin: 0 22px 10px 0
+		+r(767)
+			display: block
 	&_mt
 		margin-top: 25px
 .radio
@@ -818,6 +821,10 @@ a
 .btn-action-group
 	.btn-action
 		margin-right: 15px
+	.link
+		+r(767)
+			display: block
+			margin-top: 10px
 .btn-action-wrap
 	margin-top: 40px
 	+r(767)
@@ -1113,6 +1120,8 @@ a.btn-action
 	margin-bottom: 28px
 	font-size: 15px
 	+reg
+	+r(767)
+		margin-bottom: 15px
 	+ .btn-action
 		margin-top: 10px
 .btn-del
@@ -1135,9 +1144,17 @@ a.btn-action
 	font-size: 18px
 	+med
 	color: #fff
+	+r(767)
+		padding: 27px 0 
+		font-size: 16px
 	i
-		vertical-align: middle
-		margin-right: 17px
+		position: absolute
+		top: 50%
+		left: 0
+		+transform(translateY(-50%))
+	&__in
+		position: relative
+		padding-left: 50px
 	&_alert
 		background: #e74c36
 .tags-list

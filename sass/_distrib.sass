@@ -131,6 +131,7 @@
 	&__img
 		text-align: center
 		padding-right: 30px
+		position: relative
 		+r(1230)
 			padding-right: 20px
 		
@@ -141,6 +142,10 @@
 			text-align: left
 		img
 			max-width: 100% 
+		.btn-remove
+			position: absolute
+			right: 0
+			top: 0
 	&__text
 		padding-right: 70px
 		+r(1230)
@@ -160,6 +165,8 @@
 	.product__img
 		text-align: left
 		padding: 0 20px 
+		+r(767)
+			text-align: center
 .btn-remove
 	border: 1px solid $green
 	width: 40px

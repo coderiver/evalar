@@ -109,6 +109,10 @@
 		padding: 40px 0 
 	&_no-pt
 		padding-top: 0
+	.accord 
+		&:last-child
+			+r(767)
+				margin-bottom: 0
 .page-body__line
 	display: block
 	margin-top: 40px
@@ -212,6 +216,10 @@
 			left: 100%
 			top: -20px
 			margin-left: 10px
+			+r(1023)
+				left: 0
+				margin: 0
+				top: -30px
 	&__body	
 		display: none
 		margin-top: 28px
@@ -641,6 +649,12 @@
 		> div
 			height: 160px
 			min-height: 160px
+			+r(767)
+				height: 110px
+				min-height: 110px
+				+vertical
+			.btn-action
+				vertical-align: middle
 .total
 	padding: 43px 0 
 	border-bottom: 1px solid #fff 
@@ -649,7 +663,14 @@
 	+med
 	font-size: 16px
 	line-height: 1
+	+r(767)
+		padding: 35px 0 
+		font-size: 13px
+		+reg
 	span
 		display: block 
 		margin: 6px 0 0 
 		font-size: 30px
+		+r(767)
+			font-size: 26px
+			

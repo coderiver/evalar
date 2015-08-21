@@ -212,6 +212,8 @@
 		+svgi(soc-add-violet)
 	.icon-arr-r
 		+svgi(arr-right-violet)
+	.icon-arr-l
+		+svgi(arr-left-violet)
 .accord
 	&__icon
 		&:before
@@ -242,12 +244,17 @@
 		+svgi(next-gray)
 
 .steps
+	+r(767)
+		margin-bottom: 20px
 	li
 		position: relative
 		display: inline-block
 		vertical-align: middle
 		margin-left: 4%
 		width: 23.5%
+		+r(1023)
+			width: 50px
+			margin-left: 35px
 		&:before
 			content: ""
 			position: absolute
@@ -256,6 +263,9 @@
 			width: 10%
 			height: 1px
 			background: $light 
+			+r(1023)
+				width: 20px
+				left: -30px
 		&:first-child
 			margin-left: 0
 			&:before
@@ -278,9 +288,26 @@
 		font-size: 13px
 		+reg
 		+text-overflow
-		color: $light  
+		color: $light 
+		+r(1023)
+			font-size: 0 
+			padding: 0
+			text-align: center
 		&:hover
 			color: $violet 
+	span
+		+r(1023)
+			font-size: 13px
 .form
 	.btn-action
 		margin-bottom: 45px
+		
+.item-slider
+	.slick-prev
+		+r(1365)
+			left: -50px
+	.slick-next
+		+r(1365)
+			right: -50px
+	.slick-dots
+		bottom: -30px
