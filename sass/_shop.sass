@@ -71,12 +71,25 @@
 	margin-top: 50px
 	max-height: 760px
 	overflow: hidden
+	+r(1229)
+		padding: 0
+	+r(767)
+		width: 100%
 	img
 		display: block
 		width: 100%
 		height: auto
+		+r(1229)
+			width: auto
+			min-height: 600px
+		+r(1023)
+			width: 100%
+			min-height: auto
 	.prod-slider__main
 		margin-bottom: 3%
+		+r(767)
+			padding-top: 10px
+			
 	.icon-list
 		margin-top: 30px
 		position: static
@@ -85,6 +98,13 @@
 		bottom: 310px
 		width: 1200px
 		+transform(translateX(-50%))
+		+r(1229)
+			padding: 0 10px 
+			bottom: 220px
+			width: 970px
+		+r(1023)
+			bottom: 280px
+			width: 600px
 .icon-list
 	color: #fff
 	+reg
@@ -181,6 +201,7 @@
 		bottom: 0
 		left: 0
 		padding: 15px 20px
+		box-shadow: inset 0 0 0 1px #CCD0C6
 	&__img
 		display: block
 		margin-bottom: 5px
@@ -225,9 +246,14 @@
 		strong
 			+med
 .el_special
-
 	.el__body
-		box-shadow: inset 0 0 0 4px #a8ae9d
+		box-shadow: inset 0 0 0 4px #0090dc
+.el_top
+	.el__body
+		box-shadow: inset 0 0 0 4px #ff830f
+.el_new
+	.el__body
+		box-shadow: inset 0 0 0 4px #c80000
 .el_list
 	padding-bottom: 0
 	text-align: left
@@ -239,9 +265,17 @@
 		position: relative
 		padding: 20px 0 
 		min-height: 160px
+		+r(767)
+			padding: 20px 
 	.el__img
 		height: 120px
 		margin-bottom: 0
+		+r(1023)
+			text-align: right
+			padding: 0 15px 
+		+r(767)
+			text-align: center
+			padding: 15px 
 	.el__text
 		font-size: 15px
 		line-height: 1.7
@@ -275,11 +309,21 @@
 	&_special
 		+svgi(badge-special)
 
-.dots-pager
++keyframes(preloader)
+	0%
+		background: #acb1a1
+		box-shadow: 0 0 0 0 #acb1a1
+	50%
+		background: $green
+		box-shadow: 0 0 0 3px $green
+	100%
+		background: #acb1a1
+		box-shadow: 0 0 0 0 #acb1a1
+.preloader
 	margin: 60px 0 30px 
 	text-align: center
 	font-size: 0
-	a
+	span
 		display: inline-block
 		position: relative
 		vertical-align: middle
@@ -292,17 +336,16 @@
 			vertical-align: middle
 			width: 6px
 			height: 6px
-			background: #acb1a1
-			+tr(background .2s)
 			border-radius: 50% 
-		&:hover
+		&:first-child
 			&:before
-				background: $green 
-	.is-active
-		&:before
-			background: $green 
-			width: 12px
-			height: 12px
+				+animation(preloader .6s linear infinite)
+		&:nth-child(2)	
+			&:before
+				+animation(preloader .6s linear infinite .2s)
+		&:nth-child(3)	
+			&:before
+				+animation(preloader .6s linear infinite .4s)
 .tags-hidden
 	display: none
 	&.is-active
@@ -510,4 +553,49 @@
 		.drop-list
 			top: 0
 		
-	
+.alphabet
+	margin: 30px 0 -55px
+	font-size: 0
+	+r(1023)
+		display: none 
+	li
+		display: inline-block
+		vertical-align: middle
+		&.is-active
+			a
+				background: $green 
+				color: #fff 
+	a
+		display: block
+		width: 40px
+		height: 40px
+		line-height: 40px
+		text-align: center
+		border-radius: 50%
+		font-size: 13px
+		text-transform: uppercase
+		color: #a8ae9d
+		&:hover
+			color: $green 
+
+.alphabet-drop
+	border-bottom: 1px solid #efeeeb 
+	display: none
+	+r(1023)
+		display: block
+	&:hover
+		.drop-list
+			opacity: 1
+			visibility: visible
+	.drop-list-trigger
+		strong
+			color: #a8ae9d 
+		div
+			&:after
+				+svgi(arr_outline-b-violet)
+	.drop-list
+		left: 15px
+		right: 15px
+		top: 0
+		
+		

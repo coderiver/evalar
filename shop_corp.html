@@ -50,7 +50,7 @@
 		<div class="container">
 			<div class="header__main">
 				<div class="row no-padding">
-					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-7">
+					<div class="col-lg-7 col-md-6 col-sm-6 col-xs-5">
 						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
 						<ul class="nav">
 							<li class="nav__item">
@@ -72,7 +72,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-5">
+					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-7">
 						<div class="text-right">
 							
 							<a href="#" class="shop shop_corp">
@@ -187,7 +187,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container hidden-sm hidden-xs">
 		<div class="row">
 			<div class="col-lg-12">
 				<button class="slider-prev js-slider-prev" type="button"></button>
@@ -303,13 +303,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="page-body">	
-		<div class="tabs-wrap tabs-wrap_last">
+	<div class="page-body ">	
+		<div class="tabs-wrap">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<ul class="tabs">
-							<li class="tabs__item">
+							<li class="tabs__item is-active">
 								<a href="#" class="tabs__link">По алфавиту</a>    
 							</li>
 							<li class="tabs__item js-toggle-list" data-list="js-list-brand">
@@ -484,8 +484,91 @@
 				</div>
 			</div>
 		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="alphabet">
+						<li class="is-active"><a href="#">А</a></li>           
+						<li><a href="#">Б</a></li>          
+						<li><a href="#">В</a></li>           
+						<li><a href="#">Г</a></li>           
+						<li><a href="#">Д</a></li>         
+						<li><a href="#">Ж</a></li>          
+						<li><a href="#">З</a></li>          
+						<li><a href="#">И</a></li>           
+						<li><a href="#">Й</a></li>          
+						<li><a href="#">К</a></li>           
+						<li><a href="#">Л</a></li>          
+						<li><a href="#">М</a></li>          
+						<li><a href="#">Н</a></li>          
+						<li><a href="#">О</a></li>          
+						<li><a href="#">П</a></li>           
+						<li><a href="#">Р</a></li>           
+						<li><a href="#">С</a></li>          
+						<li><a href="#">Т</a></li>           
+						<li><a href="#">Ф</a></li>          
+						<li><a href="#">Х</a></li>          
+						<li><a href="#">Ц</a></li>         
+						<li><a href="#">Ч</a></li>          
+						<li><a href="#">Ш</a></li>          
+						<li><a href="#">Э</a></li>           
+						<li><a href="#">Я</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="alphabet-drop">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<button class="drop-list-trigger" type="button">
+							<div>
+								<strong>Выбрать</strong>
+							</div>
+						</button>
+						<div class="drop-list js-list js-list-city js-drop-list">
+							<div class="drop-list__active js-drop-list-active">
+								<a href="#" data-index="1">
+									Выбрать
+								</a>
+							</div>
+							<div class="scroll-pane">
+								<ul class="drop-list__main js-drop-list-main">
+									<li class="is-active"><a href="#">А</a></li>           
+									<li><a href="#">Б</a></li>          
+									<li><a href="#">В</a></li>           
+									<li><a href="#">Г</a></li>           
+									<li><a href="#">Д</a></li>         
+									<li><a href="#">Ж</a></li>          
+									<li><a href="#">З</a></li>          
+									<li><a href="#">И</a></li>           
+									<li><a href="#">Й</a></li>          
+									<li><a href="#">К</a></li>           
+									<li><a href="#">Л</a></li>          
+									<li><a href="#">М</a></li>          
+									<li><a href="#">Н</a></li>          
+									<li><a href="#">О</a></li>          
+									<li><a href="#">П</a></li>           
+									<li><a href="#">Р</a></li>           
+									<li><a href="#">С</a></li>          
+									<li><a href="#">Т</a></li>           
+									<li><a href="#">Ф</a></li>          
+									<li><a href="#">Х</a></li>          
+									<li><a href="#">Ц</a></li>         
+									<li><a href="#">Ч</a></li>          
+									<li><a href="#">Ш</a></li>          
+									<li><a href="#">Э</a></li>           
+									<li><a href="#">Я</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+					
+		</div>
 	</div>
-	<div class="page-body">
+	<div class="page-body no-padding">
 		<div class="container">
 			<div class="tags-hidden js-list js-list-cats">
 				<div class="row">
@@ -534,6 +617,7 @@
 										руб
 									</div>
 								</div>
+								<div class="badge badge_special">Акция</div>
 							</div>
 							
 						</div>
@@ -548,7 +632,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<div class="el el_special">
+					<div class="el el_top">
 						<div class="el__body">
 							<span class="el__title">Эвалар БИО успокаивающий вечерний</span>
 							<div class="el__img">
@@ -559,6 +643,7 @@
 										руб
 									</div>
 								</div>
+								<div class="badge badge_hit">Хит</div>
 							</div>
 							
 						</div>
@@ -573,7 +658,7 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<div class="el el_special">
+					<div class="el">
 						<div class="el__body">
 							<span class="el__title">Турбослим билокатор калорий</span>
 							<div class="el__img">
@@ -584,6 +669,8 @@
 										руб
 									</div>
 								</div>
+								
+
 							</div>
 							
 						</div>
@@ -598,19 +685,20 @@
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-					<div class="el el_special">
+					<div class="el">
 						<div class="el__body">
-							<a href="#"><img src="img/product1.png" alt=""></a>
+							<span class="el__title">Турбослим билокатор калорий</span>
 							<div class="el__img">
-								
+								<a href="#"><img src="img/product1.png" alt=""></a>
 								<div class="price">
 									<div class="price__in">
 										<span>235</span>	
 										руб
 									</div>
 								</div>
+								<div class="badge badge_new">Акция</div>
 							</div>
-							<span class="el__title">Турбослим билокатор калорий</span>
+							
 						</div>
 						<a class="el__more" href="#">
 							<span>Турбослим билокатор калорий</span>
@@ -782,7 +870,7 @@
 						<div class="el__body">
 							<span class="el__title">Турбослим билокатор калорий</span>
 							<div class="el__img">
-								<a href="#"><img src="img/product3.png" alt=""></a>
+								<a href="#"><img src="img/product1.png" alt=""></a>
 								<div class="price">
 									<div class="price__in">
 										<span>235</span>	
@@ -805,9 +893,9 @@
 				<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 					<div class="el">
 						<div class="el__body">
-							<a href="#"><img src="img/product1.png" alt=""></a>
+							<span class="el__title">Турбослим билокатор калорий</span>
 							<div class="el__img">
-								
+								<a href="#"><img src="img/product1.png" alt=""></a>
 								<div class="price">
 									<div class="price__in">
 										<span>235</span>	
@@ -815,7 +903,7 @@
 									</div>
 								</div>
 							</div>
-							<span class="el__title">Турбослим билокатор калорий</span>
+							
 						</div>
 						<a class="el__more" href="#">
 							<span>Турбослим билокатор калорий</span>
@@ -930,10 +1018,10 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-					<div class="dots-pager">
-						<a href="#"></a>
-						<a href="#" class="is-active"></a>
-						<a href="#"></a>
+					<div class="preloader">
+						<span></span>
+						<span></span>
+						<span></span>
 					</div>	
 				</div>
 			</div>
