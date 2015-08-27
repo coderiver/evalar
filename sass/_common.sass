@@ -344,6 +344,7 @@ a
 	display: inline-block
 	vertical-align: top
 	position: relative
+	cursor: pointer
 	&__input
 		position: absolute
 		top: 0
@@ -1159,3 +1160,77 @@ a.btn-action
 .tags-list
 	+r(767) 
 		display: none
+		
+.steps
+	+r(767)
+		margin-bottom: 20px
+	li
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		margin-left: 4%
+		width: 23.5%
+		+r(1023)
+			width: 50px
+			margin-left: 35px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: -13.5%
+			width: 10%
+			height: 1px
+			background: $light 
+			+r(1023)
+				width: 20px
+				left: -30px
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none
+		&.is-active
+			a
+				color: #fff
+				background: $light
+				border-color: $light 
+		&.is-last
+			a
+				color: $black   
+	a
+		display: block
+		border: 1px solid
+		padding: 0 10px 0 25px
+		height: 40px
+		line-height: 40px
+		border-radius: 20px 
+		font-size: 13px
+		+reg
+		+text-overflow
+		color: $light 
+		+r(1023)
+			font-size: 0 
+			padding: 0
+			text-align: center
+		&:hover
+			color: $violet 
+	span
+		+r(1023)
+			font-size: 13px
+
+.steps_gid
+	margin: 40px 0 
+	li
+		margin-left: 3%
+		width: 13.3%
+		&:before
+			background: #fff 
+			left: -16.5%
+		&.is-active
+			a
+				background: #fff
+				border-color: #fff
+				color: #000   
+	a
+		color: #fff 
+		&:hover
+			color: #fff 
