@@ -99,6 +99,8 @@
 	padding: 40px 0 100px 
 	margin: 100px 0 45px
 	+cover
+	+r(767)
+		padding-bottom: 150px
 	&__title
 		margin-bottom: 28px
 		font-size: 24px
@@ -111,10 +113,19 @@
 	.slider-prev
 		left: -35px
 		top: 175px
+		+r(767)
+			display: block
+			top: auto
+			left: 0
+			bottom: -115px
 	.slider-next
 		right: -35px
 		top: 175px
-		
+		+r(767)
+			display: block
+			top: auto
+			right: 0
+			bottom: -115px
 .price-old
 	display: inline-block
 	vertical-align: middle
