@@ -11,7 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	
 </head>
-<body class="gid-page" style="background-image: url(./img/gid-bg.jpg);">
+<body>
 <!-- BEGIN  out-->
 <div class="out">
 	<div class="header js-header">
@@ -185,7 +185,16 @@
 		</div>
 	</div>
 	<!-- BEGIN page-head  -->
-	<div class="page-head page-head_empty">
+	<div class="page-head">
+		<div class="page-head__img">
+			<picture>
+				<!--[if IE 9]><video style="display: none;"><![endif]-->
+				<source srcset="img/page_head12.jpg" media="(min-width: 1024px)">
+				<source srcset="img/page_head10-1024.jpg" media="(min-width: 768px)">
+				<!-- [if IE 9]></video><![endif] -->
+				<img srcset="img/page_head10-1024.jpg" alt="img">
+			</picture>
+		</div>
 		<div class="page-head__info">
 			<div class="container">
 				<div class="row">
@@ -211,92 +220,95 @@
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="steps steps_gid">
-					<li class="is-active"><a href="#"><span>1</span> Начало</a></li>
-					<li><a href="#"><span>2</span> Похудение</a></li>
-					<li><a href="#"><span>3</span> Здоровье</a></li>
-					<li><a href="#"><span>4</span> Общие</a></li>
-					<li><a href="#"><span>5</span> Стиль жизни</a></li>
-					<li><a href="#"><span>6</span> Рекомендации</a></li>
-				</ul>
-				<div class="gid-content">
-					<div class="gid-content__in">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="title">Вводный текст про условия выборки и объяснением, что рекомендации противопоказаны людям перед операцией quam samus esciist, cusaped et pratem derum quunt et reperi beata que simus aut dercite del iscia vel molor reresti iscitem pernati</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="text">
-									<p>Quat. Dollam rendam ipienet moditaq uosseque non re sita eiciur?</p>
-
-									<p>Aturerum eicil is suntia porrorum faccatem nonectisqui aut ut aut ut ratquunt parunt inullaborum quidus aut volorum harcit re ni reprercipsum imint delitat quasinis sinulla boressed que inumquae natecus, tem sequodis estes et alibus illaut es acium is enisimi libust, quaessed everfer natest lam volore nos rest lacerum niendam, aut ex endisquam explam fugiatur?</p>
-
-									<p>Agnis reperum ipid ut inctus iundistium etur, odist, tem ius rae volorror repro officatquam facius.</p>
+	<div class="gid-wrap" style="background-image: url(./img/gid_bg.jpg)">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="steps steps_gid">
+						<li class="is-active"><a href="#"><span>1</span> Начало</a></li>
+						<li><a href="#"><span>2</span> Похудение</a></li>
+						<li class="steps__dots"><a href="#"><span>...</span></a></li>
+						<li><a href="#"><span>3</span> Здоровье</a></li>
+						<li><a href="#"><span>4</span> Общие</a></li>
+						<li><a href="#"><span>5</span> Стиль жизни</a></li>
+						<li><a href="#"><span>6</span> Рекомендации</a></li>
+					</ul>
+					<div class="gid-content">
+						<div class="gid-content__in">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="title">Вводный текст про условия выборки и объяснением, что рекомендации противопоказаны людям перед операцией quam samus esciist, cusaped et pratem derum quunt et reperi beata que simus aut dercite del iscia vel molor reresti iscitem pernati</div>
 								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="gid-content__footer">
-									<div class="gid-content__info">
-										Я&nbsp;&nbsp;<label class="radio radio_big">
-											<input type="radio" class="radio__input" name="radio-gender" checked>
-											<span class="radio__text"><i></i>мужчина&nbsp;</span>
-										</label> <label class="radio radio_big">
-											<input type="radio" class="radio__input" name="radio-gender">
-											<span class="radio__text"><i></i>женщина</span> </label>, мой возраст&nbsp; <input type="text" class="input input_dark" value="33">
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="text">
+										<p>Quat. Dollam rendam ipienet moditaq uosseque non re sita eiciur?</p>
+
+										<p>Aturerum eicil is suntia porrorum faccatem nonectisqui aut ut aut ut ratquunt parunt inullaborum quidus aut volorum harcit re ni reprercipsum imint delitat quasinis sinulla boressed que inumquae natecus, tem sequodis estes et alibus illaut es acium is enisimi libust, quaessed everfer natest lam volore nos rest lacerum niendam, aut ex endisquam explam fugiatur?</p>
+
+										<p>Agnis reperum ipid ut inctus iundistium etur, odist, tem ius rae volorror repro officatquam facius.</p>
 									</div>
-									<div class="row">
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="title-small title-small_mod">У вас есть лишний вес?</div>
-											<div class="radio-group">
-												<label class="radio">
-													<input type="radio" class="radio__input" name="radio1" checked>
-													<span class="radio__text"><i></i>Да</span>
-												</label>
-												<label class="radio">
-													<input type="radio" class="radio__input" name="radio1">
-													<span class="radio__text"><i></i>Да, но это следствие</span>
-												</label>
-												<label class="radio">
-													<input type="radio" class="radio__input" name="radio1">
-													<span class="radio__text"><i></i>Нет</span>
-												</label>
-											</div>
-											
+								</div>
+								<div class="col-lg-12 col-sm-12">
+									<div class="gid-content__footer">
+										<div class="gid-content__info">
+											Я&nbsp;&nbsp;<label class="radio radio_big">
+												<input type="radio" class="radio__input" name="radio-gender" checked>
+												<span class="radio__text"><i></i>мужчина&nbsp;</span>
+											</label> <label class="radio radio_big">
+												<input type="radio" class="radio__input" name="radio-gender">
+												<span class="radio__text"><i></i>женщина</span> </label>, мой возраст&nbsp; <input type="text" class="input input_dark" value="33">
 										</div>
-										<div class="col-lg-6 col-md-6 col-sm-12">
-											<div class="row">
-												<div class="col-lg-6 col-md-6 col-sm-12">
-													<div class="title-small title-small_mod">Вы вегитарианец?</div>
-													<div class="radio-group">
-														<label class="radio">
-															<input type="radio" class="radio__input" name="radio2" checked>
-															<span class="radio__text"><i></i>Да</span>
-														</label>
-														<label class="radio">
-															<input type="radio" class="radio__input" name="radio2">
-															<span class="radio__text"><i></i>Нет</span>
-														</label>
+										<div class="row">
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="title-small title-small_mod">У вас есть лишний вес?</div>
+												<div class="radio-group">
+													<label class="radio">
+														<input type="radio" class="radio__input" name="radio1" checked>
+														<span class="radio__text"><i></i>Да</span>
+													</label>
+													<label class="radio">
+														<input type="radio" class="radio__input" name="radio1">
+														<span class="radio__text"><i></i>Да, но это следствие</span>
+													</label>
+													<label class="radio">
+														<input type="radio" class="radio__input" name="radio1">
+														<span class="radio__text"><i></i>Нет</span>
+													</label>
+												</div>
+												
+											</div>
+											<div class="col-lg-6 col-md-6 col-sm-12">
+												<div class="row">
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="title-small title-small_mod">Вы вегитарианец?</div>
+														<div class="radio-group">
+															<label class="radio">
+																<input type="radio" class="radio__input" name="radio2" checked>
+																<span class="radio__text"><i></i>Да</span>
+															</label>
+															<label class="radio">
+																<input type="radio" class="radio__input" name="radio2">
+																<span class="radio__text"><i></i>Нет</span>
+															</label>
+														</div>
+													</div>
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<a href="#" class="btn-action">
+															<i class="icon-arr-r"></i>
+															Продолжить
+														</a>
 													</div>
 												</div>
-												<div class="col-lg-6 col-md-6 col-sm-12">
-													<a href="#" class="btn-action">
-														<i class="icon-arr-r"></i>
-														Продолжить
-													</a>
-												</div>
+												
+												
 											</div>
-											
-											
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						
 					</div>
-					
 				</div>
 			</div>
 		</div>

@@ -1234,11 +1234,44 @@ a.btn-action
 		&:before
 			background: #fff 
 			left: -16.5%
+		+r(1023)
+			&:before
+				width: 10%
+				left: -18.5% 
 		&.is-active
 			a
 				background: #fff
 				border-color: #fff
-				color: #000   
+				color: #000  
+		&.steps__dots 
+			position: absolute
+			width: 27px
+			margin-left: 0
+			right: 98px
+			a 
+				border: 0 
+			span 
+				display: inline-block
+				margin-top: -4px
+			
+			&:before 
+				left: -26px
+			+rm(768) 
+				display: none
+			
+ 
+		+r(767)
+			width: 17%
+			margin-left: 45px 
+			&:last-child 
+				float: right
+			&:before 
+				width: 26px
+				left: -37px 
+			&:nth-child(4),
+			&:nth-child(5), 
+			&:nth-child(6) 
+				display: none
 	a
 		color: #fff 
 		&:hover

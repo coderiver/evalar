@@ -5,27 +5,68 @@
 		background: none 
 		&__title
 			color: #fff 
+.gid-wrap 
+	background-position: 50% 0
+	background-repeat: repeat  
+	background-size: cover
+	padding-top: 1px
+	& > .container 
+		position: relative
+		z-index: 3 
+	
+	+r(767) 
+		position: relative
+		&:after 
+			content: ''
+			position: absolute
+			top: 121px
+			bottom: 0
+			left: 0
+			right: 0
+			background: #FFF  
+		
+	
+	
 
 .gid-content
 	background: #fff
 	margin-bottom: 130px
+	+r(767) 
+		margin-bottom: 0
+	
 	&__in
 		padding: 85px 100px
+		+r(767) 
+			padding: 20px 15px 50px
+		
 	&__footer
 		margin-top: 60px
 		padding: 74px 0 0
 		border-top: 1px solid #faf9f8
+		+r(1023)
+			margin-top: 45px
+			padding: 45px 0 0
 		.title-small
 			margin-bottom: 0
+		.radio-group 
+			+r(1023) 
+				margin-bottom: 45px 
 	&__info
 		margin-bottom: 65px
 		font-size: 24px
 		+reg
 		color: #262626
+		+r(1023) 
+			font-size: 16px 
+			margin-bottom: 45px 
+		
 		.radio__text
 			font-size: 24px
 			+reg
 			color: #a8ae9d
+			+r(1023) 
+				font-size: 16px
+			
 		.radio
 			vertical-align: baseline
 			input
@@ -38,4 +79,16 @@
 			display: inline-block
 			width: 50px
 			text-align: center
-			padding: 0
+			padding: 0 
+			+r(1023) 
+				font-size: 16px
+				width: 35px 
+				height: 35px 
+	.btn-action
+		+r(1023) 
+			float: right
+		+r(767) 
+			float: left
+		
+		
+			
