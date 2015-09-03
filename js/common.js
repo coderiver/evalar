@@ -432,7 +432,31 @@ $(document).ready(function() {
 	}
 
 	$(".js-item-slider").slick(configItemSlider);
-
+	$(".js-item-slider-bas").slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: true,
+		infinite: false,
+		adaptiveHeight: false,
+		responsive: [
+	    {
+	      breakpoint: 1023,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 1,
+	      }
+	    },
+	    {
+	      breakpoint: 767,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	  ]
+	});
+	
 // filter
 	$(".js-open-filter").on("click", function() {
 		var filter = $(this).attr("data-filter");

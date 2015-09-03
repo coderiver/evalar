@@ -162,11 +162,26 @@
 	.title-link
 		margin-bottom: 13px
 .product_extend
+	+r(767) 
+		padding-left: 0
+		padding-right: 0
+	.product__price 
+		+r(767) 
+			padding-left: 0
+	.title-link
+		+r(767) 
+			margin-top: 13px 
+		
 	.product__img
 		text-align: left
 		padding: 0 20px 
-		+r(767)
-			text-align: center
+		a 
+			display: block
+			position: relative
+		.badge
+			top: -10px
+			left: 60px 
+			 
 .btn-remove
 	border: 1px solid $green
 	width: 40px

@@ -259,12 +259,40 @@
 			right: -50px
 	.slick-dots
 		bottom: -30px
+	&_bas
+		.slick-slider 
+			border: 0
+		.slick-prev
+			+r(767)
+				left: 0
+		.slick-next
+			+r(767)
+				right: 0
+		.slick-next,
+		.slick-prev 
+			+r(767)
+				+bg-size(14px,34px)
+				width: 14px 
+				height: 34px 
+		.el 
+			.price
+				+r(767) 
+					bottom: initial
+					top: -20px
+			.el__title 
+				+r(767) 
+					margin: 0
+					width: 60% 
+			.el__body 
+				box-shadow: none
+		
+
 .badge
 	font-size: 16px
 	+med
 	&_new
-		+svgi(badge-special)
+		+svgi(badge-new)
 	&_hit
 		+svgi(badge-hit)
 	&_special
-		+svgi(badge-special2)
+		+svgi(badge-special)
