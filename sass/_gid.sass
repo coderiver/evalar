@@ -10,12 +10,81 @@
 	background-repeat: repeat  
 	background-size: cover
 	padding-top: 1px
+	.goods
+		.goods__buy
+			a 
+				&:not(:first-of-type) 
+					margin-left: 20px 
+				+r(1023)
+					margin-left: 20px 
+					margin-bottom: 20px 
+					&:first-child 
+						margin-bottom: 0
+					
+			&-links 
+				+r(1023) 
+					display: -webkit-box
+					display: -webkit-flex
+					display: -ms-flexbox
+					display: flex
+					-webkit-flex-wrap: wrap
+					-ms-flex-wrap: wrap
+					flex-wrap: wrap
+					a
+						white-space: nowrap 
+						max-width: 100% 
+					a:last-of-type 
+						-webkit-box-ordinal-group: 0
+						-webkit-order: -1
+						-ms-flex-order: -1
+						order: -1
+					
+		+r(1023) 
+			.goods__img 
+				display: none
+		.goods__img-tab 
+			display: inline-block
+			width: 42%
+			float: left
+			img 
+				max-width: 100% 
+			 
+			+rm(1023)
+				display: none
+			+r(1023) 
+				width: 100%
+				float: none
+				text-align: center 
+		
 	& > .container 
 		position: relative
-		z-index: 3 
-	
+	.slider-items 
+		margin-top: -75px
+		margin-bottom: 0
+		padding-top: 0
+		position: relative
+		&__title 
+			+r(767) 
+				color: #bebebe
+		+r(767)
+			padding-top: 20px
+			border: 1px solid #000
+			margin: 0
+			.slider-next,
+			.slider-prev
+				top: 50%   
+			.slider-next 
+				+svgi(next-gray)
+			.slider-prev
+				+svgi(prev-gray)
+			.el
+				&__body 
+					box-shadow: none
+				
+
 	+r(767) 
 		position: relative
+		z-index: 1  
 		&:after 
 			content: ''
 			position: absolute
@@ -24,21 +93,31 @@
 			left: 0
 			right: 0
 			background: #FFF  
-		
-	
-	
+			z-index: -1
 
 .gid-content
 	background: #fff
 	margin-bottom: 130px
+	+r(1023)
+		& > .row > div 
+			width: 400px
+			margin: 0 auto
+			float: none
+			+r(767) 
+				width: 200px 
 	+r(767) 
 		margin-bottom: 0
 	
 	&__in
 		padding: 85px 100px
+		&_p 
+			+r(1023)
+				padding: 55px 100px
 		+r(767) 
 			padding: 20px 15px 50px
-		
+			&_p
+				padding-bottom: 0
+			 
 	&__footer
 		margin-top: 60px
 		padding: 74px 0 0
@@ -90,5 +169,94 @@
 		+r(767) 
 			float: left
 		
+.gid-slider 
+	opacity: 0
+	visibility: hidden
+	&.is-ready 
+		opacity: 1
+		visibility: visible
+	border-left: 1px solid #6a5a00
+.gid-slider-item 
+	display: block
+	height: 100px 
+	position: relative
+	border: 1px solid #6a5a00
+	border-left: 0
+	border-top: 0 
+	&.is-active
+		+box-shadow(inset 0 0 0 3px #009036)
+	img 
+		width: 60px
+		+vcenter
+	&_prev,
+	&_next
+		position: absolute
+		top: 0
+		border-right: 0
+		width: 102px 
+		background: none
+		&:before 
+			content: ''
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			border: 1px solid #ccc
+			+vcenter  
+		&:after 
+			content: ''
+			+vcenter  
+		+r(1023) 
+			width: 25% 
+		+r(767) 
+			width: 69px 
+	&_prev
+		+rm(1024)
+			width: 10%
+			left: -65px 
+		+rm(1230)
+			left: -87px
+
+ 
+		&:after 
+			+svg(caret-l-green,9,17)
+		+r(1023) 
+			width: 25% 
+			left: -85px 
+		+r(767) 
+			width: 69px
+			left: -59px
+	&_next
+		+rm(1024)
+			width: 10%
+			right: -65px
+		+rm(1230)
+			width: 103px 
+			right: -88px
+
+		&:after 
+			+svg(caret-r-green,9,17)
+		+rh(1023) 
+			border-left: 1px solid #6a5a00
 		
+		+r(1023) 
+			width: 25%
+			right: -84px 
+		+r(767) 
+			width: 69px
+			right: -58px  
+.gid-article 
+	.title 
+		font-size: 18px
+		&:not(:first-child) 
+			margin-top: 60px 
+		
+	
+
+		
+	
+	
+		 
+	
+	
+	
 			
