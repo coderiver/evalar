@@ -241,6 +241,10 @@ a
 			position: absolute
 			left: -13px
 			top: 3px
+			+r(767) 
+				position: static
+				margin-right: .25em 
+			
 	&__body
 		display: block
 		position: relative
@@ -255,6 +259,7 @@ a
 		font-size: 12px
 		+reg 
 		background: none
+		
 .field_password
 	.link
 		position: absolute
@@ -340,6 +345,11 @@ a
 			display: block
 	&_mt
 		margin-top: 25px
+	&_mob
+		.radio
+			+r(767) 
+				display: inline-block
+			
 .radio
 	display: inline-block
 	vertical-align: top
@@ -1143,6 +1153,9 @@ a.btn-action
 			margin-top: 10px
 	+ .btn-action
 		margin-top: 10px
+	&.last 
+		margin-bottom: 0
+	
 		
 .btn-del
 	display: inline-block
