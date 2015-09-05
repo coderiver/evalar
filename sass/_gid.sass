@@ -10,6 +10,7 @@
 	background-repeat: repeat  
 	background-size: cover
 	padding-top: 1px
+	padding-bottom: 100px 
 	.goods
 		.goods__buy
 			a 
@@ -42,6 +43,7 @@
 		+r(1023) 
 			.goods__img 
 				display: none
+		
 		.goods__img-tab 
 			display: inline-block
 			width: 42%
@@ -59,20 +61,33 @@
 	& > .container 
 		position: relative
 	.slider-items 
-		margin-top: -75px
+		margin-top: 60px
 		margin-bottom: 0
-		padding-top: 0
+		padding: 0
 		position: relative
+		.slick-dots
+			bottom: 20px 
+			text-align: left
+			button 
+				border-color: #bebebe 
+				border-width: 1px
+				width: 8px
+				height: 8px  
+			li.slick-active
+				button
+					background: #bebebe 
+			
 		&__title 
 			+r(767) 
 				color: #bebebe
 		+r(767)
-			padding-top: 20px
-			border: 1px solid #000
+			padding: 20px 0
 			margin: 0
+			border-top: 1px solid #000
+			border-bottom: 1px solid #000
 			.slider-next,
 			.slider-prev
-				top: 50%   
+				top: 50%
 			.slider-next 
 				+svgi(next-gray)
 			.slider-prev
@@ -80,32 +95,46 @@
 			.el
 				&__body 
 					box-shadow: none
-				
-
-	+r(767) 
+	+r(767)
 		position: relative
-		z-index: 1  
-		&:after 
+		z-index: 1 
+		padding-bottom: 0
+		&:after
 			content: ''
 			position: absolute
-			top: 121px
+			top: 50%
 			bottom: 0
 			left: 0
 			right: 0
-			background: #FFF  
-			z-index: -1
-
-.gid-content
-	background: #fff
-	margin-bottom: 130px
-	+r(1023)
-		& > .row > div 
-			width: 400px
-			margin: 0 auto
+			background: #fff  
+			z-index: -1 
+.gid-title 
+	+clr
+	&__text
+		color: #fff
+		font-weight: 300 
+		font-size: 48px 
+		float: left
+		+r(1023)
+			font-size: 26px
+		+r(767) 
+			font-size: 24px 
+			font-weight: 400 
+			margin-bottom: 20px  
+		
+	&__btn 
+		float: right
+		margin-top: 15px
+		+r(1023) 
+			margin-top: 0
+		+r(767)
 			float: none
-			+r(767) 
-				width: 200px 
+			display: block
+.gid-content-wrap
+	background: #fff 
+.gid-content
 	+r(767) 
+		background: #fff
 		margin-bottom: 0
 	
 	&__in
@@ -172,17 +201,27 @@
 .gid-slider 
 	opacity: 0
 	visibility: hidden
+	height: 100px
+	border-left: 1px solid #6a5a00
+	border-right: 1px solid #6a5a00
+	margin: 0 auto
+	width: 83.333% 
+	+r(1023)
+		width: 66.668% 
+	+r(767)
+		width: 68% 
 	&.is-ready 
 		opacity: 1
 		visibility: visible
-	border-left: 1px solid #6a5a00
+
 .gid-slider-item 
 	display: block
 	height: 100px 
 	position: relative
 	border: 1px solid #6a5a00
 	border-left: 0
-	border-top: 0 
+	border-top: 0  
+	+clr
 	&.is-active
 		+box-shadow(inset 0 0 0 3px #009036)
 	img 
@@ -193,7 +232,8 @@
 		position: absolute
 		top: 0
 		border-right: 0
-		width: 102px 
+		width: 8.333% 
+		min-width: 0
 		background: none
 		&:before 
 			content: ''
@@ -206,44 +246,21 @@
 			content: ''
 			+vcenter  
 		+r(1023) 
-			width: 25% 
+			width: 16% 
 		+r(767) 
-			width: 69px 
+			width: 18%
 	&_prev
-		+rm(1024)
-			width: 10%
-			left: -65px 
-		+rm(1230)
-			left: -87px
-
- 
+		left: 15px
 		&:after 
 			+svg(caret-l-green,9,17)
-		+r(1023) 
-			width: 25% 
-			left: -85px 
-		+r(767) 
-			width: 69px
-			left: -59px
+		+r(767)
+			left: 0
 	&_next
-		+rm(1024)
-			width: 10%
-			right: -65px
-		+rm(1230)
-			width: 103px 
-			right: -88px
-
+		right: 15px
 		&:after 
 			+svg(caret-r-green,9,17)
-		+rh(1023) 
-			border-left: 1px solid #6a5a00
-		
-		+r(1023) 
-			width: 25%
-			right: -84px 
-		+r(767) 
-			width: 69px
-			right: -58px  
+		+r(767)
+			right: 0
 .gid-article 
 	.title 
 		font-size: 18px

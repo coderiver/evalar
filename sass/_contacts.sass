@@ -60,8 +60,19 @@
 	li
 		font-size: 15px 
 		line-height: 1.6em 
-
-
+		position: relative
+		padding-left: 20px 
+		&:before
+			content: ""
+			position: absolute
+			background: #000
+			width: 10px
+			height: 1px
+			left: 0
+			top: 0.66em
+		+r(767) 
+			margin: 20px 0
+		
 .contacts-wrap
 	margin-top: 10px 
 	+column-count(4)
@@ -75,6 +86,19 @@
 	.contacts__list
 		li a
 			white-space: nowrap
+
+.numbers 
+	+r(767) 
+		display: block
+.contacts-title 
+	+r(767) 
+		font-size: 22px 
+	
+
+	
+
+	
+
 		
 
 

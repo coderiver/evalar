@@ -908,6 +908,10 @@ a
 			border-color: $green_h 
 	.icon-list-view
 		margin-top: -3px 
+	&_white 
+		color: #fff
+		border-color: #fff
+	
 a.btn-action
 	line-height: 38px
 
@@ -1256,7 +1260,10 @@ a.btn-action
 	span
 		+r(1023)
 			font-size: 13px
-
+	&_mod 
+		+r(767)
+			margin: 20px 0
+	
 .steps_gid
 	margin: 40px 0 
 	li
@@ -1307,3 +1314,8 @@ a.btn-action
 		color: #fff 
 		&:hover
 			color: #fff 
+	& + .gid-title 
+		margin-bottom: 20px
+		margin-top: -20px  
+		
+	
