@@ -92,6 +92,7 @@ a
 		margin-bottom: -313px
 	+r(767)
 		margin-bottom: 0
+		min-height: initial 
 	&:after
 		content: ""
 		display: block 
@@ -596,10 +597,15 @@ a
 		.icon-arr-r_tab 
 			display: block
 			right: 22% 
+	&_no-tab 
+		.icon-arr-r_tab 
+			+r(1023) 
+				display: none
 	+r(767)
 		.icon-arr-l_tab 
 			display: block
 		.icon-arr-r_tab 
+			display: block
 			right: 0
 		.icon-arr-l_tab 
 			left: 0
@@ -633,6 +639,7 @@ a
 		&:before,
 		&:after,
 			display: block
+	
 .tabs_view
 	position: absolute
 	right: 0
