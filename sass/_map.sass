@@ -9,14 +9,18 @@
 		height: 60vh
 	+r(1023)
 		height: 50vh
+	+r(767)
+		height: 100vh 
 	&__in
 		position: absolute
 		top: 60px
 		right: 0
 		bottom: 0
 		left: 0
+		+r(767)
+			top: 120px 
 .map-search
-	border-top: 1px solid #faf9f8
+	border-top: 1px solid #efeeeb
 	height: 60px
 	+clr
 	&__item
@@ -105,11 +109,28 @@
 		width: 40%
 	+r(767)
 		width: 100% 
+		display: none
+.gm-style-iw
+	overflow: initial !important 
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		left: 40px 
+		right: 40px
+		top: 50%
+		bottom: -8px
+		z-index: -1
+		box-shadow: 0 0 50px #000 
 .map-info
 	&_on-map
 		padding: 12px 0 21px
 		text-align: center
 		width: 249px
+		position: relative
+		z-index: 1 
+		
+
 		.map-info__header
 			+med
 			font-size: 16px
