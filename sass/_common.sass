@@ -604,11 +604,23 @@ a
 				display: inline-block
 				vertical-align: middle
 .tabs-arr
+	overflow-x: auto
+	&.is-start
+		.tabs-arr__item_l,
+		&:before
+			display: none
+	&.is-end
+		.tabs-arr__item_r,
+		&:after
+			display: none
+	.tabs_main
+		display: inline-block
+		width: initial 
 	.tabs-arr__item
 		display: none
 		position: absolute
 		top: 15px
-		z-index: 8  
+		z-index: 8
 	+r(1023) 
 		.icon-arr-r_tab 
 			display: block

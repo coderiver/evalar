@@ -179,13 +179,12 @@ $(document).ready(function() {
         slidesToShow: 10,
         dots: false,
         arrows: false,
-        responsive: [ {
-			breakpoint: 1230,
-			settings: {
+        responsive: [{
+            breakpoint: 1230,
+            settings: {
                 slidesToShow: 8
             }
-        },
-        {
+        }, {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 4,
@@ -373,11 +372,11 @@ $(document).ready(function() {
     }
 
     // $(window).resize(function(){
-    // 	if($('.scroll-pane').length) {
-    // 		var scrollPane = $('.scroll-pane').jScrollPane();
-    // 		var api = scrollPane.data('jsp');
-    // 		api.reinitialise(s);
-    // 	}
+    //  if($('.scroll-pane').length) {
+    //      var scrollPane = $('.scroll-pane').jScrollPane();
+    //      var api = scrollPane.data('jsp');
+    //      api.reinitialise(s);
+    //  }
     // });
 
     // fotorama
@@ -575,55 +574,42 @@ $(document).ready(function() {
     });
 
     // $(".js-drop-list-main a").on("click", function(event){
-    // 	var parent = $(this).parent();
-    // 	var html = parent.html();
-    // 	var index = + new Date();
-    // 	$(this).attr("data-index", index);
-    // 	parent.addClass("is-active");
-    // 	$(".js-drop-list-active").append(html).find("a").last().attr("data-index", index);
-    // 	event.stopPropagation();
-    // 	return false;
+    //  var parent = $(this).parent();
+    //  var html = parent.html();
+    //  var index = + new Date();
+    //  $(this).attr("data-index", index);
+    //  parent.addClass("is-active");
+    //  $(".js-drop-list-active").append(html).find("a").last().attr("data-index", index);
+    //  event.stopPropagation();
+    //  return false;
     // });
     // $("body").on("click", ".js-drop-list-active a", function(event){
-    // 	var index = $(this).attr("data-index");
-    // 	$("body").find('[data-index="'+index+'"]').parent().removeClass("is-active");
-    // 	$(this).remove();
-    // 	event.stopPropagation();
-    // 	return false;
+    //  var index = $(this).attr("data-index");
+    //  $("body").find('[data-index="'+index+'"]').parent().removeClass("is-active");
+    //  $(this).remove();
+    //  event.stopPropagation();
+    //  return false;
     // });
 
     // $(".js-list").on("click", function(event){
-    // 	event.stopPropagation();
+    //  event.stopPropagation();
     // });
 
     $(".js-remove").on("click", function(event) {
         $(this).parents(".js-parent").remove();
         return false;
     });
-
-    // function scrollArrowShow() {
-    //     var maxScroll = ($('.tabs-wrap').width() - $('.tabs').scrollLeft()) - $('.tabs').width();
-    //     if (0 == $('.tabs').scrollLeft()) {
-    //         $('.icon-arr-l_tab').css({
-    //             visibility: 'hidden'
-    //         });
-    //     } else {
-    //         $('.icon-arr-l_tab').css({
-    //             visibility: 'visible'
-    //         });
-    //     }
-    //     if (0 == maxScroll) {
-    //         $('.icon-arr-r_tab').css({
-    //             visibility: 'hidden'
-    //         });
-    //     } else {
-    //         $('.icon-arr-r_tab').css({
-    //             visibility: 'visible'
-    //         });
-    //     }
-    // }
-    // $('.tabs').scrollLeft(function() {
-    //     console.log('yes');
-    //     scrollArrowShow();
-    // });
+    if($(".js-tabs-arr").length) {
+        $(".js-tabs-arr").scroll(function (){
+            var scrollLeft =  $(".js-tabs-arr").scrollLeft();
+            if(scrollLeft === 0) {
+                $(this).addClass('is-start');
+            } else if(scrollLeft > 0 && scrollLeft != ($('.js-tabs-main').width() - $(".js-tabs-arr").width())) {
+                $(this).removeClass('is-start');
+                $(this).removeClass('is-end');
+            } else if(scrollLeft === ($('.js-tabs-main').width() - $(".js-tabs-arr").width())) {
+                $(this).addClass('is-end');
+            } 
+        });
+    }
 });
