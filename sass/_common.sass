@@ -604,7 +604,9 @@ a
 				display: inline-block
 				vertical-align: middle
 .tabs-arr
-	overflow-x: auto
+	+r(767)
+		overflow-x: auto
+		overflow-y: hidden
 	&.is-start
 		.tabs-arr__item_l,
 		&:before
@@ -614,8 +616,9 @@ a
 		&:after
 			display: none
 	.tabs_main
-		display: inline-block
-		width: initial 
+		+r(767)
+			display: inline-block
+			width: initial 
 	.tabs-arr__item
 		display: none
 		position: absolute
