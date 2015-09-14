@@ -559,7 +559,12 @@ $(document).ready(function() {
         event.stopPropagation();
         return false;
     });
-
+    $(".js-list-mob a").on('click', function(e) {
+        var listM = $(this).attr("data-open");
+        $('.' + listM).addClass('is-open');
+        e.stopPropagation();
+        return false;
+    } )
     $(".js-show-password").on("click", function(event) {
         var textVisible = $(this).text();
         var textHidden = $(this).attr("data-text");
@@ -612,4 +617,10 @@ $(document).ready(function() {
             } 
         });
     }
+
+    $('.fotorama').on('fotorama:show fotorama:load', function (e, fotorama, extra) {
+        $('.js-carousel .meta > div').removeClass('is-active');
+        $('.js-carousel .meta > div').eq(fotorama.activeFrame.i-1).addClass('is-active');
+     }).fotorama();
+
 });
