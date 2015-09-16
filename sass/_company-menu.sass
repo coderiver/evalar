@@ -179,12 +179,15 @@ body
 .history
 	overflow: hidden
 	padding: 30px 0 
-	height: 540px
-	max-height: 100vh
+	min-height: 540px
 	position: relative
 	&__in
-		position: absolute
 		+vcenter
+		+r(767)
+			position: relative
+			left: 0
+			top: 0
+			+translate(0,0)
 		> .container
 			position: relative
 			&:before,
