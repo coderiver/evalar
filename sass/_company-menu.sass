@@ -210,9 +210,11 @@ body
 				+r(1023)
 					display: none
 			&:before
-				left: -1610px
+				left: -1630px
+
 			&:after
-				right: -1610px
+				right: -1630px
+
 	&__bg
 		position: absolute
 	&__slider
@@ -233,9 +235,13 @@ body
 			+r(1230)
 				display: none
 		&:before
-			left: -25%
+			left: -30%
+			+r(1416)
+				left: -25% 
 		&:after
-			right: -25%
+			right: -30%
+			+r(1416)
+				right: -25% 
 	&__item
 		display: table
 		table-layout: fixed
@@ -278,15 +284,20 @@ body
 			&:last-child
 				margin-bottom: 0
 	.slick-prev
-		left: -33%
+		left: -37%
+		
 		+svg(prev,21,60)
+		+r(1416)
+			left: -30% 
 		+r(1230)
 			left: -20%
 		+r(1023)
 			left: -50px
 	.slick-next
-		right: -33%
+		right: -37%
 		+svg(next,21,60)
+		+r(1416)
+			right: -30% 
 		+r(1230)
 			right: -20%
 		+r(1023)
