@@ -179,22 +179,28 @@ body
 .history
 	overflow: hidden
 	padding: 30px 0 
-	> .container
-		position: relative
-		&:before,
-		&:after
-			content: ""
-			position: absolute
-			top: 50%
-			height: 1px
-			width: 1500px
-			background: #fff
-			+r(1023)
-				display: none
-		&:before
-			left: -1610px
-		&:after
-			right: -1610px
+	height: 540px
+	max-height: 100vh
+	position: relative
+	&__in
+		position: absolute
+		+vcenter
+		> .container
+			position: relative
+			&:before,
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				height: 1px
+				width: 1500px
+				background: #fff
+				+r(1023)
+					display: none
+			&:before
+				left: -1610px
+			&:after
+				right: -1610px
 	&__bg
 		position: absolute
 	&__slider
