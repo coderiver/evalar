@@ -117,7 +117,29 @@
 		margin-top: 0
 	&_small
 		font-size: 15px
-
+	&_in
+		display: inline-block
+.link-go
+	position: relative
+	display: inline-block
+	color: $green
+	+med
+	font-size: 16px 
+	+tr(color .3s)
+	&:hover
+		color: $green_h
+	&:after
+		content: ''
+		display: inline-block
+		vertical-align: top
+		margin-left: 3px 
+		+svg(link,10,10)
+	&_no-mg
+		margin-top: 0
+	&_small
+		font-size: 15px
+	&_in
+		display: inline-block
 	
 .product
 	background: $bg

@@ -31,6 +31,17 @@
 		&:first-child,
 		+ h3
 			margin-top: 0
+	> h4
+		font-size: 16px  
+		margin: 35px 0 10px 
+	> h5
+		font-size: 14px
+		font-weight: 400 
+		color: #a8ae9d
+	> h6
+		font-size: 14px
+		font-weight: 300 
+		color: #a8ae9d
 	> p
 		margin: 18px 0 
 	a
@@ -76,6 +87,78 @@
 			background: #EFEEEA
 		td
 			border-bottom: 1px solid #eee
+	ul
+		margin: 20px 0 
+		li
+			position: relative
+			margin-bottom: 15px
+			&:before
+				content: ""
+				position: absolute
+				background: #000 
+				width: 10px
+				height: 1px  
+				left: -20px
+				top: .66em 
+		ul
+			margin: 0
+			margin-left: 20px 
+	ol
+		list-style-type: decimal 
+		li
+			margin-bottom: 15px 
+	sup
+		font-size: .5em
+		display: inline-block
+		vertical-align: top
+		margin-top: .2em  
+		&.footnote
+			color: #a8ae9d
+		a
+			font-size: inherit
+			color: inherit
+			&:hover
+				color: #a8ae9d
+	sub
+		display: inline-block
+		vertical-align: bottom
+		font-size: .5em
+		margin-bottom: -.2em  
+		a
+			font-size: inherit
+			color: inherit
+			&:hover
+				color: #a8ae9d
+	cite
+		display: block
+		position: relative
+		font-style: normal
+		color: #a8ae9d
+		z-index: 2 
+		font-size: 12px
+		padding: 20px 0
+		
+
+		&:before
+			content: ''
+			position: absolute
+			left: -300px
+			right: 0px  
+			display: block
+			top: 0
+			height: 1px
+			background: #efeeeb
+			z-index: -1  
+			+r(1230)
+				left: -240px  
+			+r(1023) 
+				left: 0
+		ol,
+		ul
+			color: inherit
+			margin-left: 20px 
+		li
+			margin-bottom: 0 
 .article_width
 	blockquote
 		margin-left: -8.33%
@@ -152,7 +235,28 @@
 				background: $light 
 				&:hover
 					border-color: $light 
-	
+// .title-h1
+// 	font-size: 48px
+// 	font-weight: 400 	
+// 	line-height: 1.1 
+// .title-h2
+// 	font-size: 24px
+// 	font-weight: 400 
+// .title-h3
+// 	font-size: 18px
+// 	font-weight: 400 
+// .title-h4
+// 	font-size: 16px
+// 	font-weight: 400 
+// .title-h5
+// 	font-size: 14px
+// 	font-weight: 00 
+// 	color: #a8ae9d
+			
+.title-h6
+	font-size: 14px
+	font-weight: 300 
+	color: #a8ae9d
 			
 .item
 	position: relative 
