@@ -438,6 +438,9 @@ a
 				position: absolute
 				top: 2px
 				right: -2px
+			&.green-check
+				&:before
+					+svgi(check-green)
 .tabs-wrap
 	border-bottom: 1px solid $border 
 	.container
@@ -905,6 +908,7 @@ a
 	background: none
 	line-height: 1
 	font-size: 16px
+	cursor: pointer
 	+font
 	+med
 	+tr(color .2s)
