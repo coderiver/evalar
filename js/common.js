@@ -622,39 +622,30 @@ $(document).ready(function() {
         $('.js-carousel .meta > div').removeClass('is-active');
         $('.js-carousel .meta > div').eq(fotorama.activeFrame.i-1).addClass('is-active');
      }).fotorama();
-       //  function tabsLoad() {
-       //      var hash = window.location.hash;
-       //      if (hash) {
-       //          $('[href="'+hash+'"]').parents(".js-tabs-group").find(".js-tabs-content").hide();
-       //          $('[data-id="'+hash+'"]').show();
-       //          $('[href="'+hash+'"]').parents(".js-tabs").find("li").removeClass("is-active");
-       //          $('[href="'+hash+'"]').parent().addClass("is-active");
-       //      }
-       //      else if ($(".js-tabs li.is-active").length) {
-       //          $(".js-tabs li").each(function(){
-       //              if ($(this).hasClass("is-active")) {
-       //                 var hash = $(this).find("a").attr("href");
-       //                  $('[data-id="'+hash+'"]').show();
-       //                  window.location.hash = hash;
-       //              }
-       //          });
-       //      }
-       //      else {
-       //          $('.js-tabs li:first').addClass("is-active");
-       //          $('.js-tabs').next().show();
-                
-       //      }
-            
-       //  }
-       // tabsLoad();
-       // // alert(hash);
-       //  $('.js-tabs a').on("click",function (e) {
-       //      var content = $(this).attr("href");
-       //      $(this).parents(".js-tabs").find("li").removeClass("is-active");
-       //      $(this).parent().addClass("is-active");
-       //      $(this).parents(".js-tabs-group").find(".js-tabs-content").hide();
-       //      $('[data-id="'+content+'"]').show();
-       //      window.location.hash = this.hash;
-       //      return false;
-       //  });
+        function tabsLoad() {
+               $(".js-tabs").each(function(){
+                 if ($(this).find(".is-active").length) {
+                    var index = $(this).find(".is-active").index();
+                    $(this).next().find(".js-tabs-content").eq(index).removeClass('is-hide');
+                    $(this).next().find(".js-tabs-content").eq(index).addClass('is-visible');
+                 }
+                 else {
+                   $(this).find("li").eq(0).addClass("is-active");
+                   $(this).next().find(".js-tabs-content").eq(0).removeClass('is-hide');
+                   $(this).next().find(".js-tabs-content").eq(0).addClass('is-visible');
+                 }
+               });
+           }
+           tabsLoad();
+            $('.js-tabs a').on("click",function () {
+                    var tabs = $(this).parents(".js-tabs");
+                    var tabsCont = tabs.next().find(".js-tabs-content");
+                    var index = $(this).parent().index();
+                    tabs.find("li").removeClass("is-active");
+                $(this).parent().addClass("is-active");
+                    tabsCont.addClass('is-hide');
+                    tabsCont.removeClass('is-visible');
+                    tabsCont.eq(index).addClass('is-visible');
+                    return false;
+            });
 });

@@ -332,7 +332,7 @@
                                 <strong>Россия, Санкт-Петербург</strong>
                             </div>
                         </button>
-                        <div class="drop-list js-list js-list-city js-drop-list">
+                        <div class="drop-list js-list js-list-city js-drop-list  hidden-xs">
                             <div class="drop-list__active js-drop-list-active">
                                 <a href="#" data-index="1">
                                     <span>Страна, город, метро</span> Россия, Санкт-Петербург
@@ -429,7 +429,7 @@
                                 </div>
                             </div>
                         </div>
-<!--                         <div class="drop-list js-list js-list-city js-drop-list visible-xs">
+                        <div class="drop-list js-list js-list-city js-drop-list visible-xs">
                             <div class="drop-list__active js-drop-list-active">
                                 <a href="#" data-index="1">
                                     <span>Страна, город, метро</span> Россия, Санкт-Петербург
@@ -437,7 +437,7 @@
                             </div>
                             <div class="tab js-tabs-group">
                                 <div class="tab js-tabs">
-                                    <ul class="tab__list">
+                                    <ul class="tab__list ">
                                         <li>
                                             <a href="#js-tab-first">Страна</a>
                                         </li>
@@ -449,82 +449,84 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="tab-content js-tabs-content" data-id="#js-tab-first">
-                                    <div class="scroll-pane">
-                                        <ul class="drop-list__main js-drop-list-main">
-                                            <li><a href="#">Россия</a></li>
-                                            <li><a href="#">Украина</a></li>
-                                            <li><a href="#">Беларусь</a></li>
-                                            <li><a href="#">Казахстан</a></li>
-                                            <li><a href="#">Молдова</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-content js-tabs-content" data-id="#js-tab-second">
-                                    <div class="scroll-pane">
-                                        <ul class="drop-list__main js-drop-list-main">
-                                            <li><a href="#">Апрелевка</a></li>
-                                            <li><a href="#">Архангельское</a></li>
-                                            <li><a href="#">Балашиха</a></li>
-                                            <li><a href="#">Бронницы</a></li>
-                                            <li><a href="#">Верея</a></li>
-                                            <li><a href="#">Видное</a></li>
-                                            <li><a href="#">Волоколамск </a></li>
-                                            <li><a href="#">Воскресенск</a></li>
-                                            <li><a href="#">Высоковск</a></li>
-                                            <li><a href="#">Голицыно</a></li>
-                                            <li><a href="#">Дзержинский</a></li>
-                                            <li><a href="#">Дмитров</a></li>
-                                            <li><a href="#">Долгопрудный</a></li>
-                                            <li><a href="#">Домодедово</a></li>
-                                            <li><a href="#">Егорьевск</a></li>
-                                            <li><a href="#">Апрелевка</a></li>
-                                            <li><a href="#">Архангельское</a></li>
-                                            <li><a href="#">Балашиха</a></li>
-                                            <li><a href="#">Бронницы</a></li>
-                                            <li><a href="#">Верея</a></li>
-                                            <li><a href="#">Видное</a></li>
-                                            <li><a href="#">Волоколамск </a></li>
-                                            <li><a href="#">Воскресенск</a></li>
-                                            <li><a href="#">Высоковск</a></li>
-                                            <li><a href="#">Голицыно</a></li>
-                                            <li><a href="#">Дзержинский</a></li>
-                                            <li><a href="#">Дмитров</a></li>
-                                            <li><a href="#">Долгопрудный</a></li>
-                                            <li><a href="#">Домодедово</a></li>
-                                            <li><a href="#">Егорьевск</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-content js-tabs-content" data-id="#js-tab-third">
-                                    <div class="scroll-pane">
-                                        <ul class="drop-list__main js-drop-list-main">
-                                            <li><a href="#">Авиамоторная</a></li>
-                                            <li><a href="#">Автозаводская</a></li>
-                                            <li><a href="#">Академическая</a></li>
-                                            <li><a href="#">Александровский сад</a></li>
-                                            <li><a href="#">Алексеевская</a></li>
-                                            <li><a href="#">Алма-Атинская</a></li>
-                                            <li><a href="#">Алтуфьево <sup>Арбатско-Покровская</sup></a></li>
-                                            <li><a href="#">Авиамоторная</a></li>
-                                            <li><a href="#">Автозаводская</a></li>
-                                            <li><a href="#">Академическая</a></li>
-                                            <li><a href="#">Александровский сад</a></li>
-                                            <li><a href="#">Алексеевская</a></li>
-                                            <li><a href="#">Алма-Атинская</a></li>
-                                            <li><a href="#">Алтуфьево </a></li>
-                                            <li><a href="#">Авиамоторная</a></li>
-                                            <li><a href="#">Автозаводская</a></li>
-                                            <li><a href="#">Академическая</a></li>
-                                            <li><a href="#">Александровский сад</a></li>
-                                            <li><a href="#">Алексеевская</a></li>
-                                            <li><a href="#">Алма-Атинская</a></li>
-                                            <li><a href="#">Алтуфьево </a></li>
-                                        </ul>
-                                    </div>
+                                <div>
+	                                <div class="tab-content js-tabs-content" data-id="#js-tab-first">
+	                                    <div class="scroll-pane">
+	                                        <ul class="drop-list__main js-drop-list-main">
+	                                            <li><a href="#">Россия</a></li>
+	                                            <li><a href="#">Украина</a></li>
+	                                            <li><a href="#">Беларусь</a></li>
+	                                            <li><a href="#">Казахстан</a></li>
+	                                            <li><a href="#">Молдова</a></li>
+	                                        </ul>
+	                                    </div>
+	                                </div>
+	                                <div class="tab-content js-tabs-content" data-id="#js-tab-second">
+	                                    <div class="scroll-pane">
+	                                        <ul class="drop-list__main js-drop-list-main">
+	                                            <li><a href="#">Апрелевка</a></li>
+	                                            <li><a href="#">Архангельское</a></li>
+	                                            <li><a href="#">Балашиха</a></li>
+	                                            <li><a href="#">Бронницы</a></li>
+	                                            <li><a href="#">Верея</a></li>
+	                                            <li><a href="#">Видное</a></li>
+	                                            <li><a href="#">Волоколамск </a></li>
+	                                            <li><a href="#">Воскресенск</a></li>
+	                                            <li><a href="#">Высоковск</a></li>
+	                                            <li><a href="#">Голицыно</a></li>
+	                                            <li><a href="#">Дзержинский</a></li>
+	                                            <li><a href="#">Дмитров</a></li>
+	                                            <li><a href="#">Долгопрудный</a></li>
+	                                            <li><a href="#">Домодедово</a></li>
+	                                            <li><a href="#">Егорьевск</a></li>
+	                                            <li><a href="#">Апрелевка</a></li>
+	                                            <li><a href="#">Архангельское</a></li>
+	                                            <li><a href="#">Балашиха</a></li>
+	                                            <li><a href="#">Бронницы</a></li>
+	                                            <li><a href="#">Верея</a></li>
+	                                            <li><a href="#">Видное</a></li>
+	                                            <li><a href="#">Волоколамск </a></li>
+	                                            <li><a href="#">Воскресенск</a></li>
+	                                            <li><a href="#">Высоковск</a></li>
+	                                            <li><a href="#">Голицыно</a></li>
+	                                            <li><a href="#">Дзержинский</a></li>
+	                                            <li><a href="#">Дмитров</a></li>
+	                                            <li><a href="#">Долгопрудный</a></li>
+	                                            <li><a href="#">Домодедово</a></li>
+	                                            <li><a href="#">Егорьевск</a></li>
+	                                        </ul>
+	                                    </div>
+	                                </div>
+	                                <div class="tab-content js-tabs-content" data-id="#js-tab-third">
+	                                    <div class="scroll-pane">
+	                                        <ul class="drop-list__main js-drop-list-main">
+	                                            <li><a href="#">Авиамоторная</a></li>
+	                                            <li><a href="#">Автозаводская</a></li>
+	                                            <li><a href="#">Академическая</a></li>
+	                                            <li><a href="#">Александровский сад</a></li>
+	                                            <li><a href="#">Алексеевская</a></li>
+	                                            <li><a href="#">Алма-Атинская</a></li>
+	                                            <li><a href="#">Алтуфьево <sup>Арбатско-Покровская</sup></a></li>
+	                                            <li><a href="#">Авиамоторная</a></li>
+	                                            <li><a href="#">Автозаводская</a></li>
+	                                            <li><a href="#">Академическая</a></li>
+	                                            <li><a href="#">Александровский сад</a></li>
+	                                            <li><a href="#">Алексеевская</a></li>
+	                                            <li><a href="#">Алма-Атинская</a></li>
+	                                            <li><a href="#">Алтуфьево </a></li>
+	                                            <li><a href="#">Авиамоторная</a></li>
+	                                            <li><a href="#">Автозаводская</a></li>
+	                                            <li><a href="#">Академическая</a></li>
+	                                            <li><a href="#">Александровский сад</a></li>
+	                                            <li><a href="#">Алексеевская</a></li>
+	                                            <li><a href="#">Алма-Атинская</a></li>
+	                                            <li><a href="#">Алтуфьево </a></li>
+	                                        </ul>
+	                                    </div>
+	                                </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="map-search__item">
                         <button class="drop-list-trigger" type="button">
@@ -533,7 +535,7 @@
                                 <strong>Все аптеки</strong>
                             </div>
                         </button>
-                        <div class="drop-list js-list js-list-city js-drop-list">
+                        <div class="drop-list js-list js-list-city js-drop-list hidden-xs">
                             <div class="drop-list__active js-drop-list-active">
                                 <a href="#" data-index="1">
                                     <span>Точки продаж</span> Все аптеки
@@ -583,6 +585,72 @@
                                     </ul>
                                 </div>
                             </div>
+                        </div>
+                        <div class="drop-list js-list js-list-city js-drop-list visible-xs">
+                            <div class="drop-list__active js-drop-list-active">
+                                <a href="#" data-index="1">
+                                    <span>Точки продаж</span> Все аптеки
+                                </a>
+                            </div>
+                            <div class="tab js-tabs-group">
+                                <div class="tab js-tabs">
+                                    <ul class="tab__list ">
+                                        <li class="is-active">
+                                            <a href="#js-tab-first">Все аптеки</a>
+                                        </li>
+                                        <li>
+                                            <a href="#js-tab-second">Название аптек</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+	                                <div class="tab-content js-tabs-content" data-id="#js-tab-first">
+	                                  <div class="scroll-pane">
+	                                      <ul class="drop-list__main has-dark-hover js-drop-list-main">
+	                                          <li class="has-icon"><a href="#"><i class="icon-pin-green"></i>Аптеки «Эвалар»</a></li>
+	                                          <li class="has-icon"><a href="#"><i class="icon-pin-white"></i>Партнерские аптеки</a></li>
+	                                          <li class="has-icon"><a href="#"><i class="icon-pin-orange"></i>Торговые сети</a></li>
+	                                      </ul>
+	                                  </div>
+	                                </div>
+	                                <div class="tab-content js-tabs-content" data-id="#js-tab-second">
+	                                 	<div class="scroll-pane">
+	                                 	    <ul class="drop-list__main js-drop-list-main">
+	                                 	        <li><a href="#">Аптека 36 и 6</a></li>
+	                                 	        <li><a href="#">Аптека на Новинском</a></li>
+	                                 	        <li><a href="#">Аптека А5</a></li>
+	                                 	        <li><a href="#">Аптека «Ника</a></li>
+	                                 	        <li><a href="#">Название аптеки</a></li>
+	                                 	        <li><a href="#">Аптека 36 и 6</a></li>
+	                                 	        <li><a href="#">Аптека на Новинском</a></li>
+	                                 	        <li><a href="#">Аптека А5</a></li>
+	                                 	        <li><a href="#">Аптека «Ника</a></li>
+	                                 	        <li><a href="#">Название аптеки</a></li>
+	                                 	        <li><a href="#">Аптека 36 и 6</a></li>
+	                                 	        <li><a href="#">Аптека на Новинском</a></li>
+	                                 	        <li><a href="#">Аптека А5</a></li>
+	                                 	        <li><a href="#">Аптека «Ника</a></li>
+	                                 	        <li><a href="#">Название аптеки</a></li>
+	                                 	        <li><a href="#">Аптека 36 и 6</a></li>
+	                                 	        <li><a href="#">Аптека на Новинском</a></li>
+	                                 	        <li><a href="#">Аптека А5</a></li>
+	                                 	        <li><a href="#">Аптека «Ника</a></li>
+	                                 	        <li><a href="#">Название аптеки</a></li>
+	                                 	        <li><a href="#">Аптека 36 и 6</a></li>
+	                                 	        <li><a href="#">Аптека на Новинском</a></li>
+	                                 	        <li><a href="#">Аптека А5</a></li>
+	                                 	        <li><a href="#">Аптека «Ника</a></li>
+	                                 	        <li><a href="#">Название аптеки</a></li>
+	                                 	        <li><a href="#">Аптека 36 и 6</a></li>
+	                                 	        <li><a href="#">Аптека на Новинском</a></li>
+	                                 	        <li><a href="#">Аптека А5</a></li>
+	                                 	        <li><a href="#">Аптека «Ника</a></li>
+	                                 	    </ul>
+	                                 	</div>
+	                                </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

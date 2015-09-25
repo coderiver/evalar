@@ -221,18 +221,37 @@
 			color: #000 
 		.link
 			font-size: 13px
-// .tab
-// 	min-height: 100vh 
-// 	.tab__list
-// 		display: block
-// 		li
-// 			display: inline-block
-// 			&.is-active
-// 				a
-// 					background: #333
-// 					color: white
+.tab
+	.tab__list
+		display: block
+		border-bottom: 1px solid #5bc07e
+		li
+			height: 50px
+			line-height: 50px
+			margin-right: 10px 
+			display: inline-block
+			a
+				color: #5bc07e
+				font-size: 12px
+				display: block
+				padding: 0 10px
 
-// .tab-content
-// 	display: none
-// 	.scroll-pane
-// 		max-height: 570px 
+			&.is-active
+				a
+					background: $green_h
+					color: #fff
+
+.tab-content
+	opacity: 0
+	visibility: hidden 
+	position: absolute
+	left: 0
+	right: 0
+	&.is-hide
+		opacity: 0
+		visibility: hidden
+	&.is-visible
+		opacity: 1
+		visibility: visible 
+	.scroll-pane
+		max-height: 570px 
