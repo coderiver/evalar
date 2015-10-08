@@ -3,15 +3,15 @@
 	top: -1px
 	opacity: 0
 	visibility: hidden
-	max-width: 1200px
+	max-width: 100%
 	margin: 0 auto
 	+r(1229)
-		padding: 0 15px 
+		// padding: 0 15px 
 	+r(1024)
 		width: 100% 
 		padding: 0
 		img
-			width: 100% 
+			// width: 100% 
 	+r(767)
 		width: 300px
 		img
@@ -23,19 +23,23 @@
 		visibility: visible
 	.slick-dots
 		left: 30px
-		bottom: 23px
-		text-align: left
+		// bottom: 23px
+		bottom: 305px
+		// text-align: left
+		text-align: center
 		+r(767)
 			left: 2.2% 
+			bottom: 20px
 	.slick-slide
 		a
 			display: block
 			position: relative
 	&__main
-		position: absolute
-		top: 0
-		right: 0
-		bottom: 0
+		// position: absolute
+		// top: 0
+		// right: 0
+		// bottom: 0
+		// float: right
 		width: 50%
 		padding: 2% 4% 5.5%
 		+med
@@ -43,12 +47,15 @@
 		color: #fff
 		span
 			font-size: 16px
-		+r(767) 
+		+r(1024)
 			width: 100%
-			padding-top: 190px  
+		+r(767) 
+			// width: 100%
+			padding-top: 75px  
 			p
 				font-size: 16px
-				line-height: 1.7em 
+				// line-height: 1.7em 
+				line-height: 1.4
 		
 	&__title
 		margin-bottom: 6%
@@ -62,12 +69,32 @@
 			font-size: 26px
 			+reg
 	.icon-list
-		position: absolute
+		margin-top: 30px
+		// position: absolute
 		// bottom: 33px
-		left: 50px
-		+r(767)
-			bottom: 60px 
-			left: 4% 
+		// left: 50px
+		// +r(767)
+		// 	bottom: 60px 
+		// 	left: 4% 
+	&__container
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		.container, .row
+			height: 100%
+		.row
+			+vertical
+			text-align: right
+			padding-bottom: 260px
+			+r(767) 
+				padding-bottom: 40px
+		.prod-slider__main
+			display: inline-block
+			vertical-align: middle
+			text-align: left
+			padding-bottom: 0
 .prod-slider_large
 	margin-top: 50px
 	max-height: 760px
