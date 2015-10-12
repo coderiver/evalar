@@ -232,6 +232,7 @@
 			function initialize() {
 
 				var boundsEvalar = new google.maps.LatLngBounds();
+				// var centerBiysk = new google.maps.LatLng(41.505082, -40.152397);
 				var centerBiysk = new google.maps.LatLng(41.505082, -40.152397);
 				var mapOptions = {
 					mapTypeId: 'roadmap',
@@ -254,7 +255,26 @@
 				    }
 				};
 				mapEvalar = new google.maps.Map(document.getElementById("evalarmap"), mapOptions);
-				mapEvalar.panTo(centerBiysk);
+				// mapEvalar.panTo(centerBiysk);
+				var logo = {
+				    url: "./img/svg/logo.svg", // url
+				    scaledSize: new google.maps.Size(70, 38), // scaled size
+				    origin: new google.maps.Point(0,0), // origin
+				    anchor: new google.maps.Point(30, 14) // anchor
+				};
+				var Turkey = new google.maps.LatLng(37.840156, 41.704102);
+				var NY = new google.maps.LatLng(-74.012673, 40.713905);  
+				var markerTr = new google.maps.Marker({
+				  position: Turkey,
+				  map: mapEvalar,
+				  icon: logo
+				});
+				var markerNy = new google.maps.Marker({
+				  position: NY,
+				  map: mapEvalar,
+				  icon: logo
+				});
+
 				var markersEvalar = [
 					['Декабристов, 33', 85.142305, 52.4881996, '\
 					<div class=\"info_content\"\>Ежедневно 08:00–20:00\<br\>+7 (3854) 39‒00‒39\<br\>единая справочная - пн-пт 8:00-19:30\</div\>'],
@@ -395,13 +415,6 @@
 						title: markersEvalar[i][0]
 					});
 					markers.push(markerEvalar);
-					google.maps.event.addListener(markerEvalar, 'click', (function(markerEvalar, i) {
-						return function() {
-							infoWindowEvalar.setContent('\
-			<h5 style=\"margin: 0.7em 0 1em 0;\"\>'+markersEvalar[i][0]+'\</h5\>'+markersEvalar[i][3]);
-							infoWindowEvalar.open(mapEvalar, markerEvalar);
-						}
-					})(markerEvalar, i));
 					mapEvalar.fitBounds(boundsEvalar);
 				}
 				var clusterOptions = {
@@ -412,7 +425,8 @@
 						width: 60,
 						anchor: [40,0],
 						textSize: 13
-					}]
+					}],
+					'zoom': 4
 				};
 				var markerCluster = new MarkerClusterer(mapEvalar, markers, clusterOptions);
 				var boundsListenerEvalar = google.maps.event.addListener((mapEvalar), 'bounds_changed', function(event) {
@@ -434,6 +448,7 @@
 
 			}
 			function drawMap(data) {
+				
 		        var rows = data['rows'];
 		        for (var i in rows) {
 		          if (rows[i][0] != 'Antarctica') {
@@ -456,6 +471,7 @@
 		              fillOpacity: 0
 		            });
 		            google.maps.event.addListener(country, 'mouseover', function() {
+	            	  if (mapEvalar.getZoom() >= 10) return false;
 		              this.setOptions({fillOpacity: 0.6});
 		            });
 		            google.maps.event.addListener(country, 'mouseout', function() {
