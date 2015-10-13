@@ -236,7 +236,7 @@
 				var centerBiysk = new google.maps.LatLng(41.505082, -40.152397);
 				var mapOptions = {
 					mapTypeId: 'roadmap',
-					zoom: 13,
+					zoom: 4,
 					mapTypeControl: true,
 				    mapTypeControlOptions: {
 				        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -255,7 +255,7 @@
 				    }
 				};
 				mapEvalar = new google.maps.Map(document.getElementById("evalarmap"), mapOptions);
-				// mapEvalar.panTo(centerBiysk);
+				mapEvalar.panTo(centerBiysk);
 				var logo = {
 				    url: "./img/svg/logo.svg", // url
 				    scaledSize: new google.maps.Size(70, 38), // scaled size
@@ -426,7 +426,7 @@
 						anchor: [40,0],
 						textSize: 13
 					}],
-					'zoom': 4
+					// gridSize: 0
 				};
 				var markerCluster = new MarkerClusterer(mapEvalar, markers, clusterOptions);
 				var boundsListenerEvalar = google.maps.event.addListener((mapEvalar), 'bounds_changed', function(event) {
