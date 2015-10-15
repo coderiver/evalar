@@ -90,11 +90,25 @@
 			padding-bottom: 260px
 			+r(767) 
 				padding-bottom: 40px
+		&_nopad
+			.row
+				padding-bottom: 0
 		.prod-slider__main
 			display: inline-block
 			vertical-align: middle
 			text-align: left
 			padding-bottom: 0
+	&_mod
+		.slider__img
+			height: auto
+		.prod-slider__container 
+			.row:before
+				display: none
+		.slick-dots
+			bottom: 12px 
+			text-align: left
+
+		
 .prod-slider_large
 	margin-top: 50px
 	max-height: 760px
