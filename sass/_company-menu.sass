@@ -60,14 +60,16 @@
 			margin-top: -50px
 .section-nav
 	position: fixed
-	top: 160px
+	// top: 160px
+	top: 50%
 	left: 0
 	right: 0
 	+vertical
 	z-index: 5
 	+transition(transform .3s)
-	+r(1023)
-		top: 140px
+	+translateY(-33%)
+	// +r(1023)
+		// top: 140px
 	ul
 		display: inline-block
 		vertical-align: middle

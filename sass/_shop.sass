@@ -426,13 +426,17 @@
 		border-radius: 20px  
 		background: none
 		opacity: 0.5
-		+tr(opacity .2s)
+		+transition(opacity, background .2s)
 		+gpu
 		color: #fff 
 		+placeholder
 			color: #fff 
 		&:focus
 			opacity: 1
+		// +tr
+		&.is-active
+			background: #fff
+			color: #000 
 	&__btn
 		position: absolute
 		right: 25px

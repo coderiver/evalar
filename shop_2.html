@@ -91,7 +91,7 @@
 				</div>
 				<div class="search-form js-search">
 					<form>
-						<input class="search-form__input" type="text" placeholder="Поиск">
+						<input class="search-form__input js-search-input" type="text" placeholder="Поиск">
 						<button class="search-form__btn" type="submit"><i class="icon-search-white"></i></button>
 					</form>
 				</div>
@@ -220,59 +220,113 @@
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-	<div class="prod-slider-wrap">
-		<div class="prod-slider js-slider">
-			<div>
-				<a href="#">
-					<!-- <img src="img/slider1.jpg" alt=""> -->
-					<picture>
-						<!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source srcset="img/slider1.jpg" media="(min-width: 1024px)">
-						<source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
-						<source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
-						<!-- [if IE 9]></video><![endif] -->
-						<img srcset="img/slider1-1024.jpg" alt="img">
-					</picture>
-					<div class="prod-slider__main">
-						<div class="prod-slider__title">Новинка</div>
-						<p>При склонности к запорам — батончик Фитолакс с ценными пищевыми волокнами.</p>
-						<p><span>Полезное лакомство на каждый день!</span></p>
-						<ul class="icon-list">
-							<li><i class="icon-param1"></i>без глютена</li>    
-							<li><i class="icon-param2"></i>без сахара</li>  
-							<li><i class="icon-param3"></i>вегетарианский</li>  
-							<li><i class="icon-param4"></i>для детей</li>
-						</ul>
-					</div>
-					
-				</a>
-			</div>
-			<div>
-				<a href="#">
-					<picture>
-						<!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source srcset="img/slider1.jpg" media="(min-width: 1024px)">
-						<source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
-						<source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
-						<!-- [if IE 9]></video><![endif] -->
-						<img srcset="img/slider1-1024.jpg" alt="img">
-					</picture>
-				</a>
-			</div>
-			<div>
-				<a href="#">
-					<picture>
-						<!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source srcset="img/slider1.jpg" media="(min-width: 1024px)">
-						<source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
-						<source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
-						<!-- [if IE 9]></video><![endif] -->
-						<img srcset="img/slider1-1024.jpg" alt="img">
-					</picture>
-				</a>
-			</div>
-		</div>
-	</div>
+	        <div class="prod-slider-wrap">
+
+            <div class="prod-slider js-slider">
+                <div>
+                    <a href="#">
+                        <!-- <img src="img/slider1.jpg" alt=""> -->
+                        <div class="slider__img">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="img/ban-prod.jpg" media="(min-width: 1024px)">
+                                <source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
+                                <source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
+                                <!-- [if IE 9]></video><![endif] -->
+                                <img srcset="img/ban-prod.jpg" alt="img">
+                            </picture>
+                        </div>
+                        <div class="prod-slider__container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="prod-slider__main">
+                                        <div class="prod-slider__title">Новинка</div>
+                                        <p>При склонности к запорам — батончик Фитолакс с ценными пищевыми волокнами.</p>
+                                        <p><span>Полезное лакомство на каждый день!</span></p>
+                                        <ul class="icon-list">
+                                            <li><i class="icon-param1"></i>без глютена</li>    
+                                            <li><i class="icon-param2"></i>без сахара</li>  
+                                            <li><i class="icon-param3"></i>вегетарианский</li>  
+                                            <li><i class="icon-param4"></i>для детей</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <!-- <img src="img/slider1.jpg" alt=""> -->
+                        <div class="slider__img">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="img/ban-prod.jpg" media="(min-width: 1024px)">
+                                <source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
+                                <source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
+                                <!-- [if IE 9]></video><![endif] -->
+                                <img srcset="img/ban-prod.jpg" alt="img">
+                            </picture>
+                        </div>
+                        <div class="prod-slider__container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="prod-slider__main">
+                                        <div class="prod-slider__title">Новинка</div>
+                                        <p>При склонности к запорам — батончик Фитолакс с ценными пищевыми волокнами.</p>
+                                        <p><span>Полезное лакомство на каждый день!</span></p>
+                                        <ul class="icon-list">
+                                            <li><i class="icon-param1"></i>без глютена</li>    
+                                            <li><i class="icon-param2"></i>без сахара</li>  
+                                            <li><i class="icon-param3"></i>вегетарианский</li>  
+                                            <li><i class="icon-param4"></i>для детей</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <!-- <img src="img/slider1.jpg" alt=""> -->
+                        <div class="slider__img">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="img/ban-prod.jpg" media="(min-width: 1024px)">
+                                <source srcset="img/slider1-1024.jpg" media="(min-width: 768px)">
+                                <source srcset="img/slider1-767.jpg" media="(max-width: 767px)">
+                                <!-- [if IE 9]></video><![endif] -->
+                                <img srcset="img/ban-prod.jpg" alt="img">
+                            </picture>
+                        </div>
+                        <div class="prod-slider__container">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="prod-slider__main">
+                                        <div class="prod-slider__title">Новинка</div>
+                                        <p>При склонности к запорам — батончик Фитолакс с ценными пищевыми волокнами.</p>
+                                        <p><span>Полезное лакомство на каждый день!</span></p>
+                                        <ul class="icon-list">
+                                            <li><i class="icon-param1"></i>без глютена</li>    
+                                            <li><i class="icon-param2"></i>без сахара</li>  
+                                            <li><i class="icon-param3"></i>вегетарианский</li>  
+                                            <li><i class="icon-param4"></i>для детей</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </a>
+                </div>
+            </div>
+           <!--  <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                    </div>
+                </div>
+            </div> -->
+        </div>
 	<div class="page-body page-body_no-pt">	
 		<div class="container">
 			<div class="row">
@@ -731,6 +785,7 @@
 		<strong>Клуб здоровья</strong>
 	</span>
 </a>
+<div class="js-cover cover"></div>
 <!-- load scripts -->
 <script src="js/main.js"></script>
 <script src="js/common.js"></script>

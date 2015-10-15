@@ -72,6 +72,8 @@ body
 	font-size: 12px
 	line-height: 1.4
 	color: $black 
+	&.is-gray
+		background: #f6f6f4 
 // .desktop
 // 	.no-scroll
 // 		.menu
@@ -1356,3 +1358,14 @@ a.btn-action
 	& + .gid-title 
 		margin-bottom: 20px
 		margin-top: -20px  
+.cover
+	position: fixed
+	top: 160px
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(255, 255, 255, .8)
+	z-index: 2
+	display: none
+	&.is-active
+		display: block 

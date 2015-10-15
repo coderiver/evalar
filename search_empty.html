@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>abc_2</title>
+	<title>new</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
@@ -11,7 +11,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	
 </head>
-<body>
+<body class="is-gray">
 <!-- BEGIN  out-->
 <div class="out">
 	<div class="header js-header">
@@ -49,7 +49,7 @@
 		</div>
 		<div class="container">
 			<div class="header__main">
-				<div class="row  no-padding">
+				<div class="row no-padding">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
 						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
 						<ul class="nav">
@@ -67,33 +67,114 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-5 col-lg-offset-2 col-md-offset-2">
-						
-						<div class="search js-search">
-							<form>
-								<input class="search__input" type="text" placeholder="Поиск">
-								<button class="search__btn" type="submit">
-									<i class="icon-search"></i>
+					<div class="col-lg-5 col-md-6 col-sm-6 col-xs-5 col-lg-offset-1">
+						<div class="text-right">
+							<div class="search search_shop js-search">
+								<button class="search__toggle js-toggle-search" type="button">
+									<i class="icon-search-white"></i>
 								</button>
-							</form>
-							<button class="search__toggle js-toggle-search" type="button">
-								<i class="icon-search-white"></i>
-							</button>
+							</div>
+							<a href="#" class="shop">
+								<i class="icon-cart"></i>
+								Интернет-магазин «Эвалар»
+								<i class="shop__arr"></i>
+							</a>
+							<div class="lang lang_shop js-toggle-lang hidden-xs">
+								<span class="lang__val">RU</span>
+								<ul class="lang__list">
+									<li><a href="#">EN</a></li>
+									<li><a href="#">DE</a></li>
+								</ul>
+							</div>
 						</div>
-						<!-- <a href="#" class="shop">
-							<i class="icon-cart"></i>
-							Интернет-магазин «Эвалар»
-							<i class="shop__arr"></i>
-						</a> -->
-						<div class="lang js-toggle-lang hidden-xs">
-							<span class="lang__val">RU</span>
-							<ul class="lang__list">
-								<li><a href="#">EN</a></li>
-								<li><a href="#">DE</a></li>
-							</ul>
-						</div>
-						
 					</div>
+				</div>
+				<div class="search-form js-search">
+					<form>
+						<input class="search-form__input js-search-input" type="text" placeholder="Поиск">
+						<button class="search-form__btn" type="submit"><i class="icon-search-white"></i></button>
+					</form>
+				</div>
+				<div class="search-suggests js-search-suggests scroll-pane js-scroll-pane">
+					<div class="search-suggests__title">Статьи</div>
+					<!-- BEGIN search-suggests__item  -->
+					<div class="search-suggests__item">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2 col-sm-4 hidden-xs ">
+									<img src="http://placehold.it/180x120" alt="">
+								</div>
+								<div class="col-lg-8 col-sm-8">
+
+									<a href="#" class="link search-suggests__name">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+									<p class="meta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minus cupiditate dolorum quidem illo sint blanditiis obcaecati repellendus praesentium, eveniet, quam suscipit culpa est facere voluptas nostrum fugit ipsa, expedita et debitis inventore laborum! Rerum, voluptatum. Magni hic, tenetur! Error!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END search-suggests__item -->
+					<!-- BEGIN search-suggests__item  -->
+					<div class="search-suggests__item">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2 col-sm-4 hidden-xs ">
+									<img src="http://placehold.it/180x120" alt="">
+								</div>
+								<div class="col-lg-8 col-sm-8">
+
+									<a href="#" class="link search-suggests__name">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+									<p class="meta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minus cupiditate dolorum quidem illo sint blanditiis obcaecati repellendus praesentium, eveniet, quam suscipit culpa est facere voluptas nostrum fugit ipsa, expedita et debitis inventore laborum! Rerum, voluptatum. Magni hic, tenetur! Error!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END search-suggests__item -->
+					<div class="search-suggests__title">Новости</div>
+					<!-- BEGIN search-suggests__item  -->
+					<div class="search-suggests__item">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-10">
+									<a href="#" class="link search-suggests__name">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+									<p class="meta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minus cupiditate dolorum quidem illo sint blanditiis obcaecati repellendus praesentium, eveniet, quam suscipit culpa est facere voluptas nostrum fugit ipsa, expedita et debitis inventore laborum! Rerum, voluptatum. Magni hic, tenetur! Error!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END search-suggests__item -->
+					<div class="search-suggests__title">Акции</div>
+					<!-- BEGIN search-suggests__item  -->
+					<div class="search-suggests__item">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2 col-sm-4 hidden-xs ">
+									<img src="http://placehold.it/180x120" alt="">
+								</div>
+								<div class="col-lg-8 col-sm-8">
+
+									<a href="#" class="link search-suggests__name">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+									<p class="meta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minus cupiditate dolorum quidem illo sint blanditiis obcaecati repellendus praesentium, eveniet, quam suscipit culpa est facere voluptas nostrum fugit ipsa, expedita et debitis inventore laborum! Rerum, voluptatum. Magni hic, tenetur! Error!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END search-suggests__item -->
+					<!-- BEGIN search-suggests__item  -->
+					<div class="search-suggests__item">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2 col-sm-4 hidden-xs ">
+									<img src="http://placehold.it/180x120" alt="">
+								</div>
+								<div class="col-lg-8 col-sm-8">
+
+									<a href="#" class="link search-suggests__name">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+									<p class="meta">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus minus cupiditate</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END search-suggests__item -->
 				</div>
 			</div>
 		</div>
@@ -185,21 +266,21 @@
 		</div>
 	</div>
 	<!-- BEGIN page-head  -->
-	<div class="page-head">
+	<div class="page-head page-head_empty">
 		<div class="page-head__img">
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="img/page_head1.jpg" media="(min-width: 1024px)">
-				<source srcset="img/page_head1-1024.jpg" media="(min-width: 768px)">
+				<!-- <source srcset="img/page_head3.jpg" media="(min-width: 1024px)"> -->
+				<!-- <source srcset="img/page_head3-1024.jpg" media="(min-width: 768px)"> -->
 				<!-- [if IE 9]></video><![endif] -->
-				<img srcset="img/page_head1-1024.jpg" alt="img">
+				<!-- <img srcset="img/page_head3-1024.jpg" alt="img"> -->
 			</picture>
 		</div>
 		<div class="page-head__info">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-						<div class="page-head__title">Энциклопедия трав</div>					
+					<div class="col-lg-12 hidden-sm">
+						<div class="page-head__title is-black">Поиск</div>					
 					</div>
 				</div>
 			</div>
@@ -213,7 +294,7 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumbs__main">
 						<li><a href="#"><i class="icon-home"></i></a></li>
-						<li><a href="#">Энциклопедия трав</a></li>
+						<li><a href="#">Поиск</a></li>
 					</ul>
 				</div>
 			</div>
@@ -221,308 +302,92 @@
 	</div>
 	<!-- END breadcrumbs -->
 
-	<!-- BEGIN abc  -->
-	
-	<div class="tabs-wrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<ul class="tabs">
-						<li class="tabs__item">
-							<a href="#" class="tabs__link">Схема</a>    
-						</li>
-						<li class="tabs__item is-active">
-							<a href="#" class="tabs__link">Список</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="page-body page-body_gray">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="abc">
-						<div class="abc__chapter">
-							<div class="abc__title">A</div>
-							<ul>
-								<li><a href="#">Абрикос</a></li>
-								<li><a href="#">Алоэ вера</a></li>
-								<li><a href="#">Алтей</a></li>
-								<li><a href="#">Ананас</a></li>
-								<li><a href="#">Арония черноплодная</a></li>
-								<li><a href="#">Артишок</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Б</div>
-							<ul>
-								<li><a href="#">Бадан</a></li>
-								<li><a href="#">Береза</a></li>
-								<li><a href="#">Бессмертник</a></li>
-								<li><a href="#">Боровая матка</a></li>
-								<li><a href="#">Босвеллия</a></li>
-								<li><a href="#">Боярышник</a></li>
-								<li><a href="#">Брокколи</a></li>
-								<li><a href="#">Брусника</a></li>
-								<li><a href="#">Бузина черная</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">В</div>
-							<ul>
-								<li><a href="#">Валериана</a></li>
-								<li><a href="#">Виноград</a></li>
-								<li><a href="#">Витекс (прутняк)</a></li>
-								<li><a href="#">Вишня</a></li>
-								<li><a href="#">Володушка</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Г</div>
-							<ul>
-								<li><a href="#">Гарциния</a></li>
-								<li><a href="#">Гвоздика</a></li>
-								<li><a href="#">Гинкго билоба</a></li>
-								<li><a href="#">Горец птичий</a></li>
-								<li><a href="#">Горянка крупноцветковая</a></li>
-								<li><a href="#">Грецкий орех</a></li>
-								<li><a href="#">Гречиха</a></li>
-								<li><a href="#">Гуарана</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Д</div>
-							<ul>
-								<li><a href="#">Девясил</a></li>
-								<li><a href="#">Джимнема</a></li>
-								<li><a href="#">Дикий ямс</a></li>
-								<li><a href="#">Донник</a></li>
-								<li><a href="#">Душица</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Ж</div>
-							<ul>
-								<li><a href="#">Женьшень</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">З</div>
-							<ul>
-								<li><a href="#">Звездчатка</a></li>
-								<li><a href="#">Зверобой</a></li>
-								<li><a href="#">Зеленый кофе</a></li>
-								<li><a href="#">Зеленый чай</a></li>
-								<li><a href="#">Золотарник канадский</a></li>
-								<li><a href="#">Золототысячник</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">И</div>
-							<ul>
-								<li><a href="#">Ива белая</a></li>
-								<li><a href="#">Иглица</a></li>
-								<li><a href="#">Имбирь</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Й</div>
-							<ul>
-								<li><a href="#">Йохимбе</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">К</div>
-							<ul>
-								<li><a href="#">Какао</a></li>
-								<li><a href="#">Календула</a></li>
-								<li><a href="#">Кассия (сенна)</a></li>
-								<li><a href="#">Каштан конский</a></li>
-								<li><a href="#">Кедр</a></li>
-								<li><a href="#">Клевер красный</a></li>
-								<li><a href="#">Клюква</a></li>
-								<li><a href="#">Копеечник альпийский</a></li>
-								<li><a href="#">Копеечник забытый (красный корень)</a></li>
-								<li><a href="#">Кофе</a></li>
-								<li><a href="#">Красная щетка</a></li>
-								<li><a href="#">Крушина</a></li>
-								<li><a href="#">Кукурузы рыльца и столбики</a></li>
-								<li><a href="#">Куркума</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Л</div>
-							<ul>
-								<li><a href="#">Ламинария</a></li>
-								<li><a href="#">Лапчатка</a></li>
-								<li><a href="#">Левзея</a></li>
-								<li><a href="#">Лопух</a></li>
-								<li><a href="#">Льнянка</a></li>
-								<li><a href="#">Любисток</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">М</div>
-							<ul>
-								<li><a href="#">Матэ</a></li>
-								<li><a href="#">Мелисса</a></li>
-								<li><a href="#">Мята</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">О</div>
-							<ul>
-								<li><a href="#">Облепиха</a></li>
-								<li><a href="#">Овес</a></li>
-								<li><a href="#">Одуванчик</a></li>
-								<li><a href="#">Ортосифон</a></li>
-								<li><a href="#">Очанка лекарственная</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">П</div>
-							<ul>
-								<li><a href="#">Пальма сабаль</a></li>
-								<li><a href="#">Пассифлора</a></li>
-								<li><a href="#">Пижма</a></li>
-								<li><a href="#">Пион белоцветковый</a></li>
-								<li><a href="#">Пихта</a></li>
-								<li><a href="#">Подорожник</a></li>
-								<li><a href="#">Пустырник</a></li>
-							</ul>
-						</div>
-						<div class="abc__chapter">
-							<div class="abc__title">Р</div>
-							<ul>
-								<li><a href="#">Расторопша</a></li>
-								<li><a href="#">Репейничек обыкновенный (Репешок)</a></li>
-								<li><a href="#">Родиола розовая</a></li>
-								<li><a href="#">Розмарин</a></li>
-								<li><a href="#">Ромашка</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">С</div>
-							<ul>
-								<li><a href="#">Сабельник</a></li>
-								<li><a href="#">Солнечник клубненосный (топинамбур)</a></li>
-								<li><a href="#">Солодка</a></li>
-								<li><a href="#">Сушеница</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">Т</div>
-							<ul>
-								<li><a href="#">Тмин</a></li>
-								<li><a href="#">Тысячелистник</a></li>
-							</ul>
-						</div>
-
-						<div class="abc__chapter">
-							<div class="abc__title">У</div>
-							<ul>
-								<li><a href="#">Укроп</a></li>
-								<li><a href="#">Ункария (кошачий коготь)</a></li>
-							</ul>
-						</div>
+				<div class="col-md-8 col-md-offset-2 col-xs-12">
+					<div class="search-text text-center">
+						По вашему запросу ничего не найдено
+						<a href="#" class="link">Перейти на главную</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<!-- END abc -->
 </div>
 <!-- END out-->
 <div class="footer">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="footer__in">
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-no-pad">
-            <div class="footer__meta">
-              <p>© «Эвалар», 2003—2014</p>
-              <p>659332, Россия, Алтайский край, 
-                Бийск, ул. Социадистическая,
-              </p>
-              <p>23/6</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-1 col-md-offset-1 col-no-pad">
-            <div class="footer__links">
-              <div class="footer__nav">
-                <a href="#">О компании</a>
-                <a href="#">Производство</a>
-                <a href="#">Продукция</a>
-                <a href="#">Партнерам</a>
-                <a href="#">Контакты</a>
-              </div>
-              <div class="footer__nav">
-                <a href="#">Новости</a>
-                <a href="#">Акции</a>
-                <a href="#">Карьера</a>
-                <a href="#">Аптеки в городе</a>
-                <a href="#">Заказ на сайте</a>
-              </div>
-              <div class="footer__nav">
-                <a href="#">Вопросы и ответы</a>
-                <a href="#">Гид по БАДам</a>
-                <a href="#">Образ жизни</a>
-              </div>
-              <div class="footer__nav">
-                <a href="#">Энциклопедия трав</a>
-              </div>
-            </div>
-          </div>
-          <div class="hidden-lg hidden-md col-sm-4 col-xs-12 col-no-pad">
-            <div class="footer__sertificates">
-              <img src="img/svg/certificates.svg" width="218" alt="">
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-no-pad">
-            <div class="soc-wrap">
-              <div class="soc">
-                <div class="soc__title">Мы в соцсетях</div>
-                <a href="#" class="soc__link">
-                <i class="icon-vk"></i>
-                </a>
-                <a href="#" class="soc__link">
-                <i class="icon-fb"></i>
-                </a>
-                <a href="#" class="soc__link">
-                <i class="icon-od"></i>
-                </a>
-              </div>
-              <a href="#" class="link-action"><i class="icon-mail"></i>Написать письмо</a>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-no-pad">
-            <a href="#" class="created-by">
-              <i class="icon-qb"></i>
-              <div>Разработка сайта -</div>
-              <span>qb-interactive</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="row">
+	  <div class="col-lg-12">
+		<div class="footer__in">
+		  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-no-pad">
+			<div class="footer__meta">
+			  <p>© «Эвалар», 2003—2014</p>
+			  <p>659332, Россия, Алтайский край, 
+				Бийск, ул. Социадистическая,
+			  </p>
+			  <p>23/6</p>
+			</div>
+		  </div>
+		  <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12 col-lg-offset-1 col-md-offset-1 col-no-pad">
+			<div class="footer__links">
+			  <div class="footer__nav">
+				<a href="#">О компании</a>
+				<a href="#">Производство</a>
+				<a href="#">Продукция</a>
+				<a href="#">Партнерам</a>
+				<a href="#">Контакты</a>
+			  </div>
+			  <div class="footer__nav">
+				<a href="#">Новости</a>
+				<a href="#">Акции</a>
+				<a href="#">Карьера</a>
+				<a href="#">Аптеки в городе</a>
+				<a href="#">Заказ на сайте</a>
+			  </div>
+			  <div class="footer__nav">
+				<a href="#">Вопросы и ответы</a>
+				<a href="#">Гид по БАДам</a>
+				<a href="#">Образ жизни</a>
+			  </div>
+			  <div class="footer__nav">
+				<a href="#">Энциклопедия трав</a>
+			  </div>
+			</div>
+		  </div>
+		  <div class="hidden-lg hidden-md col-sm-4 col-xs-12 col-no-pad">
+			<div class="footer__sertificates">
+			  <img src="img/svg/certificates.svg" width="218" alt="">
+			</div>
+		  </div>
+		  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-lg-offset-1 col-md-offset-1 col-no-pad">
+			<div class="soc-wrap">
+			  <div class="soc">
+				<div class="soc__title">Мы в соцсетях</div>
+				<a href="#" class="soc__link">
+				<i class="icon-vk"></i>
+				</a>
+				<a href="#" class="soc__link">
+				<i class="icon-fb"></i>
+				</a>
+				<a href="#" class="soc__link">
+				<i class="icon-od"></i>
+				</a>
+			  </div>
+			  <a href="#" class="link-action"><i class="icon-mail"></i>Написать письмо</a>
+			</div>
+		  </div>
+		  <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-no-pad">
+			<a href="#" class="created-by">
+			  <i class="icon-qb"></i>
+			  <div>Разработка сайта -</div>
+			  <span>qb-interactive</span>
+			</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
   </div>
 </div>
 <div class="popup js-popup js-popup-city">
@@ -621,12 +486,6 @@
 		</div>
 	</div>
 </div>
-<a class="btn-feedback" href="#">
-	<span>
-		Подписка на новости
-		<strong>Клуб здоровья</strong>
-	</span>
-</a>
 <div class="js-cover cover"></div>
 <!-- load scripts -->
 <script src="js/main.js"></script>

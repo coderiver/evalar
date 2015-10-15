@@ -2,19 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>distrib_2</title>
+	<title>new</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<!-- theme color for android 5.0 -->
 	<meta name="theme-color" content="#009036"> 
-	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/screen_corp.css" >
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 	
 </head>
-<body>
+<body class="is-gray">
 <!-- BEGIN  out-->
 <div class="out">
-	<div class="header js-header">
+		<div class="header js-header">
 		<div class="header__top">
 			<div class="container">	
 				<div class="row no-padding">
@@ -49,51 +49,54 @@
 		</div>
 		<div class="container">
 			<div class="header__main">
-				<div class="row  no-padding">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
+				<div class="row no-padding">
+					<div class="col-lg-7 col-md-9 col-sm-6 col-xs-5">
 						<button class="btn-menu js-toggle-menu" type="button"><i></i></button>
 						<ul class="nav">
-							<li class="nav__item">
-								<a href="#" class="nav__link hidden-sm hidden-xs">О компании</a>
+							<li class="nav__item hidden-sm hidden-xs">
+								<a href="#" class="nav__link">продукция</a>
+							</li> 
+							<li class="nav__item hidden-sm hidden-xs">
+								<a href="#" class="nav__link">акции</a>
 							</li>   
 							<li class="nav__item">
-								<a href="#" class="nav__link hidden-xs">продукция</a>
-							</li>   
-							<li class="nav__item">
-								<a href="#" class="nav__link">где купить</a>
-							</li>  
-							<li class="nav__item hidden-md hidden-sm hidden-xs">
-								<a href="#" class="nav__link">Партнерам</a>
+								<a href="#" class="nav__link hidden-xs">доставка и оплата</a>
 							</li>
 						</ul>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-5 col-lg-offset-2 col-md-offset-2">
-						
-						<div class="search js-search">
-							<form>
-								<input class="search__input" type="text" placeholder="Поиск">
-								<button class="search__btn" type="submit">
-									<i class="icon-search"></i>
-								</button>
-							</form>
-							<button class="search__toggle js-toggle-search" type="button">
-								<i class="icon-search-white"></i>
-							</button>
-						</div>
-						<!-- <a href="#" class="shop">
-							<i class="icon-cart"></i>
-							Интернет-магазин «Эвалар»
-							<i class="shop__arr"></i>
-						</a> -->
-						<div class="lang js-toggle-lang hidden-xs">
-							<span class="lang__val">RU</span>
-							<ul class="lang__list">
-								<li><a href="#">EN</a></li>
-								<li><a href="#">DE</a></li>
+						<div class="user">
+							<button class="user__name js-toggle-user" type="button">Константин Констанополь</button>
+							<ul class="user__list js-list-user">
+								<li><a href="#">Личные данные</a></li>
+								<li><a href="#">История заказов</a></li>
+								<li><a href="#">Выход <i class="icon-logout"></i></a></li>
 							</ul>
 						</div>
-						
 					</div>
+					<div class="col-lg-5 col-md-3 col-sm-6 col-xs-7">
+						<div class="text-right">
+							
+							<a href="#" class="shop shop_corp">
+								<i class="icon-case"></i>
+								Корпоративный сайт
+								<i class="shop__arr"></i>
+							</a>
+							<a href="#" class="cart is-full">
+								<i class="icon-cart"></i>
+								<span>10</span>
+							</a>
+							<div class="search search_shop js-search">
+								<button class="search__toggle js-toggle-search" type="button">
+									<i class="icon-search-white"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search-form js-search">
+					<form>
+						<input class="search-form__input js-search-input" type="text" placeholder="Поиск">
+						<button class="search-form__btn" type="submit"><i class="icon-search-white"></i></button>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -189,17 +192,17 @@
 		<div class="page-head__img">
 			<picture>
 				<!--[if IE 9]><video style="display: none;"><![endif]-->
-				<source srcset="img/page_head2.jpg" media="(min-width: 1024px)">
-				<source srcset="img/page_head2-1024.jpg" media="(min-width: 768px)">
+				<!-- <source srcset="img/page_head3.jpg" media="(min-width: 1024px)"> -->
+				<!-- <source srcset="img/page_head3-1024.jpg" media="(min-width: 768px)"> -->
 				<!-- [if IE 9]></video><![endif] -->
-				<img srcset="img/page_head2-1024.jpg" alt="img">
+				<!-- <img srcset="img/page_head3-1024.jpg" alt="img"> -->
 			</picture>
 		</div>
 		<div class="page-head__info">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="page-head__title">Дистрибьюторам</div>					
+						<div class="page-head__title is-black">Поиск</div>					
 					</div>
 				</div>
 			</div>
@@ -213,132 +216,26 @@
 				<div class="col-lg-12">
 					<ul class="breadcrumbs__main">
 						<li><a href="#"><i class="icon-home"></i></a></li>
-						<li><a href="#">Партнерам</a></li>
-						<li><a href="#">Дистрибьюторам</a></li>
+						<li><a href="#">Поиск</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- END breadcrumbs -->
-	<div class="tabs-wrap">
+
+	<div class="page-body page-body_gray">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<ul class="tabs">
-						<li class="tabs__item">
-							<a href="#" class="tabs__link">Дистрибьюторы</a>    
-						</li>
-						<li class="tabs__item is-active">
-							<a href="#" class="tabs__link">Лидеры продаж</a>
-						</li>
-						<li class="tabs__item">
-							<a href="#" class="tabs__link">Прайс-лист</a>
-						</li>
-						<li class="tabs__item">
-							<a href="#" class="tabs__link">Продукция с рекламной поддержкой</a>
-						</li>
-						<li class="tabs__item">
-							<a href="#" class="tabs__link">Контакты</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="page-body">
-		<div class="container">
-			<div class="row no-padding">
-				<div class="col-lg-8">
-					<div class="page-text">
-						<div class="text text_big">
-							Axima nobit que sequisint ilibusc ieniscilla seque excepud ipienti corrum quatiusam sam cuptatur ant accatemquiat odicimporem di ut poressim dolupta turisquam fuga. Nest exped modi que abori omnisque id quae quia dolecabor sapistion es estiat fugiant hilliquis eosaessi aut pra sunt lacestio. Tem vel ium exped quia aut fugiatus escit lacerorepro mossent aut parumquam ium simusandam net fugitium quat vel moluptatur?
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="product-wrap">
-						<div class="product">
-							<div class="row no-padding">
-								<div class="col-lg-2 col-md-2 col-sm-4">
-									<div class="product__img">
-										<a href="#"><img src="img/product1.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9 col-sm-8 col-lg-offset-1 col-md-offset-1">
-									<div class="product__text">
-										<div class="title-link title-link_big"><a href="">Турбослим блокатор калорий</a></div>
-										<div class="text text_big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sunt fuga, commodi officiis, expedita obcaecati pariatur ex voluptatem ut aperiam impedit.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product">
-							<div class="row no-padding">
-								<div class="col-lg-2 col-md-2 col-sm-4">
-									<div class="product__img">
-										<a href="#"><img src="img/product2.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9 col-sm-8 col-lg-offset-1 col-md-offset-1">
-									<div class="product__text">
-										<div class="title-link title-link_big"><a href="">Эвалар БИО успокаивающий вечерний</a></div>
-										<div class="text text_big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sunt fuga, commodi officiis, expedita obcaecati pariatur ex voluptatem ut aperiam impedit.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product">
-							<div class="row no-padding">
-								<div class="col-lg-2 col-md-2 col-sm-4">
-									<div class="product__img">
-										<a href="#"><img src="img/product3.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9 col-sm-8 col-lg-offset-1 col-md-offset-1">
-									<div class="product__text">
-										<div class="title-link title-link_big"><a href="">Турбослим блокатор калорий</a></div>
-										<div class="text text_big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sunt fuga, commodi officiis, expedita obcaecati pariatur ex voluptatem ut aperiam impedit.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product">
-							<div class="row no-padding">
-								<div class="col-lg-2 col-md-2 col-sm-4">
-									<div class="product__img">
-										<a href="#"><img src="img/product4.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9 col-sm-8 col-lg-offset-1 col-md-offset-1">
-									<div class="product__text">
-										<div class="title-link title-link_big"><a href="">Эвалар БИО успокаивающий вечерний</a></div>
-										<div class="text text_big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sunt fuga, commodi officiis, expedita obcaecati pariatur ex voluptatem ut aperiam impedit.</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product">
-							<div class="row no-padding">
-								<div class="col-lg-2 col-md-2 col-sm-4">
-									<div class="product__img">
-										<a href="#"><img src="img/product5.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9 col-sm-8 col-lg-offset-1 col-md-offset-1">
-									<div class="product__text">
-										<div class="title-link title-link_big"><a href="">Ци-Клим Аланин</a></div>
-										<div class="text text_big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit sunt fuga, commodi officiis, expedita obcaecati pariatur ex voluptatem ut aperiam impedit.</div>
-									</div>
-								</div>
-							</div>
-						</div>
+				<div class="col-md-8 col-md-offset-2 col-xs-12">
+					<div class="search-text text-center">
+						По вашему запросу ничего не найдено
+						<a href="#" class="link">Перейти на главную</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </div>
 <!-- END out-->
 <div class="footer">
@@ -511,12 +408,6 @@
 		</div>
 	</div>
 </div>
-<a class="btn-feedback" href="#">
-	<span>
-		Подписка на новости
-		<strong>Клуб здоровья</strong>
-	</span>
-</a>
 <div class="js-cover cover"></div>
 <!-- load scripts -->
 <script src="js/main.js"></script>
