@@ -223,12 +223,14 @@ $(document).ready(function() {
 	$(".js-search").on('click', function(event) {
 		event.stopPropagation();
 	});
-
+	$(".js-search-suggests").on('click', function(event) {
+		event.stopPropagation();
+	});
 	$('.js-toggle-search').on('click', function() {
 		$(".js-search").toggleClass("is-active");
 		return false;
 	});
-	$(".js-search-input").on('keyup', function(event) {
+	$(".js-search-input").on('keyup', function() {
 		var $el  = $(this),
 			$suggests = $('.js-search-suggests'),
 			$cover = $('.js-cover');
@@ -242,7 +244,7 @@ $(document).ready(function() {
 			$cover.removeClass('is-active');
 		}
 	});
-	
+
 	// user
 	$(".js-list-user").on('click', function(event) {
 		event.stopPropagation();
@@ -298,10 +300,7 @@ $(document).ready(function() {
 		if (!body.hasClass("main-full-page")) {
 			fixHeader();
 		}
-
 	});
-
-
 	// lang list
 	$('.js-toggle-lang').on('click', function(event) {
 		$(this).toggleClass("is-active");
