@@ -27,6 +27,9 @@ $(document).ready(function() {
 			$(".js-list").removeClass("is-active");
 			$(".js-toggle-list").removeClass("is-active");
 		}
+		if ($(".js-cover").hasClass("is-active")) {
+			$(".js-cover").removeClass("is-active");
+		}
 	});
 
 
@@ -228,6 +231,10 @@ $(document).ready(function() {
 	});
 	$('.js-toggle-search').on('click', function() {
 		$(".js-search").toggleClass("is-active");
+		if(!$(".js-search").hasClass("is-active")) {
+			$('.js-search-suggests').removeClass("is-active");
+			$(".js-cover").removeClass("is-active");
+		}
 		return false;
 	});
 	$(".js-search-input").on('keyup', function() {
