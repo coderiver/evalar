@@ -231,12 +231,11 @@
 			var mapEvalar;
 			function initialize() {
 
-				var boundsEvalar = new google.maps.LatLngBounds();
-				// var centerBiysk = new google.maps.LatLng(41.505082, -40.152397);
-				var centerBiysk = new google.maps.LatLng(41.505082, -40.152397);
+				// var boundsEvalar = new google.maps.LatLngBounds();
+				var centerBiysk = new google.maps.LatLng(41.505082, -2.152397);
 				var mapOptions = {
 					mapTypeId: 'roadmap',
-					zoom: 4,
+					zoom: 3,
 					mapTypeControl: true,
 				    mapTypeControlOptions: {
 				        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
@@ -407,7 +406,7 @@
 				var markers = [];
 				for( i = 0; i < markersEvalar.length; i++ ) {
 					var positionEvalar = new google.maps.LatLng(markersEvalar[i][2], markersEvalar[i][1]);
-					boundsEvalar.extend(positionEvalar);
+					// boundsEvalar.extend(positionEvalar);
 					markerEvalar = new google.maps.Marker({
 						position: positionEvalar,
 						map: mapEvalar,
@@ -415,7 +414,7 @@
 						title: markersEvalar[i][0]
 					});
 					markers.push(markerEvalar);
-					mapEvalar.fitBounds(boundsEvalar);
+					// mapEvalar.fitBounds(boundsEvalar);
 				}
 				var clusterOptions = {
 					styles: [{
