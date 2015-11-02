@@ -670,4 +670,19 @@ $(document).ready(function() {
 					tabsCont.eq(index).addClass('is-visible');
 					return false;
 			});
+
+	(function($) {
+
+	$.fn.toggleAttr = function(attribute, value) {
+	    if($(this).attr(attribute)){
+	        $(this).removeAttr(attribute,value);
+	    }
+	    else{
+	        $(this).attr(attribute,value);
+	    } 
+	};
+	})(jQuery);
+	$('.js-radio-check').on('click', function () {
+		$(this).toggleAttr('checked','checked')
+	});
 });

@@ -32,6 +32,8 @@
 		text-align: left
 		+r(767)
 			padding: 24px 20px 24px
+		&.is-white
+			background: #fff 
 	&__title
 		font-size: 18px
 		+light
@@ -69,6 +71,8 @@
 			max-height: 72vh
 		+rh(480)
 			max-height: 65vh
+		&.is-gray
+			background: #f6f6f4 
 	&__in
 		padding: 33px 30px 
 		+r(767)
@@ -81,6 +85,114 @@
 			&:last-child
 				.btn
 					margin-bottom: 0
+	&__submit
+		margin-top: 30px 				
+//-------------------
+.popup	
+	&__meta
+		border-top: 1px solid #ecebe7 
+		color: #000
+		font-size: 17px 
+		padding: 10px 0 0 
+		+r(767)
+			font-size: 13px 
+	&__title + &__meta
+		margin-top: 10px 
+	&__head
+		&.is-white
+			background: #fff 			
+.popup_subscribe
+	.popup__main
+		width: 465px
+		+r(767)
+			max-width: 320px 
+	.popup__head
+		padding: 30px 60px 10px
+		+r(767)
+			padding: 15px 30px 10px 
+	.popup__title
+		color: $green
+		font-size: 25px 
+		+r(767)
+			font-size: 18px 
+	.popup__close
+		height: 45px
+		&:hover
+			i
+				opacity: .8
+		+r(767)
+			height: 50px 
+			background: #dddddc
+			i
+				opacity: 1
+	.popup__in
+		padding: 20px 60px 25px 
+		+r(767)
+			padding: 10px 30px 15px  
+	.field__title_inline-m
+		display: inline-block
+		+r(767)
+			display: block
+			margin-bottom: 15px 
+	.regular-select_inline
+		+r(767)
+			width: 32%   
+			select
+				width: 100%
+				
+	.popup__body
+		max-height: 61vh
+		+rh(480)
+			max-height: 40vh 
+.regular-select
+	position: relative
+	&_inline
+		display: inline-block
+	select
+		-webkit-appearance: none
+		-moz-appearance : none
+		appearance: none
+		padding: 0 15px 0 7px
+	&:after
+		content: ''
+		position: absolute
+		top: 50% 
+		right: 7px
+		margin-top: -3px 
+		+arr(9,8,#b1b1b1,b)
+		pointer-events: none
+select
+	height: 40px
+	border-color: #e4e5df 
+	color: #9ba393 
+	position: relative
+	cursor: pointer
+	option
+		color: #000
+.field__body
+	position: relative
+	.icon-star
+		position: absolute
+		top: 5px 
+		right: 7px 
+.field.is-gray
+	color: #a8ac9d
+.field_mt
+	margin-top: 20px 
+.radio_sm
+	.radio__text
+		font-size: 13px 
+.form__meta
+	margin-left: 28px  
+.radio
+	&__text
+		&.is-required
+			margin-left: 35px 
+		.icon-star
+			position: absolute
+			top: -7px
+			left: -39px
+// --------------------------------------
 .desktop
 	.popup__body
 		+scrollbar
